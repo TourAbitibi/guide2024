@@ -1,0 +1,842 @@
+---
+output: pdf_document
+latex_engine: pdflatex
+header-includes:
+  \usepackage{helvet}
+  \renewcommand\familydefault{\sfdefault}
+  
+  \usepackage{graphicx}
+  \usepackage{float}
+
+  \usepackage{pifont}  
+
+  \usepackage[french]{babel}
+  \usepackage[T1]{fontenc} 
+  
+  \usepackage{pdfpages}
+  
+  \usepackage{array, multirow}
+  \usepackage{tabularx, tabulary, tabu, longtable}
+  \usepackage{makecell}
+
+  \setlength{\tabcolsep}{18pt} 
+  \renewcommand{\arraystretch}{2} 
+  
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyhead[C]{\bfseries\leftmark}
+  \fancyfoot{}
+  \fancyfoot[C]{\thepage}
+
+  \setlength{\headheight}{13pt}
+  \setlength{\parindent}{0pt}
+  
+  \usepackage{tikz,lipsum,lmodern}    
+  \usepackage[most]{tcolorbox}
+  \usepackage{tcolorbox}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r call_Libs_Vars, include=FALSE}
+
+here::i_am("guide2024.Rproj")
+
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Dates
+source(here("code", "_Dates.R"))
+
+# Pour accès aux données du fichier excel Itineraires.xlsx
+source(here("code","programmation.R"))
+
+# Langue
+lang <- "FR"
+
+# Lien Guide web
+lienWeb <- glue('{params$lienWeb}{lang}')
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+```
+ 
+
+
+\begin{titlepage}
+
+\begin{center}
+
+\huge{\textbf{Tour de l'Abitibi `r params$sponsor` `r params$annee`}}\\
+
+\vspace*{1.0cm}
+
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.3\linewidth]{../img/logo/TA_Glencore.png}
+\end{figure}
+
+\vfill
+
+\line(1,0){350}\\[2mm]
+
+\vspace*{0.5cm}
+\emph{\huge{\textbf{GUIDE TECHNIQUE}}\\}
+\vspace*{0.75cm}
+\emph{\Large{\textbf{DÉTAILS DES PARCOURS}}\\}
+\vspace*{0.75cm}
+\Large{\textbf{`r params$edition`$^e$ édition}}\\
+\vspace*{0.75cm}
+\Large{\textbf{Du `r params$dates_compl`}}\\
+\vspace*{0.5cm}
+\line(1,0){350}\\[2mm]
+
+\vfill
+
+Version :  `r Sys.Date()` \\
+
+\end{center}
+
+\end{titlepage}
+
+
+
+\tableofcontents
+\thispagestyle{empty}
+
+\vfill
+
+\emph{\textbf{Notes}\\}
+
+Dans le but d'éviter le gaspillage de papier et de faciliter les mises à jour du document, seuls les détails des parcours seront disponibles en format papier.
+
+Veuillez vous référer au site : \url{`r lienWeb`} pour l'information complète du guide technique.
+
+
+\newpage
+
+
+
+\thispagestyle{plain}
+\setcounter{page}{1}
+
+\includepdf[scale=0.8,pages=1,pagecommand=\section{Programmation}]{details/prog.png}
+
+\pagebreak
+
+
+
+```{r include=FALSE}
+Etape <- 1
+
+jour_date <- dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureEntree <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+comm <- here("img", "logo",  glue("comm_{Etape}.png"))
+```
+
+\thispagestyle{plain}
+\section{Étape `r Etape` : `r iti_etape$Details$Descr_Villes[Etape]`}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X X}
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.35\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+  \end{tabularx}
+\end{table}
+
+\vspace*{4mm}
+
+\begin{table}[h]
+\centering
+		\begin{tabular}{m{6cm} c}
+    		\textbf{} & \textbf{Heure} \\ \toprule
+    		Départ & `r heureDep`\\ 
+    		\*
+    		Arrivée au circuit & `r heureEntree`\\ 
+    		\*
+    		Arrivée & `r heureArr` \\ \bottomrule
+
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Parcours}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.6\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Détails du départ}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.8\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Départ neutralisé sur `r iti_etape$Details$KM_Neutres[Etape]` km
+  \end{itemize}
+\end{tcolorbox}
+
+
+\subsection{Détails de l'arrivée}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] `r iti_etape$Details$Nb_tours[Etape]` tours complets de circuit à l'arrivée de `r iti_etape$Details$KM_par_tours[Etape]` km en sens horaire.
+  \item[\ding{46}] L'entrée du circuit se situe à l'intersection de la 4e Rue Est et de la 14e Avenue Est
+  \end{itemize}
+\end{tcolorbox}
+
+\pagebreak
+
+\subsection{Élévation}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Full_{lang}.png"))`}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Final_{lang}.png"))`}
+\end{figure}
+
+\pagebreak
+
+\includepdf[scale=.9]{`r here("guide_FR_PDF", "details", glue("tableau_{Etape}.pdf"))`}
+
+\pagebreak
+
+```{r include=FALSE}
+Etape <- 2
+
+jour_date <- dates_FR %>% filter(code=="Mer") %>% pull(jsem_jour_mois_an)
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureEntree <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+comm <- here("img", "logo",  glue("comm_{Etape}.png"))
+```
+
+\thispagestyle{plain}
+\section{Étape `r Etape` : `r iti_etape$Details$Descr_Villes[Etape]`}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X X}
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+		\begin{tabular}{m{6cm} c}
+    		\textbf{} & \textbf{Heure} \\ \toprule
+    		Départ & `r heureDep`\\ 
+    		\*
+    		Arrivée & `r heureArr` \\ \bottomrule
+
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Parcours}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Détails du départ}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Départ neutralisé sur `r iti_etape$Details$KM_Neutres[Etape]` km
+  \end{itemize}
+\end{tcolorbox}
+
+
+\subsection{Détails de l'arrivée}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Arrivée en ligne sans circuit
+  \end{itemize}
+\end{tcolorbox}
+
+\pagebreak
+
+\subsection{Élévation}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Full_{lang}.png"))`}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Final_{lang}.png"))`}
+\end{figure}
+
+\pagebreak
+
+\includepdf[scale=.9]{`r here("guide_FR_PDF", "details", glue("tableau_{Etape}.pdf"))`}
+
+\pagebreak
+
+```{r include=FALSE}
+Etape <- 3
+
+jour_date <- dates_FR %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureEntree <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+heureDernierDep <- iti_etape$Details$DerDep[Etape]
+
+heureDernierArr <- iti_etape$Details$DerArr[Etape]
+
+comm <- here("img", "logo",  glue("comm_{Etape}.png"))
+```
+
+\thispagestyle{plain}
+\section{`r iti_etape$Details$Nom_Courts_FR[Etape]`}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X X}
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+		\begin{tabular}{m{6cm} c}
+    		\textbf{} & \textbf{Heure} \\ \toprule
+    		Premier départ & `r heureDep`\\ 
+    		\*
+    		Première arrivée & `r heureArr` \\
+        \*
+        Dernier départ & `r heureDernierDep`\\ 
+    		\*
+        Dernière arrivée & `r heureDernierArr`\\ \bottomrule
+
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Parcours}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Détails du départ}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Contre-la-montre de type aller-retour : 2 x 5 km
+  \item[\ding{46}] Déviation des voitures suiveuses vers la 3e ave Est et la 1ere Rue Est
+  \end{itemize}
+\end{tcolorbox}
+
+
+\subsection{Détails de l'arrivée}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Élévation}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Full_{lang}.png"))`}
+\end{figure}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Final_{lang}.png"))`}
+\end{figure}
+
+\pagebreak
+
+\includepdf[scale=.9]{`r here("guide_FR_PDF", "details", glue("tableau_{Etape}.pdf"))`}
+
+\pagebreak
+
+
+
+```{r include=FALSE}
+Etape <- 4
+
+jour_date <- dates_FR %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureEntree <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+comm <- here("img", "logo",  glue("comm_{Etape}.png"))
+```
+
+\thispagestyle{plain}
+\section{Étape `r Etape` : `r iti_etape$Details$Descr_Villes[Etape]`}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X X}
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+		\begin{tabular}{m{6cm} c}
+    		\textbf{} & \textbf{Heure} \\ \toprule
+    		Départ & `r heureDep`\\ 
+    		\*
+    		Arrivée & `r heureArr` \\ \bottomrule
+
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Parcours}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Détails du départ}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.8\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Départ neutralisé sur `r iti_etape$Details$KM_Neutres[Etape]` km
+  \end{itemize}
+\end{tcolorbox}
+
+
+\subsection{Détails de l'arrivée}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.7\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Repas servi au Théâtre Meglab, près de la ligne d'arrivée
+  \end{itemize}
+\end{tcolorbox}
+
+\pagebreak
+
+\subsection{Élévation}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Full_{lang}.png"))`}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Final_{lang}.png"))`}
+\end{figure}
+
+\pagebreak
+
+\includepdf[scale=.9]{`r here("guide_FR_PDF", "details", glue("tableau_{Etape}.pdf"))`}
+
+\pagebreak
+
+
+
+
+```{r include=FALSE}
+Etape <- 5
+
+jour_date <- dates_FR %>% filter(code=="Ven") %>% pull(jsem_jour_mois_an)
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureEntree <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+comm <- here("img", "logo",  glue("comm_{Etape}.png"))
+```
+
+\thispagestyle{plain}
+\section{Étape `r Etape` : `r iti_etape$Details$Descr_Villes[Etape]`}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X X}
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+		\begin{tabular}{m{6cm} c}
+    		\textbf{} & \textbf{Heure} \\ \toprule
+    		Départ & `r heureDep`\\ 
+    		\*
+    		Arrivée & `r heureArr` \\ \bottomrule
+
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Parcours}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.6\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Détails du départ}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.85\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Départ neutralisé sur `r iti_etape$Details$KM_Neutres[Etape]` km
+  \end{itemize}
+\end{tcolorbox}
+
+
+\subsection{Détails de l'arrivée}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Arrivée en ligne sans circuit
+  \end{itemize}
+\end{tcolorbox}
+
+\pagebreak
+
+\subsection{Élévation}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Full_{lang}.png"))`}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Final_{lang}.png"))`}
+\end{figure}
+
+\pagebreak
+
+\includepdf[scale=.9]{`r here("guide_FR_PDF", "details", glue("tableau_{Etape}.pdf"))`}
+
+\pagebreak
+
+
+
+```{r include=FALSE}
+Etape <- 6
+
+jour_date <- dates_FR %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureEntree <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+comm <- here("img", "logo",  glue("comm_{Etape}.png"))
+```
+
+\thispagestyle{plain}
+\section{Étape `r Etape` : `r iti_etape$Details$Descr_Villes[Etape]`}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X X}
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+		\begin{tabular}{m{6cm} c}
+    		\textbf{} & \textbf{Heure} \\ \toprule
+    		Départ & `r heureDep`\\ 
+    		\*
+    		Arrivée & `r heureArr` \\ \bottomrule
+
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Parcours}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.6\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Détails du départ}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.8\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Départ neutralisé sur `r iti_etape$Details$KM_Neutres[Etape]` km
+  \end{itemize}
+\end{tcolorbox}
+
+
+\subsection{Détails de l'arrivée}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Arrivée en ligne sans circuit
+  \end{itemize}
+\end{tcolorbox}
+
+\pagebreak
+
+\subsection{Élévation}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Full_{lang}.png"))`}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Final_{lang}.png"))`}
+\end{figure}
+
+\pagebreak
+
+\includepdf[scale=.9]{`r here("guide_FR_PDF", "details", glue("tableau_{Etape}.pdf"))`}
+
+\pagebreak
+
+
+
+
+```{r include=FALSE}
+Etape <- 7
+
+jour_date <- dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureEntree <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+comm <- here("img", "logo",  glue("comm_{Etape}.png"))
+```
+
+\thispagestyle{plain}
+\section{Étape `r Etape` : `r iti_etape$Details$Descr_Villes[Etape]`}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X X}
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.35\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+  \end{tabularx}
+\end{table}
+
+\vspace*{8mm}
+
+\begin{table}[h]
+\centering
+		\begin{tabular}{m{6cm} c}
+    		\textbf{} & \textbf{Heure} \\ \toprule
+    		Départ & `r heureDep`\\ 
+    		\*
+    		Arrivée au circuit & `r heureEntree`\\ 
+    		\*
+    		Arrivée & `r heureArr` \\ \bottomrule
+
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Parcours}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=1\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+\end{figure}
+
+\pagebreak
+
+\subsection{Détails du départ}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=0.9\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] Départ neutralisé sur `r iti_etape$Details$KM_Neutres[Etape]` km
+  \end{itemize}
+\end{tcolorbox}
+
+
+\subsection{Détails de l'arrivée}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+\end{figure}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
+  \begin{itemize}
+  \item[\ding{46}] `r iti_etape$Details$Nb_tours[Etape]` tours complets de circuit à l'arrivée de `r iti_etape$Details$KM_par_tours[Etape]` km en sens horaire.
+  \item[\ding{46}] L'entrée du circuit se situe à l'intersection de la 4e Rue Est et de la 14e Avenue Est
+  \end{itemize}
+\end{tcolorbox}
+
+\pagebreak
+
+\subsection{Élévation}
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Full_{lang}.png"))`}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering    
+  \includegraphics[width=\textwidth]{`r here("img", "elev", glue("Etape{Etape}_Final_{lang}.png"))`}
+\end{figure}
+
+\pagebreak
+
+\includepdf[scale=.9]{`r here("guide_FR_PDF", "details", glue("tableau_{Etape}.pdf"))`}
+
+\pagebreak
