@@ -369,8 +369,8 @@ rule R51_render_book:
 
         "img/cartes/input/Etape1_Full.png",
 
-        "results/Liste_Coureurs.csv",
-        "results/Maillots_Porteurs.csv",
+        # "results/Liste_Coureurs.csv",
+        # "results/Maillots_Porteurs.csv",
 
         "elevParcours/elev_parcours.csv",
         "img/elev/Etape1_Full_FR.png",
