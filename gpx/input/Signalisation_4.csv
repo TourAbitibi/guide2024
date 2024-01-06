@@ -1,0 +1,18 @@
+Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
+Start,Start of route,0,0,,
+Danger,sign_01,1.04,327.00,Terre-plein,Edited
+Control,sign_02,1.07,327.50,,Edited
+Slight Left,sign_03,6.38,308.90,,Edited
+Slight Left,sign_04,15.92,302.00,,Edited
+Danger,sign_05,29.08,321.80,,Edited
+Left,sign_06,29.54,321.60,,Edited
+Left,sign_07,29.60,320.90,,Edited
+Danger,sign_08,29.65,320.50,,Edited
+Left,sign_09,29.84,320.00,,Edited
+Right,sign_10,30.30,321.80,,Edited
+Sharp Right,sign_11,58.08,323.00,,Edited
+Control,sign_12,58.29,326.10,,Edited
+Left,sign_13,58.93,318.90,,Edited
+Left,sign_14,59.28,318.60,,Edited
+Control,sign_15,59.47,323.60,,Edited
+End,End of route,59.54,322.70,

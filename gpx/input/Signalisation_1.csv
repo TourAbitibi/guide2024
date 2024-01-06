@@ -1,0 +1,26 @@
+Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
+Start,Start of route,0,0,,
+Danger,sign_01,0.03,305.90,terre_plein,Edited
+Danger,sign_02,0.25,305.10,terre-plein,Edited
+Danger,sign_03,0.30,305.10,Terre-plein,Edited
+Danger,sign_04,0.98,302.90,terre-plein,Edited
+Control,sign_05,1.04,302.20,police,Edited
+Danger,sign_06,2.05,302.70,terre-plein,Edited
+Danger,sign_07,2.30,305.90,terre-plein,Edited
+Danger,sign_08,2.48,306.30,terre-plein,Edited
+Danger,sign_09,2.57,305.10,terre-plein,Edited
+Danger,sign_10,46.62,311.80,terre-plein,Edited
+Danger,sign_11,46.68,312.30,terre-plein,Edited
+Left,sign_12,58.90,319.30,Police - Intersection route provinciale,Edited
+Danger,sign_13,79.49,314.80,Voie ferrée - Angle,Edited
+Danger,sign_14,88.88,316.90,Police - Intersection route provinciale,Edited
+Control,sign_23,89.03,318.20,SQ,Edited
+Danger,sign_15,92.44,309.00,terre-plein,Edited
+Danger,sign_16,93.07,304.70,terre-plein,Edited
+Danger,sign_17,93.32,307.30,terre-plein (300m),Edited
+Danger,sign_18,93.66,305.90,terre-plein (100m),Edited
+Danger,sign_19,94.23,298.00,terre-plein,Edited
+Danger,sign_20,94.52,297.60,terre-plein,Edited
+Control,sign_21,94.60,298.40,Contrôle Policier,Edited
+Left,sign_22,95.14,301.50,Prendre à gauche sur 14e Av E,Edited
+End,End of route,119.44,306.30,

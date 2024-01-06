@@ -1,0 +1,104 @@
+--- 
+title: "Tour de l'Abitibi Glencore 2024 - Technical Guide"
+author: "Bruno Gauthier"
+institute: "Tour de l'Abitibi"
+date: "Last update : `r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+toc-title: "Contents"
+favicon: "../img/favicon.jpg"
+#papersize: letter
+#fontsize: 12pt
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+    Technical guide for the 2024 Tour de l'Abitibi, a stage of the UCI Nations Cup.
+    Presentation of the program, courses and regulations for the event.
+suppress-bibliography: yes
+#link-citations: yes
+#github-repo: rstudio/bookdown-demo
+---
+
+# Presentation
+
+```{r here, include=FALSE}
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+```
+
+```{r call_Libs_Vars, include=FALSE}
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Dates
+source(here("code", "_Dates.R"))
+
+# Utilisation Résultats
+source(here("code", "_useResults.R"))
+
+# Pour accès aux données du fichier excel Itineraires.xlsx
+source(here("code","_import_itineraire.R"))
+
+# Pour accès aux tracés et aux POI d'étapes
+parcours <- st_read(here("gpx","output","parcours.shp"))%>% 
+  mutate(name = str_replace(name, "Étape", "Stage"),
+                name = str_replace(name, "CLMI", "ITT"))
+points <- st_read(here("gpx","output","points_parcours.shp"))
+
+# Langue
+lang <- "EN"
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA,
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+```
+
+
+```{r logo_tour_sponsor, echo=TRUE, echo=FALSE, out.width= "25%", out.extra='style="float:right; padding:10px"'}
+knitr::include_graphics(here("img", "logo", "TA_Glencore.png"))
+```
+
+<br/>
+
+Welcome to the `r params$edition`^th^ edition of the **`r params$annee` Tour de l'Abitibi `r params$sponsor`**, which will be held from `r dates_EN %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` to `r dates_EN %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` in `r params$ville`.
+
+In this online technical guide, you will find all the details about the event, as well as details about your stay in Abitibi-Témiscamingue. 
+
+<br/>
+
+```{r map_globale, echo = FALSE, eval = TRUE}
+# Visualisation
+mapview(parcours ,
+        lwd = 2.5,
+        alpha = 0.7,
+        z = "name",
+        color = palette.colors(n=7, palette="ggplot2"),
+        layer.name = "Stage")
+```
+
+<br/>
+
+You can also download a condensed version of the technical guide, containing only the stages descriptions, by clicking on the PDF icon at the top left of the screen.
+
+<br/>
+
+```{r lien_pdf, out.width="40%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "lien_pdf.png"))
+```
+
+
+
+----
+
+*Si vous cherchez la version française du guide : [Guide Technique](../FR/)*

@@ -1,0 +1,182 @@
+
+<!-- Repas.Rmd  : document bilingue -->
+
+```{r , eval=(lang != "FR"), results='asis', echo= FALSE}
+
+glue("# Meals of the week {#meals}", .open = "[") 
+```
+
+```{r , eval=(lang == "FR"), results='asis', echo= FALSE }
+
+glue("# Repas de la semaine {#repas}", .open = "[")
+```
+
+
+
+```{r , eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("### Allowed quantities {-}", .open = "[")
+```
+
+```{r , eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("### Quantités permises {-}", .open = "[")
+```
+
+
+```{r qty_fr,eval=(lang != "FR"), echo=FALSE}
+
+repas_xlsx <- here("excel", "repas.xlsx")
+
+read_excel(repas_xlsx, sheet = "QTY") %>% 
+  select(" " = nom_EN,
+         Breakfast = dej_EN,
+         "Lunch and Dinner" = din_souper_EN) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+
+```
+
+```{r qty_en, eval=(lang == "FR"), echo=FALSE}
+
+repas_xlsx <- here("excel", "repas.xlsx")
+
+read_excel(repas_xlsx, sheet = "QTY") %>% 
+  select(" " = nom_FR,
+         Déjeuner = dej_FR,
+         "Dîner et Souper" = din_souper_FR) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+
+```
+
+
+<br/>
+
+### Menu {-}
+
+```{r , eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("#### Breakfast {-}", .open = "[")
+```
+
+```{r , eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("#### Déjeuner {-}", .open = "[")
+```
+
+```{r menu_dej_EN, eval=(lang != "FR"), echo=FALSE}
+
+read_excel(repas_xlsx, sheet = "DEJEUNER") %>% 
+  select(Breakfast = repas_en) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+```
+
+```{r menu_dej_FR, eval=(lang == "FR"), echo=FALSE}
+
+read_excel(repas_xlsx, sheet = "DEJEUNER") %>% 
+  select(Déjeuner = repas_fr) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+```
+
+<br/>
+
+```{r , eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("#### Lunch {-}", .open = "[")
+```
+
+```{r , eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("#### Dîner {-}", .open = "[")
+```
+
+```{r menu_diner_FR, eval=(lang == "FR"), echo=FALSE}
+
+df <- read_excel(repas_xlsx, sheet = "DINER") 
+
+left_join(x= df, y= dates_FR, by= "code") %>% 
+  select(Date = jsem_jour_mois,
+         Dîner = repas_fr) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+```
+
+```{r menu_diner_EN, eval=(lang != "FR"), echo=FALSE}
+
+df <- read_excel(repas_xlsx, sheet = "DINER") 
+
+left_join(x= df, y= dates_EN, by= "code") %>% 
+  select(Date = jsem_jour_mois,
+         Lunch = repas_en) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+```
+
+
+<br/>
+
+```{r , eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("#### Dinner {-}", .open = "[")
+```
+
+```{r , eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("#### Souper {-}", .open = "[")
+```
+
+```{r menu_souper_FR, eval=(lang == "FR"), echo=FALSE}
+
+df <- read_excel(repas_xlsx, sheet = "SOUPER") 
+
+left_join(x= df, y= dates_FR, by= "code") %>% 
+  select(Date = jsem_jour_mois,
+         Souper = repas_fr) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+```
+
+```{r menu_souper_EN, eval=(lang != "FR"), echo=FALSE}
+
+df <- read_excel(repas_xlsx, sheet = "SOUPER") 
+
+left_join(x= df, y= dates_EN, by= "code") %>% 
+  select(Date = jsem_jour_mois,
+         Dinner = repas_en) %>%   
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+```
+
+
+<br/>
+
+### Notes {-}
+
+```{r , eval=(lang == "FR"), results='asis', echo= FALSE}
+glue("**Le menu est sujet à changement <br/> <br/>Le Tour Cycliste de l’Abitibi n’est pas responsable des réactions allergiques et/ou des intolérances alimentaires**")
+```
+
+```{r , eval=(lang != "FR"), results='asis', echo= FALSE }
+glue("**Menu may vary <br/> <br/>The Tour Cycliste de l’Abitibi is not responsible of any allergic reactions and/or food intolerances**")
+```
+
+

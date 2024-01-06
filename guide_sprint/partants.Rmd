@@ -1,0 +1,307 @@
+---
+title: "Challenge Sprint Abitibi 2024"
+description: "Liste des partants / Startlist"
+output:
+  distill::distill_article
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- Pour render : rmarkdown::render_site('guide_sprint') -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+```
+
+```{r call_Libs_Vars, include=FALSE}
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Appel des fonctions résultats
+source(here::here("code","_useResults.R"))
+
+# Langue
+lang <- "FR"
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA, 
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+```
+
+```{r liste_coureurs, include = FALSE, echo=FALSE}
+
+# Lecture  de la liste de coureurs vers un .csv
+file_path <- here("results", "Liste_Coureurs.csv")
+if(file.exists(file_path)){
+  start_list_coureurs <- read_csv(file_path, show_col_types = FALSE)
+  ui_done("La liste détaillée des coureurs du Tour de l'Abitibi existe et a été lue.")
+
+  LISTE_COUREURS_existe <- TRUE
+  
+} else LISTE_COUREURS_existe <- FALSE
+
+# Lecture fichier excel de la startlist
+file_path <- here("excel", "sprint.xlsx")
+if(file.exists(file_path)){
+  df_startlist <- read_excel(file_path, sheet = "STARTLIST")
+  ui_done("La liste de partants du sprint existe et a été lue.")
+
+  STARTLIST_existe <- TRUE
+  
+} else STARTLIST_existe <- FALSE
+
+if(STARTLIST_existe & nrow(df_startlist) >0 ){
+  ui_done("La liste de partants du sprint existe et n'est pas vide.")
+} else STARTLIST_existe <- FALSE
+
+```
+
+
+
+```{r liste_coureurs_existe_pas, eval= !STARTLIST_existe, results='asis', echo= FALSE }
+
+# Si la startlist du sprint n'est pas encore disponible
+glue("À venir / To come.")
+
+```
+
+```{r startlist_sprint_existe, eval= STARTLIST_existe, include= FALSE }
+
+# Création de tableaux contenant seulement les bib numbers
+vague_1 <- df_startlist %>% select("No." = vague_1)
+vague_2 <- df_startlist %>% select("No." = vague_2)
+vague_3 <- df_startlist %>% select("No." = vague_3)
+vague_4 <- df_startlist %>% select("No." = vague_4)
+
+# Dans le cas de 8 vagues, enlever les commentaires
+# vague_5 <- df_startlist %>% select("No." = vague_5)
+# vague_6 <- df_startlist %>% select("No." = vague_6)
+# vague_7 <- df_startlist %>% select("No." = vague_7)
+# vague_8 <- df_startlist %>% select("No." = vague_8)
+```
+
+```{r startlist_et_details_coureurs_existent, eval= STARTLIST_existe & LISTE_COUREURS_existe, include= FALSE }
+
+# Création de tableaux contenant les bib numbers et le détails des coureurs
+
+vague_1 <- vague_1 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+  select("No.", 
+         "Nom / Name" = Coureur,
+         "Équipe / Team" = Team,
+         "Pays / Country" = Pays
+         )
+  
+vague_2 <- vague_2 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+  select("No.",
+         "Nom / Name" = Coureur,
+         "Équipe / Team" = Team,
+         "Pays / Country" = Pays
+         )
+
+vague_3 <- vague_3 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+  select("No.",
+         "Nom / Name" = Coureur,
+         "Équipe / Team" = Team,
+         "Pays / Country" = Pays
+         )
+
+vague_4 <- vague_4 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+  select("No.",
+         "Nom / Name" = Coureur,
+         "Équipe / Team" = Team,
+         "Pays / Country" = Pays
+         )
+
+# Dans le cas de 8 vagues, enlever les commentaires
+
+# vague_5 <- vague_5 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+#   select("No.", 
+#          "Nom / Name" = Coureur,
+#          "Équipe / Team" = Team,
+#          "Pays / Country" = Pays
+#          )
+   
+# vague_6 <- vague_6 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+#   select("No.",
+#          "Nom / Name" = Coureur,
+#          "Équipe / Team" = Team,
+#          "Pays / Country" = Pays
+#          )
+ 
+# vague_7 <- vague_7 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+#   select("No.",
+#          "Nom / Name" = Coureur,
+#          "Équipe / Team" = Team,
+#          "Pays / Country" = Pays
+#          )
+ 
+# vague_8 <- vague_8 %>% left_join(start_list_coureurs, by= c("No." = "Bib")) %>% 
+#   select("No.",
+#          "Nom / Name" = Coureur,
+#          "Équipe / Team" = Team,
+#          "Pays / Country" = Pays
+#          )
+
+```
+
+
+```{r titre_vague_1, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+glue("## Vague 1 / Heat 1")
+
+```
+
+
+```{r tableau_vague_1, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+vague_1 %>% 
+    kbl(
+      escape = F, # permet de passer les <br/>
+      align = c('c', 'l', 'l', 'c' ),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+```
+
+```{r titre_vague_2, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+glue("## Vague 2 / Heat 2")
+
+```
+
+
+```{r tableau_vague_2, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+vague_2 %>% 
+    kbl(
+      escape = F, # permet de passer les <br/>
+      align = c('c', 'l', 'l', 'c' ),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+```
+
+```{r titre_vague_3, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+glue("## Vague 3 / Heat 3")
+
+```
+
+
+```{r tableau_vague_3, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+vague_3 %>% 
+    kbl(
+      escape = F, # permet de passer les <br/>
+      align = c('c', 'l', 'l', 'c' ),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+```
+
+```{r titre_vague_4, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+glue("## Vague 4 / Heat 4")
+
+```
+
+
+```{r tableau_vague_4, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+vague_4 %>% 
+    kbl(
+      escape = F, # permet de passer les <br/>
+      align = c('c', 'l', 'l', 'c' ),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+```
+
+
+<!-- Si besoins de plus de vagues, enlever les commentaires -->
+
+```{r titre_vague_5, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# glue("## Vague 5 / Heat 5")
+
+```
+
+
+```{r tableau_vague_5, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# vague_5 %>% 
+#     kbl(
+#       escape = F, # permet de passer les <br/>
+#       align = c('c', 'l', 'l', 'c' ),
+#       ) %>% 
+#     kable_styling("striped",      # kable_minimal
+#                   full_width = T) 
+```
+
+```{r titre_vague_6, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# glue("## Vague 6 / Heat 6")
+
+```
+
+
+```{r tableau_vague_6, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# vague_6 %>% 
+#     kbl(
+#       escape = F, # permet de passer les <br/>
+#       align = c('c', 'l', 'l', 'c' ),
+#       ) %>% 
+#     kable_styling("striped",      # kable_minimal
+#                   full_width = T) 
+```
+
+```{r titre_vague_7, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# glue("## Vague 7 / Heat 7")
+
+```
+
+
+```{r tableau_vague_7, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# vague_7 %>% 
+#     kbl(
+#       escape = F, # permet de passer les <br/>
+#       align = c('c', 'l', 'l', 'c' ),
+#       ) %>% 
+#     kable_styling("striped",      # kable_minimal
+#                   full_width = T) 
+```
+
+```{r titre_vague_8, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# glue("## Vague 8 / Heat 8")
+
+```
+
+
+```{r tableau_vague_8, eval= STARTLIST_existe, results='asis', echo= FALSE }
+
+# vague_8 %>% 
+#     kbl(
+#       escape = F, # permet de passer les <br/>
+#       align = c('c', 'l', 'l', 'c' ),
+#       ) %>% 
+#     kable_styling("striped",      # kable_minimal
+#                   full_width = T) 
+```

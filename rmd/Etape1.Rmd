@@ -1,0 +1,226 @@
+
+<!-- Besoin de changer le # de la ville du titre et la variable Etape et codeJour -->
+
+<!-- Version FR - AVEC circuit d'arrivée -->
+
+# Étape 1 : `r iti_etape$Details$Descr_Villes[1]` {#etape1}
+
+```{r, echo=FALSE}
+Etape <-1
+
+codeJour <- "Mar"
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureCircuit <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+
+```
+
+```{r, echo=FALSE, results='asis'}
+
+glue('<table border=1>
+    <tr>
+        <td><strong/>Présentée par</strong></td>
+        <td><img src="../img/logo/comm_{Etape}.png" width="350" style="float:right"></td>
+    </tr>
+</table>')
+```
+
+<br/>
+
+**`r dates_FR %>% filter(code== codeJour) %>% pull(jsem_jour_mois_an)`** 
+
+ **`r iti_etape$Details$Distance_totale[Etape]` km**
+
+
+## Sommaire
+
+- `r iti_etape$Details$KM_Neutres[Etape]` km neutralisés au départ   
+- `r iti_etape$Details$Nb_tours[Etape]` tours de circuits de `r iti_etape$Details$KM_par_tours[Etape]` km
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                                  `r heureDep`
+
+Arrivée au circuit                      `r heureCircuit`
+
+Arrivée finale                         `r heureArr`
+----------------------------------------------------
+
+## Parcours
+
+### Carte interactive
+
+```{r, echo = FALSE, eval = TRUE}
+
+
+# Fonction pour affichage carte typique étape 
+carte_dynamique_etape <- function(no_etape = 1){
+  
+  # Filtrer sur l'étape à créer et joindre à df_POI
+  POI <- points %>% filter(etape == no_etape)
+  
+  # POI is empty ?
+  poi_isEmpty <- nrow(POI) %>% as.integer()==0
+    
+  # Filtrer sur l'étape à créer
+  etape_line <- parcours %>% filter(etape == no_etape)
+    
+  # Points arrivée
+  pt_arrivee <- st_as_sf(st_cast(st_geometry(etape_line), to = "POINT")) %>% 
+    tail(n=1) %>% 
+    rename(geometry = x) %>% 
+    mutate(label_fr = "Arrivée Finale",
+           label_en = "Finish",
+           labels = "Fin",
+           etape = no_etape,
+           name = "Arrivée Finale / Finish")
+    
+  # Création carte
+  map_parcous <-mapview(parcours[Etape,],
+                      layer.name = "Parcours",
+                      color = couleurs$bleuTour,
+                      alpha = 0.7,
+                      map.types = "OpenStreetMap",
+                      lwd = 3,
+                      legend = FALSE)
+  map_POI <- NULL
+  map_POI <- if(!poi_isEmpty){
+            mapview(POI ,
+                    layer.name = "POI",
+                    color = POI$color,
+                    col.regions = POI$color,
+                    alpha = 0.0,
+                    map.types = "OpenStreetMap",
+                    lwd = 3,
+                    legend = FALSE,
+                    homebutton = FALSE)
+  }
+    
+  map_arrivee <- mapview(pt_arrivee ,
+                        layer.name = "Fin",
+                        color = couleurs$brunMaillot,
+                        col.regions = couleurs$brunMaillot,
+                        alpha = 0.0,
+                        map.types = "OpenStreetMap",
+                        lwd = 3,
+                        legend = FALSE,
+                        homebutton = FALSE)
+  
+  map <- map_parcous + map_POI + map_arrivee
+
+  map@map 
+}
+
+
+carte_dynamique_etape(Etape)
+
+```
+
+
+<br/>
+
+
+<a href="`r iti_etape$Details$Liens[Etape]`" target="blank">Lien vers <strong>Ride with GPS</strong></a>
+
+<br/>
+
+### Parcours complet
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png")))
+
+```
+
+<br/>
+
+### Détail du départ
+
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png")))
+
+```
+
+### Détail de l'arrivée
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png")))
+
+```
+
+<!-- À modifier avec nouveau vidéo 2024
+
+#### En images {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7_qncxP2Dbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br/>
+
+-->
+
+## Élévation
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Full_{lang}.png")))
+
+```
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Final_{lang}.png")))
+
+```
+
+## Description détaillée
+
+```{r echo=FALSE}
+
+# fonction tableau_Descrip_Etape dans `code/_import_itineraire.R`
+
+tableau_Descrip_Etape(Etape, lang)
+
+```
+
+
+<!-- impression des résultats si existent  -->
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("## Résultats")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Podium de l'étape {-}", .open = "[")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+podium_FR(Etape)
+
+```
+
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Maillots distinctifs après l'étape {-}", .open = "[")
+```
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+maillots_apres_etape_tableau_FR(Etape)
+
+```

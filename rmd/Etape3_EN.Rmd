@@ -1,0 +1,158 @@
+
+<!-- Besoin de changer le # de la ville du titre et la variable Etape et codeJour -->
+
+<!-- CLMI   -->
+
+# Stage 3 : `r params$ville` - ITT {#stage3}
+
+```{r, echo=FALSE}
+Etape <-3
+
+codeJour <- "Jeu"
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+heureDernierDep <- iti_etape$Details$DerDep[Etape]
+
+heureDernierArr <- iti_etape$Details$DerArr[Etape]
+
+```
+
+```{r, echo=FALSE, results='asis'}
+
+glue('<table border=1>
+    <tr>
+        <td><strong/>Powered by</strong></td>
+        <td><img src="../img/logo/comm_{Etape}.png" width="350" style="float:right"></td>
+    </tr>
+</table>')
+```
+
+<br/>
+
+**`r dates_EN %>% filter(code== codeJour) %>% pull(jsem_jour_mois_an)`** 
+
+ **`r iti_etape$Details$Distance_totale[Etape]` km**
+
+
+## Summary
+
+- Out and bakk Individual Time Trial : 2 x 4.2 km
+
+----------------------------------------------------
+                                              Time
+----------------- ----------------------------------
+First start                          `r heureDep`
+
+First finish                         `r heureArr`
+
+Last start                           `r heureDernierDep`
+
+Last finish                          `r heureDernierArr`
+----------------------------------------------------
+
+## Course
+
+### Interactive map
+
+```{r, echo = FALSE, eval = TRUE}
+
+carte_dynamique_etape(Etape)
+
+```
+
+
+<br/>
+
+
+<a href="`r iti_etape$Details$Liens[Etape]`" target="blank">Link to <strong>Ride with GPS</strong></a>
+
+<br/>
+
+### Full course
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png")))
+
+```
+
+<br/>
+
+### Start details
+
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png")))
+
+```
+
+### Finish details
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png")))
+
+```
+
+
+## Topographic profile
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Full_{lang}.png")))
+
+```
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Final_{lang}.png")))
+
+```
+
+
+## Detailed description
+
+```{r echo=FALSE}
+
+# Tableau sans footer pour le CLMI
+tableau_Descrip_BASE(Etape, lang)
+
+```
+
+<!-- impression des résultats si existent  -->
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("## Results")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Stage podium {-}", .open = "[")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+podium_EN(Etape)
+
+```
+
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Distinctive jerseys after the stage {-}", .open = "[")
+```
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+maillots_apres_etape_tableau_EN(Etape)
+
+```
+

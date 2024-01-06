@@ -1,0 +1,91 @@
+---
+title: "Tour de l'Abitibi Glencore 2024"
+favicon: "../img/favicon.jpg"
+image: "../img/favicon.jpg"
+links:
+  - label: Facebook
+    url: "https://www.facebook.com/tourdelabitibi/"
+  - label: Twitter
+    url: "https://twitter.com/TourAbitibi/"
+  - label: Instagram
+    url: "https://www.instagram.com/tourabitibi/"
+output:
+  postcards::jolla
+---
+
+<!-- CSS Custom -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+body {
+  background-color:#00414F;
+}
+
+h1 {
+  color: white;
+  padding: 25px;
+}
+
+a {
+  color: #eac11d;
+  background-color: transparent;
+  font-size: 1.4em;
+}
+
+a:hover {
+  color: #eac11d;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.btn-outline-dark {
+    color: white;
+    border-color: white;
+
+</style>
+
+<!-- Matomo -->
+<script>
+  var _paq = (window._paq = window._paq || []);
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function () {
+    var u = "//matomo.brunogauthier.net/";
+    _paq.push(["setTrackerUrl", u + "matomo.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d = document,
+      g = d.createElement("script"),
+      s = d.getElementsByTagName("script")[0];
+    g.async = true;
+    g.src = u + "matomo.js";
+    s.parentNode.insertBefore(g, s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+
+[Programmation préliminaire](prog/)
+
+<br/>
+
+[Guide Technique - Challenge Sprint Abitibi](sprint/)
+
+<br/>
+
+[Guide Technique - Version Française](FR/)
+
+<br/>
+
+[Technical Guide - English Version](EN/)
+
+<br/>
+
+[Documentation de l'organisateur](organisateur/)
+
+<br/>

@@ -1,0 +1,76 @@
+---
+title: "Challenge Sprint Abitibi 2024"
+description: "Résultats / Results"
+output:
+  distill::distill_article
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- Pour render : rmarkdown::render_site('guide_sprint') -->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+```
+
+```{r call_Libs_Vars, include=FALSE}
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Appel des fonctions résultats
+source(here::here("code","_useResults.R"))
+
+# Langue
+lang <- "FR"
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA, 
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+```
+
+
+<!-- Inscrire les données ici :  -->
+
+```{r input, include=FALSE}
+
+isResultsDisponibles <- FALSE
+
+liens_result <- "https://tourabitibi.com/wp-content/uploads/2024/07/ChalengeSprint2024-Resultats.pdf"
+
+```
+
+
+
+```{r results_a_venir, eval= !isResultsDisponibles, results='asis', echo= FALSE }
+
+glue("Résultats à venir / *Results to come*")
+
+```
+
+
+```{r tableau_results, eval= isResultsDisponibles, results='asis', echo= FALSE }
+
+# Référence pour insérer objet : https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html
+
+glue('<object data="{liens_result}" type="application/pdf" width="100%" height="650px">
+      <p><a href="{liens_result}" target="_blank">Téléchargez les résultats / *Download results*</a></p>
+    </object>')
+
+ 
+
+```
+
+    

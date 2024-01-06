@@ -1,0 +1,331 @@
+---
+title: "Tour de l'Abitibi Glencore 2024"
+description: "Programmation préliminaire<br/>Dernière mise à jour : `r Sys.Date()`"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+editor_options: 
+  chunk_output_type: console
+---
+<!-- Références Distill : https://rstudio.github.io/distill/ -->
+
+<!-- Analytics Matomo dans le fichier _footer.html -->
+
+<!-- Pour render : `rmarkdown::render_site('prog_prelim')` -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+
+```
+
+```{r call_Libs_Vars, include=FALSE}
+
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Dates
+source(here("code", "_Dates.R"))
+
+# Pour accès aux données du fichier excel Itineraires.xlsx
+source(here("code","_import_itineraire.R"))
+
+# Pour accès aux tracés
+parcours <- st_read(here("gpx","output","parcours.shp"))
+
+# Langue
+lang <- "FR"
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA,
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                echo = FALSE,
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+```
+
+
+```{r params}
+
+data <- iti_etape$Details %>% 
+  select(Etape, 
+         Descr_Villes, 
+         Descr_km,
+         KM_Total, 
+         km_neutres = KM_Neutres, 
+         nb_tours = Nb_tours,
+         km_par_tour = KM_par_tours,
+         Distance_Route, 
+         Distance_en_circuit, 
+         Distance_totale,
+         Liens, 
+         heure_dep = Depart,
+         heure_arr_circuit = HeureEntreeVille, 
+         heure_arr_finale = time_arrivee
+         ) %>% 
+  # Correction si heure est mal formatée - par exemple : 14:0  
+  mutate(heure_dep = str_replace(heure_dep, "(\\d):0$", "\\1:00"),
+         heure_arr_circuit = str_replace(heure_arr_circuit, "(\\d):0$", "\\1:00"),
+         heure_arr_finale = str_replace(heure_arr_finale, "(\\d):0$", "\\1:00") )
+
+
+```
+
+```{r fun_lien_iframe}
+
+lien_iframe <- function(etape){
+  
+  ## Derniers chiffres de "https://ridewithgps.com/routes/123456789"
+  id_RWG <- str_extract(data$Liens[etape], "\\d*$") 
+  
+  # Création d'un lien de type iframe
+  lien <- glue('<iframe src="https://ridewithgps.com/embeds?type=route&id={id_RWG}&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>')
+  
+  return (lien)
+}
+```
+
+
+Voici un aperçu préliminaire de la `r params$edition`^e^ édition du **Tour de l'Abitibi `r params$sponsor`** qui se tiendra du `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an) %>% tolower()` au `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an) %>% tolower()` à `r params$ville`. 
+
+
+```{r map_globale, echo = FALSE, eval = TRUE}
+# Visualisation
+mapview(parcours, 
+        lwd = 2.5,
+        alpha = 0.7,
+        z = "name",
+        color = palette.colors(n=7, palette="ggplot2"),
+        layer.name = "Étape")
+```
+
+<aside>
+  <a href="https://tourabitibi.com" target="_blank" >
+  <img src="../img/logo/TA_Glencore.png" alt="Logo Tour de l'Abitibi Glencore" width="100%">
+  </a>
+</aside>
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jsem_jour_mois_an)` - Présentation des équipes et Challenge Sprint
+
+De xx:30 à xx:00, secteur Hôtel de Ville. 
+
+<br/>
+
+
+```{r}
+etape = 1
+```
+
+
+## Étape `r etape` -  `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` - `r data$Descr_Villes[etape]`
+
+ **`r data$Descr_km[etape]`**
+
+- `r data$km_neutres[etape]` km neutralisés au départ  
+- `r data$nb_tours[etape]` tours de circuit d'arrivée long de `r data$km_par_tour[etape]` km
+
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                     `r data$heure_dep[etape]`
+
+Arrivée en circuit    `r data$heure_arr_circuit[etape]`
+
+Arrivée finale      `r data$heure_arr_finale[etape]`
+----------------------------------------------------
+
+<br/>
+
+
+`r lien_iframe(etape)`
+
+<br/>
+
+
+```{r}
+etape = 2
+```
+
+
+## Étape `r etape` -  `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` - `r data$Descr_Villes[etape]`
+
+ **`r data$Descr_km[etape]`**
+
+- `r data$km_neutres[etape]` km neutralisés au départ  
+- `r data$nb_tours[etape]` tours de circuit d'arrivée long de `r data$km_par_tour[etape]` km
+
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                     `r data$heure_dep[etape]`
+
+Arrivée en circuit    `r data$heure_arr_circuit[etape]`
+
+Arrivée finale      `r data$heure_arr_finale[etape]`
+----------------------------------------------------
+
+<br/>
+
+
+`r lien_iframe(etape)`
+
+<br/>
+
+```{r}
+etape = 3
+```
+
+
+## Étape `r etape` -  `r dates_FR %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)` AM - `r data$Descr_Villes[etape]`
+
+ **`r data$Descr_km[etape]`**
+
+Premier départ à `r data$heure_dep[etape]`.
+
+Dernières arrivées avant midi.
+
+<br/>
+
+`r lien_iframe(etape)`
+
+<br/>
+
+```{r}
+etape = 4
+```
+
+
+## Étape `r dates_FR %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)` PM - `r data$Descr_Villes[etape]`
+
+ **`r data$Descr_km[etape]`**
+
+- `r data$km_neutres[etape]` km neutralisés au départ   
+- Sans circuit d'arrivée
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                     `r data$heure_dep[etape]`
+
+Arrivée finale      `r data$heure_arr_finale[etape]`
+----------------------------------------------------
+
+<br/>
+
+`r lien_iframe(etape)`
+
+<br/>
+
+```{r}
+etape = 5
+```
+
+
+## Étape `r dates_FR %>% filter(code=="Ven") %>% pull(jsem_jour_mois_an)` - `r data$Descr_Villes[etape]`
+
+ **`r data$Descr_km[etape]`**
+
+- `r data$km_neutres[etape]` km neutralisés au départ   
+- Sans circuit d'arrivée
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                     `r data$heure_dep[etape]`
+
+Arrivée finale      `r data$heure_arr_finale[etape]`
+----------------------------------------------------
+
+<br/>
+
+`r lien_iframe(etape)`
+
+<br/>
+
+```{r}
+etape = 6
+```
+
+
+## Étape `r etape` -  `r dates_FR %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)` - `r data$Descr_Villes[etape]` - Circuit urbain
+
+ **`r data$Descr_km[etape]`**
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                     `r data$heure_dep[etape]`
+
+Arrivée finale      `r data$heure_arr_finale[etape]`
+----------------------------------------------------
+
+<br/>
+
+`r lien_iframe(etape)`
+
+<br/>
+
+
+```{r}
+etape = 7
+```
+
+
+## Étape `r etape` -  `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` - `r data$Descr_Villes[etape]`
+
+**`r data$Descr_km[etape]`**
+
+- `r data$km_neutres[etape]` km neutralisés au départ   
+- `r data$nb_tours[etape]` tours de circuit urbain long de `r data$km_par_tour[etape]` km
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                     `r data$heure_dep[etape]`
+
+Arrivée en circuit    `r data$heure_arr_circuit[etape]`
+
+Arrivée finale      `r data$heure_arr_finale[etape]`
+----------------------------------------------------
+
+<br/>
+
+`r lien_iframe(etape)`
+
+<br/>
+
+
+## Résumé de l'épreuve - Tour de l'Abitibi `r params$sponsor` `r params$annee`
+
+Distance officielle totale : **`r sum(data$Distance_totale)` km**
+
+Distance sur la route : **`r sum(data$Distance_Route)` km**
+
+Distance en circuit d'arrivée / urbain : **`r sum(data$Distance_en_circuit)` km**
+
+Nombre de tours total : **`r sum(data$nb_tours)` tours**
+
+Km neutralisés (non-inclus) : **_`r sum(data$km_neutres)` km_**  

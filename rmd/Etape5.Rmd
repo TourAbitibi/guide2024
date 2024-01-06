@@ -1,0 +1,177 @@
+<!-- Besoin de changer le # de la ville du titre et la variable Etape et codeJour -->
+
+<!-- Version FR - SANS circuit d'arrivée   -->
+
+# Étape 5 : `r iti_etape$Details$Descr_Villes[5]` {#etape5}
+
+
+```{r, echo=FALSE}
+Etape <-5
+
+codeJour <- "Ven"
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+```
+
+```{r, echo=FALSE, results='asis'}
+
+glue('<table border=1>
+    <tr>
+        <td><strong/>Présentée par</strong></td>
+        <td><img src="../img/logo/comm_{Etape}.png" width="400" style="float:right"></td>
+    </tr>
+</table>')
+```
+
+<br/>
+
+**`r dates_FR %>% filter(code== codeJour) %>% pull(jsem_jour_mois_an)`** 
+
+**`r iti_etape$Details$Distance_totale[Etape]` km**
+
+
+
+
+## Sommaire
+
+
+- `r iti_etape$Details$KM_Neutres[Etape]` km neutralisés au départ   
+- Boucle en sens anti-horaire
+- Arrivée au sommet du Mont Bell : bonification doublée pour Classement général individuel de la montagne (GPM) (art. 13.3, [Règlements particuliers])
+- Cérémonies protocolaires sur le site de départ devant l'hôtel de ville de Senneterre
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                                  `r heureDep`
+
+Arrivée finale                         `r heureArr`
+----------------------------------------------------
+
+## Parcours
+
+### Carte interactive
+
+
+```{r, echo = FALSE, eval = TRUE}
+
+carte_dynamique_etape(Etape)
+
+```
+
+
+<br/>
+
+<a href="`r iti_etape$Details$Liens[Etape]`" target="blank">Lien vers <strong>Ride with GPS</strong></a>
+
+<br/>
+
+### Parcours complet
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png")))
+
+```
+
+<br/>
+
+### Détail du départ
+
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png")))
+
+```
+
+### Détail de l'arrivée
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png")))
+
+```
+
+#### En images {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z7yGlUB9rwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br/>
+
+
+## Élévation
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Full_{lang}.png")))
+
+```
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Final_{lang}.png")))
+
+```
+
+<!-- impression des porteurs de maillots si existent  -->
+
+```{r, eval=(verif_porteurs_complets(BeforeStage = Etape)), results='asis', echo= FALSE }
+
+glue("## Porteurs des maillots pour l'étape")
+```
+
+
+```{r, eval=(verif_porteurs_complets(BeforeStage = Etape)), results='asis', echo= FALSE }
+
+maillots_porteurs_tableau_FR(Etape)
+
+```
+
+<!-- fin porteur maillots -->
+
+## Description détaillée
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, quiet=TRUE}
+
+
+tableau_Descrip_Etape_Sommet(Etape, lang)
+
+```
+
+<!-- impression des résultats si existent  -->
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("## Résultats")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Podium de l'étape {-}", .open = "[")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+podium_FR(Etape)
+
+```
+
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Maillots distinctifs après l'étape {-}", .open = "[")
+```
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+maillots_apres_etape_tableau_FR(Etape)
+
+```

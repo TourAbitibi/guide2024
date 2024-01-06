@@ -1,0 +1,24 @@
+Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
+Start,Start of route,0,0,,
+Left,sign_50,1.57,294.40,,Edited
+Straight,sign_51,3.01,301.00,,Edited
+Left,sign_05,31.03,287.20,,Edited
+Left,sign_61,59.33,321.90,,Edited
+Left,sign_04,59.42,322.00,,Edited
+Left,sign_62,76.51,304.00,,Edited
+Left,sign_03,76.51,304.00,,Edited
+Straight,sign_02,76.81,301.50,,Edited
+Right,sign_01,115.86,300.90,,Edited
+Left,sign_06,117.24,294.00,,Edited
+Left,sign_07,117.30,294.40,,Edited
+Danger,sign_08,117.66,296.00,,Edited
+Left,sign_09,117.75,295.50,,Edited
+Left,sign_10,117.89,296.00,,Edited
+Left,sign_11,118.02,295.90,,Edited
+Left,sign_12,118.14,297.80,,Edited
+Left,sign_13,118.26,297.90,,Edited
+Left,sign_14,118.39,299.00,,Edited
+Left,sign_15,118.68,301.30,,Edited
+Left,sign_16,118.82,304.10,,Edited
+Left,sign_17,118.89,305.00,,Edited
+End,End of route,119.07,306.40,

@@ -1,0 +1,190 @@
+
+<!-- Besoin de changer le # de la ville du titre et la variable Etape et codeJour -->
+
+<!-- Version FR - AVEC circuit d'arrivée -->
+
+<!-- Notes spéciale pour dernière étape -->
+
+# Étape 7 : `r iti_etape$Details$Descr_Villes[7]` {#etape7}
+
+```{r, echo=FALSE}
+Etape <-7
+
+codeJour <- "Dim"
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureCircuit <- iti_etape$Details$HeureEntreeVille[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+```
+
+```{r, echo=FALSE, results='asis'}
+
+glue('<table border=1>
+    <tr>
+        <td><strong/>Présentée par</strong></td>
+        <td><img src="../img/logo/comm_{Etape}.png" width="350" style="float:right"></td>
+    </tr>
+</table>')
+```
+
+<br/>
+
+**`r dates_FR %>% filter(code== codeJour) %>% pull(jsem_jour_mois_an)`** 
+
+ **`r iti_etape$Details$Distance_totale[Etape]` km**
+
+
+## Sommaire
+
+- `r iti_etape$Details$KM_Neutres[Etape]` km neutralisés au départ   
+- `r iti_etape$Details$Nb_tours[Etape]` tours de circuits de `r iti_etape$Details$KM_par_tours[Etape]` km
+
+
+----------------------------------------------------
+                                              Heure
+----------------- ----------------------------------
+Départ                                  `r heureDep`
+
+Arrivée au circuit                      `r heureCircuit`
+
+Arrivée finale                         `r heureArr`
+----------------------------------------------------
+
+## Parcours
+
+### Carte interactive
+
+
+```{r, echo = FALSE, eval = TRUE}
+
+carte_dynamique_etape(Etape)
+
+```
+
+
+<br/>
+
+<a href="`r iti_etape$Details$Liens[Etape]`" target="blank">Lien vers <strong>Ride with GPS</strong></a>
+
+<br/>
+
+### Parcours complet
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png")))
+
+```
+
+<br/>
+
+### Détail du départ
+
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png")))
+
+```
+
+### Détail de l'arrivée
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png")))
+
+```
+
+<!-- En attente vidéo 2024
+
+#### En images {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7_qncxP2Dbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br/>
+-->
+
+## Élévation
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Full_{lang}.png")))
+
+```
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Final_{lang}.png")))
+
+```
+
+<!-- impression des porteurs de maillots si existent  -->
+
+```{r, eval=(verif_porteurs_complets(BeforeStage = Etape)), results='asis', echo= FALSE }
+
+glue("## Porteurs des maillots pour l'étape")
+```
+
+
+```{r, eval=(verif_porteurs_complets(BeforeStage = Etape)), results='asis', echo= FALSE }
+
+maillots_porteurs_tableau_FR(Etape)
+
+```
+
+<!-- fin porteur maillots -->
+
+## Description détaillée
+
+```{r echo=FALSE}
+
+
+tableau_Descrip_Etape(Etape, lang)
+
+```
+
+### Notes {-}
+
+Merci de consulter l'article 11 des [règlements particuliers][Règlements particuliers] concernant l'arrivée en circuit de cette dernière étape.
+
+<!-- impression des résultats si existent  -->
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("## Résultats")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Podium de l'étape {-}", .open = "[")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+podium_FR(Etape)
+
+```
+
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Maillots distinctifs après l'étape finale {-}", .open = "[")
+```
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+maillots_apres_etape_tableau_FR(Etape)
+
+```
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue('<a href="https://tourabitibi.com/wp-content/uploads/2024/07/TourAbitibi2024-Etape729.pdf" target="_blank">Lien vers résultats complets</a>')
+
+```

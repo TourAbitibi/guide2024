@@ -1,0 +1,53 @@
+
+<!-- Croquis.Rmd  : croquis d'installation pour équipe logistiques -->
+
+# Croquis Installation {#croquis}
+
+**Référence 2023, à mettre à jour 2024.**
+
+Présentation des différents site de compétition et des installations logistiques qui y sont requises.
+
+
+### Croquis - Challenge Sprint - Amos
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/yqDdTCb/croquis-challengesprint.png")
+```
+<br/>
+
+### Croquis - CLMI - Amos
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/m8dFN2G/croquis-clmi-amos.png")
+```
+<br/>
+
+### Croquis départ - Amos
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/XJy04Cq/croquis-site-amos.png")
+```
+<br/>
+
+### Croquis - Départ - Val-d'Or
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/tHc0nWd/croquis-dep-vd.png")
+```
+<br/>
+
+### Croquis - Départ - Rouyn-Noranda 
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/Rz25BzY/croquis-dep-rn.png")
+```
+<br/>
+
+### Croquis - Départ Arrivée - Malartic
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/KD9chrr/croquis-dep-arr-malartic.png")
+```
+<br/>
+
+

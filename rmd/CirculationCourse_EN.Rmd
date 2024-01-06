@@ -1,0 +1,44 @@
+
+<!-- CirculationCourse_EN.Rmd  : version anglaise -->
+
+# Race circulation {#circulation}
+
+###  Road race {-}
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Guidelines for vehicle circulation in the race convoy, p.7](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/7dafeb185ad035d43c6ab4c80b2d1ed3/2021-uci-road-guidelines-for-circulation-eng.pdf)"}
+
+knitr::include_graphics(here("img/support/circulation_Course_EN.png"))
+```
+
+### Circuit finish (Stage 1, 2 and 7) or urban circuit (Stage 6) {-}
+
+To ensure the safety of the riders and the local population, these specific guidelines must be followed for a circuit finish:
+
+* All caravan vehicles must enter the finish circuit.
+
+* Only vehicles with an essential function in the race are allowed to complete the full circuit laps. Other vehicles take the deviation before the first passage of the line.
+
+* After stopping to assist a rider or other reason, the vehicle resumes its place in the caravan where it is. **Overtaking to return to its original place in the queue is prohibited**.
+
+* If the stop is prolonged and a gap has formed between the caravan and its vehicle, the driver must be particularly careful when returning to the caravan, as some intersections may be open to automobile or pedestrian traffic.
+
+* The maximum speed exceptionally tolerated in the city is **70 km/h**.
+
+* Any **dangerous** driving will be sanctioned by the commissioners, the organization, and/or its representatives, as described in Article **19** of the [specific rules][Specific rules]. 
+
+
+### Caravan deviation {-}
+
+A deviation for vehicles is set up upstream of the finish line for each event, with the exception of stage **5** (summit finish).
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Guidelines for vehicle circulation in the race convoy, p.18](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/7dafeb185ad035d43c6ab4c80b2d1ed3/2021-uci-road-guidelines-for-circulation-eng.pdf)"}
+
+knitr::include_graphics(here("img/support/circulation_derivation_EN.png"))
+```
+
+### Individual time trial {-}
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [Guidelines for vehicle circulation in the race convoy, p.30](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/7dafeb185ad035d43c6ab4c80b2d1ed3/2021-uci-road-guidelines-for-circulation-eng.pdf)"}
+
+knitr::include_graphics(here("img/support/circulation_CLMI.png"))
+```

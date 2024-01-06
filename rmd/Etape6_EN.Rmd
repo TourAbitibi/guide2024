@@ -1,0 +1,166 @@
+
+<!-- Besoin de changer le # de la ville du titre et la variable Etape et codeJour -->
+
+<!-- Version anglaise  -- CIRCUIT URBAIN   -->
+
+# Stage 6 : Urbain circuit `r iti_etape$Details$VilleDep[6]` {#stage6}
+
+```{r, echo=FALSE}
+Etape <- 6
+
+codeJour <- "Sam"
+
+heureDep <- iti_etape$Details$time_depart[Etape]
+
+heureArr <- iti_etape$Details$time_arrivee[Etape]
+
+```
+
+```{r, echo=FALSE, results='asis'}
+
+glue('<table border=1>
+    <tr>
+        <td><strong/>Powered by</strong></td>
+        <td><img src="../img/logo/comm_{Etape}.png" width="350" style="float:right"></td>
+    </tr>
+</table>')
+```
+
+<br/>
+
+**`r dates_EN %>% filter(code== codeJour) %>% pull(jsem_jour_mois_an)`** 
+
+ **`r iti_etape$Details$Distance_totale[Etape]` km**
+
+
+## Summary
+
+- Counterclockwise loop
+
+
+----------------------------------------------------
+                                              Time
+----------------- ----------------------------------
+Start                                  `r heureDep`
+
+Finish                                 `r heureArr`
+----------------------------------------------------
+
+## Course
+
+### Interactive map
+
+```{r, echo = FALSE, eval = TRUE}
+
+carte_dynamique_etape(Etape)
+
+```
+
+
+<br/>
+
+
+<a href="`r iti_etape$Details$Liens[Etape]`" target="blank">Link to <strong>Ride with GPS</strong></a>
+
+<br/>
+
+### Full course
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png")))
+
+```
+
+<br/>
+
+### Start details
+
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png")))
+
+```
+
+### Finish details
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png")))
+
+```
+
+
+## Topographic profile
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Full_{lang}.png")))
+
+```
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "elev", glue("Etape{Etape}_Final_{lang}.png")))
+
+```
+
+<!-- impression des porteurs de maillots si existent  -->
+
+```{r, eval=(verif_porteurs_complets(BeforeStage = Etape)), results='asis', echo= FALSE }
+
+glue("## Jersey wearers for the stage")
+```
+
+
+```{r, eval=(verif_porteurs_complets(BeforeStage = Etape)), results='asis', echo= FALSE }
+
+maillots_porteurs_tableau_EN(Etape)
+
+```
+
+<!-- fin porteur maillots -->
+
+## Detailed description
+
+```{r echo=FALSE}
+
+
+tableau_Descrip_Etape(Etape, lang)
+
+```
+
+<!-- impression des résultats si existent  -->
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("## Results")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Stage podium {-}", .open = "[")
+```
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+podium_EN(Etape)
+
+```
+
+
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+glue("### Distinctive jerseys after the stage {-}", .open = "[")
+```
+
+```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
+
+maillots_apres_etape_tableau_EN(Etape)
+
+```
+

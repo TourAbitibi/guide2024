@@ -1,0 +1,68 @@
+
+<!-- Locaux.Rmd  : document bilingue -->
+
+```{r locaux_title_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+
+glue("# List of rooms {#rooms}", .open = "[")
+```
+
+```{r locaux_titre_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+
+glue("# Liste des locaux {#locaux}", .open = "[")
+```
+
+
+
+```{r team_room_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("### Teams rooms {-}", .open = "[")
+```
+
+```{r team_room_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("### Locaux des équipes {-}", .open = "[")
+```
+
+
+```{r team_room_tableau, echo=FALSE}
+
+locaux_xlsx <- here("excel", "locaux.xlsx")
+
+# Note : mettre en ordre manuellement dans le fichier excel selon l'ordre des dossards !
+
+read_excel(locaux_xlsx, sheet = "EQUIPES") %>% 
+  select(role = ifelse(lang=="FR", "equipe_fr", "equipe_en"),
+         room) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c("l","r"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+
+```
+<br/>
+
+```{r staff_room_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("### Administratives rooms {-}", .open = "[")
+```
+
+```{r staff_room_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("### Locaux administratifs {-}", .open = "[")
+```
+
+
+```{r admin_room_tableau, echo=FALSE}
+
+locaux_xlsx <- here("excel", "locaux.xlsx")
+
+read_excel(locaux_xlsx, sheet = "ADMIN") %>% 
+  select(role = ifelse(lang=="FR", "commite_fr", "commite_en"),
+         room = ifelse(lang=="FR", "room_fr", "room_en")) %>% 
+  arrange(role) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c("l","r"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+
+```

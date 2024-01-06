@@ -1,0 +1,57 @@
+
+<!-- FollowMee  : info pour connexion site FollowMee -->
+
+# Application GPS FollowMee {#followmee}
+
+Nous utilisons le site <a href="https://www.followmee.com" target="_blank">FollowMee</a> afin de pouvoir localiser:
+
+- le devant de la course : voiture du directeur technique;
+- le peloton : voiture du président du jury;
+- la queue de la course : le camion balai.
+
+Pour ce faire, les personnes concernées doivent utiliser l'application sur leur téléphone cellulaire. 
+
+### Application à installer {-}
+
+```{r, out.width="35%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "followmee", "app.jpg"))
+```
+
+<br/>
+
+Il est possible de télécharger gratuitement la version correspondante à votre cellulaire grâce au code QR:
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "followmee", "codeQR.png"))
+```
+
+
+
+### Paramètres de l’application {-}
+
+Dans menu / settings : 
+
+- **username** : tour2024
+- **password** : communiquer avec <a href="mailto:tour@brunogauthier.net">Bruno Gauthier</a>
+- **Device name** : Direction Course / Peloton / Balai
+
+Pour assurer le bon fonctionnement :
+
+- Accepter que l’application vous suive en tout temps.
+- Presser sur **start** avant la course et **stop** après.
+- Fermer l’application entre les courses pour éviter de drainer la batterie de votre cellulaire.
+
+### Login token {-}
+
+L'accès au compte est aussi possible grâce au *<a href="https://www.followmee.com/FAQ.aspx?r=1&t=logintoken" target="_blank">login token</a>*.
+
+
+### Visualisation de la carte {-}
+
+Afin de visualiser, l'équipe de production TV peut accéder au site <a href="https://www.followmee.com" target="_blank">FollowMee</a>. 
+
+Une fois connecté avec l'identifiant, il est possible d'aller sur l'onglet `Map` et de créer un lien pour le suivi.
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "followmee", "plan.png"))
+```

@@ -1,0 +1,34 @@
+book_filename: "guide2024"
+delete_merged_file: true
+language:
+  label:
+    toc: "Table des matières"
+    fig: "FIGURE "
+    tab: "TABLEAU "
+  ui:
+    chapter_name: ""
+rmd_files:
+  - "index.Rmd"
+  - "../rmd/MotsBienvenue.Rmd"
+  - "../rmd/Partenaires.Rmd"
+  - "../rmd/Programmation.Rmd"
+  - "../rmd/CO.Rmd"
+  - "../rmd/FeuillesRoute.Rmd"
+  - "../rmd/Etape1.Rmd"
+  - "../rmd/Etape2.Rmd"
+  - "../rmd/Etape3.Rmd"
+  - "../rmd/Etape4.Rmd"
+  - "../rmd/Etape5.Rmd"
+  - "../rmd/Etape6.Rmd"
+  - "../rmd/Etape7.Rmd"
+  - "../rmd/Reglements.Rmd"
+  - "../rmd/CirculationCourse.Rmd"
+  - "../rmd/Regl_sejour.Rmd"
+  - "../rmd/Repas.Rmd"
+  - "../rmd/MedMasso.Rmd"
+  - "../rmd/Locaux.Rmd"
+  - "../rmd/CarteAbitibi.Rmd"
+#delete_merged_file: true
+#language:
+#  ui:
+#    chapter_name: ""

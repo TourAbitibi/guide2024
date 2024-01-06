@@ -1,0 +1,13 @@
+```{r, echo=FALSE, results='asis'}
+  
+  ### Préparation des pages détaillées par Étape, contenant la partie technique (même que le guide) et les détails de signalisation ###
+
+for (i in c(1:7)){
+  
+  cat( knitr::knit_child(here("rmd",glue("Etape{i}.Rmd")), envir = environment(), quiet = TRUE))
+  
+  cat( knitr::knit_child(here("rmd","Etape_sign.Rmd"), envir = environment(), quiet = TRUE))
+  
+}
+
+```

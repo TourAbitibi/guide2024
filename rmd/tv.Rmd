@@ -1,0 +1,95 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- tv  : info pour moto tv -->
+
+# Motos-Caméras {#moto-tv}
+
+La médiatisation de son épreuve est particulièrement importante pour l’organisateur. Elle lui permet d’assurer, en amont, la promotion de son épreuve ; elle permet au public de suivre la course en direct. 
+
+Elle peut aussi constituer, pour les partenaires de l’événement, la garantie d’une visibilité de leur marque ou de leur territoire auprès d’un large public et, par conséquent, conditionner le modèle économique et la pérennité de l’événement.
+
+Il doit aussi, de plus en plus, créer lui-même du contenu et le diffuser sur internet et sur les médias sociaux.
+
+> Le cyclisme est un sport d’équipe… filmé par des équipes techniques qui doivent être soudées et structurées. Sur un terrain aussi compliqué que la route, leur expérience est capitale pour la réussite de la production TV.
+
+<br/>
+
+**Références complètes** : 
+
+- <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=247" target="_blank">Guide Organisateur UCI, section J.5 p. 245</a>
+- <a href="https://assets.ctfassets.net/761l7gh5x5an/6CZrPOFvHrTlhFnDN1tnA5/ca2b2ad10820c4509dd5cdc0d6198ada/guidedeproductiontv-tvproductionguide_neutral.pdf#page=18" target="_blank">Guide Production TV UCI, p. 18</a>
+
+
+### Communications et respect des directives {-}
+
+Pour la sécurité de tous et le bon déroulement sportif de l'épreuve, le pilote de la moto-caméra et son caméraman doivent être en tout temps à l'écoute de la fréquence Radio-Tour sur le radio fourni par l'organisation. Ces derniers doivent se soumettre immédiatement à toute demande en provenance de la direction course.
+
+Le caméraman et le pilote **peuvent être sanctionnés** s’ils contreviennent à un règlement ou à une directive lors d’une épreuve (mise hors course, amende, etc.).
+
+
+### Position des motos-caméras durant la course {-}
+
+#### Peloton groupé {-}
+
+Quand un peloton roule à allure modérée, il n’y a qu’un seul caméraman en tête du peloton. Les caméramen doivent veiller à ne pas géner les coureurs ou la circulation des autres véhicules **(1)**.
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_peleton_groupe.png"))
+```
+
+
+
+#### Peloton roulant à allure rapide {-}
+
+Les caméramen filment de l’arrière ou de profil **(2)**. 
+
+Le caméraman ne peut se positionner devant un groupe roulant à une allure rapide **(3)**. Cette position pourrait gêner ou favoriser les coureurs selon la situation de course.
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_peleton_rapide.png"))
+```
+
+
+#### Échappée {-}
+
+La moto-caméra demeure derrière l'échappée et filme de dos ou de 3/4 arrière. 
+
+```{r, out.width="60%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_derriere_echappee.png"))
+```
+
+
+
+#### Jonction entre deux groupes {-}
+
+Quand deux groupes de coureurs sont sur le point de se rejoindre, le caméraman ne peut rester intercalé. Il doit soit :
+
+- **A** : Se positionner pour filmer de profil.
+- **B** : Se positionner pour filmer de l’arrière
+
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_jonction.png"))
+```
+
+
+#### Arrivée {-}
+
+Les caméramen prennent la dérivation avant la ligne d’arrivée, sauf dans certaines causes sur décision
+des commissaires UCI (étape de montagne, courses ne bénéficiant pas de caméra fixe à l’arrivée)
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_arrivee.png"))
+```
+
+
+### En terminant {-}
+
+Quelques exemples en vidéos.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U71fKofZK_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

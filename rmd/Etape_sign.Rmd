@@ -1,0 +1,143 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+## Signalisation - Carte
+
+```{r, echo=FALSE, eval=TRUE}
+
+POI <- points %>% filter(etape == Etape)
+
+mapview(parcours %>% filter(etape == Etape) ,
+        layer.name = "Parcours",
+        color = couleurs$bleuTour,
+        alpha = 0.7,
+        map.types = "OpenStreetMap",
+        lwd = 3,
+        legend = FALSE)+
+  mapview( POI,
+          layer.name = "POI",
+          color = POI$color,
+          col.regions = POI$color,
+          alpha = 0.0,
+          map.types = "OpenStreetMap",
+          lwd = 3,
+          legend = FALSE,
+          homebutton = FALSE)+
+   mapview(points_signalisation %>% filter(etape == Etape) ,
+          layer.name = "Signalisation",
+          color = "red",
+          col.regions = "red",
+          alpha = 0.0,
+          map.types = "OpenStreetMap",
+          lwd = 3,
+          legend = FALSE,
+          homebutton = FALSE)
+
+```
+
+
+## Signalisation - Tableau
+
+```{r, echo = FALSE, eval = TRUE}
+
+# Pour calculs des temps de passage des POIs
+dep_etape_time <- iti_etape$Details[(Etape),] %>% select(dttm_depart) %>% pull()
+vit_moy_etape <- iti_etape$Details[(Etape),] %>% select(Vit_moy) %>% pull()
+
+# Voir _import_itineraire.R pour fonction : calcul_h_passage(km)
+
+# Obtenir tous les POIs de signalisation de l'étape
+POIs <- POIs_signalisation(Etape)
+
+# Création du tableau style 'Kable'
+POIs_tableau_affichage <- POIs_tableau(POIs)
+
+# Affichage du tableau contenant tous les POIs de signalisation de l'étape
+POIs_tableau_affichage
+
+```
+
+
+## Signalisation - Détails
+
+```{r, echo=FALSE, results='asis'}
+
+
+for (poi_idx in seq(nrow(POIs))) {
+  
+  P <- POIs %>% slice(poi_idx)
+  
+  cat( knitr::knit_child(here("rmd","Signalisation_Details.Rmd"), envir = environment(), quiet = TRUE))
+
+}
+
+```
+
+
+## Matériel pour signalisation (flèchage)
+
+```{r, eval= (iti_etape$Details$Nb_tours[Etape] >0 ) , echo=FALSE, results='asis'}
+
+# S'il y a un circuit, on veut le nombre d'affiche jusqu'au circuit d'arrivée
+
+descr_iti <- calcul_iti_etape(Etape, "FR")
+  
+descr_iti %>% as_tibble() %>% 
+  mutate(ligne_entree_circuit = str_detect(Details, "circuit d'arrivée" )) %>% 
+  slice(1:(which(ligne_entree_circuit))) %>%
+  select(Symbol) %>% 
+  janitor::tabyl(Symbol) %>% 
+  filter(!Symbol %in% c("Info", "Start", "Danger", "Bypass" )) %>% 
+  left_join(iti_etape$Lexique, by = "Symbol") %>% 
+  select(Type = Info_FR,
+         Nombre = n,
+         -percent) %>% 
+  arrange(Type) %>% 
+  kbl(  escape = F, # permet de passer les <br/>
+        align = c(rep('c', times = 2))) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE, 
+                  font_size = 16) %>% 
+  column_spec(2, bold = T) %>% 
+  add_header_above(c( "Affichage des épreuves"  = 2)) %>% 
+  footnote(.,general = c(
+              "Jusqu'à l'entrée du circuit d'arrivée",
+              "Panneaux 25 km, 20 km, 10 km, 5 km, 4 km, 3 km, 2 km par équipe route (Maurice)",
+              "Flamme rouge (1 km) et panneaux métriques 500 m, 300 m, 200 m, 150 m, 100 m, 50 m à installer par l'équipe en ville"))
+```
+
+
+```{r, eval= (iti_etape$Details$Nb_tours[Etape] == 0 ) , echo=FALSE, results='asis'}
+
+# S'il n'y a pas de circuit, on veut le nombre d'affiche total
+
+descr_iti <- calcul_iti_etape(Etape, "FR")
+  
+descr_iti %>% as_tibble() %>% 
+  select(Symbol) %>% 
+  janitor::tabyl(Symbol) %>% 
+  filter(!Symbol %in% c("Info", "Start", "Danger" , "Bypass", "Finish", "Bell")) %>% 
+  left_join(iti_etape$Lexique, by = "Symbol") %>% 
+  select(Type = Info_FR,
+         Nombre = n,
+         -percent) %>% 
+  arrange(Type) %>% 
+  kbl(  escape = F, # permet de passer les <br/>
+        align = c(rep('c', times = 2))) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE, 
+                  font_size = 16) %>% 
+  column_spec(2, bold = T) %>% 
+  add_header_above(c( "Affichage des épreuves"  = 2)) %>% 
+  footnote(.,general = c(
+              "Jusqu'à la ligne d'arrivée",
+              "Panneaux 25 km, 20 km, 10 km, 5 km, 4 km, 3 km, 2 km par équipe route (Maurice)",
+              "Flamme rouge (1 km), panneaux métriques 500 m, 300 m, 200 m, 150 m, 100 m, 50 m, affiche déviation de caravane et zone ravito fixe à installer par l'équipe en ville"))
+```
+
+<br/>
+
+**Références** : <a href="https://downloads.ctfassets.net/761l7gh5x5an/7qhUGLmnseEMGg95GQnF1V/4228000a541888393810a793e2e16a50/uci-guide-orga-epreuve-road-2021-fra.pdf#page=115" target="_blank">Guide organisateur UCI, p.113</a>.

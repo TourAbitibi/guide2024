@@ -1,0 +1,164 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- ardoise.Rmd  : info pour horaire et coordonnées moto-info et ardoisier -->
+
+# Moto-Info et Ardoisier {#info_ardoise}
+
+Instructions et horaires pour les opérateurs de moto-info et ardoisiers.
+
+### Horaire {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "HORAIRE") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  inner_join(iti_etape$Details, by = 'Etape') %>% 
+  mutate(
+    Heure_Navette = format(Heure_Navette, format = "%H:%M")
+  ) %>% 
+  select(
+    'Étape' = Etape,
+    Jour,
+    "Villes d'étape" = Descr_Villes,
+    'Heure Navette' = Heure_Navette,
+    'Départ Course' = Depart,
+    'Moto-Info' = info,
+    'Ardoisier' = ardoisier,
+    'Notes' = notes
+  ) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c('c', rep('l', times = 2), rep('c', times = 2), rep('l', times = 3)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+
+```
+
+
+#### Notes {-}
+
+- S'assurer d'être à `r params$ville` - `r params$nom_centrale`, 30-45 min avant le départ de la navette.
+- Si vous vous rendez directement à Malartic ou Senneterre, merci d'aviser <a href="mailto:tour@brunogauthier.net?subject=Tour Abitibi - Ardoise Info">Bruno Gauthier</a> à l'avance.
+- Pour l'étape 6, être à la ligne départ/arrivée 1h minimum avant le départ.
+- Vous irez de `r params$ville` vers la ville de départ en voiture, retour sur la moto. 
+- S’assurer de récupérer et rendre le matériel à chaque journée, sauf entente. 
+
+
+### Coordonnées de l'équipe {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "COORD") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  filter(Nom != c('TBD')) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c(rep('l', times = 3)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+### Instructions {-}
+
+#### Rôle : Moto information {-}
+La personne en charge de la moto information doit avoir une certaine expérience de cette fonction. Cette moto, positionnée devant le peloton, signale en temps réel au speaker radio-tour qui se trouve dans la voiture du Président du Collège des Commissaires, les différents mouvements des coureurs et, le cas échéant, le ou les numéros de dossards et les écarts du/des coureurs échappés. Une deuxième moto info peut être utile; les motos se positionnent alors de façon à couvrir les différents
+groupes de coureurs.
+
+#### Rôle : Moto ardoisier {-}
+L'ardoisier est un membre de l'organisation. Il inscrit les numéros de dossard des coureurs échappés et les écarts en temps entre les différents groupes. L'information est fournie par Radio Tour ou par un chronométrage effectué directement par l'ardoisier.
+
+Matériel de l'ardoisier :
+
+- Un chronomètre
+- Une ardoise rectangulaire : dimensions préconisées : 40cm L x sur 55cm H (avec éventuellement un espace publicitaire de 10 cm en haut), de couleur foncée - noire de préférence - légère et en bois avec un trou sur la partie supérieure pour la prise en main.
+- Des bâtons de craie blanche de gros calibre (carrée ou ronde)
+- Un gant en tissu ou une éponge pour effacer l'ardoise 
+
+L'ardoisier sera piloté par une moto équipé d'un récepteur avec les fréquences Radio-Tour et Info. 
+
+Une ardoise doit être claire et rapide à lire. Sur le côté gauche de l'ardoise, les différents groupes - ou les numéros de dossards - seront marqués et soulignés :
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/Qfb2y0q/ardoise-exemple.png")
+```
+
+<br/>
+
+Les temps seront inscrits en minutes (**'**) et secondes (**"**).
+
+La moto doit se positionner, rapidement et sans les gêner, près de chaque groupe de coureurs afin de leur apporter cette information. Ensuite, elle repart vers l'avant de la course pour effectuer, si nécessaire, de nouveaux pointages. Il faut une bonne coordination entre le pilote et l'ardoisier afin de montrer au mieux l'ardoise et laisser le temps au coureur de la mémoriser. 
+
+Dès connaissance des nouveaux écarts, les temps doivent être donnés au plus vite. Quand la route est assez large, montrer l'ardoise à tout le peloton ou, au moins, à la moitié du peloton.
+
+On ne montre pas l'ardoise aux coureurs :
+
+- si l'écart est inférieur à **30 secondes** (sauf autorisation d'un commissaire),
+- à moins de 500m d'un **sprint intermédiaire ou d'un GPM**,
+- dans une zone de **ravitaillement**,
+
+Dans la mesure du possible, sur une course télévisée, il faut éviter de couper le champ de la caméra. Il est intéressant de montrer l'ardoise au public ainsi que dans la zone de ravitaillement où les assistants des équipes n'ont pas toujours ces informations.
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=296" target="_blank">Guide UCI, p. 294</a>
+
+
+#### Comment montrer l'ardoise {-}
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/KwjFqdm/ardoise-montrer-1.jpg")
+```
+
+<br/>
+
+- Pas au dessus de la tête,
+- la moto à côté des coureurs, pas devant,
+- aux 5-10 premiers en avant, pas tout le peloton.
+
+
+```{r, out.width="60%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/HXNpMHg/ardoise-montrer-2.jpg")
+```
+
+
+
+##### Un exemple en vidéo 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OA1hth5Xyno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br/>
+
+#### Positionnement des motos {-}
+
+- La Moto info demeure à la hauteur de la voiture commissaire 2 et se laisse descendre quand c'est requis de prendre les numéros de dossards ou des écarts.
+  
+  - Quand l'écart se confirme, on se laisse descendre pour prendre les numéros de dossard et les relayer sur la fréquence moto-info.
+
+- La moto ardoisier demeure devant la voiture de presse et se laisse descendre lorsque les écarts augmentent, pour montrer l'ardoise ou aider à calculer les écarts.
+  
+  - La direction course (Bruno) lui demandera de se laisser descendre lorsque requis.
+
+#### Matériel {-}
+
+M'avertir si vous n'avez pas de casque moto, nous en avons.
+
+En moto, vaut mieux être prêt à toutes les températures. Manteau, pantalon, ensemble de pluie, etc.
+
+Nous fournirons ardoises, crayons, chronomètre (le vôtre sera p-e plus *récent* que ceux que nous avons, si vous désirez)
+
+Vous aurez 2 radios portatifs avec vous.
+
+- premier sur la fréquence 1 - Radio-Tour. En écoute seulement. Accrocher le mirco dans le dos de votre pilote pour que vous entendiez tous les deux
+
+- 2e sur la fréquence 5 Moto-Info, avec oreillette. Vous communiquerez seulement sur cette fréquence.
+
+S'assurer d'avoir une grille des coureurs
+
+S'assurer d'avoir pris connaissance du parcours de la journée, position et km des sprints intermédiaires / maires / KOM (page de la journée à imprimer)

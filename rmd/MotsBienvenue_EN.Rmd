@@ -1,0 +1,178 @@
+# Welcoming words {#welcome}
+
+### A word from the chairwoman of the board {-}
+
+\linebreak
+
+```{r photo_pres, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+knitr::include_graphics(here("img", "photos", "pres.png"))
+```
+
+
+On behalf of all the members of the board of directors, the organizing committee, I would like to welcome you to the 54th Tour de l'Abitibi Glencore. We are very proud of our cycling event, the only one in its category in North America! Its longevity is due to the passion, enthusiasm and unconditional commitment of the Témiscabitibians!
+
+For its 54th edition, the Tour will welcome young cyclists from all over the world. As in previous years, team fans can watch the races live on our website at www.tourabitibi.com.
+
+I would like to acknowledge the indispensable work of our many volunteers and our permanent team, who worked throughout the year to offer you a most memorable event during the week of the Tour in Amos. In addition, I would like to make a special mention to our faithful and generous partners, without whom the event would not take place, not to mention our current partner, Glencore.
+
+On behalf of myself and all those involved in the success of this sporting event, I would like to thank the cyclists and their companions for travelling to Abitibi-Timiskaming. To all of you, I wish you the best of luck, and that the visit to our beautiful region will forever be remembered.
+
+
+**Mélanie Rocher**    
+Chairwoman of the board         
+Tour Cycliste de l'Abitibi inc.   
+
+```{r mots_logo_tour, echo=TRUE, echo=FALSE, fig.align='left', out.width= "25%"}
+knitr::include_graphics(here("img", "logo", "TA_Glencore.png"))
+```
+
+<br/>
+
+--- 
+
+\pagebreak
+
+<br/>
+
+### A word from our title partner {-}
+
+\linebreak
+
+```{r photo_AlexisSegal, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics(here("img", "photos", "comm_titre.jpg"))
+
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+
+
+**Alexis Segal**   
+Director of Government Relations and Public Affairs
+
+
+```{r mots_logo_Glencore, echo=TRUE, echo=FALSE, fig.align='left', out.width= "35%"}
+knitr::include_graphics(here("img", "logo", "Glencore.png"))
+```
+
+<br/>
+
+---
+
+\pagebreak
+
+<br/>
+
+### A word from `r params$ville` mayor {-}
+
+\linebreak
+
+```{r photo_maire, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics(here("img", "photos", "maire_vd.png"))
+
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+
+
+**Céline Brindamour**    
+`r params$ville` mayor 
+  
+
+```{r mots_logo_amos, echo=TRUE, echo=FALSE, fig.align='left', out.width= "25%"}
+knitr::include_graphics(here("img", "logo", "VilleVD.png"))
+```
+
+<br/>
+
+---
+
+\pagebreak
+
+<br/>
+
+### A word from the Minister {-}
+
+\linebreak
+
+```{r photo_ministre_gauche, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:left; padding:10px"'}
+
+knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/2018/08/photo-profil-charest-isabelle-brome-missisquoi.png")
+
+```
+
+```{r photo_ministre_droite, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/2018/08/photo-profil-proulx-caroline-berthier-sans-main.png")
+
+```
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+
+<br/>
+
+**Isabelle Charest**      
+Minister Responsible for Sport, Recreation and the Outdoors  
+
+<br/>
+
+
+**Caroline Proulx**   
+Minister of Tourism   
+Minister responsible for the Lanaudière region
+
+```{r, echo=FALSE,out.width="75%",fig.show='hold',fig.align='center'}
+knitr::include_graphics(here("img", "logo", "gouv_quebec_large.png"))
+``` 
+
+<br/>
+
+---
+
+\pagebreak
+
+<br/>
+
+
+### A word from the regional Member of the National Assembly {-}
+
+\linebreak
+
+```{r photo_deputee_reg, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/2018/08/photo-profil-dufour-pierre-abitibi-est.png")
+
+```
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+
+**Pierre Dufour**       
+Member of the National Assembly for Abitibi-Est
+Parliamentary assistant to the Minister of the Economy, Innovation and Energy (regional economic development)
+Government assistant to the Minister responsible for the Abitibi-Témiscamingue region
+
+
+```{r, echo=FALSE,out.width="75%",fig.show='hold',fig.align='center'}
+knitr::include_graphics(here("img", "logo", "gouv_quebec_large.png"))
+``` 
+

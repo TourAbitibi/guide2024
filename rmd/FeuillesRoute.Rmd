@@ -1,0 +1,132 @@
+---
+editor_options: 
+  chunk_output_type: console
+---
+# Feuilles de route quotidiennes {#feuilleroute}
+
+```{r feuille_route_function_FR, echo=FALSE}
+
+feuilleroute_xlsx <- here("excel", "feuilleroute.xlsx")
+
+graphFeuilleRoute <- function(df){
+    
+  df %>% 
+    drop_na(desc_fr) %>% 
+    select(" " = desc_fr,
+         Heures = heures) %>%
+    
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c")) %>%
+    
+    kable_styling( "striped", # "striped",      # kable_minimal ou kable_styling
+                  full_width = TRUE) %>% 
+    
+    row_spec(which(df$param == "reunion",), bold = T, 
+             color = couleurs$brunMaillot,
+             background = couleurs$orangePale) %>% 
+    row_spec(which(df$param == "course",), bold = T, 
+             color = couleurs$bleuTour,
+             background = couleurs$jauneTour, 
+             font_size = 20) %>% 
+    row_spec(which(df$param == "repas",), bold = F, 
+             color = couleurs$blueSprintMaire,
+             background = couleurs$bluePale) %>% 
+    row_spec(which(df$param == "navette",), bold = T) %>% 
+    row_spec(which(df$param == "arrivee",), bold = T, 
+             color = couleurs$bleuTour)
+    
+    
+}
+```
+
+## `r dates_FR %>% filter(code=="Dim_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_dim_av_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "DIM_AV") %>% 
+  graphFeuilleRoute()
+
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_lun_av_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "LUN_AV") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_mar_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "MAR") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Mer") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_mer_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "MER") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_jeu_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "JEU") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Ven") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_ven_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "VEN") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_sam_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "SAM") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_dim_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "DIM") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Lun_Ap") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_lun_ap_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "LUN_AP") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+

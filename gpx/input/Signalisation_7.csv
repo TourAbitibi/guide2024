@@ -1,0 +1,22 @@
+Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
+Start,Start of route,0,0,,
+Control,sign_01,0.05,272.70,Sortie stationnement vers rue Principale,Edited
+Control,sign_02,0.13,272.60,Gestion circulation rue Principale / Virage à droite,Edited
+Control,sign_03,0.44,271.70,Gestion circulation rte 111E / Virage à droite,Edited
+Control,sign_04,0.75,276.50,Gestion intersection 12e ave / Rte 111E,Edited
+Control,sign_05,2.33,280.70,Signaleur terre-plein - toute à gauche dans bretelle,Edited
+Control,sign_06,2.38,280.00,Gestion circulation SQ,Edited
+Danger,sign_07,7.45,282.30,Chemin de fer oblique,Edited
+Control,sign_08,18.17,286.80,,Edited
+Danger,sign_09,28.35,289.40,Pont potentiellement 1 voie - Construction,Edited
+Danger,sign_10,49.43,302.40,,Edited
+Danger,sign_11,72.40,312.40,Voie ferrée très oblique,Edited
+Control,sign_12,84.82,311.70,,Edited
+Control,sign_13,94.54,315.70,,Edited
+Control,sign_14,95.06,298.60,,Edited
+Control,sign_15,95.23,297.78,,Edited
+Right,Tournez à droite sur 2e Avenue Ouest,95.33,296.40,,""
+Left,Tournez à gauche sur 1re Rue Ouest,95.56,307.30,,""
+Right,Tournez à droite sur 5e Avenue Ouest,95.96,300.80,,""
+Right,Tournez à droite sur Rue Principale Nord,96.14,304.10,,""
+End,End of route,96.47,306.40,

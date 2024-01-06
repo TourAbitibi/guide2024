@@ -1,0 +1,153 @@
+
+<!-- CLMI_notes.Rmd  : info/photo pour rampe du CLMI -->
+
+# Installation - CLMI {#clmi}
+
+Présentation de différentes vues sur le secteur du départ/arrivée du CLMI et de sa rampe de départ.
+
+**Référence 2023, à mettre à jour 2024.**
+
+### Localisation
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "cartes", "sign", "E3_sign_01.png"))
+```
+
+### Vues générales
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/zHt2XxP/CLMI-Ligne-Droite.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/W6RGPzn/CLMI-Enlignement-Cones-Departs.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/gzKQGVY/rampe-14.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/KwnrGhb/rampe-15.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/bBtKn0m/rampe-16.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/jWnqDVL/rampe-17.jpg")
+```
+
+
+### Positionnement de la rampe
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/h7ftS0p/rampe-01.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/V0GmQqd/rampe-06.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/BGY6wLP/rampe-08.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/RYg6kZg/rampe-18.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/ygghSMt/rampe-19.jpg")
+```
+
+
+### Secteur vérification vélos
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/5Ybwhrg/rampe-02.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/v4rHMyB/rampe-03.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/tzrKp7x/rampe-04.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/kXbGMPp/rampe-05.jpg")
+```
+
+
+### Déviation des voitures suiveuses
+
+Les voitures d'équipe choisissent de suivre certains leurs coureurs. Le retour se fait via la 3e avenue Est et la 1ere rue Est.
+
+Il faut être extrêmement prudent dans le secteur de la rue Principale Nord et de la 3e avenue : beaucoup de circulation des coureurs en fin de parcours, des voitures suiveuses, des coureurs en préparation, spectateurs, etc...
+
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "sign", "E3", "sign_92.png"))
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/xS4YsYJ/rampe-10.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/TmF3Gjp/rampe-13.jpg")
+```
+
+
+### Secteur ligne arrivée
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/rMC54Sk/rampe-11.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/rmySY1q/rampe-12.jpg")
+```
+
+<br/>
+
+Il faut aussi gérer la sortie des coureurs de la section sécurisée. 
+
+> Il faut éviter à tout prix qu'ils retournent jusqu'à la ligne d'arrivée, où il pourrait causer une collision avec un coureur finissant son parcours à pleine vitesse. 
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "sign", "E3", "sign_91.png"))
+```

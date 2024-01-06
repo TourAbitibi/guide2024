@@ -1,0 +1,85 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- signaleur  : info pour signaleur -->
+
+# Signaleur
+
+Le principe essentiel de la sécurité d’une course cycliste est d’arrêter toute circulation extérieure à l’épreuve, en particulier arrivant en sens inverse de la course, dans les minutes précédant et pendant le passage de la course. 
+
+Ils indiquent aussi aux coureurs le parcours à suivre avec une gestuelle simple mais efficace. 
+
+À cet effet, les forces de sécurité seront déployées en dispositif statique et/ou mobile. 
+
+
+### Instructions {-}
+
+#### Rôle : Signaleur moto - Drapeau jaune {-}
+
+Les motards doivent dans la mesure du possible connaitre le parcours de l’épreuve, à défaut lire attentivement le livre de route avant le départ, afin d’anticiper les zones de danger.
+
+Le fonctionnement de l’escorte doit être défini au préalable et les missions de chacun précisées si nécessaire (ouverture de course, protection des coureurs, drapeaux jaunes, etc.). 
+
+> Au Tour de l'Abitibi, le corps policier de la Sûreté du Québec assure les rôles d'ouverture de course alors de le signaleur moto joue principalement un rôle de drapeau jaune, aidé par les signaleurs statiques fournir par les municipalités et comité organisateur. 
+
+Il est souhaitable que l’escorte de motards civils soit clairement identifiée. Leurs équipements vestimentaires sont identiques et de couleur vive, généralement fluo, ils sont ainsi aisément repérables par les autres usagers.
+
+Ils sont munis d’un sifflet et d’un drapeau jaune, fourni par l’organisateur et peuvent ainsi avertir les coureurs des virages et points dangereux, îlots directionnels, ronds-points, véhicules mal garés, etc.
+
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=153" target="_blank">Guide UCI, section C.3.1 p. 151</a>
+
+
+#### Exemple en vidéo : Signaleur moto - Drapeau jaune {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oklufKDk8yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+#### Rôle : Signaleurs statiques - Drapeau jaune {-}
+
+Les forces de sécurité statiques sont constituées par la police, les forces de l’ordre, les bénévoles civils. Ces personnes ont la mission essentielle de sécuriser l’épreuve en avertissant les autres usagers de l’imminence de l’arrivée de la course.
+Ils les arrêtent avant le passage des coureurs, évitant ainsi qu’ils ne s’engagent à contre-sens ou dans le sens de la course.
+
+Au moment du passage des coureurs et suiveurs, ils leur indiquent le parcours à suivre. À la différence des membres de l’escorte motocycliste, le personnel statique peut être à son poste bien avant le passage de la course et peut donc anticiper sur les mesures à prendre pour sécuriser l’épreuve. 
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=161" target="_blank">Guide UCI, section C.3.2 p. 159</a>
+
+
+#### Exemple en photos : Signaleurs statiques - Drapeau jaune {-}
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","signaleur.jpg"))
+```
+<br/>
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","signaleur_derriere.jpg"))
+```
+
+
+##### La gestuelle {-}
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","signaleur_gestes.jpg"))
+```
+
+
+#### Matériel du signaleur {-}
+
+- un drapeau jaune pour signaler la direction
+- un sifflet pour être entendu par tous les coureurs du peloton
+- une veste de sécurité ou un t-shirt de couleur visible
+
+#### En terminant {-}
+
+<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 6px;">Le signaleur doit signaler avec son drapeau pour tous les coureurs de même que pour les véhicules. <br/>Restez alerte en tout temps !</div>
+
+<br/>
+
+<blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">It was a close call for this Tour de Yorkshire marshall <a href="https://twitter.com/hashtag/BBCTDY?src=hash&amp;ref_src=twsrc%5Etfw">#BBCTDY</a> <a href="https://t.co/lcOgzmxAaY">pic.twitter.com/lcOgzmxAaY</a></p>&mdash; BBC Yorkshire (@BBCLookNorth) <a href="https://twitter.com/BBCLookNorth/status/993172025463267328?ref_src=twsrc%5Etfw">6 mai 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

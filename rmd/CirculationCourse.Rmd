@@ -1,0 +1,39 @@
+
+<!-- CirculationCourse.Rmd : version française -->
+
+# Circulation en course {#circulation}
+
+###  Course sur route {-}
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Directives de circulation des véhicules en course, p.7](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/9c3ae8c70aeca646d6a1984684658271/2021-uci-road-guidelines-for-circulation-fr.pdf#page=7)"}
+
+knitr::include_graphics(here("img/support/circulation_Course.png"))
+```
+
+### Arrivée en circuit (Étape 1, 2 et 7) et Circuit urbain (Étape 6) {-}
+
+Afin d'assurer la sécurité des coureurs et de la population locale, ces directives particulières doivent être respectées lors d'une arrivée en circuit :
+
+* Toutes les voitures de la caravane empruntent le circuit d'arrivée. 
+* Seul les véhicules ayant une fonction indispensable dans la course sont autorisés à effectuer l'ensemble des tours de circuits. Les autres véhicules empruntent la dérivation avant le premier passage de la ligne. 
+* Après un arrêt pour assistance à un coureur ou autre, le véhicule reprend une place dans la caravane à l'endroit où il se trouve. **Le dépassement pour reprendre sa place originale dans la file est interdit.**  
+* Si l'arrêt s'est prolongé et qu'un écart s'est formée entre la caravane et son véhicule, le conducteur doit être particulièrement prudent lors de son retour à la caravane, car certaines intersections peuvent être ouvertes à la circulation automobile ou piétonne.  
+* La vitesse maximale exceptionnellement tolérée en ville est de **70 km/h**. 
+* Toute conduite ***dangereuse*** sera sanctionnée par les commissaires, l'organisation et/ou ses représentants, tel que décrit à l'article **19** des [règlements particuliers][Règlements particuliers].  
+
+
+### Dérivation de la caravane {-}
+
+Une dérivation pour les véhicules est aménagée en amont de la ligne d'arrivée pour chaque épreuve, à l'exception de l'étape **5** (arrivée au sommet).
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Directives de circulation des véhicules en course, p.18](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/9c3ae8c70aeca646d6a1984684658271/2021-uci-road-guidelines-for-circulation-fr.pdf#page=18)"}
+
+knitr::include_graphics(here("img/support/circulation_derivation.png"))
+```
+
+### Contre-la-montre individuel {-}
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Directives de circulation des véhicules en course, p.30](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/9c3ae8c70aeca646d6a1984684658271/2021-uci-road-guidelines-for-circulation-fr.pdf#page=30)"}
+
+knitr::include_graphics(here("img/support/circulation_CLMI.png"))
+```

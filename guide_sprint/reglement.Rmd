@@ -1,0 +1,294 @@
+---
+title: "Challenge Sprint Abitibi 2024"
+description: "Règlements Spécifiques / Specifics Rules"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- Références 2 colonnes : https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html-->
+
+<!-- Pour render : rmarkdown::render_site('guide_sprint') -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+
+```
+
+```{r call_Libs_Vars, include=FALSE}
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Dates
+source(here("code", "_Dates.R"))
+
+# Langue
+lang <- "FR"
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA,
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+```
+
+
+## Article 1 – Organisation / Organization
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Le **Challenge Sprint Abitibi**, propriété de **Le Tour cycliste de l’Abitibi inc.**, est organisé le lundi `r dates_FR %>% filter(code ==  "Lun_Av") %>% pull(jour_mois_an)` sous la sanction et les règlements de <a href="https://www.cyclismecanada.ca/" target="_blank">Cyclisme Canada</a> sur une distance totale de 600 mètres.
+:::
+::: {}
+The **Challenge Sprint Abitibi**, a property of **Le Tour cycliste de l’Abitibi inc.**, is organized on `r dates_FR %>% filter(code ==  "Lun_Av") %>% pull(jsem_jour_mois_an)`, under <a href="https://cyclingcanada.ca/" target="_blank">Cycling Canada</a>’s sanction and regulations, on a total distance of 600 meters.
+:::
+::::
+
+<aside>
+  <a href="https://tourabitibi.com" target="_blank" >
+  <img src="../img/logo/TA_Glencore.png" alt="Logo Tour de l'Abitibi Glencore" width="100%">
+  </a>
+</aside>
+
+## Article 2 - Permanence / Headquarters 
+
+```{r cell_coord, include=FALSE}
+
+# Fichier excel avec noms
+staff_xlsx <- here("excel", "staff.xlsx")
+
+cell <- read_excel(staff_xlsx, sheet = "CO") %>% 
+  filter(role_en == "Coordonator - Tour Abitibi") %>% 
+  select(cell)
+```
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Pour la durée de l'évènement, la permanence du **Tour de l’Abitibi `r params$sponsor`** est situé à la `r params$nom_centrale` au `r params$adresse_centrale`.
+:::
+
+:::{}
+For the duration of the event, the **Tour de l'Abitibi `r params$sponsor`** headquarters are located at the `r params$centrale_name` at `r params$centrale_address`.
+:::
+::::
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Durant les heures de bureau, la coordonatrice peut être rejointe au `r cell`.
+:::
+
+:::{}
+During office hours, the coordinator can be reached at `r cell`.
+:::
+::::
+
+## Article 3 - Invitations / Invites
+
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+
+::: {}
+Chaque équipe participant au **Tour de l’Abitibi** devra compléter le bulletin d’engagement pour le **Challenge Sprint Abitibi** en inscrivant le nom du coureur qui participera au Challenge, en plus d’un remplaçant.
+:::
+
+:::{}
+Each team participating in the **Tour de l’Abitibi** will have to complete the registration form for the **Challenge Sprint Abitibi**, including the name of the rider who will compete, as well as a substitute.
+:::
+::::
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Un maximum de **`r params$nb_coureurs_sprint`** coureurs participera à cette épreuve. Dans le cas où moins d'équipes sont présentent au **Tour de l'Abitibi** que le nombre de coureurs requis au **Challenge Sprint Abitibi**, une tirage au sort sera effectué pour engager un 2^e^ coureur par équipe parmis celle le désirant. 
+:::
+::: {}
+A maximum of **`r params$nb_coureurs_sprint`** riders will be invited to take part in this event. In the event that fewer teams are present at the **Tour de l'Abitibi** than the number of riders required for the **Challenge Sprint Abitibi**, a draw will be made to enter a 2^nd^ rider per team among those wishing to do so. 
+:::
+::::
+
+## Article 4 - Format de l’épreuve / Race format
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+La composition des séries de qualification sera déterminée selon un tirage au sort effectué durant la réunion des directeurs sportifs (N1 @ N16). Voir la liste des [partants](partants.html) après la rencontre des directeurs sportifs.
+:::
+
+:::{}
+The heat composition will be determined by a draw conducted during the team managers' meeting (N1 @ N16). See the [start list](partants.html) available after the team directors meeting.
+:::
+:::: 
+
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Les vagues seront composées de manière à ne pas avoir de coureurs d'une même équipe dans la première vague  (sauf exception).
+:::
+
+:::{}
+The heat will be composed in such a way as not to have riders from the same team in the first heat (unless an exception applies).
+:::
+:::: 
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Les quarts de finale seront constituées de 4 vagues. S’ensuivront les demi-finales, la finale consolation et la grande finale, pour un total de 8 épreuves. Toutes les épreuves seront composées de 4 coureurs, sauf abandon ou non-départ.
+:::
+
+:::{}
+The quarter-final will consist of 4 heats. The the semi-final, the little final and the grand final will follow. All heats will be contested by 4 participants, to the exception of an abandon or a DNS.
+:::
+::::
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+À chaque vague de quart de finale, les deux premiers coureurs de chaque série avanceront à la ronde suivante alors que les 2 derniers seront éliminés.
+:::
+
+:::{}
+For each quarter-final, the two first riders of each heat will advance to the next round, while others riders will be eliminated.
+:::
+::::
+
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+
+::: {}
+Lors des demi-finales, les 2 premiers coureurs passeront en finale et les 2 derniers en finale consolation.
+:::
+
+:::{}
+The first two riders of each semi- final will access to the grand final while the last 2 will access to the little final.
+:::
+::::
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Un classement final du Challenge Sprint Abitibi sera complété, attribuant une place de 1 à 8 pour les coureurs ayant participé aux 2 finales.
+:::
+
+:::{}
+The final classification of the Challenge Sprint Abitibi will include positions 1 to 8 for the riders competing in the two finals.
+:::
+:::: 
+
+## Article 5 - Règlementation pour l’épreuve / Regulations for the race
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+
+::: {}
+Les sprints seront disputés et jugés selon la règlementation du **Titre II- Épreuves sur Route** de l’<a href="https://uci.org" target="_blank">UCI</a>, plus spécifiquement en tenant compte de l’article `r glue('<a href="{uci_p2_FR}#page=47" target="_blank">2.3.036</a>')`.
+:::
+
+:::{}
+Sprints will take place and be judged under **Part II - Road Races regulations** of the <a href="https://uci.org" target="_blank">UCI</a>, more specifically taking into account article `r glue('<a href="{uci_p2_EN}#page=47" target="_blank">2.3.036</a>')`.
+
+:::
+::::
+
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+* Les départs seront effectués à partir d’un point fixe, avec présence de teneurs, comme s’il s’agissait d’une épreuve contre-la-montre ;
+* Le teneur ne peut pousser son coureur pour lui donner un avantage au départ; 
+* Le surplace est interdit ;
+* Le virage en demi-tour se fera obligatoirement avec la corde à gauche.
+:::
+
+:::{}
+* The start will take place from a fixed position, with holders, as in a time trial;
+* The holder cannot push his rider to give him an advantage at the start;
+* Standstill is forbidden;
+* The U-turn will be done counter-clockwise around the traffic cones.
+:::
+::::
+
+## Article 6 - Protocole et entrevues / Protocol and interviews
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+À la suite de chacune des séries de chaque ronde, les coureurs qualifiés pour la ronde suivante devront se rendre à la tente d’échauffement et être disponibles pour interviews.
+:::
+
+:::{}
+Following each heat of each round, the riders qualified for the next round must show up at the warm-up tent immediately following their race and be available for interviews.
+:::
+::::
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+À la suite de la finale, les trois premiers coureurs devront se rendre à la tente du protocole et être disponibles pour entrevues en attente de la cérémonie protocolaire.
+:::
+
+:::{}
+At the end of the grand final, the Top-3 riders must go to the protocol tent and be available for interviews while waiting for the awards ceremony.
+:::
+:::: 
+
+
+## Article 7 - Service aux coureurs / Services available for riders
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Tente d’attente de départ.
+:::
+
+:::{}
+Waiting tent in the start area.
+:::
+:::: 
+
+## Article 8 - Bourses / Prize money
+
+```{r bourse, echo=FALSE}
+
+# Bourse individuelle
+bourse <- tribble(
+  ~Position, ~"$CAD",
+  "1", 400,
+  "2", 200,
+  "3", 150,
+)
+
+# Calcul de la bourse totale
+bourse <- bourse %>% add_row(Position = "Total", "$CAD" = bourse %>% select("$CAD") %>% sum())
+```
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
+::: {}
+Un total de **`r bourse %>% filter(Position == "Total") %>% pull("$CAD")` $ CAD** en prix sera remis aux coureurs selon la répartition suivante :
+:::
+
+:::{}
+A total of **`r bourse %>% filter(Position == "Total") %>% pull("$CAD")` $ CAD** in prize money will be granted to the riders according to the following table:
+:::
+:::: 
+
+```{r tableau_bourse, echo=FALSE}
+
+bourse %>% 
+    mutate("$CAD" = currency(bourse$`$CAD`, digits = 0)) %>% 
+    kbl(#col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c('c', 'c'),
+      ) %>% 
+    kable_styling("striped",      
+                  full_width = T) %>% 
+  row_spec(4, bold = T, color = couleurs$bleuTour )
+```
+
+

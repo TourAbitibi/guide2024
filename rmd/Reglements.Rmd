@@ -1,0 +1,520 @@
+# Règlements particuliers {#reglements}
+
+<!-- Liens vers PDF règlements UCI sont définis dans _LibsVars.R-->
+
+Article 1 – Organisation
+
+:   L’épreuve du Tour de l’Abitibi `r params$sponsor` est une épreuve junior par étapes organisée par Le Tour cycliste de l’Abitibi inc. (1122, 8^e^ Rue - Suite 201, Val-d'Or (Québec) J9P 3N6) sous les règlements et la sanction de <a href="https://uci.org" target="blank">l'Union Cycliste Internationale</a> (UCI). 
+
+    Le Tour de l’Abitibi `r params$sponsor` est également sanctionné par la <a href="https://fqsc.net/" target="blank">Fédération Québécoise des Sports Cyclistes</a> (FQSC) et <a href="https://fcyclingcanada.ca/" target="blank">Cyclisme Canada</a> (CC). 
+
+    L’épreuve est disputée sous le règlement UCI et seule l’échelle des sanctions UCI s’appliquera. Elle se dispute du `r params$dates_compl`.
+
+
+
+Article 2 – Type d’épreuve
+
+:   L’épreuve est réservée aux athlètes de la catégorie hommes junior. Elle est inscrite au calendrier UCI Mondial Junior. Pour être considéré comme junior, un coureur doit être né en `r params$annee - 18` ou `r params$annee - 17`. L’épreuve est classée 2.NCupJ et les points UCI seront attribués selon l’article  `r glue('<a href="{uci_p2_FR}#page=185" target="_blank">2.14.040</a>')`.    
+
+    Les dérogations suivantes ont été accordées par l’UCI à l’organisation du Tour de l’Abitibi :  
+    
+    * L’épreuve du Tour de l’Abitibi a la possibilité d’accueillir des équipes régionales ou des clubs composés uniquement de coureurs juniors mais ne marquant pas de points UCI (article `r glue('<a href="{uci_p2_FR}#page=184" target="_blank">2.14.036</a>')`. De plus, leur maillot devra respecter les articles `r glue('<a href="{uci_p1_FR}#page=83" target="_blank">1.3.045 à 1.3.047</a>')` du Règlement UCI;    
+    * L’épreuve du Tour de l’Abitibi compte deux (2) demi-étapes la même journée (article `r glue('<a href="{uci_p2_FR}#page=60" target="_blank">2.6.010</a>')`.
+   
+   
+    
+Article 3 – Participation
+ 
+:   Tel que mentionné à l’article 2 ci-dessus, l’épreuve est ouverte aux équipes nationales, régionales, de club et mixtes. 
+
+    Conformément à l’article `r glue('<a href="{uci_p2_FR}#page=185" target="_blank">2.14.039</a>')` du règlement UCI, le nombre de coureurs par équipe est de minimum quatre (4) et de maximum six (6) coureurs.
+    
+    > Conformément au règlement `r glue('<a href="{uci_p2_FR}#page=20" target="_blank">2.2.023</a>')` abrogé par l'UCI pour 2023, il n'y a plus de développement maximum pour les hommes juniors (braquets). 
+    
+
+Article 4 – Permanence
+
+:   La permanence de l’épreuve opère du dimanche `r dates_FR %>% filter(code=="Dim_Av") %>% pull(jour_mois)` au dimanche `r dates_FR %>% filter(code=="Lun_Ap") %>% pull(jour_mois_an)` à l’école secondaire Le Carrefour, au `r params$adresse_centrale`. Les heures d’ouverture sont établies en fonction de l’horaire des courses, mais un gardien de sécurité est présent 24 heures sur 24.
+
+    La rencontre initiale entre l’organisation du Tour et les responsables d’équipes se fait à la permanence le dimanche `r dates_FR %>% filter(code=="Dim_Av") %>% pull(jour_mois)` de 12h00 à 23h00 et le lundi `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jour_mois)` de 8h00 à 16h30.
+    
+    La vérification des licences par le Collège des commissaires et la remise des dossards et plaques de cadre aura lieu le lundi `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jour_mois)` entre 14h et 15h30.
+    
+    La réunion obligatoire des directeurs sportifs organisée suivant l’article `r glue('<a href="{uci_p1_FR}#page=43" target="_blank">1.2.087</a>')` du règlement UCI, en présence des membres du Collège des commissaires, est fixée à 10h00 le mardi `r dates_FR %>% filter(code=="Mar") %>% pull(jour_mois_an)`.
+
+
+Article 5 – Ordre de la caravane
+
+:   L’ordre de la caravane pour l’étape 1 sera déterminé selon l’article `r glue('<a href="{uci_p2_FR}#page=187" target="_blank">2.14.046</a>')` du règlement UCI. 
+
+    L’ordre de la caravane pour les étapes subséquentes sera déterminé en fonction du coureur de l’équipe le mieux placé au classement général individuel.
+    
+
+Article 6 – Ordre de départ pour le contre-la-montre
+
+:   L’ordre de départ est l’ordre inverse du classement général au temps après l’étape No 2. Toutefois le collège des commissaires peut modifier cet ordre afin d’éviter que deux coureurs d’une même équipe se suivent (`r glue('<a href="{uci_p2_FR}#page=64" target="_blank">2.6.023</a>')`). 
+
+    Les départs se donneront à intervalle d’une (1) minute, à l’exception des 10 derniers coureurs qui partiront avec un intervalle de deux (2) minutes.
+
+    Les vélos doivent être présentés et en quarantaine pour vérification au moins 15 minutes avant le départ du coureur. Les vélos spécifiques au contre-la-montre sont autorisés pour le contre-la-montre individuel s’ils respectent la règlementation de l’UCI.
+    
+    Une vérification optionnelle de vélos sera offerte par les commissaires le mercredi `r dates_FR %>% filter(code=="Mer") %>% pull(jour_mois_an)` à 10h30.
+    
+    
+Article 7 – Radio-Tour
+
+:   Les informations courses sont émises sur la fréquence **01 – Radio-Tour** sur le radio fourni par l’organisation.
+
+
+Article 8 – Assistance technique neutre
+
+:   Le service d’assistance technique neutre est assuré par l’organisation du Tour cycliste de l’Abitibi (à l’exception de l’étape 3 – CLMI). Le service est assuré au moyen de 2 véhicules automobiles et 1 moto identifiés à cet effet. 
+
+    Toutes les roues arrière du dépannage neutre seront équipées de cassettes 11 & 12 vitesses, avec freins traditionels sur jantes et freins à disques. Pour les équipes ayant des besoins particuliers, veuillez nous avertir à la réunion des directeurs sportifs.
+
+
+Article 9 – Délais d’arrivée
+
+:   Il sera accordé un délai d’arrivée établi sur le temps réel du vainqueur augmenté de 20 % pour toutes les étapes, à l’exception du contre-la-montre individuel qui ne comporte pas de délai d’arrivée.
+
+
+Article 10 – Arrivée en circuit (Étapes 1 et 2)
+
+:   Dans une étape sur route finissant sur un circuit, les coureurs arrivant à l’entrée du circuit en même temps qu’un peloton ou que la caravane passe sur le circuit seront arrêtés temporairement par un commissaire et pourront repartir lorsque le circuit sera libre, de manière à ne pas interférer avec les autres groupes.   
+
+    La perte de temps sera créditée de leur temps final.   
+    
+    Tout coureur arrêté temporairement à l’entrée du circuit doit ensuite **compléter tous les tours prescrits**.   
+    
+    Si à l’entrée du circuit, il est déterminé par le commissaire que le coureur ne pourra arriver dans le délai d’arrivée prescrit, le commissaire pourra arrêter ce dernier et il ne pourra reprendre le départ à la prochaine étape.
+
+
+Article 11 – Arrivée en circuit - dernière étape (Étape 7)
+
+:   Lors de la dernière étape, un coureur arrêté par le commissaire à l’entrée du circuit d'arrivée obtiendra un temps calculé et n'entrera pas sur le circuit. S'il est déjà en dehors du temps limite relativement au premier coureur entré sur le circuit, il sera considéré **hors délai** et n’apparaîtra pas aux résultats finaux.
+
+    Un coureur doublé sur le circuit d’arrivée devra se retirer de la course et sera crédité d’un temps calculé. Il apparaîtra aux résultats s’il se rapporte aux commissaires à la ligne d’arrivée lors de son exclusion.
+    
+    Tout coureur abandonnant en cours de circuit lors de la dernière étape obtiendra un résultat d’**abandon**.
+    
+
+Article 12 – Bonifications en temps
+
+:   Des bonifications seront attribuées aux trois (3) premiers coureurs de l’étape excepté pour le contre-la-montre individuel :
+
+    * Course sur route (avec/sans circuit) : 10, 6, 4 secondes, sauf étape 4 (demi-étape) : 6, 4, 2 secondes.
+    
+    Des bonifications seront attribuées aux trois (3) premiers coureurs de chacun des sprints intermédiaires avec bonification :
+    
+    * Sprint bonification: 3, 2, 1 secondes.
+
+
+
+Article 13 – Classements
+
+:   La course fait l’objet de cinq (5) classements généraux différents:
+
+
+    * Classement général individuel au temps (Maillot brun) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.014; 2.6.015; 2.6.019</a>')`
+    * Classement général individuel aux points (Maillot orange) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`
+    * Classement général individuel de la montagne (Maillot à pois) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`
+    * Classement général individuel de la relève au temps (Maillot bleu) pour les juniors de 1re année;
+    * Classement général par équipe au temps `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.016</a>')`
+    
+    Si un coureur est en tête de plusieurs classements, l’ordre de priorité des maillots distinctifs est le suivant :
+ 
+    1.  Maillot brun;
+    2.	Maillot orange;
+    3.	Maillot à pois;
+    4.	Maillot bleu;
+    5.	Champion du monde;
+    6.	Champion continental;
+    7.	Champion national;
+    8.	Équipe nationale;
+    9.	Équipe régionale.
+
+
+Article 13.1 - Classement général individuel au temps
+
+:   Un classement général individuel au temps est établi par l’addition des temps enregistrés dans chacune des étapes en tenant compte des bonifications et pénalités – article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.014</a>')` de l’UCI.
+
+    En cas d’égalité de temps, les fractions de seconde enregistrées lors de l’étape du contre-la-montre individuel seront réincorporées dans le temps total pour départager les coureurs ex æquo. (article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.015</a>')` du règlement UCI).
+    
+    En cas de nouvelle égalité, les coureurs seront départagés par l’addition des places obtenues à chaque étape; en cas de nouvelle égalité, le classement de la dernière étape sera pris en compte. (article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.015</a>')` du règlement UCI).
+    
+
+Article 13.2 - Classement général individuel aux points
+
+:   Il s’obtient par l’addition des points attribués à la fin des étapes et ceux des sprints intermédiaires.
+
+    En cas d’égalité dans une étape, les coureurs bénéficient tous du nombre de points attribués à leur rang.
+
+    En cas d’égalité au classement général individuel aux points, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage (`r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`) :
+    
+    1.  Nombre de victoires d’étapes
+    2.  Nombre de victoires dans les sprints intermédiaires
+    3.  Classement général individuel au temps.
+    
+    Points aux dix (10) premiers coureurs d’une étape et aux trois (3) premiers coureurs des sprints intermédiaires :
+    
+    *  10 premiers d’une étape sur route : 30 – 24 – 20 – 16 – 12 – 10 – 8 – 6 – 4 – 2
+    *  C.L.M. individuel : 15 – 12 – 10 – 8 – 6 – 5 – 4 – 3 – 2 – 1
+    *  Sprints intermédiaires : 6 – 4 – 2
+
+
+Article 13.3 - Classement général individuel de la montagne (GPM) 
+
+:   Il s’obtient par l’addition de points attribués au prix de la montagne (sprint de côte) soit 5-3-2 points, sauf à l’étape 5 où les points sont doublés à l’arrivée (arrivée au sommet), soit 10-6-4 points.
+
+    En cas d’égalité au classement final, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage :
+    
+    1. Nombre de premières places dans les arrivées au sommet (étape 5);
+    2. Nombre de premières places dans les sprints de côte;
+    3. Classement général individuel au temps.
+
+Article 13.4 - Classement général individuel de la relève
+
+:   Le classement général individuel de la relève est basé sur le classement général individuel au temps, mais ne concerne que les coureurs juniors de 1re année nés en `r params$annee - 17`.
+
+
+
+Article 13.5 - Classement général par équipe au temps
+
+:   Le classement par équipe du jour s’établit par l’addition des trois (3) meilleurs temps individuels de chaque équipe. 
+
+    En cas d’égalité, les équipes sont départagées par l’addition des places obtenues par leurs trois meilleurs temps de l’étape. En cas de nouvelle égalité, les équipes sont départagées par la place de leur meilleur coureur au classement de l’étape. (Article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.016</a>')` du règlement UCI)
+
+
+    Le classement général par équipe s’établit par l’addition des trois meilleurs temps individuels de chaque équipe dans toutes les étapes courues. En cas d’égalité, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage :
+    
+    1. Nombre de premières places dans le classement par équipe du jour;
+    2. Nombre de deuxièmes places dans le classement par équipe du jour; etc.
+    
+    S’il y a toujours égalité, les équipes sont départagées par la place de leur meilleur coureur au classement général individuel.
+
+    Toute équipe réduite à moins de trois coureurs est éliminée du classement général par équipe.
+
+
+Article 14 - Réclamation
+
+:   Seul le directeur sportif d’une équipe pourra déposer une demande de vérification des résultats; celle-ci devra être présentée au juge à l’arrivée. 
+
+    Une demande de vérification doit être faite dans les délais suivants :
+
+    * Au sujet des classements : au plus tard une (1) heure avant le départ de l’étape suivante;
+    * Au sujet du classement général final : au plus tard trente (30) minutes après l’affichage des résultats.
+
+
+
+
+Article 15 – Bourses
+
+:     Les prix suivants sont attribués selon le guide des `r glue('<a href="{uci_financial}" target="_blank">obligations financières UCI</a>')`. Tous les montants sont en dollars canadiens.        
+
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "Etape") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement individuel d'étapes" =2),
+                   font_size = "x-large",
+                   background = couleurs$jauneTour)
+    
+
+```
+
+<br/>
+
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "DemiEtape") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement individuel des demi-étapes" =2),
+                   font_size = "x-large",
+                   background = couleurs$jauneTour)
+    
+
+```
+
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenTemps") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel au temps" =2),
+                   font_size = "x-large",
+                   background = couleurs$brunMaillot,
+                   color = "white")
+    
+
+```
+
+<br/>
+ 
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenPoints") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel aux points" =2),
+                   font_size = "x-large",
+                   background = couleurs$orangeMaillot)
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenKOM") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel de la montagne (GPM)" =2),
+                   font_size = "x-large",
+                   background = couleurs$vertMaillot)
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenJeune") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel de la relève" =2),
+                   font_size = "x-large",
+                   background = couleurs$blueSprintMaire,
+                   color= "white")
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenEquipe") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général par équipe au temps" =2),
+                   font_size = "x-large",
+                   background = couleurs$bleuTour,
+                   color = couleurs$jauneTour)
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "Abitibien") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Meilleur Abitibien" =2),
+                   font_size = "x-large",
+                   background = couleurs$jauneTour,
+                   color = couleurs$bleuTour)
+    
+
+```
+
+<br/>
+
+```{r, echo=FALSE}
+
+bourse_totale <- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "Total") %>% 
+  filter(Type == "GrandTotal") %>% pull(Total) %>% currency(digits = 0)
+
+```
+
+Le total général des prix distribués à l’occasion de l’épreuve est de **`r bourse_totale` CAD**.
+
+
+<br/>
+
+Article 16 - Prix spéciaux
+
+:   Les gagnants des prix spéciaux sont choisis par l’ensemble des directeurs techniques et par les commissaires par le biais d’un questionnaire
+
+    * Trophée du meilleur junior abitibien[^abitibien]
+    * Trophée de la révélation – Relevation Trophy
+    * Trophée du plus courageux – Most Courageous Trophy
+    * Trophée du plus gentilhomme – Most Gentlemanly Conduct Trophy
+    * Trophée du plus combatif – Most Combative Trophy
+    * Trophée du meilleur esprit d’équipe – Best Team Spirit Trophy
+    * Trophée du meilleur mécanicien - Best Mechanic Trophy
+    * Trophée du directeur sportif par excellence – Best Team Manager Trophy
+    * Trophée du plus utile à son équipe – MVP of each team Trophy
+
+
+[^abitibien]: Coureur en provenance ou habitant en Abitibi-Témiscamingue, selon le classement général individuel au temps
+
+
+Article 17 – Antidopage
+
+:   Le règlement antidopage de l’UCI s’applique intégralement à la présente épreuve, le cas échéant, la législation antidopage locale qui serait d’application outre le règlement antidopage de l’UCI. 
+
+    Les coureurs sont responsables de vérifier la liste des participants sélectionnés pour contrôle antidopage chaque jour. 
+
+    Le fait de ne pas se présenter aux tests lorsque requis sera considéré comme une violation des règles antidopage. 
+
+
+
+Article 18 – Protocole et récompenses
+
+:   Conformément à l’article `r glue('<a href="{uci_p1_FR}#page=47" target="_blank">1.2.112</a>')` du règlement UCI, les coureurs suivants doivent se présenter quotidiennement au protocole au maximum 10 minutes après l’arrivée en tenue de compétition :
+
+    * Les 3 premiers de l’étape.
+    * Les leaders des classements suivants : 
+    
+        * classement individuel au temps (maillot brun), 
+        * classement général aux points (maillot orange), 
+        * leader de première année (maillot bleu) et 
+        * leader au classement de la montagne (maillot à pois).
+
+
+Article 19 – Pénalités
+
+:   Le barème de pénalités de l’UCI est applicable intégralement.
+
+    De plus, si une voiture d’équipe effectue un dépassement interdit en zone urbaine pour remonter la caravane ou fait usage de conduite dangereuse, l’organisation pourra exiger que cette voiture d’équipe soit placée au dernier rang de la caravane, immédiatement ou pour la ou les prochaines étapes, à la discrétion de l’organisation. 
+    
+    Si une deuxième infraction devait se produire ou en cas d’infraction grave, la voiture d’équipe pourrait être exclue complètement de la caravane.
+
+
+Article 20 – Services d’urgence
+
+:   Étant donné le caractère urbain de certaines épreuves et de l’importance accordée par l’organisation à la sécurité du public, la priorité sera accordée aux services d’urgence en cas d’incident et tous devront s’y conformer.
+
+
+Article 21 – Respect de l’environnement et de l’image du cyclisme
+
+:   Il est interdit aux coureurs de jeter déchets ou bidons sans précautions le long du parcours en dehors des zones de déchets mises en place par l’organisateur (article `r glue('<a href="{uci_p2_FR}#page=21" target="_blank">2.2.025</a>')`). 
+
+    Les emballages et déchets doivent être conservés par le coureur ou remis à la voiture d’équipe. Les bidons peuvent être laissés en bord de chaussée si des spectateurs sont présents. 
+    
+    Le non-respect de cet article peut entrainer des sanctions (`r glue('<a href="{uci_p2_FR}#page=103" target="_blank">2.12.004</a>')`) ou une exclusion (`r glue('<a href="{uci_p2_FR}#page=128" target="_blank">2.2.010</a>')`).
+

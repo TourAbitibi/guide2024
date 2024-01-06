@@ -1,0 +1,128 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- dep_neutre.Rmd  : info pour horaire et coordonnées moto-info et ardoisier -->
+
+# Dépannage neutre {#depneutre}
+
+Instructions et horaires pour l'équipe de dépannage neutre.
+
+### Horaire {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "HORAIRE_DEP") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  inner_join(iti_etape$Details, by = 'Etape') %>% 
+  mutate(
+    Heure_Navette = format(Heure_Navette, format = "%H:%M")
+  ) %>% 
+  select(
+    'Étape' = Etape,
+    Jour,
+    "Villes d'étape" = Descr_Villes,
+    'Heure Navette' = Heure_Navette,
+    'Départ Course' = Depart,
+    'Notes' = notes
+  ) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c('c', 'l','l', 'c','c','l'),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+
+```
+<br/>
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "HORAIRE_DEP") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  inner_join(iti_etape$Details, by = 'Etape') %>% 
+  mutate(
+    Heure_Navette = format(Heure_Navette, format = "%H:%M")
+  ) %>% 
+  select(
+    'Étape' = Etape,
+    'Conducteur 1' = cond_1,
+    'Mécano 1'= dep_1,
+    'Conducteur 2' = cond_2,
+    'Mécano 2'= dep_2,
+    'Conducteur 3' = cond_3,
+    'Mécano 3'= dep_3
+  ) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c('c', rep('l', times = 6)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+
+```
+
+#### Notes {-}
+
+- S'assurer d'être à `r params$ville` - `r params$nom_centrale`, 30-45 min avant le départ de la navette.
+- Si vous vous rendez directement à Malartic, merci d'aviser <a href="mailto:tour@brunogauthier.net?subject=Tour Abitibi - Dépannage Neutre">Bruno Gauthier</a> à l'avance.
+- Pour les étapes 5 et 6, être à la ligne départ/arrivée 1h minimum avant le départ.
+- Vous irez de `r params$ville` vers la ville de départ en voiture, retour dans une voiture ou moto de dépannage neutre. 
+- S’assurer de récupérer et rendre le matériel à chaque journée, sauf entente préalable. 
+
+
+### Coordonnées de l'équipe {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "COORD_DEP") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  filter(!Nom %in% c('TBD', 'Non-requis','---')) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c(rep('l', times = 3)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+### Instructions {-}
+
+#### Rôle : Dépannage neutre {-}
+
+- Les équipes ont priorité. Le dépannage neutre est un *back-up* aux équipes
+- Radio-tour peut indiquer d'assurer le service pour une équipe en particulier
+- Chute majeure - toujours s'arrêter et s'assurer que tout le monde est dépanné par les équipes avant de repartir
+- Prendre en note le numéro du coureur ayant reçu une roue ou un vélo
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/5Mf4QGR/neutre-auto.jpg")
+```
+
+#### Matériel {-}
+
+- Clés Allen communes (4, 5, 6, mm)
+- Clé à pédales/Allen 8mm sur *ratchet* si possible en cas de changement de vélo 
+- Guenille
+- Crayon feutre ou papier-crayon pour identifier roues avec crevaison avec numéro de dossard du coureur
+- Emporter quelques bouteilles d’eau pour ravitailler les coureurs échappés si nécessaire.
+
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/gg77qBR/neutre-moto.jpg")
+```
+
+#### Références UCI {-}
+
+##### Véhicule de dépannage neutre {-}
+
+L’organisateur doit prévoir au minimum trois véhicules d’assistance neutre (voitures ou motos) qui disposent de vélos et/ou roues de rechange permettant de dépanner tout coureur au cours de l’épreuve. Ces véhicules d’assistance neutre sont positionnés par le Président du Collège des Commissaires devant ou derrière les différents groupes de coureurs selon les circonstances de course.
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=297" target="_blank">Guide UCI, p. 295</a>
+

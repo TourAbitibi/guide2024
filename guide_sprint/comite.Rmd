@@ -1,0 +1,84 @@
+---
+title: "Challenge Sprint Abitibi 2024"
+description: "Comité organisateur / Organizing Committee  / Commissaires"
+output:
+  distill::distill_article
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- Pour render : rmarkdown::render_site('guide_sprint') -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+
+```
+
+```{r call_Libs_Vars, include=FALSE}
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Dates
+source(here("code", "_Dates.R"))
+
+# Langue
+lang <- "FR"
+
+# Fichier excel avec noms
+staff_xlsx <- here("excel", "staff.xlsx")
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA,
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+```
+
+## Commissaires
+
+```{r CO_commissaires_tableau, echo=FALSE}
+
+read_excel(staff_xlsx, sheet = "COMM_SPRINT") %>% 
+  select(role_fr,
+         noms,
+         role_en) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c('l', 'c', 'r'),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+## Comité organisateur / Organizing Committee 
+
+```{r CO_tableau, echo=FALSE}
+
+staff_xlsx <- here("excel", "staff.xlsx")
+
+read_excel(staff_xlsx, sheet = "CO") %>% 
+  select(role_fr,
+         noms,
+         role_en) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c('l', 'c', 'r'),
+      ) %>% 
+    kable_styling("striped",    
+                  full_width = T) 
+
+```

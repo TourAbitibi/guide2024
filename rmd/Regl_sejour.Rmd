@@ -1,0 +1,12 @@
+# Règlements de séjour {#sejour}
+
+- Portez la carte d’accréditation **en tout temps** à l’intérieur de la centrale administrative. Il est interdit de circuler sans celle-ci.
+- Aux repas, présentez votre carte d’accréditation, respectez les quantités permises et videz les cabarets après utilisation en respectant les consignes de récupération.
+- Respectez le couvre-feu à 23h et l’heure de départ le `r dates_FR %>% filter(code=="Lun_Ap") %>% pull(jsem_jour_mois) %>% tolower()`  à midi, à moins d’une entente spéciale avec l’administration.
+- Réparez et nettoyez les vélos aux endroits prévus à l’extérieur et n’entreposez pas de produits inflammables à l’intérieur.
+- Dans les classes, posez les vélos sur les plastiques prévus à cet effet.
+- Ne circulez pas sur les vélos à l’intérieur de la centrale administrative.
+- Massez les coureurs à l’intérieur des classes ou à la salle prévue à cet effet.
+- Ne consommez pas d’alcool ni tabac ni cannabis à l’intérieur de la centrale et sur le terrain de l’école.
+- Gardez la centrale propre à l’intérieur et à l’extérieur en utilisant les poubelles et les bacs de récupération. Placez votre poubelle de classe dans le corridor pour la faire vider durant la journée.
+- Respectez le personnel et les bénévoles.

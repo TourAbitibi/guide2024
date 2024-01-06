@@ -1,0 +1,35 @@
+---
+title: "Détails de POIs de signalisation"
+output: html_document
+---
+
+
+### Point d'intérêt - `r P$ID`
+
+```{r, echo = FALSE, eval = TRUE}
+
+# Affichage des 2 tableaux détaillés  (provient de : code/_import_itineraire.R)
+P_sign_detail_1(P)
+P_sign_detail_2(P)
+
+```
+
+#### Localisation du point d'intérêt {-}
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "cartes" ,"sign", glue("{P$ID}.png")))
+
+```
+
+
+#### Photo du point d'intérêt {-}
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "sign", P$image))
+
+```
+
+
+----

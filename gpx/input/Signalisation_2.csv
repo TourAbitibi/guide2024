@@ -1,0 +1,30 @@
+Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
+Start,Start of route,0,0,,
+Right,Tournez à droite sur Boulevard du Collège,0.07,289.70,,Edited
+Danger,sign_01,0.07,289.70,terre_plein,Edited
+Left,Tournez à gauche sur Rue Tardif,0.16,285.50,,Edited
+Left,Tournez à gauche sur Avenue Laliberté,0.86,282.40,,Edited
+Right,Tournez à droite sur Rue Marie-Victorin,0.96,278.10,,Edited
+Right,Tournez à droite sur Rue Perreault Est,2.68,293.50,,Edited
+Left,"Tournez à gauche sur 117 - Voie de contournement, 117",4.04,295.30,,Edited
+Control,sign_02,4.04,295.30,virage,Edited
+Danger,sign_03,8.82,312.40,terre_plein,Edited
+Control,sign_08,8.98,312.70,control,Edited
+Slight Right,"Restez sur la droite sur Rue du Saguenay, 101",9.00,312.30,,Edited
+Control,sign_09,60.42,289.90,,Edited
+Right,Prendre à droite sur Av. Baril E/​QC-390 E,60.43,290.00,,""
+Right,sign_10,60.43,290.10,,Edited
+Left,"Tournez à gauche sur Rue Principale, 390",83.00,307.50,,Edited
+Control,sign_12,83.18,306.00,virage,Edited
+Right,"Tournez à droite sur Avenue Privat, 111",83.18,305.90,,Edited
+Danger,sign_13,106.60,312.60,danger,Edited
+Straight,Continuez sur 1re Avenue Ouest,128.71,315.70,,Edited
+Control,sign_14,128.71,315.70,intersection,Edited
+Danger,sign_15,129.21,299.90,terre_plein,Edited
+Control,sign_16,129.39,296.70,virage,Edited
+Left,Tournez à gauche sur Boulevard Mercier,129.40,297.72,,Edited
+Right,Tournez à droite sur 2e Avenue Ouest,129.50,296.40,,Edited
+Left,Tournez à gauche sur 1re Rue Ouest,129.73,307.30,,Edited
+Right,Tournez à droite sur 5e Avenue Ouest,130.13,300.80,,Edited
+Right,Tournez à droite sur Rue Principale Nord,130.31,304.10,,Edited
+End,End of route,130.65,306.30,

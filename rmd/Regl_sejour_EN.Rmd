@@ -1,0 +1,12 @@
+# Accommodation rules {#accomodation}
+
+- Wear credentials **at all times** in the race headquarters. It is mandatory.
+- At meals, show your credentials; take permitted quantities and empty the cabarets after use, following the recycling instructions.
+- Respect 11:00 PM curfew and noon departure time on Monday, `r dates_EN %>% filter(code=="Lun_Ap") %>% pull(jour_mois)` unless you have a special agreement with the administration.
+- Repair and clean bikes in designated areas outside and do not store flammable products inside.
+- In rooms, place bikes on plastic covering.
+- Do not ride bikes inside the race headquarters.
+- Massages must be given in rooms or in the designated massage room.
+- Use of alcohol, tobacco and cannabis are prohibited in the race headquarters and on school property.
+- Deposit waste in trash cans and recycling bins to keep the race headquarters clean. Place your room’s trash can in the hallway to have it emptied during the day.
+- Respect staff and volunteers.

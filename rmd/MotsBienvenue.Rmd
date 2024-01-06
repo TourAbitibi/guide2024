@@ -1,0 +1,175 @@
+# Mots de bienvenue {#bienvenue}
+
+### Mot de la présidente {-}
+
+\linebreak
+
+```{r photo_pres, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+knitr::include_graphics(here("img", "photos", "pres.png"))
+```
+
+
+C’est au nom de tous les membres du conseil d’administration, du comité organisateur, que j’aimerais vous souhaiter la bienvenue au `r params$edition`e Tour de l’Abitibi `r params$sponsor`. Nous sommes très fiers de notre événement cycliste, le seul dans sa catégorie en Amérique du Nord! Sa longévité est attribuable à la passion, l’engouement et l’engagement inconditionnel des Témiscabitibiens!
+
+Pour sa `r params$edition`e édition, le Tour accueillera des jeunes cyclistes provenant d’un peu partout à travers le monde. Comme les années dernières, les partisans des équipes pourront suivre les courses en direct sur notre site web en se rendant au <a href="https://www.tourabitibi.com" target="blank">www.tourabitibi.com</a>.
+
+Je tiens à souligner le travail indispensable de nos nombreux bénévoles et de notre équipe permanente, qui tout au long de l’année, ont travaillé pour vous offrir un événement des plus mémorable lors de la semaine du Tour à Amos. De plus, j’aimerais faire une mention toute spéciale à nos fidèles et généreux partenaires, sans qui l’événement n’aurait pas lieu, sans oublier notre partenaire en titre ; Glencore.
+
+En mon nom et en celui de tous ceux et celles qui participent à la réussite de cette compétition sportive, j’aimerais remercier les cyclistes et leurs accompagnateurs de s’être déplacés jusqu’en Abitibi-Témiscamingue. À vous tous, je vous souhaite la meilleure des chances, et que le passage dans notre magnifique région soit à jamais gravé dans votre mémoire.
+
+**Mélanie Rocher**    
+Présidente du Conseil d'Administration         
+Tour Cycliste de l'Abitibi inc. 
+
+```{r mots_logo_tour, echo=TRUE, echo=FALSE, fig.align='left', out.width= "25%"}
+knitr::include_graphics(here("img", "logo", "TA_Glencore.png"))
+```
+
+<br/>
+
+--- 
+
+\pagebreak
+
+<br/>
+
+### Mot du commanditaire en titre {-}
+
+\linebreak
+
+```{r photo_AlexisSegal, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics(here("img", "photos", "comm_titre.jpg"))
+
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+
+
+**Alexis Segal**      
+Directeur Relations gouvernementales et affaires publiques
+
+
+```{r mots_logo_Glencore, echo=TRUE, echo=FALSE, fig.align='left', out.width= "35%"}
+knitr::include_graphics(here("img", "logo", "Glencore.png"))
+```
+
+<br/>
+
+---
+
+\pagebreak
+
+<br/>
+
+### Mot du Maire de la Ville de `r params$ville` {-}
+
+\linebreak
+
+```{r photo_maire, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics(here("img", "photos", "maire_vd.png"))
+
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+
+**Céline Brindamour**    
+Mairesse de la Ville de `r params$ville` 
+  
+
+```{r mots_logo_amos, echo=TRUE, echo=FALSE, fig.align='left', out.width= "25%"}
+knitr::include_graphics(here("img", "logo", "VilleVD.png"))
+```
+
+<br/>
+
+---
+
+\pagebreak
+
+<br/>
+
+### Mot de la Ministre {-}
+
+\linebreak
+
+```{r photo_ministre_gauche, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:left; padding:10px"'}
+
+knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/2018/08/photo-profil-charest-isabelle-brome-missisquoi.png")
+
+```
+
+```{r photo_ministre_droite, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/2018/08/photo-profil-proulx-caroline-berthier-sans-main.png")
+
+```
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+<br/>
+
+**Isabelle Charest**    
+Ministre responsable du Sport, du Loisir et du Plein air
+
+<br/>
+
+
+**Caroline Proulx**   
+Ministre du Tourisme
+Ministre responsable de la région de Lanaudière
+
+```{r, echo=FALSE,out.width="75%",fig.show='hold',fig.align='center'}
+knitr::include_graphics(here("img", "logo", "gouv_quebec_large.png"))
+``` 
+
+<br/>
+
+---
+
+\pagebreak
+
+<br/>
+
+
+### Mot du député régional {-}
+
+\linebreak
+
+```{r photo_deputee_reg, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/2018/08/photo-profil-dufour-pierre-abitibi-est.png")
+
+```
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+
+Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+
+**Pierre Dufour**     
+Député dans Abitibi-Est   
+Adjoint parlementaire du ministre de l’Économie, de l’Innovation et de l’Énergie (volet développement économique régional)
+Adjoint gouvernemental au ministre responsable de la région de l’Abitibi-Témiscamingue 
+
+
+
+```{r, echo=FALSE,out.width="75%",fig.show='hold',fig.align='center'}
+knitr::include_graphics(here("img", "logo", "gouv_quebec_large.png"))
+``` 
+

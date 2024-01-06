@@ -1,0 +1,19 @@
+bookdown::gitbook:
+  toc_depth: 2
+  css: style.css
+  includes:
+    in_header: matamo-analytics.html
+    before_body: ../img/logo/header_lien_webdiffusion_FR.html
+  config:
+    toc:
+      before: |
+        <li><a href="index.html" >Guide 2024 - Organisateur</a></li>
+      after: |
+        <li><a href="https://tourabitibi.com" target="blank">Tour de l'Abitibi Glencore</a></li>
+    download: ["pdf"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  #  citation_package: natbib
+  keep_tex: yes

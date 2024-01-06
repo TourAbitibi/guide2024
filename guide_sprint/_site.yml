@@ -1,0 +1,23 @@
+name: "guide_sprint"
+title: "Challenge Sprint Abitibi 2024"
+description: "Challenge Sprint Abitibi 2024"
+output_dir: "../sprint"
+base_url: "https://tourabitibi.github.io/guide2024/sprint/"
+favicon: "../img/favicon.jpg"
+navbar:
+  logo:
+    image: "../img/favicon.jpg"
+    href: https://www.tourabitibi.com
+  right:
+    - text: "Presentation"
+      href: index.html
+    - text: "Comité / Staff"
+      href: comite.html
+    - text: "Règlements / Rules"
+      href: reglement.html
+    - text: "Partants / Startlist"
+      href: partants.html
+    - text: "Résultats / Results"
+      href: results.html
+theme: "../distill.css"
+output: distill::distill_article

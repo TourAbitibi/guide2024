@@ -1,0 +1,105 @@
+--- 
+title: "Tour de l'Abitibi Glencore 2024" 
+subtitle: "Guide de l'Organisateur"
+author: "Bruno Gauthier"
+institute: "Tour de l'Abitibi"
+date: "Dernière mise à jour : `r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+toc-title: "Table des Matières"
+favicon: "../img/favicon.jpg"
+#papersize: letter
+#fontsize: 12pt
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+    Guide technique du Tour de l'Abitibi 2024, version de l'organisateur.
+suppress-bibliography: yes
+#github-repo: rstudio/bookdown-demo
+---
+
+# Présentation
+
+```{r here, include=FALSE}
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+```
+
+```{r call_Libs_Vars, include=FALSE}
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Dates
+source(here("code", "_Dates.R"))
+
+# Utilisation Résultats
+source(here("code", "_useResults.R"))
+
+# Pour accès aux données du fichier excel Itineraires.xlsx
+source(here("code","_import_itineraire.R"))
+
+# Pour accès aux tracés et aux POI d'étapes
+parcours <- st_read(here("gpx","output","parcours.shp"))
+points <- st_read(here("gpx","output","points_parcours.shp"))
+points_signalisation <- st_read(here("gpx","output","points_signalisation.shp"))
+
+# Langue
+lang <- "FR"
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA,
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+
+```
+
+
+```{r logo_page_index, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics(here("img", "logo", "TA_Glencore.png"))
+
+```
+
+Bonjour et bienvenue au **Tour de l'Abitibi `r params$sponsor` `r params$annee`** !
+
+Voici un aperçu de la **`r params$edition`^e^ édition** du Tour de l'Abitibi `r params$sponsor` qui se tiendra du `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an) %>% tolower()` au `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an) %>% tolower()`.
+
+Ce guide de l'organisateur contient toutes les informations essentielles pour préparer les différentes étapes du Tour de l'Abitibi `r params$sponsor` et ainsi assurer la sécurité des coureurs, des participants et de la population générale. 
+
+Notamment, il vous permettra de retrouver tous les détails : 
+
+- Programmation et horaire détaillée;
+- Membres du comité organisateur incluant leurs coordonnées;
+- Détails des étapes
+  - Parcours avec détails du départ et de l'arrivée;
+  - Tableaux détaillés des éléments de course;
+  - Détails de tous les points d'intérêts identifiés devant être protégés par un bénévole ou membre des forces de l'ordre (ex, terre-plein, intersection dangereuse, carrefour giratoire, etc.);
+  - Quantité d'affiches requises sur la route;
+  - Photos et localisation précise des ces points d'intérêt; 
+  - Responsabilité des intervenants (qui fait quoi);
+- Règlements particuliers de l'épreuve sportive;
+- Directives pour la circulation en course.
+
+Ce site est un complément du **Guide Technique** complet pour les membres de l'organisation.
+
+<br/>
+
+```{r map_globale, echo = FALSE, eval = TRUE}
+# Visualisation
+mapview(parcours, 
+        lwd = 2.5,
+        alpha = 0.7,
+        z = "name",
+        color = palette.colors(n=7, palette="ggplot2"),
+        layer.name = "Étape")
+```

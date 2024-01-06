@@ -1,0 +1,27 @@
+book_filename: "guide_organisateur"
+delete_merged_file: false
+language:
+  label:
+    toc: "Table des matières"
+    fig: "FIGURE "
+    tab: "TABLEAU "
+  ui:
+    chapter_name: ""
+rmd_files:
+  - "index.Rmd"
+  - "../rmd/Programmation.Rmd"
+  - "../rmd/Partenaires.Rmd"
+  - "../rmd/CO.Rmd"
+  - "../rmd/FeuillesRoute.Rmd"
+  - "../rmd/BoucleSignalisation.Rmd" # Contient le détails d'étape technique + détails signalisation, à modifier pour ajouter les étapes
+  - "../rmd/Sites.Rmd"
+  - "../rmd/Croquis.Rmd"
+  - "../rmd/CLMI_notes.Rmd"
+  - "../rmd/Reglements.Rmd"
+  - "../rmd/signaleur.Rmd"
+  - "../rmd/dep_neutre.Rmd"
+  - "../rmd/ardoise.Rmd"
+  - "../rmd/tv.Rmd"
+  - "../rmd/CirculationCourse.Rmd"
+  - "../rmd/FollowMee.Rmd"
+  - "../rmd/Locaux.Rmd"

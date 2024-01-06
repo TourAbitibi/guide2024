@@ -1,0 +1,22 @@
+Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
+Start,Start of route,0,0,,
+Control,sign_50,1.76,294.60,Gestion rond point départ,Edited
+Left,sign_01,3.22,300.90,,Edited
+Danger,sign_02,42.27,301.60,Intersection,Edited
+Danger,sign_03,42.52,304.00,Intersection,Edited
+Right,sign_04,59.71,322.30,intersection,Edited
+Danger,sign_05,88.02,287.20,Pont de bois / Wooden bridge,Edited
+Control,sign_51,116.02,301.60,,Edited
+Left,sign_06,117.43,293.70,,Edited
+Left,sign_07,117.52,294.30,,Edited
+Danger,sign_08,117.88,296.00,terre-plein,Edited
+Danger,sign_09,117.98,295.40,terre-plein,Edited
+Danger,sign_10,118.11,296.00,terre-plein,Edited
+Danger,sign_11,118.24,295.90,terre-plein,Edited
+Danger,sign_12,118.37,297.80,terre-plein,Edited
+Left,sign_13,118.49,297.90,terre-plein,Edited
+Danger,sign_14,118.61,299.00,Terre-plein,Edited
+Danger,sign_15,118.72,301.30,terre-plein,Edited
+Left,sign_16,118.84,303.90,,Edited
+Danger,sign_17,118.91,304.90,,Edited
+End,End of route,119.10,306.40,

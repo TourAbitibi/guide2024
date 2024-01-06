@@ -1,0 +1,147 @@
+---
+editor_options: 
+  chunk_output_type: console
+---
+# Programmation
+
+```{r include=FALSE}
+
+### Voir le fichier `code/programmation.R` pour effectuer des changements ###
+
+source(here("code","programmation.R"))
+
+```
+
+
+###  Tour de l'Abitibi `r params$sponsor` `r params$annee` - `r params$edition`e édition {-}
+
+
+```{r echo=FALSE, results='asis'}
+
+
+glue('<table>
+    <tr>
+        <td><strong>Date</strong></td>
+        <td><strong>Présenté par</strong></td>
+        <td><strong>Épreuve</strong></td>
+        <td><strong>Départ</strong></td>
+        <td><strong>Arrivée</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[1]}</td>
+        <td>{dff$presente[1]}</td>
+        <td>{dff$epreuve[1]}</td>
+        <td>{dff$dep[1]}</td>
+        <td>{dff$arr[1]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[2]}</td>
+        <td>{dff$presente[2]}</td>
+        <td>{dff$epreuve[2]}</td>
+        <td>{dff$dep[2]}</td>
+        <td>{dff$arr[2]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[3]}</td>
+        <td>{dff$presente[3]}</td>
+        <td>{dff$epreuve[3]}</td>
+        <td>{dff$dep[3]}</td>
+        <td>{dff$arr[3]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[4]}</td>
+        <td>{dff$presente[4]}</td>
+        <td>{dff$epreuve[4]}</td>
+        <td>{dff$dep[4]}</td>
+        <td>{dff$arr[4]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[5]}</td>
+        <td>{dff$presente[5]}</td>
+        <td>{dff$epreuve[5]}</td>
+        <td>{dff$dep[5]}</td>
+        <td>{dff$arr[5]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[6]}</td>
+        <td>{dff$presente[6]}</td>
+        <td>{dff$epreuve[6]}</td>
+        <td>{dff$dep[6]}</td>
+        <td>{dff$arr[6]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[7]}</td>
+        <td>{dff$presente[7]}</td>
+        <td>{dff$epreuve[7]}</td>
+        <td>{dff$dep[7]}</td>
+        <td>{dff$arr[7]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[8]}</td>
+        <td>{dff$presente[8]}</td>
+        <td>{dff$epreuve[8]}</td>
+        <td>{dff$dep[8]}</td>
+        <td>{dff$arr[8]}</td>
+    </tr>
+</table>') 
+
+
+```
+
+**Distance totale :** `r sum(df$Distance_totale)` km

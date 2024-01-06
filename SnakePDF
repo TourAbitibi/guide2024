@@ -1,0 +1,189 @@
+
+##########################################################################################################################
+##########################################################################################################################
+#
+# Regroupement des règles pour création des PDF résumé guide
+#
+#  Pour création : snakemake -s  SnakePDF -c3 -F
+# 
+##########################################################################################################################
+##########################################################################################################################
+
+rule Z_targets:
+    input:
+        "code/programmation.R",
+
+        "img/cartes/input/Etape1_Full.png",
+        "img/elev/Etape1_Full_FR.png",
+
+        "guide_FR_PDF/details/tableau_1.pdf",
+        "guide_EN_PDF/details/tableau_1.pdf",
+
+        "guide_FR_PDF/details/prog.png",
+        "guide_EN_PDF/details/prog.png",
+
+        "guide_FR_PDF/guide_FR.pdf",
+        "guide_EN_PDF/guide_EN.pdf",
+
+        "excel/Itineraires.xlsx"
+
+    output:
+        "dag_PDF.png"
+    shell:
+        """
+        snakemake -s SnakePDF --dag | dot -Tpng > {output}
+
+        echo "\n  ~~ Rsync vers Portainer 250 ~~ \n"
+
+        rsync -avhP img/* bruno@192.168.101.250:/home/bruno/guide_web/2024/img/ --delete-after
+
+        rsync -avhP FR/* bruno@192.168.101.250:/home/bruno/guide_web/2024/FR/ --delete-after
+        rsync -avhP EN/* bruno@192.168.101.250:/home/bruno/guide_web/2024/EN/ --delete-after
+
+        rsync -avhP organisateur/* bruno@192.168.101.250:/home/bruno/guide_web/2024/organisateur/ --delete-after
+
+	    echo "\n  ~~ Fin de la synchronisation ~~ \n"
+        
+        """
+
+
+##########################################################################################################################
+##########################################################################################################################
+#
+# Création des fichiers préliminaires servant seulement au guide pdf
+#
+##########################################################################################################################
+##########################################################################################################################
+
+
+rule R01_creationTableauProgrammationOnePage:
+    input:
+        "code/_import_itineraire.R",
+        "code/programmation.R",
+        "code/_creationProgrammationOnePage.R",
+        "excel/Itineraires.xlsx"
+    output:
+        FR = "guide_FR_PDF/details/prog.png",
+        EN = "guide_EN_PDF/details/prog.png"
+    params:
+        script = "code/_creationProgrammationOnePage.R",
+    shell:
+        """
+        {params.script}
+        """
+
+##########################################################################################################################
+
+# Création des tableaux pdf individuels qui servent à créer les guides papier
+
+rule R02_creationTableauxDetails:
+    input:
+        "code/_import_itineraire.R",
+        "code/_creationTableauxDetails.R",
+        "excel/Itineraires.xlsx"
+    output:
+        "guide_FR_PDF/details/tableau_1.pdf",
+        "guide_EN_PDF/details/tableau_1.pdf"
+    params:
+        script = "code/_creationTableauxDetails.R",
+        temp = "guide_FR_PDF/details/temp.pdf",
+        FR_path = "guide_FR_PDF/details/tableau_*.pdf",
+        EN_path = "guide_EN_PDF/details/tableau_*.pdf"
+    shell:
+        """
+        {params.script}
+
+        echo "\n ~~ Gestion de la taille des pdf ~~\n"
+
+        for pdfs in {params.FR_path}; do
+            ps2pdf "$pdfs" {params.temp} &&
+            mv {params.temp} "$pdfs"
+        done
+
+        for pdfs in {params.EN_path}; do
+            ps2pdf "$pdfs" {params.temp} &&
+            mv {params.temp} "$pdfs"
+        done
+
+        """
+
+
+##########################################################################################################################
+##########################################################################################################################
+#
+# Création des pdf
+#
+##########################################################################################################################
+##########################################################################################################################
+
+
+rule R51_render_pdf_FR:
+    input:
+        "img/cartes/input/Etape1_Full.png",
+        "img/elev/Etape1_Full_FR.png",
+        "excel/Itineraires.xlsx",
+        "guide_FR_PDF/guide_FR.Rmd",
+        "guide_FR_PDF/details/tableau_1.pdf",
+        "code/programmation.R",
+        "guide_FR_PDF/details/prog.png",
+        "img/logo/comm_0.png", "img/logo/comm_1.png", "img/logo/comm_2.png", "img/logo/comm_3.png", "img/logo/comm_4.png", "img/logo/comm_5.png", "img/logo/comm_6.png", "img/logo/comm_7.png",
+
+    output:
+        "guide_FR_PDF/guide_FR.pdf"
+    params:
+        PDF_FR = "guide_FR_PDF/guide_FR.Rmd",
+        lang = "FR"
+    shell:
+        """
+        Rscript -e "rmarkdown::render('{params.PDF_FR}')"
+
+        echo "  ~~ Corriger la taille du fichier FR ~~ "
+
+        ps2pdf {output} guide_FR_PDF/guide_resized.pdf &&
+        rm {output} &&
+        mv guide_FR_PDF/guide_resized.pdf {output} &&
+
+        echo "  ~~ Copier le pdf vers le fichier FR ~~ "
+
+        cp -R {output} {params.lang}/guide2024.pdf
+
+        echo "  ~~ Copier le pdf vers le fichier organisateur ~~ "
+        
+        cp -R {output} organisateur/guide_organisateur.pdf
+
+        """
+
+##########################################################################################################################
+
+rule R52_render_pdf_EN:
+    input:
+        "img/cartes/input/Etape1_Full.png",
+        "img/elev/Etape1_Full_FR.png",
+        "excel/Itineraires.xlsx",
+        "guide_EN_PDF/guide_EN.Rmd",
+        "guide_EN_PDF/details/tableau_1.pdf",
+        "code/programmation.R",
+        "guide_EN_PDF/details/prog.png",
+        "img/logo/comm_0.png", "img/logo/comm_1.png", "img/logo/comm_2.png", "img/logo/comm_3.png", "img/logo/comm_4.png", "img/logo/comm_5.png", "img/logo/comm_6.png", "img/logo/comm_7.png",
+
+
+    output:
+        "guide_EN_PDF/guide_EN.pdf"
+    params:
+        PDF_EN = "guide_EN_PDF/guide_EN.Rmd",
+        lang = "EN"
+    shell:
+        """
+        Rscript -e "rmarkdown::render('{params.PDF_EN}')"
+
+        echo "  ~~ Corriger la taille du fichier EN ~~ "
+
+        ps2pdf {output} guide_EN_PDF/guide_resized.pdf &&
+        rm {output} &&
+        mv guide_EN_PDF/guide_resized.pdf {output} &&
+
+        echo "  ~~ Copier le pdf vers le fichier EN ~~ "
+
+        cp -R {output} {params.lang}/guide2024.pdf
+
+        """
