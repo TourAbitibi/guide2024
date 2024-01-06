@@ -1,4 +1,4 @@
-```{r, echo=FALSE, results='asis'}
+```{r boucle_signalisation, echo=FALSE, results='asis'}
   
   ### Préparation des pages détaillées par Étape, contenant la partie technique (même que le guide) et les détails de signalisation ###
 

@@ -1,0 +1,2104 @@
+--- 
+title: "Tour de l'Abitibi Glencore 2024" 
+subtitle: "Guide de l'Organisateur"
+author: "Bruno Gauthier"
+institute: "Tour de l'Abitibi"
+date: "Dernière mise à jour : `r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+toc-title: "Table des Matières"
+favicon: "../img/favicon.jpg"
+#papersize: letter
+#fontsize: 12pt
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+    Guide technique du Tour de l'Abitibi 2024, version de l'organisateur.
+suppress-bibliography: yes
+#github-repo: rstudio/bookdown-demo
+---
+
+# Présentation
+
+```{r here, include=FALSE}
+# Gestion avec here
+here::i_am("guide2024.Rproj")
+```
+
+```{r call_Libs_Vars, include=FALSE}
+# Appel des librairies et variables partagées
+source(here::here("code","_LibsVars.R"))
+
+# Dates
+source(here("code", "_Dates.R"))
+
+# Utilisation Résultats
+source(here("code", "_useResults.R"))
+
+# Pour accès aux données du fichier excel Itineraires.xlsx
+source(here("code","_import_itineraire.R"))
+
+# Pour accès aux tracés et aux POI d'étapes
+parcours <- st_read(here("gpx","output","parcours.shp"))
+points <- st_read(here("gpx","output","points_parcours.shp"))
+points_signalisation <- st_read(here("gpx","output","points_signalisation.shp"))
+
+# Langue
+lang <- "FR"
+
+# Locale
+## https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/locales
+{if (lang == "FR") Sys.setlocale("LC_TIME", locale = "fr_CA.UTF-8") 
+  else Sys.setlocale("LC_TIME", locale = "en_US.UTF-8") }
+
+opts_chunk$set( tidy = FALSE, comment = NA,
+                fig.align = "center",
+                fig.width = 7.5, fig.height = 7.5,
+                fig.retina = 2, cache = FALSE,
+                class.output = "codeout",
+                warning = FALSE,
+                message = FALSE,
+                quiet=TRUE)
+
+
+```
+
+
+```{r logo_page_index, echo=TRUE, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'}
+
+knitr::include_graphics(here("img", "logo", "TA_Glencore.png"))
+
+```
+
+Bonjour et bienvenue au **Tour de l'Abitibi `r params$sponsor` `r params$annee`** !
+
+Voici un aperçu de la **`r params$edition`^e^ édition** du Tour de l'Abitibi `r params$sponsor` qui se tiendra du `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an) %>% tolower()` au `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an) %>% tolower()`.
+
+Ce guide de l'organisateur contient toutes les informations essentielles pour préparer les différentes étapes du Tour de l'Abitibi `r params$sponsor` et ainsi assurer la sécurité des coureurs, des participants et de la population générale. 
+
+Notamment, il vous permettra de retrouver tous les détails : 
+
+- Programmation et horaire détaillée;
+- Membres du comité organisateur incluant leurs coordonnées;
+- Détails des étapes
+  - Parcours avec détails du départ et de l'arrivée;
+  - Tableaux détaillés des éléments de course;
+  - Détails de tous les points d'intérêts identifiés devant être protégés par un bénévole ou membre des forces de l'ordre (ex, terre-plein, intersection dangereuse, carrefour giratoire, etc.);
+  - Quantité d'affiches requises sur la route;
+  - Photos et localisation précise des ces points d'intérêt; 
+  - Responsabilité des intervenants (qui fait quoi);
+- Règlements particuliers de l'épreuve sportive;
+- Directives pour la circulation en course.
+
+Ce site est un complément du **Guide Technique** complet pour les membres de l'organisation.
+
+<br/>
+
+```{r map_globale, echo = FALSE, eval = TRUE}
+# Visualisation
+mapview(parcours, 
+        lwd = 2.5,
+        alpha = 0.7,
+        z = "name",
+        color = palette.colors(n=7, palette="ggplot2"),
+        layer.name = "Étape")
+```
+
+<!--chapter:end:index.Rmd-->
+
+---
+editor_options: 
+  chunk_output_type: console
+---
+# Programmation
+
+```{r include=FALSE}
+
+### Voir le fichier `code/programmation.R` pour effectuer des changements ###
+
+source(here("code","programmation.R"))
+
+```
+
+
+###  Tour de l'Abitibi `r params$sponsor` `r params$annee` - `r params$edition`e édition {-}
+
+
+```{r echo=FALSE, results='asis'}
+
+
+glue('<table>
+    <tr>
+        <td><strong>Date</strong></td>
+        <td><strong>Présenté par</strong></td>
+        <td><strong>Épreuve</strong></td>
+        <td><strong>Départ</strong></td>
+        <td><strong>Arrivée</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[1]}</td>
+        <td>{dff$presente[1]}</td>
+        <td>{dff$epreuve[1]}</td>
+        <td>{dff$dep[1]}</td>
+        <td>{dff$arr[1]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[2]}</td>
+        <td>{dff$presente[2]}</td>
+        <td>{dff$epreuve[2]}</td>
+        <td>{dff$dep[2]}</td>
+        <td>{dff$arr[2]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[3]}</td>
+        <td>{dff$presente[3]}</td>
+        <td>{dff$epreuve[3]}</td>
+        <td>{dff$dep[3]}</td>
+        <td>{dff$arr[3]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[4]}</td>
+        <td>{dff$presente[4]}</td>
+        <td>{dff$epreuve[4]}</td>
+        <td>{dff$dep[4]}</td>
+        <td>{dff$arr[4]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[5]}</td>
+        <td>{dff$presente[5]}</td>
+        <td>{dff$epreuve[5]}</td>
+        <td>{dff$dep[5]}</td>
+        <td>{dff$arr[5]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[6]}</td>
+        <td>{dff$presente[6]}</td>
+        <td>{dff$epreuve[6]}</td>
+        <td>{dff$dep[6]}</td>
+        <td>{dff$arr[6]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[7]}</td>
+        <td>{dff$presente[7]}</td>
+        <td>{dff$epreuve[7]}</td>
+        <td>{dff$dep[7]}</td>
+        <td>{dff$arr[7]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>{dff$date[8]}</td>
+        <td>{dff$presente[8]}</td>
+        <td>{dff$epreuve[8]}</td>
+        <td>{dff$dep[8]}</td>
+        <td>{dff$arr[8]}</td>
+    </tr>
+</table>') 
+
+
+```
+
+**Distance totale :** `r sum(df$Distance_totale)` km
+
+<!--chapter:end:../rmd/Programmation.Rmd-->
+
+
+<!-- Partenaires.Rmd  : document bilingue -->
+
+```{r , eval=(lang != "FR"), results='asis', echo= FALSE}
+
+glue("# Sponsors")
+```
+
+```{r , eval=(lang == "FR"), results='asis', echo= FALSE }
+
+glue("# Partenaires")
+```
+
+
+<!-- TODO : À réviser 2024-->
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+
+knitr::include_graphics(here("img", "logo", "Tableau_Partenaires.png"))
+
+```
+
+<!--chapter:end:../rmd/Partenaires.Rmd-->
+
+
+<!-- CO : document biligue  -->
+
+```{r CO_title_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("# Organizing committee {#co}", .open = "[")
+```
+
+```{r CO_titre_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("# Comité organisateur {#co}", .open = "[")
+```
+
+
+```{r CO_membres_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("### Organizing committee members {-}", .open = "[")
+```
+
+```{r CO_membres_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("### Membres du comité organisateur {-}", .open = "[")
+```
+
+```{r CO_tableau, echo=FALSE}
+
+staff_xlsx <- here("excel", "staff.xlsx")
+
+read_excel(staff_xlsx, sheet = "CO") %>% 
+  select(role = ifelse(lang=="FR", "role_fr", "role_en"),
+         noms,
+         cell) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c(rep('c', times = 3)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+
+
+```{r CO_support_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("### Support team {.unnumbered}", .open = "[")
+```
+
+```{r CO_support_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("### Équipe de soutien {.unnumbered}", .open = "[")
+```
+
+```{r CO_soutien_tableau, echo=FALSE}
+
+read_excel(staff_xlsx, sheet = "SOUTIEN") %>% 
+  select(role = ifelse(lang=="FR", "role_fr", "role_en"),
+         noms) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c(rep('c', times = 2)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+### Commissaires {-}
+
+```{r CO_commissaires_tableau, echo=FALSE}
+
+read_excel(staff_xlsx, sheet = "COMM") %>% 
+  select(role = ifelse(lang=="FR", "role_fr", "role_en"),
+         noms) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c(rep('c', times = 2)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+
+<!-- Ajout de la liste des coureurs si existe, dans une nouvelle section  -->
+
+```{r start_list_FR, eval=(lang == "FR" & STARTLIST_existe), results='asis', echo= FALSE }
+
+glue("# Liste des partants {#partants}", .open = "[")
+
+```
+
+```{r start_list_EN, eval=(lang == "EN" & STARTLIST_existe), results='asis', echo= FALSE }
+
+glue("# Start list {#startlist}", .open = "[")
+
+```
+
+
+```{r start_list_tableau_FR, eval=(lang == "FR" & STARTLIST_existe), results='asis', echo= FALSE }
+
+startlist_tableau_FR()
+
+```
+
+
+```{r start_list_tableau_EN, eval=(lang == "EN" & STARTLIST_existe), results='asis', echo= FALSE }
+
+startlist_tableau_EN()
+
+```
+
+
+
+<!--chapter:end:../rmd/CO.Rmd-->
+
+---
+editor_options: 
+  chunk_output_type: console
+---
+# Feuilles de route quotidiennes {#feuilleroute}
+
+```{r feuille_route_function_FR, echo=FALSE}
+
+feuilleroute_xlsx <- here("excel", "feuilleroute.xlsx")
+
+graphFeuilleRoute <- function(df){
+    
+  df %>% 
+    drop_na(desc_fr) %>% 
+    select(" " = desc_fr,
+         Heures = heures) %>%
+    
+  kbl(escape = F, # permet de passer les <br/>
+      align = c("l","c")) %>%
+    
+    kable_styling( "striped", # "striped",      # kable_minimal ou kable_styling
+                  full_width = TRUE) %>% 
+    
+    row_spec(which(df$param == "reunion",), bold = T, 
+             color = couleurs$brunMaillot,
+             background = couleurs$orangePale) %>% 
+    row_spec(which(df$param == "course",), bold = T, 
+             color = couleurs$bleuTour,
+             background = couleurs$jauneTour, 
+             font_size = 20) %>% 
+    row_spec(which(df$param == "repas",), bold = F, 
+             color = couleurs$blueSprintMaire,
+             background = couleurs$bluePale) %>% 
+    row_spec(which(df$param == "navette",), bold = T) %>% 
+    row_spec(which(df$param == "arrivee",), bold = T, 
+             color = couleurs$bleuTour)
+    
+    
+}
+```
+
+## `r dates_FR %>% filter(code=="Dim_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_dim_av_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "DIM_AV") %>% 
+  graphFeuilleRoute()
+
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_lun_av_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "LUN_AV") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_mar_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "MAR") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Mer") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_mer_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "MER") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_jeu_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "JEU") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Ven") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_ven_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "VEN") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_sam_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "SAM") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_dim_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "DIM") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+## `r dates_FR %>% filter(code=="Lun_Ap") %>% pull(jsem_jour_mois_an)` {-}
+
+```{r feuille_route_lun_ap_FR, echo=FALSE}
+
+read_excel(feuilleroute_xlsx, sheet = "LUN_AP") %>% 
+  graphFeuilleRoute()
+```
+
+<br/>
+
+
+<!--chapter:end:../rmd/FeuillesRoute.Rmd-->
+
+```{r boucle_signalisation, echo=FALSE, results='asis'}
+  
+  ### Préparation des pages détaillées par Étape, contenant la partie technique (même que le guide) et les détails de signalisation ###
+
+for (i in c(1:7)){
+  
+  cat( knitr::knit_child(here("rmd",glue("Etape{i}.Rmd")), envir = environment(), quiet = TRUE))
+  
+  cat( knitr::knit_child(here("rmd","Etape_sign.Rmd"), envir = environment(), quiet = TRUE))
+  
+}
+
+```
+
+<!--chapter:end:../rmd/BoucleSignalisation.Rmd-->
+
+
+<!-- Sites.Rmd  : info/photo pour sites de départs arrivées -->
+
+# Sites Départ Arrivée {#sites}
+
+**2024 : à mettre à jour**
+
+Présentation de différentes photos concernant les lieux de départs et arrivées.
+
+### Site départ - départ -- Amos
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/nQcPt5Z/site-1.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/2NzFWX3/site-2.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/M2FGWcN/site-3.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/Z1rWmPm/site-4.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/C95LVMX/site-5.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/YkynzT8/site-6.jpg")
+```
+<br/>
+
+Et quelques références un peu plus vieilles
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/7XFyb5t/ref-1.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/3ccqTyX/ref-2.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/W04dTBZ/ref-3.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/DC2Q2F7/ref-4.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/DM3y2sY/ref-5.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/nnPVzjP/ref-6.jpg")
+```
+<br/>
+
+Voir [Installation - CLMI] pour la section spécifique au contre-la-montre du jeudi matin.
+
+
+### Site départ - Rouyn-Noranda
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/2M0X9rT/site-11.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/BsfZQcZ/site-12.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/gZVyXXb/site-13.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/NLH1kP1/site-14.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/Mh2RL3P/site-15.jpg")
+```
+<br/>
+
+
+### Site départ - arrivée -- Malartic
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/cvYzVn5/site-31.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/5cRNf0d/site-32.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/bQKj3f5/site-33.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/pvLYn79/site-34.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/swF6tf3/site-35.jpg")
+```
+<br/>
+
+On voit ici que l'arche gonflable a été déplacée durant la course, avant l'arrivée, derrière le *flat bed*.
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/ZYwTkj0/site-36.jpg")
+```
+<br/>
+
+
+### Site départ - Senneterre
+
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/gJLpqgV/site-41.jpg")
+```
+<br/>
+
+On voit ici que l'arche gonflable a été déplacée pour l'arrivée, derrière le *flat bed*.
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/KwydZ1q/site-42.jpg")
+```
+<br/>
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/rsNdt5D/site-43.jpg")
+```
+<br/>
+
+### Site arrivée - Mont Bell - Senneterre
+
+```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/6Dqg214/site-44.jpg")
+```
+<br/>
+
+
+<!--chapter:end:../rmd/Sites.Rmd-->
+
+
+<!-- Croquis.Rmd  : croquis d'installation pour équipe logistiques -->
+
+# Croquis Installation {#croquis}
+
+**Référence 2023, à mettre à jour 2024.**
+
+Présentation des différents site de compétition et des installations logistiques qui y sont requises.
+
+
+### Croquis - Challenge Sprint - Amos
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/yqDdTCb/croquis-challengesprint.png")
+```
+<br/>
+
+### Croquis - CLMI - Amos
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/m8dFN2G/croquis-clmi-amos.png")
+```
+<br/>
+
+### Croquis départ - Amos
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/XJy04Cq/croquis-site-amos.png")
+```
+<br/>
+
+### Croquis - Départ - Val-d'Or
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/tHc0nWd/croquis-dep-vd.png")
+```
+<br/>
+
+### Croquis - Départ - Rouyn-Noranda 
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/Rz25BzY/croquis-dep-rn.png")
+```
+<br/>
+
+### Croquis - Départ Arrivée - Malartic
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/KD9chrr/croquis-dep-arr-malartic.png")
+```
+<br/>
+
+
+
+<!--chapter:end:../rmd/Croquis.Rmd-->
+
+
+<!-- CLMI_notes.Rmd  : info/photo pour rampe du CLMI -->
+
+# Installation - CLMI {#clmi}
+
+Présentation de différentes vues sur le secteur du départ/arrivée du CLMI et de sa rampe de départ.
+
+**Référence 2023, à mettre à jour 2024.**
+
+### Localisation
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "cartes", "sign", "E3_sign_01.png"))
+```
+
+### Vues générales
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/zHt2XxP/CLMI-Ligne-Droite.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/W6RGPzn/CLMI-Enlignement-Cones-Departs.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/gzKQGVY/rampe-14.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/KwnrGhb/rampe-15.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/bBtKn0m/rampe-16.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/jWnqDVL/rampe-17.jpg")
+```
+
+
+### Positionnement de la rampe
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/h7ftS0p/rampe-01.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/V0GmQqd/rampe-06.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/BGY6wLP/rampe-08.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/RYg6kZg/rampe-18.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/ygghSMt/rampe-19.jpg")
+```
+
+
+### Secteur vérification vélos
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/5Ybwhrg/rampe-02.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/v4rHMyB/rampe-03.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/tzrKp7x/rampe-04.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/kXbGMPp/rampe-05.jpg")
+```
+
+
+### Déviation des voitures suiveuses
+
+Les voitures d'équipe choisissent de suivre certains leurs coureurs. Le retour se fait via la 3e avenue Est et la 1ere rue Est.
+
+Il faut être extrêmement prudent dans le secteur de la rue Principale Nord et de la 3e avenue : beaucoup de circulation des coureurs en fin de parcours, des voitures suiveuses, des coureurs en préparation, spectateurs, etc...
+
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "sign", "E3", "sign_92.png"))
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/xS4YsYJ/rampe-10.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/TmF3Gjp/rampe-13.jpg")
+```
+
+
+### Secteur ligne arrivée
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/rMC54Sk/rampe-11.jpg")
+```
+
+<br/>
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/rmySY1q/rampe-12.jpg")
+```
+
+<br/>
+
+Il faut aussi gérer la sortie des coureurs de la section sécurisée. 
+
+> Il faut éviter à tout prix qu'ils retournent jusqu'à la ligne d'arrivée, où il pourrait causer une collision avec un coureur finissant son parcours à pleine vitesse. 
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "sign", "E3", "sign_91.png"))
+```
+
+<!--chapter:end:../rmd/CLMI_notes.Rmd-->
+
+# Règlements particuliers {#reglements}
+
+<!-- Liens vers PDF règlements UCI sont définis dans _LibsVars.R-->
+
+Article 1 – Organisation
+
+:   L’épreuve du Tour de l’Abitibi `r params$sponsor` est une épreuve junior par étapes organisée par Le Tour cycliste de l’Abitibi inc. (1122, 8^e^ Rue - Suite 201, Val-d'Or (Québec) J9P 3N6) sous les règlements et la sanction de <a href="https://uci.org" target="blank">l'Union Cycliste Internationale</a> (UCI). 
+
+    Le Tour de l’Abitibi `r params$sponsor` est également sanctionné par la <a href="https://fqsc.net/" target="blank">Fédération Québécoise des Sports Cyclistes</a> (FQSC) et <a href="https://fcyclingcanada.ca/" target="blank">Cyclisme Canada</a> (CC). 
+
+    L’épreuve est disputée sous le règlement UCI et seule l’échelle des sanctions UCI s’appliquera. Elle se dispute du `r params$dates_compl`.
+
+
+
+Article 2 – Type d’épreuve
+
+:   L’épreuve est réservée aux athlètes de la catégorie hommes junior. Elle est inscrite au calendrier UCI Mondial Junior. Pour être considéré comme junior, un coureur doit être né en `r params$annee - 18` ou `r params$annee - 17`. L’épreuve est classée 2.NCupJ et les points UCI seront attribués selon l’article  `r glue('<a href="{uci_p2_FR}#page=185" target="_blank">2.14.040</a>')`.    
+
+    Les dérogations suivantes ont été accordées par l’UCI à l’organisation du Tour de l’Abitibi :  
+    
+    * L’épreuve du Tour de l’Abitibi a la possibilité d’accueillir des équipes régionales ou des clubs composés uniquement de coureurs juniors mais ne marquant pas de points UCI (article `r glue('<a href="{uci_p2_FR}#page=184" target="_blank">2.14.036</a>')`. De plus, leur maillot devra respecter les articles `r glue('<a href="{uci_p1_FR}#page=83" target="_blank">1.3.045 à 1.3.047</a>')` du Règlement UCI;    
+    * L’épreuve du Tour de l’Abitibi compte deux (2) demi-étapes la même journée (article `r glue('<a href="{uci_p2_FR}#page=60" target="_blank">2.6.010</a>')`.
+   
+   
+    
+Article 3 – Participation
+ 
+:   Tel que mentionné à l’article 2 ci-dessus, l’épreuve est ouverte aux équipes nationales, régionales, de club et mixtes. 
+
+    Conformément à l’article `r glue('<a href="{uci_p2_FR}#page=185" target="_blank">2.14.039</a>')` du règlement UCI, le nombre de coureurs par équipe est de minimum quatre (4) et de maximum six (6) coureurs.
+    
+    > Conformément au règlement `r glue('<a href="{uci_p2_FR}#page=20" target="_blank">2.2.023</a>')` abrogé par l'UCI pour 2023, il n'y a plus de développement maximum pour les hommes juniors (braquets). 
+    
+
+Article 4 – Permanence
+
+:   La permanence de l’épreuve opère du dimanche `r dates_FR %>% filter(code=="Dim_Av") %>% pull(jour_mois)` au dimanche `r dates_FR %>% filter(code=="Lun_Ap") %>% pull(jour_mois_an)` à l’école secondaire Le Carrefour, au `r params$adresse_centrale`. Les heures d’ouverture sont établies en fonction de l’horaire des courses, mais un gardien de sécurité est présent 24 heures sur 24.
+
+    La rencontre initiale entre l’organisation du Tour et les responsables d’équipes se fait à la permanence le dimanche `r dates_FR %>% filter(code=="Dim_Av") %>% pull(jour_mois)` de 12h00 à 23h00 et le lundi `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jour_mois)` de 8h00 à 16h30.
+    
+    La vérification des licences par le Collège des commissaires et la remise des dossards et plaques de cadre aura lieu le lundi `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jour_mois)` entre 14h et 15h30.
+    
+    La réunion obligatoire des directeurs sportifs organisée suivant l’article `r glue('<a href="{uci_p1_FR}#page=43" target="_blank">1.2.087</a>')` du règlement UCI, en présence des membres du Collège des commissaires, est fixée à 10h00 le mardi `r dates_FR %>% filter(code=="Mar") %>% pull(jour_mois_an)`.
+
+
+Article 5 – Ordre de la caravane
+
+:   L’ordre de la caravane pour l’étape 1 sera déterminé selon l’article `r glue('<a href="{uci_p2_FR}#page=187" target="_blank">2.14.046</a>')` du règlement UCI. 
+
+    L’ordre de la caravane pour les étapes subséquentes sera déterminé en fonction du coureur de l’équipe le mieux placé au classement général individuel.
+    
+
+Article 6 – Ordre de départ pour le contre-la-montre
+
+:   L’ordre de départ est l’ordre inverse du classement général au temps après l’étape No 2. Toutefois le collège des commissaires peut modifier cet ordre afin d’éviter que deux coureurs d’une même équipe se suivent (`r glue('<a href="{uci_p2_FR}#page=64" target="_blank">2.6.023</a>')`). 
+
+    Les départs se donneront à intervalle d’une (1) minute, à l’exception des 10 derniers coureurs qui partiront avec un intervalle de deux (2) minutes.
+
+    Les vélos doivent être présentés et en quarantaine pour vérification au moins 15 minutes avant le départ du coureur. Les vélos spécifiques au contre-la-montre sont autorisés pour le contre-la-montre individuel s’ils respectent la règlementation de l’UCI.
+    
+    Une vérification optionnelle de vélos sera offerte par les commissaires le mercredi `r dates_FR %>% filter(code=="Mer") %>% pull(jour_mois_an)` à 10h30.
+    
+    
+Article 7 – Radio-Tour
+
+:   Les informations courses sont émises sur la fréquence **01 – Radio-Tour** sur le radio fourni par l’organisation.
+
+
+Article 8 – Assistance technique neutre
+
+:   Le service d’assistance technique neutre est assuré par l’organisation du Tour cycliste de l’Abitibi (à l’exception de l’étape 3 – CLMI). Le service est assuré au moyen de 2 véhicules automobiles et 1 moto identifiés à cet effet. 
+
+    Toutes les roues arrière du dépannage neutre seront équipées de cassettes 11 & 12 vitesses, avec freins traditionels sur jantes et freins à disques. Pour les équipes ayant des besoins particuliers, veuillez nous avertir à la réunion des directeurs sportifs.
+
+
+Article 9 – Délais d’arrivée
+
+:   Il sera accordé un délai d’arrivée établi sur le temps réel du vainqueur augmenté de 20 % pour toutes les étapes, à l’exception du contre-la-montre individuel qui ne comporte pas de délai d’arrivée.
+
+
+Article 10 – Arrivée en circuit (Étapes 1 et 2)
+
+:   Dans une étape sur route finissant sur un circuit, les coureurs arrivant à l’entrée du circuit en même temps qu’un peloton ou que la caravane passe sur le circuit seront arrêtés temporairement par un commissaire et pourront repartir lorsque le circuit sera libre, de manière à ne pas interférer avec les autres groupes.   
+
+    La perte de temps sera créditée de leur temps final.   
+    
+    Tout coureur arrêté temporairement à l’entrée du circuit doit ensuite **compléter tous les tours prescrits**.   
+    
+    Si à l’entrée du circuit, il est déterminé par le commissaire que le coureur ne pourra arriver dans le délai d’arrivée prescrit, le commissaire pourra arrêter ce dernier et il ne pourra reprendre le départ à la prochaine étape.
+
+
+Article 11 – Arrivée en circuit - dernière étape (Étape 7)
+
+:   Lors de la dernière étape, un coureur arrêté par le commissaire à l’entrée du circuit d'arrivée obtiendra un temps calculé et n'entrera pas sur le circuit. S'il est déjà en dehors du temps limite relativement au premier coureur entré sur le circuit, il sera considéré **hors délai** et n’apparaîtra pas aux résultats finaux.
+
+    Un coureur doublé sur le circuit d’arrivée devra se retirer de la course et sera crédité d’un temps calculé. Il apparaîtra aux résultats s’il se rapporte aux commissaires à la ligne d’arrivée lors de son exclusion.
+    
+    Tout coureur abandonnant en cours de circuit lors de la dernière étape obtiendra un résultat d’**abandon**.
+    
+
+Article 12 – Bonifications en temps
+
+:   Des bonifications seront attribuées aux trois (3) premiers coureurs de l’étape excepté pour le contre-la-montre individuel :
+
+    * Course sur route (avec/sans circuit) : 10, 6, 4 secondes, sauf étape 4 (demi-étape) : 6, 4, 2 secondes.
+    
+    Des bonifications seront attribuées aux trois (3) premiers coureurs de chacun des sprints intermédiaires avec bonification :
+    
+    * Sprint bonification: 3, 2, 1 secondes.
+
+
+
+Article 13 – Classements
+
+:   La course fait l’objet de cinq (5) classements généraux différents:
+
+
+    * Classement général individuel au temps (Maillot brun) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.014; 2.6.015; 2.6.019</a>')`
+    * Classement général individuel aux points (Maillot orange) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`
+    * Classement général individuel de la montagne (Maillot à pois) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`
+    * Classement général individuel de la relève au temps (Maillot bleu) pour les juniors de 1re année;
+    * Classement général par équipe au temps `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.016</a>')`
+    
+    Si un coureur est en tête de plusieurs classements, l’ordre de priorité des maillots distinctifs est le suivant :
+ 
+    1.  Maillot brun;
+    2.	Maillot orange;
+    3.	Maillot à pois;
+    4.	Maillot bleu;
+    5.	Champion du monde;
+    6.	Champion continental;
+    7.	Champion national;
+    8.	Équipe nationale;
+    9.	Équipe régionale.
+
+
+Article 13.1 - Classement général individuel au temps
+
+:   Un classement général individuel au temps est établi par l’addition des temps enregistrés dans chacune des étapes en tenant compte des bonifications et pénalités – article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.014</a>')` de l’UCI.
+
+    En cas d’égalité de temps, les fractions de seconde enregistrées lors de l’étape du contre-la-montre individuel seront réincorporées dans le temps total pour départager les coureurs ex æquo. (article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.015</a>')` du règlement UCI).
+    
+    En cas de nouvelle égalité, les coureurs seront départagés par l’addition des places obtenues à chaque étape; en cas de nouvelle égalité, le classement de la dernière étape sera pris en compte. (article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.015</a>')` du règlement UCI).
+    
+
+Article 13.2 - Classement général individuel aux points
+
+:   Il s’obtient par l’addition des points attribués à la fin des étapes et ceux des sprints intermédiaires.
+
+    En cas d’égalité dans une étape, les coureurs bénéficient tous du nombre de points attribués à leur rang.
+
+    En cas d’égalité au classement général individuel aux points, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage (`r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`) :
+    
+    1.  Nombre de victoires d’étapes
+    2.  Nombre de victoires dans les sprints intermédiaires
+    3.  Classement général individuel au temps.
+    
+    Points aux dix (10) premiers coureurs d’une étape et aux trois (3) premiers coureurs des sprints intermédiaires :
+    
+    *  10 premiers d’une étape sur route : 30 – 24 – 20 – 16 – 12 – 10 – 8 – 6 – 4 – 2
+    *  C.L.M. individuel : 15 – 12 – 10 – 8 – 6 – 5 – 4 – 3 – 2 – 1
+    *  Sprints intermédiaires : 6 – 4 – 2
+
+
+Article 13.3 - Classement général individuel de la montagne (GPM) 
+
+:   Il s’obtient par l’addition de points attribués au prix de la montagne (sprint de côte) soit 5-3-2 points, sauf à l’étape 5 où les points sont doublés à l’arrivée (arrivée au sommet), soit 10-6-4 points.
+
+    En cas d’égalité au classement final, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage :
+    
+    1. Nombre de premières places dans les arrivées au sommet (étape 5);
+    2. Nombre de premières places dans les sprints de côte;
+    3. Classement général individuel au temps.
+
+Article 13.4 - Classement général individuel de la relève
+
+:   Le classement général individuel de la relève est basé sur le classement général individuel au temps, mais ne concerne que les coureurs juniors de 1re année nés en `r params$annee - 17`.
+
+
+
+Article 13.5 - Classement général par équipe au temps
+
+:   Le classement par équipe du jour s’établit par l’addition des trois (3) meilleurs temps individuels de chaque équipe. 
+
+    En cas d’égalité, les équipes sont départagées par l’addition des places obtenues par leurs trois meilleurs temps de l’étape. En cas de nouvelle égalité, les équipes sont départagées par la place de leur meilleur coureur au classement de l’étape. (Article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.016</a>')` du règlement UCI)
+
+
+    Le classement général par équipe s’établit par l’addition des trois meilleurs temps individuels de chaque équipe dans toutes les étapes courues. En cas d’égalité, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage :
+    
+    1. Nombre de premières places dans le classement par équipe du jour;
+    2. Nombre de deuxièmes places dans le classement par équipe du jour; etc.
+    
+    S’il y a toujours égalité, les équipes sont départagées par la place de leur meilleur coureur au classement général individuel.
+
+    Toute équipe réduite à moins de trois coureurs est éliminée du classement général par équipe.
+
+
+Article 14 - Réclamation
+
+:   Seul le directeur sportif d’une équipe pourra déposer une demande de vérification des résultats; celle-ci devra être présentée au juge à l’arrivée. 
+
+    Une demande de vérification doit être faite dans les délais suivants :
+
+    * Au sujet des classements : au plus tard une (1) heure avant le départ de l’étape suivante;
+    * Au sujet du classement général final : au plus tard trente (30) minutes après l’affichage des résultats.
+
+
+
+
+Article 15 – Bourses
+
+:     Les prix suivants sont attribués selon le guide des `r glue('<a href="{uci_financial}" target="_blank">obligations financières UCI</a>')`. Tous les montants sont en dollars canadiens.        
+
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "Etape") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement individuel d'étapes" =2),
+                   font_size = "x-large",
+                   background = couleurs$jauneTour)
+    
+
+```
+
+<br/>
+
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "DemiEtape") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement individuel des demi-étapes" =2),
+                   font_size = "x-large",
+                   background = couleurs$jauneTour)
+    
+
+```
+
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenTemps") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel au temps" =2),
+                   font_size = "x-large",
+                   background = couleurs$brunMaillot,
+                   color = "white")
+    
+
+```
+
+<br/>
+ 
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenPoints") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel aux points" =2),
+                   font_size = "x-large",
+                   background = couleurs$orangeMaillot)
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenKOM") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel de la montagne (GPM)" =2),
+                   font_size = "x-large",
+                   background = couleurs$vertMaillot)
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenJeune") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général individuel de la relève" =2),
+                   font_size = "x-large",
+                   background = couleurs$blueSprintMaire,
+                   color= "white")
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "GenEquipe") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Classement général par équipe au temps" =2),
+                   font_size = "x-large",
+                   background = couleurs$bleuTour,
+                   color = couleurs$jauneTour)
+    
+
+```
+
+<br/>
+    
+```{r , echo=FALSE}
+
+df<- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "Abitibien") %>% 
+  select(Postion = pos,
+         Montant = montant) 
+
+df %>% 
+  mutate(Montant = currency(Montant, digits = 0)) %>% 
+  kbl(
+      escape = F, # permet de passer les <br/>
+      align = c("c","c"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) %>% 
+    row_spec(which(df$Postion == "Total"), 
+             bold = T, 
+             color = couleurs$blueTour,
+             font_size = "larger") %>% 
+  add_header_above(c("Meilleur Abitibien" =2),
+                   font_size = "x-large",
+                   background = couleurs$jauneTour,
+                   color = couleurs$bleuTour)
+    
+
+```
+
+<br/>
+
+```{r, echo=FALSE}
+
+bourse_totale <- read_excel(here("excel", "prix.xlsx"), 
+           sheet = "Total") %>% 
+  filter(Type == "GrandTotal") %>% pull(Total) %>% currency(digits = 0)
+
+```
+
+Le total général des prix distribués à l’occasion de l’épreuve est de **`r bourse_totale` CAD**.
+
+
+<br/>
+
+Article 16 - Prix spéciaux
+
+:   Les gagnants des prix spéciaux sont choisis par l’ensemble des directeurs techniques et par les commissaires par le biais d’un questionnaire
+
+    * Trophée du meilleur junior abitibien[^abitibien]
+    * Trophée de la révélation – Relevation Trophy
+    * Trophée du plus courageux – Most Courageous Trophy
+    * Trophée du plus gentilhomme – Most Gentlemanly Conduct Trophy
+    * Trophée du plus combatif – Most Combative Trophy
+    * Trophée du meilleur esprit d’équipe – Best Team Spirit Trophy
+    * Trophée du meilleur mécanicien - Best Mechanic Trophy
+    * Trophée du directeur sportif par excellence – Best Team Manager Trophy
+    * Trophée du plus utile à son équipe – MVP of each team Trophy
+
+
+[^abitibien]: Coureur en provenance ou habitant en Abitibi-Témiscamingue, selon le classement général individuel au temps
+
+
+Article 17 – Antidopage
+
+:   Le règlement antidopage de l’UCI s’applique intégralement à la présente épreuve, le cas échéant, la législation antidopage locale qui serait d’application outre le règlement antidopage de l’UCI. 
+
+    Les coureurs sont responsables de vérifier la liste des participants sélectionnés pour contrôle antidopage chaque jour. 
+
+    Le fait de ne pas se présenter aux tests lorsque requis sera considéré comme une violation des règles antidopage. 
+
+
+
+Article 18 – Protocole et récompenses
+
+:   Conformément à l’article `r glue('<a href="{uci_p1_FR}#page=47" target="_blank">1.2.112</a>')` du règlement UCI, les coureurs suivants doivent se présenter quotidiennement au protocole au maximum 10 minutes après l’arrivée en tenue de compétition :
+
+    * Les 3 premiers de l’étape.
+    * Les leaders des classements suivants : 
+    
+        * classement individuel au temps (maillot brun), 
+        * classement général aux points (maillot orange), 
+        * leader de première année (maillot bleu) et 
+        * leader au classement de la montagne (maillot à pois).
+
+
+Article 19 – Pénalités
+
+:   Le barème de pénalités de l’UCI est applicable intégralement.
+
+    De plus, si une voiture d’équipe effectue un dépassement interdit en zone urbaine pour remonter la caravane ou fait usage de conduite dangereuse, l’organisation pourra exiger que cette voiture d’équipe soit placée au dernier rang de la caravane, immédiatement ou pour la ou les prochaines étapes, à la discrétion de l’organisation. 
+    
+    Si une deuxième infraction devait se produire ou en cas d’infraction grave, la voiture d’équipe pourrait être exclue complètement de la caravane.
+
+
+Article 20 – Services d’urgence
+
+:   Étant donné le caractère urbain de certaines épreuves et de l’importance accordée par l’organisation à la sécurité du public, la priorité sera accordée aux services d’urgence en cas d’incident et tous devront s’y conformer.
+
+
+Article 21 – Respect de l’environnement et de l’image du cyclisme
+
+:   Il est interdit aux coureurs de jeter déchets ou bidons sans précautions le long du parcours en dehors des zones de déchets mises en place par l’organisateur (article `r glue('<a href="{uci_p2_FR}#page=21" target="_blank">2.2.025</a>')`). 
+
+    Les emballages et déchets doivent être conservés par le coureur ou remis à la voiture d’équipe. Les bidons peuvent être laissés en bord de chaussée si des spectateurs sont présents. 
+    
+    Le non-respect de cet article peut entrainer des sanctions (`r glue('<a href="{uci_p2_FR}#page=103" target="_blank">2.12.004</a>')`) ou une exclusion (`r glue('<a href="{uci_p2_FR}#page=128" target="_blank">2.2.010</a>')`).
+
+
+<!--chapter:end:../rmd/Reglements.Rmd-->
+
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- signaleur  : info pour signaleur -->
+
+# Signaleur
+
+Le principe essentiel de la sécurité d’une course cycliste est d’arrêter toute circulation extérieure à l’épreuve, en particulier arrivant en sens inverse de la course, dans les minutes précédant et pendant le passage de la course. 
+
+Ils indiquent aussi aux coureurs le parcours à suivre avec une gestuelle simple mais efficace. 
+
+À cet effet, les forces de sécurité seront déployées en dispositif statique et/ou mobile. 
+
+
+### Instructions {-}
+
+#### Rôle : Signaleur moto - Drapeau jaune {-}
+
+Les motards doivent dans la mesure du possible connaitre le parcours de l’épreuve, à défaut lire attentivement le livre de route avant le départ, afin d’anticiper les zones de danger.
+
+Le fonctionnement de l’escorte doit être défini au préalable et les missions de chacun précisées si nécessaire (ouverture de course, protection des coureurs, drapeaux jaunes, etc.). 
+
+> Au Tour de l'Abitibi, le corps policier de la Sûreté du Québec assure les rôles d'ouverture de course alors de le signaleur moto joue principalement un rôle de drapeau jaune, aidé par les signaleurs statiques fournir par les municipalités et comité organisateur. 
+
+Il est souhaitable que l’escorte de motards civils soit clairement identifiée. Leurs équipements vestimentaires sont identiques et de couleur vive, généralement fluo, ils sont ainsi aisément repérables par les autres usagers.
+
+Ils sont munis d’un sifflet et d’un drapeau jaune, fourni par l’organisateur et peuvent ainsi avertir les coureurs des virages et points dangereux, îlots directionnels, ronds-points, véhicules mal garés, etc.
+
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=153" target="_blank">Guide UCI, section C.3.1 p. 151</a>
+
+
+#### Exemple en vidéo : Signaleur moto - Drapeau jaune {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oklufKDk8yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+#### Rôle : Signaleurs statiques - Drapeau jaune {-}
+
+Les forces de sécurité statiques sont constituées par la police, les forces de l’ordre, les bénévoles civils. Ces personnes ont la mission essentielle de sécuriser l’épreuve en avertissant les autres usagers de l’imminence de l’arrivée de la course.
+Ils les arrêtent avant le passage des coureurs, évitant ainsi qu’ils ne s’engagent à contre-sens ou dans le sens de la course.
+
+Au moment du passage des coureurs et suiveurs, ils leur indiquent le parcours à suivre. À la différence des membres de l’escorte motocycliste, le personnel statique peut être à son poste bien avant le passage de la course et peut donc anticiper sur les mesures à prendre pour sécuriser l’épreuve. 
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=161" target="_blank">Guide UCI, section C.3.2 p. 159</a>
+
+
+#### Exemple en photos : Signaleurs statiques - Drapeau jaune {-}
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","signaleur.jpg"))
+```
+<br/>
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","signaleur_derriere.jpg"))
+```
+
+
+##### La gestuelle {-}
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","signaleur_gestes.jpg"))
+```
+
+
+#### Matériel du signaleur {-}
+
+- un drapeau jaune pour signaler la direction
+- un sifflet pour être entendu par tous les coureurs du peloton
+- une veste de sécurité ou un t-shirt de couleur visible
+
+#### En terminant {-}
+
+<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 6px;">Le signaleur doit signaler avec son drapeau pour tous les coureurs de même que pour les véhicules. <br/>Restez alerte en tout temps !</div>
+
+<br/>
+
+<blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">It was a close call for this Tour de Yorkshire marshall <a href="https://twitter.com/hashtag/BBCTDY?src=hash&amp;ref_src=twsrc%5Etfw">#BBCTDY</a> <a href="https://t.co/lcOgzmxAaY">pic.twitter.com/lcOgzmxAaY</a></p>&mdash; BBC Yorkshire (@BBCLookNorth) <a href="https://twitter.com/BBCLookNorth/status/993172025463267328?ref_src=twsrc%5Etfw">6 mai 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!--chapter:end:../rmd/signaleur.Rmd-->
+
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- dep_neutre.Rmd  : info pour horaire et coordonnées moto-info et ardoisier -->
+
+# Dépannage neutre {#depneutre}
+
+Instructions et horaires pour l'équipe de dépannage neutre.
+
+### Horaire {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "HORAIRE_DEP") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  inner_join(iti_etape$Details, by = 'Etape') %>% 
+  mutate(
+    Heure_Navette = format(Heure_Navette, format = "%H:%M")
+  ) %>% 
+  select(
+    'Étape' = Etape,
+    Jour,
+    "Villes d'étape" = Descr_Villes,
+    'Heure Navette' = Heure_Navette,
+    'Départ Course' = Depart,
+    'Notes' = notes
+  ) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c('c', 'l','l', 'c','c','l'),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+
+```
+<br/>
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "HORAIRE_DEP") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  inner_join(iti_etape$Details, by = 'Etape') %>% 
+  mutate(
+    Heure_Navette = format(Heure_Navette, format = "%H:%M")
+  ) %>% 
+  select(
+    'Étape' = Etape,
+    'Conducteur 1' = cond_1,
+    'Mécano 1'= dep_1,
+    'Conducteur 2' = cond_2,
+    'Mécano 2'= dep_2,
+    'Conducteur 3' = cond_3,
+    'Mécano 3'= dep_3
+  ) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c('c', rep('l', times = 6)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+
+```
+
+#### Notes {-}
+
+- S'assurer d'être à `r params$ville` - `r params$nom_centrale`, 30-45 min avant le départ de la navette.
+- Si vous vous rendez directement à Malartic, merci d'aviser <a href="mailto:tour@brunogauthier.net?subject=Tour Abitibi - Dépannage Neutre">Bruno Gauthier</a> à l'avance.
+- Pour les étapes 5 et 6, être à la ligne départ/arrivée 1h minimum avant le départ.
+- Vous irez de `r params$ville` vers la ville de départ en voiture, retour dans une voiture ou moto de dépannage neutre. 
+- S’assurer de récupérer et rendre le matériel à chaque journée, sauf entente préalable. 
+
+
+### Coordonnées de l'équipe {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "COORD_DEP") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  filter(!Nom %in% c('TBD', 'Non-requis','---')) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c(rep('l', times = 3)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+### Instructions {-}
+
+#### Rôle : Dépannage neutre {-}
+
+- Les équipes ont priorité. Le dépannage neutre est un *back-up* aux équipes
+- Radio-tour peut indiquer d'assurer le service pour une équipe en particulier
+- Chute majeure - toujours s'arrêter et s'assurer que tout le monde est dépanné par les équipes avant de repartir
+- Prendre en note le numéro du coureur ayant reçu une roue ou un vélo
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/5Mf4QGR/neutre-auto.jpg")
+```
+
+#### Matériel {-}
+
+- Clés Allen communes (4, 5, 6, mm)
+- Clé à pédales/Allen 8mm sur *ratchet* si possible en cas de changement de vélo 
+- Guenille
+- Crayon feutre ou papier-crayon pour identifier roues avec crevaison avec numéro de dossard du coureur
+- Emporter quelques bouteilles d’eau pour ravitailler les coureurs échappés si nécessaire.
+
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/gg77qBR/neutre-moto.jpg")
+```
+
+#### Références UCI {-}
+
+##### Véhicule de dépannage neutre {-}
+
+L’organisateur doit prévoir au minimum trois véhicules d’assistance neutre (voitures ou motos) qui disposent de vélos et/ou roues de rechange permettant de dépanner tout coureur au cours de l’épreuve. Ces véhicules d’assistance neutre sont positionnés par le Président du Collège des Commissaires devant ou derrière les différents groupes de coureurs selon les circonstances de course.
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=297" target="_blank">Guide UCI, p. 295</a>
+
+
+<!--chapter:end:../rmd/dep_neutre.Rmd-->
+
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- ardoise.Rmd  : info pour horaire et coordonnées moto-info et ardoisier -->
+
+# Moto-Info et Ardoisier {#info_ardoise}
+
+Instructions et horaires pour les opérateurs de moto-info et ardoisiers.
+
+### Horaire {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "HORAIRE") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  inner_join(iti_etape$Details, by = 'Etape') %>% 
+  mutate(
+    Heure_Navette = format(Heure_Navette, format = "%H:%M")
+  ) %>% 
+  select(
+    'Étape' = Etape,
+    Jour,
+    "Villes d'étape" = Descr_Villes,
+    'Heure Navette' = Heure_Navette,
+    'Départ Course' = Depart,
+    'Moto-Info' = info,
+    'Ardoisier' = ardoisier,
+    'Notes' = notes
+  ) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c('c', rep('l', times = 2), rep('c', times = 2), rep('l', times = 3)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+
+```
+
+
+#### Notes {-}
+
+- S'assurer d'être à `r params$ville` - `r params$nom_centrale`, 30-45 min avant le départ de la navette.
+- Si vous vous rendez directement à Malartic ou Senneterre, merci d'aviser <a href="mailto:tour@brunogauthier.net?subject=Tour Abitibi - Ardoise Info">Bruno Gauthier</a> à l'avance.
+- Pour l'étape 6, être à la ligne départ/arrivée 1h minimum avant le départ.
+- Vous irez de `r params$ville` vers la ville de départ en voiture, retour sur la moto. 
+- S’assurer de récupérer et rendre le matériel à chaque journée, sauf entente. 
+
+
+### Coordonnées de l'équipe {-}
+
+```{r, echo=FALSE}
+
+here("excel", "ardoise_info_neutre.xlsx") %>% 
+  read_excel(sheet = "COORD") %>% 
+  mutate_if(is.character, ~replace_na(., "---")) %>% 
+  filter(Nom != c('TBD')) %>% 
+  kbl(escape = F, # permet de passer les <br/>
+      align = c(rep('l', times = 3)),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = T) 
+
+```
+
+### Instructions {-}
+
+#### Rôle : Moto information {-}
+La personne en charge de la moto information doit avoir une certaine expérience de cette fonction. Cette moto, positionnée devant le peloton, signale en temps réel au speaker radio-tour qui se trouve dans la voiture du Président du Collège des Commissaires, les différents mouvements des coureurs et, le cas échéant, le ou les numéros de dossards et les écarts du/des coureurs échappés. Une deuxième moto info peut être utile; les motos se positionnent alors de façon à couvrir les différents
+groupes de coureurs.
+
+#### Rôle : Moto ardoisier {-}
+L'ardoisier est un membre de l'organisation. Il inscrit les numéros de dossard des coureurs échappés et les écarts en temps entre les différents groupes. L'information est fournie par Radio Tour ou par un chronométrage effectué directement par l'ardoisier.
+
+Matériel de l'ardoisier :
+
+- Un chronomètre
+- Une ardoise rectangulaire : dimensions préconisées : 40cm L x sur 55cm H (avec éventuellement un espace publicitaire de 10 cm en haut), de couleur foncée - noire de préférence - légère et en bois avec un trou sur la partie supérieure pour la prise en main.
+- Des bâtons de craie blanche de gros calibre (carrée ou ronde)
+- Un gant en tissu ou une éponge pour effacer l'ardoise 
+
+L'ardoisier sera piloté par une moto équipé d'un récepteur avec les fréquences Radio-Tour et Info. 
+
+Une ardoise doit être claire et rapide à lire. Sur le côté gauche de l'ardoise, les différents groupes - ou les numéros de dossards - seront marqués et soulignés :
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/Qfb2y0q/ardoise-exemple.png")
+```
+
+<br/>
+
+Les temps seront inscrits en minutes (**'**) et secondes (**"**).
+
+La moto doit se positionner, rapidement et sans les gêner, près de chaque groupe de coureurs afin de leur apporter cette information. Ensuite, elle repart vers l'avant de la course pour effectuer, si nécessaire, de nouveaux pointages. Il faut une bonne coordination entre le pilote et l'ardoisier afin de montrer au mieux l'ardoise et laisser le temps au coureur de la mémoriser. 
+
+Dès connaissance des nouveaux écarts, les temps doivent être donnés au plus vite. Quand la route est assez large, montrer l'ardoise à tout le peloton ou, au moins, à la moitié du peloton.
+
+On ne montre pas l'ardoise aux coureurs :
+
+- si l'écart est inférieur à **30 secondes** (sauf autorisation d'un commissaire),
+- à moins de 500m d'un **sprint intermédiaire ou d'un GPM**,
+- dans une zone de **ravitaillement**,
+
+Dans la mesure du possible, sur une course télévisée, il faut éviter de couper le champ de la caméra. Il est intéressant de montrer l'ardoise au public ainsi que dans la zone de ravitaillement où les assistants des équipes n'ont pas toujours ces informations.
+
+
+**Références complètes** : <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=296" target="_blank">Guide UCI, p. 294</a>
+
+
+#### Comment montrer l'ardoise {-}
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/KwjFqdm/ardoise-montrer-1.jpg")
+```
+
+<br/>
+
+- Pas au dessus de la tête,
+- la moto à côté des coureurs, pas devant,
+- aux 5-10 premiers en avant, pas tout le peloton.
+
+
+```{r, out.width="60%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/HXNpMHg/ardoise-montrer-2.jpg")
+```
+
+
+
+##### Un exemple en vidéo 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OA1hth5Xyno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br/>
+
+#### Positionnement des motos {-}
+
+- La Moto info demeure à la hauteur de la voiture commissaire 2 et se laisse descendre quand c'est requis de prendre les numéros de dossards ou des écarts.
+  
+  - Quand l'écart se confirme, on se laisse descendre pour prendre les numéros de dossard et les relayer sur la fréquence moto-info.
+
+- La moto ardoisier demeure devant la voiture de presse et se laisse descendre lorsque les écarts augmentent, pour montrer l'ardoise ou aider à calculer les écarts.
+  
+  - La direction course (Bruno) lui demandera de se laisser descendre lorsque requis.
+
+#### Matériel {-}
+
+M'avertir si vous n'avez pas de casque moto, nous en avons.
+
+En moto, vaut mieux être prêt à toutes les températures. Manteau, pantalon, ensemble de pluie, etc.
+
+Nous fournirons ardoises, crayons, chronomètre (le vôtre sera p-e plus *récent* que ceux que nous avons, si vous désirez)
+
+Vous aurez 2 radios portatifs avec vous.
+
+- premier sur la fréquence 1 - Radio-Tour. En écoute seulement. Accrocher le mirco dans le dos de votre pilote pour que vous entendiez tous les deux
+
+- 2e sur la fréquence 5 Moto-Info, avec oreillette. Vous communiquerez seulement sur cette fréquence.
+
+S'assurer d'avoir une grille des coureurs
+
+S'assurer d'avoir pris connaissance du parcours de la journée, position et km des sprints intermédiaires / maires / KOM (page de la journée à imprimer)
+
+<!--chapter:end:../rmd/ardoise.Rmd-->
+
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- tv  : info pour moto tv -->
+
+# Motos-Caméras {#moto-tv}
+
+La médiatisation de son épreuve est particulièrement importante pour l’organisateur. Elle lui permet d’assurer, en amont, la promotion de son épreuve ; elle permet au public de suivre la course en direct. 
+
+Elle peut aussi constituer, pour les partenaires de l’événement, la garantie d’une visibilité de leur marque ou de leur territoire auprès d’un large public et, par conséquent, conditionner le modèle économique et la pérennité de l’événement.
+
+Il doit aussi, de plus en plus, créer lui-même du contenu et le diffuser sur internet et sur les médias sociaux.
+
+> Le cyclisme est un sport d’équipe… filmé par des équipes techniques qui doivent être soudées et structurées. Sur un terrain aussi compliqué que la route, leur expérience est capitale pour la réussite de la production TV.
+
+<br/>
+
+**Références complètes** : 
+
+- <a href="https://archive.uci.org/docs/default-source/publications/2021/uci-guide-orga-epreuve-road-2021-fra.pdf#page=247" target="_blank">Guide Organisateur UCI, section J.5 p. 245</a>
+- <a href="https://assets.ctfassets.net/761l7gh5x5an/6CZrPOFvHrTlhFnDN1tnA5/ca2b2ad10820c4509dd5cdc0d6198ada/guidedeproductiontv-tvproductionguide_neutral.pdf#page=18" target="_blank">Guide Production TV UCI, p. 18</a>
+
+
+### Communications et respect des directives {-}
+
+Pour la sécurité de tous et le bon déroulement sportif de l'épreuve, le pilote de la moto-caméra et son caméraman doivent être en tout temps à l'écoute de la fréquence Radio-Tour sur le radio fourni par l'organisation. Ces derniers doivent se soumettre immédiatement à toute demande en provenance de la direction course.
+
+Le caméraman et le pilote **peuvent être sanctionnés** s’ils contreviennent à un règlement ou à une directive lors d’une épreuve (mise hors course, amende, etc.).
+
+
+### Position des motos-caméras durant la course {-}
+
+#### Peloton groupé {-}
+
+Quand un peloton roule à allure modérée, il n’y a qu’un seul caméraman en tête du peloton. Les caméramen doivent veiller à ne pas géner les coureurs ou la circulation des autres véhicules **(1)**.
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_peleton_groupe.png"))
+```
+
+
+
+#### Peloton roulant à allure rapide {-}
+
+Les caméramen filment de l’arrière ou de profil **(2)**. 
+
+Le caméraman ne peut se positionner devant un groupe roulant à une allure rapide **(3)**. Cette position pourrait gêner ou favoriser les coureurs selon la situation de course.
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_peleton_rapide.png"))
+```
+
+
+#### Échappée {-}
+
+La moto-caméra demeure derrière l'échappée et filme de dos ou de 3/4 arrière. 
+
+```{r, out.width="60%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_derriere_echappee.png"))
+```
+
+
+
+#### Jonction entre deux groupes {-}
+
+Quand deux groupes de coureurs sont sur le point de se rejoindre, le caméraman ne peut rester intercalé. Il doit soit :
+
+- **A** : Se positionner pour filmer de profil.
+- **B** : Se positionner pour filmer de l’arrière
+
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_jonction.png"))
+```
+
+
+#### Arrivée {-}
+
+Les caméramen prennent la dérivation avant la ligne d’arrivée, sauf dans certaines causes sur décision
+des commissaires UCI (étape de montagne, courses ne bénéficiant pas de caméra fixe à l’arrivée)
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support","tv", "tv_arrivee.png"))
+```
+
+
+### En terminant {-}
+
+Quelques exemples en vidéos.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U71fKofZK_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<!--chapter:end:../rmd/tv.Rmd-->
+
+
+<!-- CirculationCourse.Rmd : version française -->
+
+# Circulation en course {#circulation}
+
+###  Course sur route {-}
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Directives de circulation des véhicules en course, p.7](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/9c3ae8c70aeca646d6a1984684658271/2021-uci-road-guidelines-for-circulation-fr.pdf#page=7)"}
+
+knitr::include_graphics(here("img/support/circulation_Course.png"))
+```
+
+### Arrivée en circuit (Étape 1, 2 et 7) et Circuit urbain (Étape 6) {-}
+
+Afin d'assurer la sécurité des coureurs et de la population locale, ces directives particulières doivent être respectées lors d'une arrivée en circuit :
+
+* Toutes les voitures de la caravane empruntent le circuit d'arrivée. 
+* Seul les véhicules ayant une fonction indispensable dans la course sont autorisés à effectuer l'ensemble des tours de circuits. Les autres véhicules empruntent la dérivation avant le premier passage de la ligne. 
+* Après un arrêt pour assistance à un coureur ou autre, le véhicule reprend une place dans la caravane à l'endroit où il se trouve. **Le dépassement pour reprendre sa place originale dans la file est interdit.**  
+* Si l'arrêt s'est prolongé et qu'un écart s'est formée entre la caravane et son véhicule, le conducteur doit être particulièrement prudent lors de son retour à la caravane, car certaines intersections peuvent être ouvertes à la circulation automobile ou piétonne.  
+* La vitesse maximale exceptionnellement tolérée en ville est de **70 km/h**. 
+* Toute conduite ***dangereuse*** sera sanctionnée par les commissaires, l'organisation et/ou ses représentants, tel que décrit à l'article **19** des [règlements particuliers][Règlements particuliers].  
+
+
+### Dérivation de la caravane {-}
+
+Une dérivation pour les véhicules est aménagée en amont de la ligne d'arrivée pour chaque épreuve, à l'exception de l'étape **5** (arrivée au sommet).
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Directives de circulation des véhicules en course, p.18](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/9c3ae8c70aeca646d6a1984684658271/2021-uci-road-guidelines-for-circulation-fr.pdf#page=18)"}
+
+knitr::include_graphics(here("img/support/circulation_derivation.png"))
+```
+
+### Contre-la-montre individuel {-}
+
+```{r echo = FALSE, fig.align = 'center', out.width = "100%", fig.cap = "Source - [UCI - Directives de circulation des véhicules en course, p.30](https://downloads.ctfassets.net/761l7gh5x5an/3gM8QxocLIQFMPSzjKor0v/9c3ae8c70aeca646d6a1984684658271/2021-uci-road-guidelines-for-circulation-fr.pdf#page=30)"}
+
+knitr::include_graphics(here("img/support/circulation_CLMI.png"))
+```
+
+<!--chapter:end:../rmd/CirculationCourse.Rmd-->
+
+
+<!-- FollowMee  : info pour connexion site FollowMee -->
+
+# Application GPS FollowMee {#followmee}
+
+Nous utilisons le site <a href="https://www.followmee.com" target="_blank">FollowMee</a> afin de pouvoir localiser:
+
+- le devant de la course : voiture du directeur technique;
+- le peloton : voiture du président du jury;
+- la queue de la course : le camion balai.
+
+Pour ce faire, les personnes concernées doivent utiliser l'application sur leur téléphone cellulaire. 
+
+### Application à installer {-}
+
+```{r, out.width="35%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "followmee", "app.jpg"))
+```
+
+<br/>
+
+Il est possible de télécharger gratuitement la version correspondante à votre cellulaire grâce au code QR:
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "followmee", "codeQR.png"))
+```
+
+
+
+### Paramètres de l’application {-}
+
+Dans menu / settings : 
+
+- **username** : tour2024
+- **password** : communiquer avec <a href="mailto:tour@brunogauthier.net">Bruno Gauthier</a>
+- **Device name** : Direction Course / Peloton / Balai
+
+Pour assurer le bon fonctionnement :
+
+- Accepter que l’application vous suive en tout temps.
+- Presser sur **start** avant la course et **stop** après.
+- Fermer l’application entre les courses pour éviter de drainer la batterie de votre cellulaire.
+
+### Login token {-}
+
+L'accès au compte est aussi possible grâce au *<a href="https://www.followmee.com/FAQ.aspx?r=1&t=logintoken" target="_blank">login token</a>*.
+
+
+### Visualisation de la carte {-}
+
+Afin de visualiser, l'équipe de production TV peut accéder au site <a href="https://www.followmee.com" target="_blank">FollowMee</a>. 
+
+Une fois connecté avec l'identifiant, il est possible d'aller sur l'onglet `Map` et de créer un lien pour le suivi.
+
+```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "followmee", "plan.png"))
+```
+
+<!--chapter:end:../rmd/FollowMee.Rmd-->
+
+
+<!-- Locaux.Rmd  : document bilingue -->
+
+```{r locaux_title_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+
+glue("# List of rooms {#rooms}", .open = "[")
+```
+
+```{r locaux_titre_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+
+glue("# Liste des locaux {#locaux}", .open = "[")
+```
+
+
+
+```{r team_room_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("### Teams rooms {-}", .open = "[")
+```
+
+```{r team_room_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("### Locaux des équipes {-}", .open = "[")
+```
+
+
+```{r team_room_tableau, echo=FALSE}
+
+locaux_xlsx <- here("excel", "locaux.xlsx")
+
+# Note : mettre en ordre manuellement dans le fichier excel selon l'ordre des dossards !
+
+read_excel(locaux_xlsx, sheet = "EQUIPES") %>% 
+  select(role = ifelse(lang=="FR", "equipe_fr", "equipe_en"),
+         room) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c("l","r"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+
+```
+<br/>
+
+```{r staff_room_en, eval=(lang != "FR"), results='asis', echo= FALSE}
+glue("### Administratives rooms {-}", .open = "[")
+```
+
+```{r staff_room_fr, eval=(lang == "FR"), results='asis', echo= FALSE }
+glue("### Locaux administratifs {-}", .open = "[")
+```
+
+
+```{r admin_room_tableau, echo=FALSE}
+
+locaux_xlsx <- here("excel", "locaux.xlsx")
+
+read_excel(locaux_xlsx, sheet = "ADMIN") %>% 
+  select(role = ifelse(lang=="FR", "commite_fr", "commite_en"),
+         room = ifelse(lang=="FR", "room_fr", "room_en")) %>% 
+  arrange(role) %>% 
+  kbl(col.names = NULL,
+      escape = F, # permet de passer les <br/>
+      align = c("l","r"),
+      ) %>% 
+    kable_styling("striped",      # kable_minimal
+                  full_width = TRUE) 
+
+```
+
+<!--chapter:end:../rmd/Locaux.Rmd-->
+

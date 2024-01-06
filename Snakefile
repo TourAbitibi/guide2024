@@ -22,8 +22,9 @@ rule Z_targets:
         "organisateur/index.html",
         "FR/index.html",
         "EN/index.html",
-        "results/Liste_Coureurs.csv",
-        "results/Maillots_Porteurs.csv",
+        
+        # "results/Liste_Coureurs.csv",
+        # "results/Maillots_Porteurs.csv",
         
         "distill.css",
 
@@ -308,8 +309,8 @@ rule R50_render_book_EN:
 
         "gpx/output/parcours.shp",
 
-        "results/Liste_Coureurs.csv",
-        "results/Maillots_Porteurs.csv",
+        # "results/Liste_Coureurs.csv",
+        # "results/Maillots_Porteurs.csv",
 
         "img/cartes/input/Etape1_Full.png",
 
@@ -479,8 +480,8 @@ rule R54_render_book_organisateur:
 
         "script/render_book.R",
 
-        "results/Liste_Coureurs.csv",
-        "results/Maillots_Porteurs.csv",
+        # "results/Liste_Coureurs.csv",
+        # "results/Maillots_Porteurs.csv",
 
         "git_book_organisateur/_bookdown.yml",
         "git_book_organisateur/_output.yml",

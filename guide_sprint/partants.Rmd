@@ -42,17 +42,24 @@ opts_chunk$set( tidy = FALSE, comment = NA,
 
 ```
 
-```{r liste_coureurs, include = FALSE, echo=FALSE}
+```{r is_liste_coureurs, include = FALSE, echo=FALSE}
 
 # Lecture  de la liste de coureurs vers un .csv
-file_path <- here("results", "Liste_Coureurs.csv")
-if(file.exists(file_path)){
+
+if(file.exists(here("results", "Liste_Coureurs.csv"))){
+  file_path <- here("results", "Liste_Coureurs.csv")
   start_list_coureurs <- read_csv(file_path, show_col_types = FALSE)
   ui_done("La liste détaillée des coureurs du Tour de l'Abitibi existe et a été lue.")
 
   LISTE_COUREURS_existe <- TRUE
   
 } else LISTE_COUREURS_existe <- FALSE
+```
+
+
+
+```{r liste_coureurs, eval= STARTLIST_existe, include = FALSE, echo=FALSE}
+
 
 # Lecture fichier excel de la startlist
 file_path <- here("excel", "sprint.xlsx")

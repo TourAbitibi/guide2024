@@ -66,7 +66,7 @@ knitr::include_graphics(here("img", "logo", "Glencore.png"))
 
 <br/>
 
-### Mot du Maire de la Ville de `r params$ville` {-}
+### Mot de la Mairesse de la Ville de `r params$ville` {-}
 
 \linebreak
 
