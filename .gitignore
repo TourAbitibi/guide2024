@@ -1,0 +1,88 @@
+# Beaucoup de changement lors de la production des fichier html
+# Pendant le développement, pas de de synchro sur ces outpus
+
+web/FR
+web/EN
+web/organisateur
+web/img
+web/prog
+web/index.html
+
+# Ne pas sync git_book/_book directement, prise en charge via le fichier web qui lui est exporte vers github
+git_book/guide2023.Rmd
+git_book/_book
+git_book/guide2023_files
+git_book/img
+
+git_book_EN/guide2023.Rmd
+git_book_EN/_book
+git_book_EN/guide2023_files
+git_book_EN/img
+
+git_book_organisateur/guide2023.Rmd
+git_book_organisateur/_book
+git_book_organisateur/guide2023_files
+git_book_organisateur/guide_organisateur_files
+git_book_organisateur/img
+
+resume_prog/prog_files
+resume_prog/prog.html
+
+# Version intermédiaire des pdf, pas besoin d'être synchronisé
+guide_EN_PDF/guide_EN.pdf 
+guide_FR_PDF/guide_FR.pdf
+
+# Image du processu Snakemake, pas requis de synchronisé
+dag.png
+dag_PDF.png
+
+# fichier tif trop gros et peut être produit localement
+rasterElevation/elv_parcours.tif
+
+################################################################################
+# History files
+.Rhistory
+.Rapp.history
+# Session Data files
+.RData
+# User-specific files
+.Ruserdata
+# Example code in package build process
+*-Ex.R
+# Output files from R CMD build
+/*.tar.gz
+# Output files from R CMD check
+/*.Rcheck/
+# RStudio files
+.Rproj.user/
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+# R Environment Variables
+.Renviron
+#DS Store
+.DS_Store
+# Snakemake temporary directory file
+.snakemake
+# Fichiers temporaire de Excel quand ouvert
+excel/~$*
+export/~$
+# Cache pour cartes OpenStreetMap
+rosm.cache
+# Fichiers temporaires Cartes
+img/cartes/input/*.bak
+
+# Fichiers temporaires tex
+guide_FR_PDF/*.log
+guide_EN_PDF/*.log
+
+# Fichier temporaire ppt
+img/sign/~$ajout_signalisation.pptx
