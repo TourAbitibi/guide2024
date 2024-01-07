@@ -53,6 +53,7 @@ params <- tibble(
     lienWeb = "https://tourabitibi.github.io/guide2024/",  # Lien web de base
     ville = "Val-d'Or",
     position_ligne_arrivee = "Hôtel de Ville",
+    position_ligne_arrivee_EN = "Town Hall",
     rue_ligne_arrivee = "2e avenue",
     nom_centrale = "Polyvalente Le Carrefour",
     adresse_centrale = "125 rue Self, Val-d'Or (Qc) J9P 3N2",

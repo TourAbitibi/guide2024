@@ -185,7 +185,7 @@ Les sprints se déroule sur la `r params$rue_ligne_arrivee` à `r params$ville` 
 :::
 
 :::{}
-The sprints take place on `r params$rue_ligne_arrivee` in `r params$ville`, in front of the `r params$position_ligne_arrivee`. 
+The sprints take place on `r params$rue_ligne_arrivee` in `r params$ville`, in front of the `r params$position_ligne_arrivee_EN`. 
 :::
 :::: 
 

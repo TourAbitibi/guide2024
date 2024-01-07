@@ -143,19 +143,19 @@ rule Z_targets:
 ##########################################################################################################################
 
 
-# rule R01_importExportGPX:
-#     input:
-#         "code/_importExportGPX.R", "excel/Itineraires.xlsx",
-#         "gpx/input/Course_1.gpx", "gpx/input/Course_2.gpx", "gpx/input/Course_3.gpx", "gpx/input/Course_4.gpx",
-#         "gpx/input/Course_5.gpx", "gpx/input/Course_6.gpx", "gpx/input/Course_7.gpx"
-#     output:
-#         "gpx/output/parcours.shp", "gpx/output/parcours.dbf", "gpx/output/parcours.prj", "gpx/output/parcours.shx"
-#     params:
-#         script = "code/_importExportGPX.R"
-#     shell:
-#         """ 
-#         {params.script}
-#         """
+rule R01_importExportGPX:
+    input:
+        "code/_importExportGPX.R", "excel/Itineraires.xlsx",
+        "gpx/input/Course_1.gpx", "gpx/input/Course_2.gpx", "gpx/input/Course_3.gpx", "gpx/input/Course_4.gpx",
+        "gpx/input/Course_5.gpx", "gpx/input/Course_6.gpx", "gpx/input/Course_7.gpx"
+    output:
+        "gpx/output/parcours.shp", "gpx/output/parcours.dbf", "gpx/output/parcours.prj", "gpx/output/parcours.shx"
+    params:
+        script = "code/_importExportGPX.R"
+    shell:
+        """ 
+        {params.script}
+        """
 
 
 
@@ -459,69 +459,69 @@ rule R53_render_prog_prelim:
         """
 
 
-rule R54_render_book_organisateur:
-    input:
-        "code/programmation.R",
-        "code/_LibsVars.R",
+# rule R54_render_book_organisateur:
+#     input:
+#         "code/programmation.R",
+#         "code/_LibsVars.R",
 
-        "gpx/output/parcours.shp",
-        "gpx/output/points_signalisation.shp", "gpx/output/points_signalisation.dbf", "gpx/output/points_signalisation.prj", "gpx/output/points_signalisation.shx",
+#         "gpx/output/parcours.shp",
+#         "gpx/output/points_signalisation.shp", "gpx/output/points_signalisation.dbf", "gpx/output/points_signalisation.prj", "gpx/output/points_signalisation.shx",
 
-        "img/cartes/input/Etape1_Full.png",
-        "img/cartes/sign/E1_sign_01.png",
+#         "img/cartes/input/Etape1_Full.png",
+#         "img/cartes/sign/E1_sign_01.png",
 
-        "excel/staff.xlsx",
-        "excel/Itineraires.xlsx",
-        "excel/feuilleroute.xlsx",
-        "excel/repas.xlsx",
-        "excel/locaux.xlsx",
-        "excel/signalisation.xlsx",
-        "excel/ardoise_info_neutre.xlsx",
+#         "excel/staff.xlsx",
+#         "excel/Itineraires.xlsx",
+#         "excel/feuilleroute.xlsx",
+#         "excel/repas.xlsx",
+#         "excel/locaux.xlsx",
+#         "excel/signalisation.xlsx",
+#         "excel/ardoise_info_neutre.xlsx",
 
-        "script/render_book.R",
+#         "script/render_book.R",
 
-        # "results/Liste_Coureurs.csv",
-        # "results/Maillots_Porteurs.csv",
+#         # "results/Liste_Coureurs.csv",
+#         # "results/Maillots_Porteurs.csv",
 
-        "git_book_organisateur/_bookdown.yml",
-        "git_book_organisateur/_output.yml",
-        "git_book_organisateur/index.Rmd",
+#         "git_book_organisateur/_bookdown.yml",
+#         "git_book_organisateur/_output.yml",
+#         "git_book_organisateur/index.Rmd",
         
-        "rmd/MotsBienvenue.Rmd",
-        "rmd/Partenaires.Rmd",
-        "rmd/Programmation.Rmd",
-        "rmd/CO.Rmd",
-        "rmd/FeuillesRoute.Rmd",
-        "rmd/Etape1.Rmd", "rmd/Etape2.Rmd", "rmd/Etape3.Rmd", "rmd/Etape4.Rmd", "rmd/Etape5.Rmd", "rmd/Etape6.Rmd", "rmd/Etape7.Rmd",
-        "rmd/Etape_sign.Rmd",
-        "rmd/CLMI_notes.Rmd",
-        "rmd/BoucleSignalisation.Rmd",
-        "rmd/Signalisation_Details.Rmd",
-        "rmd/Sites.Rmd",
-        "rmd/Croquis.Rmd",
-        "rmd/FollowMee.Rmd",
-        "rmd/ardoise.Rmd",
-        "rmd/tv.Rmd",
-        "rmd/signaleur.Rmd",
-        "rmd/dep_neutre.Rmd",
-        "rmd/Reglements.Rmd",
-        "rmd/CirculationCourse.Rmd",
-        "rmd/Repas.Rmd",
-        "rmd/Locaux.Rmd"
-    output:
-        "git_book_organisateur/_book/index.html",
-        "organisateur/index.html"
-    params:
-        guide_path = "git_book_organisateur"
-    shell:
-        """
-        Rscript -e "bookdown::render_book('{params.guide_path}')"
+#         "rmd/MotsBienvenue.Rmd",
+#         "rmd/Partenaires.Rmd",
+#         "rmd/Programmation.Rmd",
+#         "rmd/CO.Rmd",
+#         "rmd/FeuillesRoute.Rmd",
+#         "rmd/Etape1.Rmd", "rmd/Etape2.Rmd", "rmd/Etape3.Rmd", "rmd/Etape4.Rmd", "rmd/Etape5.Rmd", "rmd/Etape6.Rmd", "rmd/Etape7.Rmd",
+#         "rmd/Etape_sign.Rmd",
+#         "rmd/CLMI_notes.Rmd",
+#         "rmd/BoucleSignalisation.Rmd",
+#         "rmd/Signalisation_Details.Rmd",
+#         "rmd/Sites.Rmd",
+#         "rmd/Croquis.Rmd",
+#         "rmd/FollowMee.Rmd",
+#         "rmd/ardoise.Rmd",
+#         "rmd/tv.Rmd",
+#         "rmd/signaleur.Rmd",
+#         "rmd/dep_neutre.Rmd",
+#         "rmd/Reglements.Rmd",
+#         "rmd/CirculationCourse.Rmd",
+#         "rmd/Repas.Rmd",
+#         "rmd/Locaux.Rmd"
+#     output:
+#         "git_book_organisateur/_book/index.html",
+#         "organisateur/index.html"
+#     params:
+#         guide_path = "git_book_organisateur"
+#     shell:
+#         """
+#         Rscript -e "bookdown::render_book('{params.guide_path}')"
 
-        # Copier les données html
-        cp -R {params.guide_path}/_book/* organisateur
+#         # Copier les données html
+#         cp -R {params.guide_path}/_book/* organisateur
 
-        echo "\nGuide d'organisateur disponible au : /Users/brunogauthier/Documents/guide2024/organisateur/index.html\n"
-        """
+#         echo "\nGuide d'organisateur disponible au : /Users/brunogauthier/Documents/guide2024/organisateur/index.html\n"
+#         """
 
 rule R55_render_sprint:
     input:

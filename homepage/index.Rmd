@@ -86,6 +86,11 @@ a:hover {
 
 <br/>
 
+<!-- Les GPX sans POI équivalents aux description de signalisation font planter le guide organisateur.
+     À finaliser plus tard
+     
 [Documentation de l'organisateur](organisateur/)
 
 <br/>
+
+-->
