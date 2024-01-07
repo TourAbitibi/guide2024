@@ -55,53 +55,13 @@ opts_chunk$set( tidy = FALSE, comment = NA,
 ```
 
 
-```{r params}
-
-data <- iti_etape$Details %>% 
-  select(Etape, 
-         Descr_Villes, 
-         Descr_km,
-         KM_Total, 
-         km_neutres = KM_Neutres, 
-         nb_tours = Nb_tours,
-         km_par_tour = KM_par_tours,
-         Distance_Route, 
-         Distance_en_circuit, 
-         Distance_totale,
-         Liens, 
-         heure_dep = Depart,
-         heure_arr_circuit = HeureEntreeVille, 
-         heure_arr_finale = time_arrivee
-         ) %>% 
-  # Correction si heure est mal formatée - par exemple : 14:0  
-  mutate(heure_dep = str_replace(heure_dep, "(\\d):0$", "\\1:00"),
-         heure_arr_circuit = str_replace(heure_arr_circuit, "(\\d):0$", "\\1:00"),
-         heure_arr_finale = str_replace(heure_arr_finale, "(\\d):0$", "\\1:00") )
-
-
-```
-
-```{r fun_lien_iframe}
-
-lien_iframe <- function(etape){
-  
-  ## Derniers chiffres de "https://ridewithgps.com/routes/123456789"
-  id_RWG <- str_extract(data$Liens[etape], "\\d*$") 
-  
-  # Création d'un lien de type iframe
-  lien <- glue('<iframe src="https://ridewithgps.com/embeds?type=route&id={id_RWG}&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>')
-  
-  return (lien)
-}
-```
-
 ## `r dates_FR %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)` AM - Route
 
 Courses sur route - 8h à 13h30    
 
 Distances variables selon les âges  - Aller-Retour de / vers la Cathédrale d'Amos
 
-<iframe src="https://ridewithgps.com/embeds?type=route&id=39662474&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
+<iframe src="https://ridewithgps.com/embeds?type=route&id=45032641&metricUnits=true&sampleGraph=true&distanceMarkers=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
 
 <aside>
   <a href="https://tourabitibi.com" target="_blank" >
@@ -113,14 +73,12 @@ Distances variables selon les âges  - Aller-Retour de / vers la Cathédrale d'A
 
 Sprint et jeux d'habilité de  12h30 à 15h30   
 
-<iframe src="https://ridewithgps.com/embeds?type=route&id=39662449&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>   
 
+<iframe src="https://ridewithgps.com/embeds?type=route&id=45310471&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
 
 ## `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` AM - Critérium
 
 Critérium de 8h à 13h
 
-<iframe src="https://ridewithgps.com/embeds?type=route&id=39662424&metricUnits=true" style="width: 1px; min-width: 100%; height: 550px; border: none;" scrolling="no"></iframe>   
-
-
+<iframe src="https://ridewithgps.com/embeds?type=route&id=45310454&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe> 
 
