@@ -50,11 +50,16 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: copy data for website
+        run: | # À tester
+          mkdir web
+          cp img web/img
+          cp EN  web/img
+          etc ...
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload entire repository
-          path: docs/_build/html
+          path: web
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2

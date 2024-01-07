@@ -1,24 +1,25 @@
 Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
 Start,Start of route,0,0,,
-Left,sign_50,1.57,294.40,,Edited
-Straight,sign_51,3.01,301.00,,Edited
-Left,sign_05,31.03,287.20,,Edited
-Left,sign_61,59.33,321.90,,Edited
-Left,sign_04,59.42,322.00,,Edited
-Left,sign_62,76.51,304.00,,Edited
-Left,sign_03,76.51,304.00,,Edited
-Straight,sign_02,76.81,301.50,,Edited
-Right,sign_01,115.86,300.90,,Edited
-Left,sign_06,117.24,294.00,,Edited
-Left,sign_07,117.30,294.40,,Edited
-Danger,sign_08,117.66,296.00,,Edited
-Left,sign_09,117.75,295.50,,Edited
-Left,sign_10,117.89,296.00,,Edited
-Left,sign_11,118.02,295.90,,Edited
-Left,sign_12,118.14,297.80,,Edited
-Left,sign_13,118.26,297.90,,Edited
-Left,sign_14,118.39,299.00,,Edited
-Left,sign_15,118.68,301.30,,Edited
-Left,sign_16,118.82,304.10,,Edited
-Left,sign_17,118.89,305.00,,Edited
-End,End of route,119.07,306.40,
+Left,sign_01,0.30,307.00,,Edited
+Danger,sign_02,1.67,306.20,voie ferrée/Rail road,Edited
+Left,sign_03,29.78,309.40,"Gestion intersection, virage à gauche sur route 397",Edited
+Danger,sign_04,70.88,305.00,,Edited
+Danger,sign_05,70.97,306.10,terre-plein,Edited
+Danger,sign_06,71.15,306.10,terre-plein,Edited
+Danger,sign_07,71.40,302.60,terre-plein,Edited
+Control,sign_08,72.40,303.10,police,Edited
+Danger,sign_09,72.50,302.00,terre-plein,Edited
+Danger,sign_10,72.97,303.90,voie ferrée,Edited
+Danger,sign_11,74.07,305.90,voie ferrée,Edited
+Danger,sign_12,74.83,312.10,terre-plein,Edited
+Danger,sign_13,74.96,318.10,police,Edited
+Danger,sign_14,75.03,318.80,terre-plein,Edited
+Left,sign_15,103.38,343.60,,Edited
+Slight Left,sign_50,139.45,302.20,,Edited
+Right,sign_16,139.91,308.20,,Edited
+Control,sign_17,140.66,304.00,Intersection,Edited
+Control,sign_18,142.15,312.80,Intersection,Edited
+Control,sign_19,143.94,325.90,Intersection,Edited
+Control,sign_60,144.73,364.00,,Edited
+Hors Category,sign_51,145.23,397.10,,Edited
+End,End of route,145.24,397.30,
