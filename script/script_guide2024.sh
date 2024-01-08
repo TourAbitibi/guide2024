@@ -3,8 +3,7 @@
 ## Script d'ouverture du dossier 
 ## à partir du mac de Bruno
 
-
-cd ~/Documents/guide2024/ &&
+cd ~/Documents/guide2024/ >/dev/null &&
 
 echo ~~fetch~~ &&
 git fetch &&

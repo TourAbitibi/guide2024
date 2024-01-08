@@ -164,7 +164,7 @@ etape = 2
 ```
 
 
-## Étape `r etape` -  `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` - `r data$Descr_Villes[etape]`
+## Étape `r etape` -  `r dates_FR %>% filter(code=="Mer") %>% pull(jsem_jour_mois_an)` - `r data$Descr_Villes[etape]`
 
  **`r data$Descr_km[etape]`**
 
