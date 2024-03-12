@@ -71,10 +71,13 @@ Distances variables selon les âges  - Aller-Retour de / vers la Cathédrale d'A
 
 ## `r dates_FR %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)` PM - Sprint
 
-Sprint et jeux d'habilité de  12h30 à 15h30   
-
+### Sprint de 12h30 à 15h30   
 
 <iframe src="https://ridewithgps.com/embeds?type=route&id=45310471&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
+
+### Jeux d'habilité de 12h30 à 15h30 
+
+Endroit à déterminer
 
 ## `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` AM - Critérium
 
