@@ -59,6 +59,13 @@ Article 6 – Ordre de départ pour le contre-la-montre
     Les vélos doivent être présentés et en quarantaine pour vérification au moins 15 minutes avant le départ du coureur. Les vélos spécifiques au contre-la-montre sont autorisés pour le contre-la-montre individuel s’ils respectent la règlementation de l’UCI.
     
     Une vérification optionnelle de vélos sera offerte par les commissaires le mercredi `r dates_FR %>% filter(code=="Mer") %>% pull(jour_mois_an)` à 10h30.
+
+
+<!--  TODO Règlements validés : ajuster la numérotation lors de l'acceptation 
+Article 7 – Utilisation d'un vélo de route régulier obligatoire pour le contre-la-montre
+
+:   "Il est prévu que les vélos utilisés dans le contre-la-montre soient des vélos conformes à tous les règlements de l'UCI pour les courses sur route ; vélo de route standard, configuration standard, guidon standard (1.3.011-1.3.017, 1.3.020, 1.3.022). Les limites de poids s'appliquent également (1.3.019). En outre, les roues doivent être uniquement des roues de course sur route (1.3.018) et les vélos de contre-la-montre et les extensions de guidon ne sont pas autorisés (1.3.023). Enfin, les vélos de contre-la-montre et les prolongateurs de guidon définis aux points 1.3.021 et 1.3.023 sont spécifiquement interdits dans cette étape."
+-->
     
     
 Article 7 – Radio-Tour
