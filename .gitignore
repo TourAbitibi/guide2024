@@ -86,3 +86,6 @@ guide_EN_PDF/*.log
 
 # Fichier temporaire ppt
 img/sign/~$ajout_signalisation.pptx
+
+# Fichiers de test
+tests/__pycache__
