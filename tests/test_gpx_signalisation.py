@@ -85,11 +85,13 @@ def test_waypoint_signalisation() -> None:
                 print("Dans le Excel mais pas dans le GPX", diff2)
 
         # Test pour pytest
-        assert list_sign_excel == list_wp
+        assert (
+            list_sign_excel == list_wp
+        ), f"Étape {etape} : Les deux listes sont différentes"
 
 
 if __name__ == "__main__":
     try:
         test_waypoint_signalisation()
     except AssertionError as e:
-        pass
+        print(e)
