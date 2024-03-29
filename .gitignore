@@ -89,3 +89,7 @@ img/sign/~$ajout_signalisation.pptx
 
 # Fichiers de test
 tests/__pycache__
+tests/.pytest_cache
+
+# Fichiers vscode
+.vscode/
