@@ -2100,7 +2100,11 @@ Article 6 – Starting order for the time trial
 
     An optional bike check will be offered by the commissaires on Wednesday `r dates_EN %>% filter(code=="Mer") %>% pull(jour_mois)` at 10:30 AM.
 
-    
+<!--  TODO Règlements validés : ajuster la numérotation lors de l'acceptation 
+Article 7 – Mandatory road bike usage for time trial
+
+:   "It is the intention bikes used in the time trial must be a bike that complies with all UCI regulations for road race competition; standard road bike, standard configuration, standard handlebars (1.3.011-1.3.017, 1.3.020, 1.3.022). Weight limits will aslo apply (1.3.019). Further, wheels must be road race only (1.3.018) and time trial bikes and handlebar extensions are not permitted (1.3.023). Finally, Time Trial bikes and handlebar extensions defined in 1.3.021 and 1.3.023 are specifically not allowed in this stage"
+-->   
     
 Article 7 – Radio-Tour
 
