@@ -39,7 +39,7 @@ glue('<table border=1>
 
 ## Sommaire
 
-- Contre-la-montre de type aller-retour : 2 x 4.2 km
+- Contre-la-montre de type aller-retour : 2 x 4.15 km
 
 ----------------------------------------------------
                                               Heure
