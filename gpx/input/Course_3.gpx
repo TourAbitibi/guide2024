@@ -124,6 +124,11 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
+  <wpt lon="-77.76710107443421" lat="48.094342687195514">
+    <name>Green / Départ réel</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
   <trk>
     <name>2024 - Etape 3 CLMI (Course)</name>
     <trkseg>
