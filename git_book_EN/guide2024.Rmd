@@ -1707,6 +1707,7 @@ glue('<table border=1>
 
 ## Summary
 
+- 12 laps of a 10.4 km circuit
 - Counterclockwise loop
 
 
@@ -1802,6 +1803,11 @@ maillots_porteurs_tableau_EN(Etape)
 tableau_Descrip_Etape(Etape, lang)
 
 ```
+
+### Special notes - urban circuit {-}
+
+- Standing feed is permitted on the 1^st^ avenue climb (500 m after the start line) 
+- This feedzone is also the trash zone.
 
 <!-- impression des résultats si existent  -->
 

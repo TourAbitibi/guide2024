@@ -37,6 +37,7 @@ glue('<table border=1>
 
 ## Sommaire
 
+- 12 tours d'un circuit de 10.4 km
 - Boucle en sens anti-horaire
 
 ----------------------------------------------------
@@ -131,6 +132,11 @@ maillots_porteurs_tableau_FR(Etape)
 tableau_Descrip_Etape(Etape, lang)
 
 ```
+
+### Notes particulières - circuit urbain {-}
+
+- Le ravitaillement fixe est permis dans la montée de la 1^ère^ avenue (500 m après la ligne de départ).
+- Cette zone de ravitaillement est aussi la zone de déchets. 
 
 <!-- impression des résultats si existent  -->
 

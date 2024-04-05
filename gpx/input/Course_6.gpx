@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxdata="http://www.cluetrust.com/XML/GPXDATA/1/0" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.cluetrust.com/XML/GPXDATA/1/0 http://www.cluetrust.com/Schemas/gpxdata10.xsd" version="1.1" creator="http://ridewithgps.com/">
   <metadata>
-    <name>2024 - Etape 6 - Circuit Urbain Val-d'Or </name>
-    <link href="https://ridewithgps.com/routes/45310748">
-      <text>2024 - Etape 6 - Circuit Urbain Val-d'Or </text>
+    <name>2024 - Etape 6 - Circuit Urbain Val-d'Or (Course)</name>
+    <link href="https://ridewithgps.com/routes/46053592">
+      <text>2024 - Etape 6 - Circuit Urbain Val-d'Or (Course)</text>
     </link>
-    <time>2024-01-07T10:42:54Z</time>
+    <time>2024-04-02T07:53:13Z</time>
   </metadata>
   <wpt lon="-77.7919" lat="48.10324">
     <name>Left</name>
@@ -32,6 +32,27 @@
     <name>Right</name>
     <cmt>Tournez à droite sur Boulevard Forest</cmt>
     <desc>Tournez à droite sur Boulevard Forest</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.804364" lat="48.096455">
+    <name>Slight Left</name>
+    <cmt>À gauche de la bretelle (sens inverse circulation)</cmt>
+    <desc>À gauche de la bretelle (sens inverse circulation)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.80537" lat="48.095206">
+    <name>Slight Left</name>
+    <cmt>Boulevard Sabourin (sens inverse de la circulation)</cmt>
+    <desc>Boulevard Sabourin (sens inverse de la circulation)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.804058" lat="48.091772">
+    <name>Right</name>
+    <cmt>Boulevard des Pins</cmt>
+    <desc>Boulevard des Pins</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -91,8 +112,18 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
+  <wpt lon="-77.80441386280724" lat="48.08235543943845">
+    <name>GPM / KOM</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78917489841065" lat="48.10225894672679">
+    <name>Départ officiel / Official start</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
   <trk>
-    <name>2024 - Etape 6 - Circuit Urbain Val-d'Or </name>
+    <name>2024 - Etape 6 - Circuit Urbain Val-d'Or (Course)</name>
     <trkseg>
       <trkpt lat="48.10225" lon="-77.78916">
         <ele>310.6</ele>
@@ -190,6 +221,9 @@
       <trkpt lat="48.096488" lon="-77.804276">
         <ele>345.5</ele>
       </trkpt>
+      <trkpt lat="48.096456" lon="-77.804365">
+        <ele>345.3</ele>
+      </trkpt>
       <trkpt lat="48.096425" lon="-77.80445">
         <ele>345.1</ele>
       </trkpt>
@@ -214,6 +248,9 @@
       <trkpt lat="48.09536" lon="-77.805339">
         <ele>345.4</ele>
       </trkpt>
+      <trkpt lat="48.095207" lon="-77.805371">
+        <ele>345.6</ele>
+      </trkpt>
       <trkpt lat="48.095113" lon="-77.80539">
         <ele>345.8</ele>
       </trkpt>
@@ -233,6 +270,9 @@
         <ele>349.8</ele>
       </trkpt>
       <trkpt lat="48.091842" lon="-77.804026">
+        <ele>350.0</ele>
+      </trkpt>
+      <trkpt lat="48.091772" lon="-77.804058">
         <ele>350.0</ele>
       </trkpt>
       <trkpt lat="48.091673" lon="-77.804104">

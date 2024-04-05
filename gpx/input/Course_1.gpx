@@ -231,10 +231,10 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
-  <wpt lon="-77.80579" lat="48.08454">
+  <wpt lon="-77.804398" lat="48.082336">
     <name>Climb</name>
-    <cmt>KOM - Tour de Cablevision</cmt>
-    <desc>KOM - Tour de Cablevision</desc>
+    <cmt>KOM - Dépôt à neige</cmt>
+    <desc>KOM - Dépôt à neige</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -484,27 +484,27 @@
     <type>Dot</type>
   </wpt>
   <wpt lon="-78.49428137945478" lat="48.223188895514596">
-    <name>Sprint</name>
+    <name>Sprint bonifications / Bonus sprint</name>
     <cmt>Sprint Bonification (Lac Normand)</cmt>
     <desc>Sprint Bonification (Lac Normand)</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
   <wpt lon="-78.12721332592947" lat="48.14885982374913">
-    <name>Sprint</name>
+    <name>Sprint bonifications / Bonus sprint</name>
     <cmt>Sprint Bonification (100m avant chemin des Pompiers Malartic)</cmt>
     <desc>Sprint Bonification (100m avant chemin des Pompiers Malartic)</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
   <wpt lon="-77.9463998540784" lat="48.11288447040583">
-    <name>Sprint (du maire)</name>
+    <name>Sprint du maire</name>
     <cmt>Sprint du Maire (école Dubuisson, passage piéton)</cmt>
     <desc>Sprint du Maire (école Dubuisson, passage piéton)</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
-  <wpt lon="-77.80578979296105" lat="48.08457063110634">
+  <wpt lon="-77.80428775591271" lat="48.08220897915079">
     <name>KOM</name>
     <cmt>KOM (Parc à Chien)</cmt>
     <desc>KOM (Parc à Chien)</desc>
@@ -5057,6 +5057,9 @@
       </trkpt>
       <trkpt lat="48.08214" lon="-77.80424">
         <ele>358.7</ele>
+      </trkpt>
+      <trkpt lat="48.082336" lon="-77.804398">
+        <ele>359.4</ele>
       </trkpt>
       <trkpt lat="48.08271" lon="-77.8047">
         <ele>360.6</ele>
