@@ -38,7 +38,8 @@ creation_3_map <- function(no_etape,
                            pos_v_arrow = "top",
                            pos_h_scale = "left",
                            pos_v_scale = "bottom",
-                           buff = 100){
+                           buff = 100,
+                           scale = 25){
 
   # Filtrer sur l'étape à créer
   etape_line <- parcours_stat %>% filter(etape == no_etape)
@@ -63,7 +64,7 @@ creation_3_map <- function(no_etape,
     tm_shape(etape_line) + 
     tm_lines(col = couleurs$bleuTour, 
              lwd= 2) +
-    tm_scale_bar(breaks = c(0,5, 10,25),
+    tm_scale_bar(breaks = c(0,scale/5,scale/5*2,scale),
                  text.size = 0.8, 
                  position=c(pos_h_scale,pos_v_scale)) +
     # ajout d'une rose des vents
@@ -134,9 +135,9 @@ creation_3_map <- function(no_etape,
 
 creation_3_map(no_etape =1,
                pct_point_debut = 0.01, 
-               pct_point_fin = 0.90,
+               pct_point_fin = 0.91,
                pos_h_arrow = "right",
-               pos_v_arrow = "bottom",
+               pos_v_arrow = "top",
                pos_h_scale = "left",
                pos_v_scale = "bottom",
                buff = 300)
@@ -156,7 +157,7 @@ creation_3_map(no_etape =2,
 
 creation_3_map(no_etape =4,
                pct_point_debut = 0.032, 
-               pct_point_fin = 0.96,
+               pct_point_fin = 0.97,
                pos_h_arrow = "right",
                pos_v_arrow = "top",
                pos_h_scale = "left",
@@ -170,17 +171,18 @@ creation_3_map(no_etape =5,
                pos_h_arrow = "right",
                pos_v_arrow = "bottom",
                pos_h_scale = "left",
-               pos_v_scale = "top",
-               buff = 300)
- 
+               pos_v_scale = "top")
+
+
 creation_3_map(no_etape =6,
-               pct_point_debut = 0.048, 
-               pct_point_fin = 0.97,
+               pct_point_debut = 0.048,
+               pct_point_fin = 0.92,
                pos_h_arrow = "right",
                pos_v_arrow = "bottom",
                pos_h_scale = "left",
-               pos_v_scale = "top",
-               buff = 300)
+               pos_v_scale = "bottom",
+               buff = 100,
+               scale = 2.5)
 
 
 creation_3_map(no_etape =7,
@@ -199,7 +201,7 @@ creation_3_map(no_etape =7,
 
 no_etape = 3
 pct_point_debut = 0.04
-pct_point_fin = 0.97
+pct_point_fin = 0.96
 pos_h_arrow = "left"
 pos_v_arrow = "top"
 pos_h_scale = "left"

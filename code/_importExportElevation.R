@@ -10,7 +10,7 @@
 #   - raster elv_parcours.tif
 #   - _import_itineraire.R
 #
-# Output : fichiers csv contenant les élévsations corrigées des parcours
+# Output : fichiers csv contenant les élévations corrigées des parcours
 #
 # --> procédure de calcul des élévations longues, 
 #     à faire seulement lors de changement de parcours (GPX)

@@ -73,6 +73,6 @@ ecrire_tableau_SOMMET <- function(Etape, lang){
   
 }
 
-# ecrire_tableau_SOMMET(etapeSOMMET, "FR")
-# ecrire_tableau_SOMMET(etapeSOMMET, "EN")
+ecrire_tableau_SOMMET(etapeSOMMET, "FR")
+ecrire_tableau_SOMMET(etapeSOMMET, "EN")
 

@@ -146,7 +146,7 @@ tableau_Descrip_Etape <- function(Etape = 1, language = "FR"){
              title_format = c("italic", "bold"),
              escape= FALSE) else
       footnote(.,general  = c("Bonus sprint : 3-2-1 sec & 6-4-2 pts",
-                            "Final Finish : 10-6-4 sec & 30-24-20-16-12-10-8-6-4-2 pts",
+                            "Finish : 10-6-4 sec & 30-24-20-16-12-10-8-6-4-2 pts",
                             "KOM : 5-3-2 points"
       ),
       general_title = "Points and bonifications :",
@@ -162,16 +162,16 @@ tableau_Descrip_Etape_Demi <- function(Etape = 1, language = "FR"){
   
   tableau_Descrip_BASE(Etape, language) %>% # Tableau de base sans footer
     {if (language == "FR")
-      footnote(.,general  = c("Sprint bonification : 3-2-1 sec & 6-4-2 pts",
-                              "Arrivée finale : 6-4-2 sec & 30-24-20-16-12-10-8-6-4-2 pts",
-                              "GPM : 5-3-2 points"
+      footnote(.,general  = c(#"Sprint bonification : 3-2-1 sec & 6-4-2 pts", #Pas de spint bonus en demi-étape
+                              "Arrivée finale : 6-4-2 sec & 30-24-20-16-12-10-8-6-4-2 pts" #,
+                              #"GPM : 5-3-2 points"
       ),
       general_title = "Points et bonifications :",
       title_format = c("italic", "bold"),
       escape= FALSE) else
-        footnote(.,general  = c("Bonus sprint : 3-2-1 sec & 6-4-2 pts",
-                                "Final Finish : 6-4-2 sec & 30-24-20-16-12-10-8-6-4-2 pts",
-                                "KOM : 5-3-2 points"
+        footnote(.,general  = c(#"Bonus sprint : 3-2-1 sec & 6-4-2 pts", #Pas de spint bonus en demi-étape
+                                "Finish : 6-4-2 sec & 30-24-20-16-12-10-8-6-4-2 pts" #,
+                                #"KOM : 5-3-2 points"
         ),
         general_title = "Points and bonifications :",
         title_format = c("italic", "bold"),
@@ -195,7 +195,7 @@ tableau_Descrip_Etape_Sommet <- function(Etape = 1, language = "FR"){
       title_format = c("italic", "bold"),
       escape= FALSE) else
         footnote(.,general  = c("Bonus sprint : 3-2-1 sec & 6-4-2 pts",
-                                "Final Finish : 10-6-4 sec & 30-24-20-16-12-10-8-6-4-2 pts",
+                                "Finish : 10-6-4 sec & 30-24-20-16-12-10-8-6-4-2 pts",
                                 "KOM : 5-3-2 points",
                                 "KOM - mountain top finish : 10-6-4 points"
         ),
