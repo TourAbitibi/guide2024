@@ -35,8 +35,8 @@ dff <- tibble(
   date =  glue('{dates_prog[2]}'),
   presente  =  glue('<img src="../img/logo/comm_0.png" width="100">'),
   epreuve =  glue('Présentation des équipes<br/>Challenge Sprint Abitibi<br/>'), 
-  dep = glue("<strong>xxh30</strong><br/><br/><strong>17h30</strong><br/>Val-d'Or , Hôtel de Ville"),
-  arr = glue("<strong>xxh</strong><br/><br/><strong>19h</strong><br/>Val-d'Or , Hôtel de Ville")
+  dep = glue("<strong>17h</strong><br/><br/><strong>18h</strong><br/>Val-d'Or , Hôtel de Ville"),
+  arr = glue("<strong>17h30</strong><br/><br/><strong>19h30</strong><br/>Val-d'Or , Hôtel de Ville")
 )
 
 # Mardi 
@@ -57,7 +57,8 @@ dff <- tibble(
   presente  =  glue('<img src="../img/logo/comm_2.png" width="200">'),
   epreuve =  glue('<strong>Route</strong><br/>{df$VilleDep[2]} - {df$VilleArr[2]}<br/>{df$Via[2]}<br/>Distance : {df$Descr_km[2]}<br/>({df$KM_Neutres[2]} km neutralisés au départ)'), 
   dep = glue('<strong>{df$time_depart[2]}</strong><br/>{df$VilleDep[2]}, {df$LieuDepFR[2]}'),
-  arr = glue('<strong>{df$time_arrivee[2]}</strong><br/>{df$VilleArr[2]}, {df$LieuArrFR[2]}')
+  arr = glue('Entrée en ville : <br/><strong>{df$HeureEntreeVille[2]}</strong> <br/>Arrivée finale : <br/><strong>{df$time_arrivee[2]}</strong><br/>{df$VilleArr[2]}, {df$LieuArrFR[2]}')
+  
 ) %>% 
   bind_rows(dff,.)
 
@@ -131,8 +132,8 @@ dfe <- tibble(
   date =  glue('{dates_prog[2]}'),
   presente  =  glue('<img src="../img/logo/comm_0.png" width="100">'),
   epreuve =  glue('Team Presentation<br/>Challenge Sprint Abitibi<br/>'), 
-  dep = glue("<strong>16h30</strong><br/><br/><strong>17h30</strong><br/>Val-d'Or , City Hall"),
-  arr = glue("<strong>17h</strong><br/><br/><strong>19h</strong><br/>Val-d'Or , City Hall")
+  dep = glue("<strong>17h</strong><br/><br/><strong>18h</strong><br/>Val-d'Or , City Hall"),
+  arr = glue("<strong>17h30</strong><br/><br/><strong>19h30</strong><br/>Val-d'Or , City Hall")
 )
 
 # Mardi 
@@ -152,8 +153,8 @@ dfe <- tibble(
   presente  =  glue('<img src="../img/logo/comm_2.png" width="200">'),
   epreuve =  glue('<strong>Road race</strong><br/>{df$VilleDep[2]} - {df$VilleArr[2]}<br/>{df$Via[2]}<br/>Distance : {df$Descr_km[2]}<br/>({df$KM_Neutres[2]} km controlled start)'), 
   dep = glue('<strong>{df$time_depart[2]}</strong><br/>{df$VilleDep[2]}, {df$LieuDepEN[2]}'),
-  arr = glue('<strong>{df$time_arrivee[2]}</strong><br/>{df$VilleArr[2]}, {df$LieuArrEN[2]}')
-  ) %>% 
+  arr = glue('Circuit arrival : <br/><strong>{df$HeureEntreeVille[2]}</strong> <br/>Finish : <br/><strong>{df$time_arrivee[2]}</strong><br/>{df$VilleArr[2]}, {df$LieuArrEN[2]}')
+) %>% 
   bind_rows(dfe,.)
 
 
