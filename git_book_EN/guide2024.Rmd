@@ -1997,7 +1997,7 @@ tableau_Descrip_Etape(Etape, lang)
 
 ### Notes {-}
 
-Please refer to article 11 of the [specific rules][Specific rules] for the circuit arrival of this last stage.
+Please refer to article 12 of the [specific rules][Specific rules] for the circuit arrival of this last stage.
 
 
 <!-- impression des résultats si existent  -->
@@ -2058,12 +2058,12 @@ Article 1 – Organization
 
 Article 2 – Race type
 
-:  This race is open to athletes from the junior men’s category. It is an official UCI World Junior competition. In order to be considered as a junior athlete, one must have been born in `r params$annee - 18` ou `r params$annee - 17`. The competition is registered as a 2.NCupJ category and UCI points will be awarded following article `r glue('<a href="{uci_p2_FR}#page=184" target="_blank">2.14.040</a>')`.    
+:  This race is open to athletes from the junior men’s category. It is an official UCI World Junior competition. In order to be considered as a junior athlete, one must have been born in `r params$annee - 18` ou `r params$annee - 17`. The competition is registered as a 2.NCupJ category and UCI points will be awarded following article `r glue('<a href="{uci_p2_EN}#page=185" target="_blank">2.14.040</a>')`.    
 
     The following waivers were granted to the organisation of the Tour de l’Abitibi by the UCI :  
     
-    * The Tour de l’Abitibi allows the participation of regional and club teams only composed of junior riders but will not score any UCI points (article 2.14.036). In addition, club teams jerseys must respect articles `r glue('<a href="{uci_p1_EN}#page=81" target="_blank">1.3.045 to 1.3.047</a>')` of the UCI rules;    
-    * The Tour de l’Abitibi race features two (2) half-stages on the same day (article `r glue('<a href="{uci_p2_EN}#page=60" target="_blank">2.6.010</a>')`).
+    * The Tour de l’Abitibi allows the participation of regional and club teams only composed of junior riders but will not score any UCI points `r glue('<a href="{uci_p2_EN}#page=184" target="_blank">2.14.036</a>')`. In addition, club teams jerseys must respect articles `r glue('<a href="{uci_p1_EN}#page=81" target="_blank">1.3.045 to 1.3.047</a>')` of the UCI rules;    
+    * The Tour de l’Abitibi race features two (2) half-stages on the same day (article `r glue('<a href="{uci_p2_EN}#page=60" target="_blank">2.6.010</a>')`) following the granting of a waiver from the UCI.
    
    
     
@@ -2102,29 +2102,30 @@ Article 6 – Starting order for the time trial
 
     Every rider will start with a one (1) minute gap, except for the last 10 riders which will start with two (2) minutes gap.
 
-    Bikes must be presented and quarantined for bike check at least 15 minutes before the rider's start. Time-trial bikes are allowed for the Individual time trial if they respect the UCI regulations.
+    Bikes must be presented and quarantined for bike check at least 15 minutes before the rider's start. 
+<!-- Time-trial bikes are allowed for the Individual time trial if they respect the UCI regulations.-->
 
     An optional bike check will be offered by the commissaires on Wednesday `r dates_EN %>% filter(code=="Mer") %>% pull(jour_mois)` at 10:30 AM.
 
-<!--  TODO Règlements validés : ajuster la numérotation lors de l'acceptation 
+
 Article 7 – Mandatory road bike usage for time trial
 
-:   "It is the intention bikes used in the time trial must be a bike that complies with all UCI regulations for road race competition; standard road bike, standard configuration, standard handlebars (1.3.011-1.3.017, 1.3.020, 1.3.022). Weight limits will aslo apply (1.3.019). Further, wheels must be road race only (1.3.018) and time trial bikes and handlebar extensions are not permitted (1.3.023). Finally, Time Trial bikes and handlebar extensions defined in 1.3.021 and 1.3.023 are specifically not allowed in this stage"
--->   
+:   It is the intention bikes used in the time trial must be a bike that complies with all UCI regulations for road race competition; standard road bike, standard configuration, standard handlebars (`r glue('<a href="{uci_p1_EN}#page=69" target="_blank">1.3.011-1.3.017, 1.3.020, 1.3.022</a>')`). Weight limits will aslo apply (`r glue('<a href="{uci_p1_EN}#page=68" target="_blank">1.3.019</a>')`). Further, wheels must be road race only (`r glue('<a href="{uci_p1_EN}#page=68" target="_blank">1.3.018</a>')`) and time trial bikes and handlebar extensions are not permitted (`r glue('<a href="{uci_p1_EN}#page=73" target="_blank">1.3.023</a>')`). Finally, Time Trial bikes and handlebar extensions defined in `r glue('<a href="{uci_p1_EN}#page=72" target="_blank">1.3.021</a>')` and `r glue('<a href="{uci_p1_EN}#page=73" target="_blank">1.3.023</a>')` are specifically not allowed in this stage.
+
     
-Article 7 – Radio-Tour
+Article 8 – Radio-Tour
 
 :   All race information will be broadcasted on channel **01 – Radio-Tour** on the radio provided by the organization. 
 
 
-Article 8 – Neutral technical assistance
+Article 9 – Neutral technical assistance
 
-:   The neutral technical assistance is under the Tour cycliste de l’Abitibi’s responsibility (with the exception of stage 3 – ITT). There will be three properly identified vehicles during each race (2 cars and 1 motorbike). 
+:   The neutral technical assistance is under the Tour cycliste de l’Abitibi’s responsibility (with the exception of stage 3 – ITT). There will be three properly identified vehicles during each race (3 cars). 
 
     All rear wheels carried by the neutral technical assistance team will be equipped with 11 & 12-speed cassettes, with rim and disk brakes. For the teams with specials needs, please contact us at the DS meeting.
 
 
-Article 9 – Time cut
+Article 10 – Time cut
 
 :   The time cuts are set as follows:
 
@@ -2132,7 +2133,7 @@ Article 9 – Time cut
 
 
 
-Article 10 – Circuit finish (Stages 1 and 2)
+Article 11 – Circuit finish (Stages 1 and 2)
 
 :  For road stages finishing with a circuit finish, the riders arriving at the circuit entry at the same time that the main peloton or the caravan is coming on the circuit will be temporarily stopped by the official to make sure there will be no interference with the other groups.    
 
@@ -2143,7 +2144,7 @@ Article 10 – Circuit finish (Stages 1 and 2)
     If it is determined by the official at the entry of the circuit that the rider will not be able to reach the finish line within the time cut, the official will have the right to stop the rider’s race and he will not be allowed to start the next stage.
 
 
-Article 11 – Circuit finish - last stage (Stage 7)
+Article 12 – Circuit finish - last stage (Stage 7)
 
 :   During the last stage, a rider stopped by the commissaire at the circuit entrance will be credited with a calculated time and won't enter the circuit. If he is already considered out of time limit relative to the first rider who entered the circuit, he will be considered ***hors délai*** **(out of the time cut)**  and will not appear on the final results.   
 
@@ -2152,7 +2153,7 @@ Article 11 – Circuit finish - last stage (Stage 7)
     Riders that abandon during the circuit laps of the last stage will get a **DNF** result. 
 
 
-Article 12 – Time bonuses
+Article 13 – Time bonuses
 
 :   Bonuses will be attributed to the first three (3) of each stage except for ITT:
 
@@ -2163,7 +2164,7 @@ Article 12 – Time bonuses
     * Bonus sprint : 3, 2, 1 second.
 
 
-Article 13 – Classification
+Article 14 – Classification
 
 :   The race is divided into five (5) different classifications:
 
@@ -2187,17 +2188,17 @@ Article 13 – Classification
 
 
 
-Article 13.1 - General Individual Time Classification
+Article 14.1 - General Individual Time Classification
 
-:   An individual time classification is set by adding the registered time from each stage including time bonuses and penalties –UCI’s article `r glue('<a href="{uci_p2_EN}#page=62" target="_blank">2.6.014</a>')`.
+:   An individual time classification is set by adding the registered time from each stage including time bonuses and penalties –UCI’s article `r glue('<a href="{uci_p2_EN}#page=61" target="_blank">2.6.014</a>')`.
 
-    If the event of a tie, the fractions of seconds registered during the individual time trial race will be added to the total time. (UCI’s article `r glue('<a href="{uci_p2_EN}#page=62" target="_blank">2.6.015</a>')`)
+    If the event of a tie, the fractions of seconds registered during the individual time trial race will be added to the total time. (UCI’s article `r glue('<a href="{uci_p2_EN}#page=61" target="_blank">2.6.015</a>')`)
 
-    In case of a further tie, the placings obtained in each stage shall be added, and as a last resort, the classification of the last stage will be used. (UCI’s article `r glue('<a href="{uci_p2_EN}#page=62" target="_blank">2.6.015</a>')`)
+    In case of a further tie, the placings obtained in each stage shall be added, and as a last resort, the classification of the last stage will be used. (UCI’s article `r glue('<a href="{uci_p2_EN}#page=61" target="_blank">2.6.015</a>')`)
 
     
 
-Article 13.2 - General Individual Points Classification
+Article 14.2 - General Individual Points Classification
 
 :   This ranking is determined by adding the points at the end of each stage and in the intermediate sprints. 
 
@@ -2217,7 +2218,7 @@ Article 13.2 - General Individual Points Classification
 
 
 
-Article 13.3 - General climber’s classification (KOM) 
+Article 14.3 - General climber’s classification (KOM) 
 
 :   It is determined by the addition of the points attributed at each KOM (hill sprint): 5-3-2 points, with the exception of stage 5 (summit finish) where the points are doubled (10-6-4 points).
 
@@ -2228,13 +2229,13 @@ Article 13.3 - General climber’s classification (KOM)
     3. Overall individual time classification.
 
 
-Article 13.4 - General Time Classification for First Year Juniors
+Article 14.4 - General Time Classification for First Year Juniors
 
 :   This classification is based on general individual time classification, but only involves first year juniors (17 years of age) born in `r params$annee - 17`.
 
 
 
-Article 13.5 - General Team Classification by Time
+Article 14.5 - General Team Classification by Time
 
 :   The team classification for the day shall be calculated on the basis of the sum of the three (3) best individual times from each team. 
 
@@ -2250,7 +2251,7 @@ Article 13.5 - General Team Classification by Time
     Any team reduced to fewer than three riders shall be eliminated from the general team classification.
 
 
-Article 14 - Protest of results
+Article 15 - Protest of results
 
 :   Only the team’s manager may file a protest of the results. A protest must be transmitted to the finish line judges. 
 
@@ -2260,7 +2261,7 @@ Article 14 - Protest of results
     - For overall final classification, thirty (30) minutes after the posting of the results.
 
 
-Article 15 – Prizes
+Article 16 – Prizes
 
 :     The following prizes will be awarded according to `r glue('<a href="{uci_financial}" target="_blank">UCI ROAD financial obligations</a>')`. All amounts are in canadians dollars.        
 
@@ -2508,7 +2509,7 @@ The overall amount awarded for the prizes is  **`r bourse_totale` CAD**.
 
 <br/>
 
-Article 16 - Special prizes
+Article 17 - Special prizes
 
 :   The winners of the special prizes are chosen by all the sport directors and the commissaires by means of a questionnaire.
 
@@ -2519,7 +2520,7 @@ Article 16 - Special prizes
     * Most Combative Trophy
     * Best Team Spirit Trophy
     * Best Mechanic Trophy
-    * Best Team Manager Trophy
+    * Best Team Manager - Bruno Gauthier Trophy
     * MVP of each team Trophy
 
 
@@ -2527,7 +2528,7 @@ Article 16 - Special prizes
 [^abitibien]: Rider from or living in Abitibi-Témiscamingue, according to general time classification
 
 
-Article 17 – Antidoping 
+Article 18 – Antidoping 
 
 :   The UCI anti-doping rules and regulations apply during this competition, where applicable, the local anti-doping legislation which will be applicable in addition to the UCI's anti-doping regulations. 
 
@@ -2537,9 +2538,9 @@ Article 17 – Antidoping
  
 
 
-Article 18 – Protocol
+Article 19 – Protocol
 
-:   In compliance with the UCI rules and regulations article `r glue('<a href="{uci_p1_EN}#page=47" target="_blank">1.1.112</a>')`, the following riders must report daily for the protocol in competition attire a maximum of 10 minutes after the finish:
+:   In compliance with the UCI rules and regulations article `r glue('<a href="{uci_p1_EN}#page=47" target="_blank">1.2.112</a>')`, the following riders must report daily for the protocol in competition attire a maximum of 10 minutes after the finish:
 
     * The first three (3) of the stage
     * Leaders of the following ranking: 
@@ -2551,7 +2552,7 @@ Article 18 – Protocol
 
 
 
-Article 19 – Penalities
+Article 20 – Penalities
 
 :   The UCI rules and regulations concerning penalties will apply.
 
@@ -2561,12 +2562,12 @@ Article 19 – Penalities
 
 
 
-Article 20 – Emergency Services
+Article 21 – Emergency Services
 
 :   According to the urban character of some of the stages and the importance accorded by the organization to the public’s security, priority will be granted to the Emergency Services in case of an accident, and everyone is expected to obey.
 
 
-Article 21 – Protection of the environment and of cycling’s reputation
+Article 22 – Protection of the environment and of cycling’s reputation
 
 :   Riders are forbidden to carelessly dispose of trash or bottles along the course outside of the litter zones provided by the organiser (article `r glue('<a href="{uci_p2_EN}#page=21" target="_blank">2.2.025</a>')`). 
 

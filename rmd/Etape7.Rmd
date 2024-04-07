@@ -148,7 +148,7 @@ tableau_Descrip_Etape(Etape, lang)
 
 ### Notes {-}
 
-Merci de consulter l'article 11 des [règlements particuliers][Règlements particuliers] concernant l'arrivée en circuit de cette dernière étape.
+Merci de consulter l'article 12 des [règlements particuliers][Règlements particuliers] concernant l'arrivée en circuit de cette dernière étape.
 
 <!-- impression des résultats si existent  -->
 

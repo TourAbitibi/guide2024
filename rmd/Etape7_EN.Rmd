@@ -150,7 +150,7 @@ tableau_Descrip_Etape(Etape, lang)
 
 ### Notes {-}
 
-Please refer to article 11 of the [specific rules][Specific rules] for the circuit arrival of this last stage.
+Please refer to article 12 of the [specific rules][Specific rules] for the circuit arrival of this last stage.
 
 
 <!-- impression des résultats si existent  -->
