@@ -13,5 +13,7 @@ navbar:
       href: index.html
     - text: "Tour de la Relève"
       href: releve.html
+    - text: "Cyclo TiTour"
+      href: cyclo.html
 theme: "../distill.css"
 output: distill::distill_article
