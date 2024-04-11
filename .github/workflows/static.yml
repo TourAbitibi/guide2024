@@ -36,13 +36,13 @@ jobs:
       - name: Copy data for website
         run: | 
           mkdir web &&
-          cp img web/img
           cp index.html  web/index.html
-          cp prog  web/prog
-          cp sprint  web/sprint
-          cp FR  web/FR
-          cp EN  web/EN
-          cp organisateur  web/organisateur
+          cp -r img web/img
+          cp -r prog  web/prog
+          cp -r sprint  web/sprint
+          cp -r FR  web/FR
+          cp -r EN  web/EN
+          cp -r organisateur  web/organisateur
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
