@@ -36,8 +36,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name : site-folders
           # Upload selected folders
-          path: |
+          path: | 
             ./index.html
             ./FR
             ./EN
