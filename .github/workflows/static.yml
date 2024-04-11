@@ -38,13 +38,13 @@ jobs:
         with:
           # Upload selected folders
           path: |
-            index.html
-            FR/
-            EN/
-            sprint/
-            prog/
-            organisateur/
-            img/
+            ./index.html
+            ./FR
+            ./EN
+            ./sprint
+            ./prog
+            ./organisateur
+            ./img
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
