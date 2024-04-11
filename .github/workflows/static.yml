@@ -33,19 +33,22 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Copy data for website
+        run: | 
+          mkdir web &&
+          cp img web/img
+          cp index.html  web/index.html
+          cp prog  web/prog
+          cp sprint  web/sprint
+          cp FR  web/FR
+          cp EN  web/EN
+          cp organisateur  web/organisateur
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name : site-folders
           # Upload selected folders
-          path: | 
-            ./index.html
-            ./FR
-            ./EN
-            ./sprint
-            ./prog
-            ./organisateur
-            ./img
+          path: web
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
