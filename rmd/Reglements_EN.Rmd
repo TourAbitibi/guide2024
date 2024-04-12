@@ -60,9 +60,9 @@ Article 6 – Starting order for the time trial
     Every rider will start with a one (1) minute gap, except for the last 10 riders which will start with two (2) minutes gap.
 
     Bikes must be presented and quarantined for bike check at least 15 minutes before the rider's start. 
-<!-- Time-trial bikes are allowed for the Individual time trial if they respect the UCI regulations.-->
+<!-- Time-trial bikes are allowed for the Individual time trial if they respect the UCI regulations.
 
-    An optional bike check will be offered by the commissaires on Wednesday `r dates_EN %>% filter(code=="Mer") %>% pull(jour_mois)` at 10:30 AM.
+    An optional bike check will be offered by the commissaires on Wednesday `r dates_EN %>% filter(code=="Mer") %>% pull(jour_mois)` at 10:30 AM.-->
 
 
 Article 7 – Mandatory road bike usage for time trial

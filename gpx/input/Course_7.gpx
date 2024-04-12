@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxdata="http://www.cluetrust.com/XML/GPXDATA/1/0" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.cluetrust.com/XML/GPXDATA/1/0 http://www.cluetrust.com/Schemas/gpxdata10.xsd" version="1.1" creator="http://ridewithgps.com/">
   <metadata>
-    <name>2024 - Etape 7 - Senneterre + Circuit Val-d'Or </name>
-    <link href="https://ridewithgps.com/routes/45310856">
-      <text>2024 - Etape 7 - Senneterre + Circuit Val-d'Or </text>
+    <name>2024 - Etape 7 - Senneterre + Circuit Val-d'Or  (course)</name>
+    <link href="https://ridewithgps.com/routes/46021875">
+      <text>2024 - Etape 7 - Senneterre + Circuit Val-d'Or  (course)</text>
     </link>
-    <time>2024-01-07T10:58:08Z</time>
+    <time>2024-03-30T12:29:23Z</time>
   </metadata>
   <wpt lon="-77.24228" lat="48.3902">
     <name>Straight</name>
@@ -35,6 +35,27 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
+  <wpt lon="-77.25118" lat="48.380627">
+    <name>Danger</name>
+    <cmt>Pont / Bridge</cmt>
+    <desc>Pont / Bridge</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.259804" lat="48.369843">
+    <name>Generic</name>
+    <cmt>Départ officiel / Official start</cmt>
+    <desc>Départ officiel / Official start</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.336994" lat="48.248435">
+    <name>Danger</name>
+    <cmt>Pont / Bridge</cmt>
+    <desc>Pont / Bridge</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
   <wpt lon="-77.3969" lat="48.09279">
     <name>Slight Right</name>
     <cmt>Restez sur la droite</cmt>
@@ -46,6 +67,27 @@
     <name>Straight</name>
     <cmt>Continuez sur 3e Avenue Est, 117</cmt>
     <desc>Continuez sur 3e Avenue Est, 117</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.489531" lat="48.095064">
+    <name>Climb</name>
+    <cmt>GPM / KOM</cmt>
+    <desc>GPM / KOM</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.657554" lat="48.094358">
+    <name>Danger</name>
+    <cmt>Pont / Bridge</cmt>
+    <desc>Pont / Bridge</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.76851" lat="48.09983">
+    <name>Generic</name>
+    <cmt>Ville de Val-d'Or / Val-d'Or city</cmt>
+    <desc>Ville de Val-d'Or / Val-d'Or city</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -63,6 +105,27 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
+  <wpt lon="-77.76564" lat="48.107527">
+    <name>Danger</name>
+    <cmt>Voie ferrée / Roadrail</cmt>
+    <desc>Voie ferrée / Roadrail</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.775776" lat="48.112358">
+    <name>Danger</name>
+    <cmt>Voie ferrée / Railroad</cmt>
+    <desc>Voie ferrée / Railroad</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.785016" lat="48.107919">
+    <name>Danger</name>
+    <cmt>Voie ferrée / Railroad</cmt>
+    <desc>Voie ferrée / Railroad</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
   <wpt lon="-77.78515" lat="48.10589">
     <name>Right</name>
     <cmt>Tournez à droite sur 7e Rue</cmt>
@@ -77,6 +140,13 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
+  <wpt lon="-77.789094" lat="48.102224">
+    <name>Generic</name>
+    <cmt>Début 1ier tour (10 à faire) / First lap (10 to go)</cmt>
+    <desc>Début 1ier tour (10 à faire) / First lap (10 to go)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
   <wpt lon="-77.7919" lat="48.10324">
     <name>Left</name>
     <cmt>Tournez à gauche sur Rue Wolfe</cmt>
@@ -95,6 +165,13 @@
     <name>Left</name>
     <cmt>Tournez à gauche sur 1e Rue</cmt>
     <desc>Tournez à gauche sur 1e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79913" lat="48.101224">
+    <name>Climb</name>
+    <cmt>GPM / KOM</cmt>
+    <desc>GPM / KOM</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -147,143 +224,10 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
-  <wpt lon="-77.7919" lat="48.10324">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
-    <desc>Tournez à gauche sur Rue Wolfe</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79332" lat="48.10152">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79967" lat="48.10278">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 1e Rue</cmt>
-    <desc>Tournez à gauche sur 1e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79913" lat="48.0993">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
-    <desc>Tournez à gauche sur Avenue Delorimier</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79405" lat="48.09794">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 6e Rue</cmt>
-    <desc>Tournez à droite sur 6e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79896" lat="48.09165">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
-    <desc>Tournez à gauche sur Boulevard des Pins</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79031" lat="48.09166">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 7e Rue</cmt>
-    <desc>Tournez à gauche sur 7e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78991" lat="48.10022">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78485" lat="48.10012">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
-    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78447" lat="48.1005">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 2e Avenue</cmt>
-    <desc>Tournez à gauche sur 2e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.7919" lat="48.10324">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
-    <desc>Tournez à gauche sur Rue Wolfe</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79332" lat="48.10152">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79967" lat="48.10278">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 1e Rue</cmt>
-    <desc>Tournez à gauche sur 1e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79913" lat="48.0993">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
-    <desc>Tournez à gauche sur Avenue Delorimier</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79405" lat="48.09794">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 6e Rue</cmt>
-    <desc>Tournez à droite sur 6e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79896" lat="48.09165">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
-    <desc>Tournez à gauche sur Boulevard des Pins</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79031" lat="48.09166">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 7e Rue</cmt>
-    <desc>Tournez à gauche sur 7e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78991" lat="48.10022">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78485" lat="48.10012">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
-    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78447" lat="48.1005">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 2e Avenue</cmt>
-    <desc>Tournez à gauche sur 2e Avenue</desc>
+  <wpt lon="-77.78948" lat="48.10237">
+    <name>Sprint</name>
+    <cmt>Sprint de la Mairesse 250$ / Mayor Sprint</cmt>
+    <desc>Sprint de la Mairesse 250$ / Mayor Sprint</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -357,73 +301,10 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
-  <wpt lon="-77.7919" lat="48.10324">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
-    <desc>Tournez à gauche sur Rue Wolfe</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79332" lat="48.10152">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79967" lat="48.10278">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 1e Rue</cmt>
-    <desc>Tournez à gauche sur 1e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79913" lat="48.0993">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
-    <desc>Tournez à gauche sur Avenue Delorimier</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79405" lat="48.09794">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 6e Rue</cmt>
-    <desc>Tournez à droite sur 6e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79896" lat="48.09165">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
-    <desc>Tournez à gauche sur Boulevard des Pins</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79031" lat="48.09166">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 7e Rue</cmt>
-    <desc>Tournez à gauche sur 7e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78991" lat="48.10022">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78485" lat="48.10012">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
-    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78447" lat="48.1005">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 2e Avenue</cmt>
-    <desc>Tournez à gauche sur 2e Avenue</desc>
+  <wpt lon="-77.78908" lat="48.102223">
+    <name>Generic</name>
+    <cmt>Début 3e tour (8 à faire) / Start 3rd lap (8 to go)</cmt>
+    <desc>Début 3e tour (8 à faire) / Start 3rd lap (8 to go)</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -497,73 +378,12 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
-  <wpt lon="-77.7919" lat="48.10324">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
-    <desc>Tournez à gauche sur Rue Wolfe</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79332" lat="48.10152">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79967" lat="48.10278">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 1e Rue</cmt>
-    <desc>Tournez à gauche sur 1e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79913" lat="48.0993">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
-    <desc>Tournez à gauche sur Avenue Delorimier</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79405" lat="48.09794">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 6e Rue</cmt>
-    <desc>Tournez à droite sur 6e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79896" lat="48.09165">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
-    <desc>Tournez à gauche sur Boulevard des Pins</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79031" lat="48.09166">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 7e Rue</cmt>
-    <desc>Tournez à gauche sur 7e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78991" lat="48.10022">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78485" lat="48.10012">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
-    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78447" lat="48.1005">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 2e Avenue</cmt>
-    <desc>Tournez à gauche sur 2e Avenue</desc>
+  <wpt lon="-77.78881" lat="48.10213">
+    <name>Sprint</name>
+    <cmt>Sprint Bonif / Bonif Sprint
+Début 4e tour (7 à faire) / 4th lap (7 to go)</cmt>
+    <desc>Sprint Bonif / Bonif Sprint
+Début 4e tour (7 à faire) / 4th lap (7 to go)</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -637,87 +457,10 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
-  <wpt lon="-77.7919" lat="48.10324">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
-    <desc>Tournez à gauche sur Rue Wolfe</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79332" lat="48.10152">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79967" lat="48.10278">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 1e Rue</cmt>
-    <desc>Tournez à gauche sur 1e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79913" lat="48.0993">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
-    <desc>Tournez à gauche sur Avenue Delorimier</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79788" lat="48.09931">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue Lévis</cmt>
-    <desc>Tournez à gauche sur Rue Lévis</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79788" lat="48.09931">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
-    <desc>Tournez à gauche sur Avenue Delorimier</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79405" lat="48.09794">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 6e Rue</cmt>
-    <desc>Tournez à droite sur 6e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79896" lat="48.09165">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
-    <desc>Tournez à gauche sur Boulevard des Pins</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.79031" lat="48.09166">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 7e Rue</cmt>
-    <desc>Tournez à gauche sur 7e Rue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78991" lat="48.10022">
-    <name>Right</name>
-    <cmt>Tournez à droite sur 1e Avenue</cmt>
-    <desc>Tournez à droite sur 1e Avenue</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78485" lat="48.10012">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
-    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78447" lat="48.1005">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur 2e Avenue</cmt>
-    <desc>Tournez à gauche sur 2e Avenue</desc>
+  <wpt lon="-77.78881" lat="48.10213">
+    <name>Generic</name>
+    <cmt>Début 5e tour (6 à faire) / 5th lap (6 to go)</cmt>
+    <desc>Début 5e tour (6 à faire) / 5th lap (6 to go)</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -739,6 +482,13 @@
     <name>Left</name>
     <cmt>Tournez à gauche sur 1e Rue</cmt>
     <desc>Tournez à gauche sur 1e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79913" lat="48.10125">
+    <name>Climb</name>
+    <cmt>GPM / KOM</cmt>
+    <desc>GPM / KOM</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -788,11 +538,458 @@
     <name>Left</name>
     <cmt>Tournez à gauche sur 2e Avenue</cmt>
     <desc>Tournez à gauche sur 2e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78881" lat="48.10213">
+    <name>Generic</name>
+    <cmt>Début 6e tour (5 à faire) / 6th lap (5 to go)</cmt>
+    <desc>Début 6e tour (5 à faire) / 6th lap (5 to go)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.7919" lat="48.10324">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
+    <desc>Tournez à gauche sur Rue Wolfe</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79332" lat="48.10152">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79967" lat="48.10278">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 1e Rue</cmt>
+    <desc>Tournez à gauche sur 1e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79913" lat="48.0993">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
+    <desc>Tournez à gauche sur Avenue Delorimier</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79405" lat="48.09794">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 6e Rue</cmt>
+    <desc>Tournez à droite sur 6e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79896" lat="48.09165">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
+    <desc>Tournez à gauche sur Boulevard des Pins</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79031" lat="48.09166">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 7e Rue</cmt>
+    <desc>Tournez à gauche sur 7e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78991" lat="48.10022">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78485" lat="48.10012">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
+    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78447" lat="48.1005">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 2e Avenue</cmt>
+    <desc>Tournez à gauche sur 2e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78926" lat="48.10229">
+    <name>Sprint</name>
+    <cmt>Sprint Bonif / 7e tour (4 à faire) / 7th lap (4 to go)</cmt>
+    <desc>Sprint Bonif / 7e tour (4 à faire) / 7th lap (4 to go)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.7919" lat="48.10324">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
+    <desc>Tournez à gauche sur Rue Wolfe</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79332" lat="48.10152">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79967" lat="48.10278">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 1e Rue</cmt>
+    <desc>Tournez à gauche sur 1e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79913" lat="48.0993">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
+    <desc>Tournez à gauche sur Avenue Delorimier</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79405" lat="48.09794">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 6e Rue</cmt>
+    <desc>Tournez à droite sur 6e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79896" lat="48.09165">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
+    <desc>Tournez à gauche sur Boulevard des Pins</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79031" lat="48.09166">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 7e Rue</cmt>
+    <desc>Tournez à gauche sur 7e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78991" lat="48.10022">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78485" lat="48.10012">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
+    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78447" lat="48.1005">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 2e Avenue</cmt>
+    <desc>Tournez à gauche sur 2e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.7891" lat="48.10223">
+    <name>Generic</name>
+    <cmt>8e tour (3 à faire) / 8th lap (3 to go)</cmt>
+    <desc>8e tour (3 à faire) / 8th lap (3 to go)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.7919" lat="48.10324">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
+    <desc>Tournez à gauche sur Rue Wolfe</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79332" lat="48.10152">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79967" lat="48.10278">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 1e Rue</cmt>
+    <desc>Tournez à gauche sur 1e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79913" lat="48.0993">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
+    <desc>Tournez à gauche sur Avenue Delorimier</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79405" lat="48.09794">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 6e Rue</cmt>
+    <desc>Tournez à droite sur 6e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79896" lat="48.09165">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
+    <desc>Tournez à gauche sur Boulevard des Pins</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79031" lat="48.09166">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 7e Rue</cmt>
+    <desc>Tournez à gauche sur 7e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78991" lat="48.10022">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78485" lat="48.10012">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
+    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78447" lat="48.1005">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 2e Avenue</cmt>
+    <desc>Tournez à gauche sur 2e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78884" lat="48.10214">
+    <name>Sprint</name>
+    <cmt>Sprint de la Mairesse 250$ / Mayor Sprint
+Début 9e tour (2 à faire) / 9th lap (2 to go)</cmt>
+    <desc>Sprint de la Mairesse 250$ / Mayor Sprint
+Début 9e tour (2 à faire) / 9th lap (2 to go)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.7919" lat="48.10324">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
+    <desc>Tournez à gauche sur Rue Wolfe</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79332" lat="48.10152">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79967" lat="48.10278">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 1e Rue</cmt>
+    <desc>Tournez à gauche sur 1e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79405" lat="48.09794">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 6e Rue</cmt>
+    <desc>Tournez à droite sur 6e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79896" lat="48.09165">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
+    <desc>Tournez à gauche sur Boulevard des Pins</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79031" lat="48.09166">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 7e Rue</cmt>
+    <desc>Tournez à gauche sur 7e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78991" lat="48.10022">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78485" lat="48.10012">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
+    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78447" lat="48.1005">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 2e Avenue</cmt>
+    <desc>Tournez à gauche sur 2e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78881" lat="48.10213">
+    <name>Generic</name>
+    <cmt>Début dernier tour / Start of last lap</cmt>
+    <desc>Début dernier tour / Start of last lap</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.7919" lat="48.10324">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue Wolfe</cmt>
+    <desc>Tournez à gauche sur Rue Wolfe</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79332" lat="48.10152">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79967" lat="48.10278">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 1e Rue</cmt>
+    <desc>Tournez à gauche sur 1e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79913" lat="48.0993">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Avenue Delorimier</cmt>
+    <desc>Tournez à gauche sur Avenue Delorimier</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79405" lat="48.09794">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 6e Rue</cmt>
+    <desc>Tournez à droite sur 6e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79896" lat="48.09165">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Boulevard des Pins</cmt>
+    <desc>Tournez à gauche sur Boulevard des Pins</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79031" lat="48.09166">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur 7e Rue</cmt>
+    <desc>Tournez à gauche sur 7e Rue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78991" lat="48.10022">
+    <name>Right</name>
+    <cmt>Tournez à droite sur 1e Avenue</cmt>
+    <desc>Tournez à droite sur 1e Avenue</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78485" lat="48.10012">
+    <name>Left</name>
+    <cmt>Tournez à gauche sur Rue d'Ukraine</cmt>
+    <desc>Tournez à gauche sur Rue d'Ukraine</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.48954803970337" lat="48.09509729048256">
+    <name>KOM</name>
+    <cmt>KOM (117, tour communication, avant rue des dunes)</cmt>
+    <desc>KOM (117, tour communication, avant rue des dunes)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79911927116395" lat="48.101228037568895">
+    <name>KOM</name>
+    <cmt>KOM 1ier tour (907 1iere Rue Val-d'Or)</cmt>
+    <desc>KOM 1ier tour (907 1iere Rue Val-d'Or)</desc>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.25118348968276" lat="48.38061953126627">
+    <name>Pont</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.33700732558175" lat="48.248472285387955">
+    <name>Pont</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.65755257367823" lat="48.09435838759501">
+    <name>Pont</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.76564000000002" lat="48.1075020011859">
+    <name>Voie Ferrée</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.77579513842177" lat="48.1123594194699">
+    <name>Voie Ferrée</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78502064167836" lat="48.107931925051986">
+    <name>Voie Ferrée</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.25979809200626" lat="48.369850753241465">
+    <name>Départ officiel / Official Start</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.38254811124811" lat="48.12599283333483">
+    <name>Début ravitaillement / Feed Open</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.76841526365179" lat="48.099798421222914">
+    <name>Ville de Val-d'Or city</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.7949011215064" lat="48.102111670733805">
+    <name>Zone de ravitaillement fixe / Fix feeding zone</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.79456512292276" lat="48.10197529416773">
+    <name>Zone déchet fixe / Fix trash zone</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.78912165250829" lat="48.10223628816851">
+    <name>Fin / Finish - bonification bonifiée</name>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
   <trk>
-    <name>2024 - Etape 7 - Senneterre + Circuit Val-d'Or </name>
+    <name>2024 - Etape 7 - Senneterre + Circuit Val-d'Or  (course)</name>
     <trkseg>
       <trkpt lat="48.3902" lon="-77.24047">
         <ele>305.3</ele>
@@ -881,6 +1078,9 @@
       <trkpt lat="48.38078" lon="-77.25113">
         <ele>303.0</ele>
       </trkpt>
+      <trkpt lat="48.380627" lon="-77.251181">
+        <ele>302.1</ele>
+      </trkpt>
       <trkpt lat="48.38042" lon="-77.25125">
         <ele>303.4</ele>
       </trkpt>
@@ -928,6 +1128,9 @@
       </trkpt>
       <trkpt lat="48.37026" lon="-77.25944">
         <ele>313.4</ele>
+      </trkpt>
+      <trkpt lat="48.369843" lon="-77.259805">
+        <ele>312.8</ele>
       </trkpt>
       <trkpt lat="48.36954" lon="-77.26007">
         <ele>312.4</ele>
@@ -1510,6 +1713,9 @@
       </trkpt>
       <trkpt lat="48.24848" lon="-77.33701">
         <ele>307.9</ele>
+      </trkpt>
+      <trkpt lat="48.248435" lon="-77.336994">
+        <ele>306.5</ele>
       </trkpt>
       <trkpt lat="48.24773" lon="-77.33675">
         <ele>308.9</ele>
@@ -2489,6 +2695,9 @@
       <trkpt lat="48.09509" lon="-77.48873">
         <ele>365.8</ele>
       </trkpt>
+      <trkpt lat="48.095064" lon="-77.489531">
+        <ele>365.2</ele>
+      </trkpt>
       <trkpt lat="48.09505" lon="-77.48998">
         <ele>365.0</ele>
       </trkpt>
@@ -2933,6 +3142,9 @@
       <trkpt lat="48.09436" lon="-77.65753">
         <ele>314.1</ele>
       </trkpt>
+      <trkpt lat="48.094358" lon="-77.657555">
+        <ele>308.0</ele>
+      </trkpt>
       <trkpt lat="48.09432" lon="-77.65809">
         <ele>313.8</ele>
       </trkpt>
@@ -3266,6 +3478,9 @@
       <trkpt lat="48.09983" lon="-77.76851">
         <ele>319.0</ele>
       </trkpt>
+      <trkpt lat="48.09983" lon="-77.76851">
+        <ele>319.0</ele>
+      </trkpt>
       <trkpt lat="48.09995" lon="-77.76866">
         <ele>319.0</ele>
       </trkpt>
@@ -3326,6 +3541,9 @@
       <trkpt lat="48.10749" lon="-77.76564">
         <ele>306.0</ele>
       </trkpt>
+      <trkpt lat="48.107528" lon="-77.76564">
+        <ele>306.0</ele>
+      </trkpt>
       <trkpt lat="48.10807" lon="-77.76564">
         <ele>305.2</ele>
       </trkpt>
@@ -3382,6 +3600,9 @@
       </trkpt>
       <trkpt lat="48.11231" lon="-77.77453">
         <ele>305.3</ele>
+      </trkpt>
+      <trkpt lat="48.112359" lon="-77.775777">
+        <ele>304.1</ele>
       </trkpt>
       <trkpt lat="48.11236" lon="-77.77581">
         <ele>304.1</ele>
@@ -3443,6 +3664,9 @@
       <trkpt lat="48.10796" lon="-77.78503">
         <ele>306.0</ele>
       </trkpt>
+      <trkpt lat="48.107919" lon="-77.785016">
+        <ele>306.0</ele>
+      </trkpt>
       <trkpt lat="48.10787" lon="-77.785">
         <ele>306.0</ele>
       </trkpt>
@@ -3487,6 +3711,12 @@
       </trkpt>
       <trkpt lat="48.10198" lon="-77.78842">
         <ele>309.8</ele>
+      </trkpt>
+      <trkpt lat="48.102186" lon="-77.78899">
+        <ele>310.5</ele>
+      </trkpt>
+      <trkpt lat="48.102225" lon="-77.789095">
+        <ele>310.5</ele>
       </trkpt>
       <trkpt lat="48.10227" lon="-77.78922">
         <ele>310.7</ele>
@@ -3565,6 +3795,9 @@
       </trkpt>
       <trkpt lat="48.10125" lon="-77.79913">
         <ele>341.4</ele>
+      </trkpt>
+      <trkpt lat="48.101225" lon="-77.79913">
+        <ele>341.5</ele>
       </trkpt>
       <trkpt lat="48.10059" lon="-77.79913">
         <ele>341.4</ele>
@@ -4065,6 +4298,9 @@
         <ele>309.8</ele>
       </trkpt>
       <trkpt lat="48.10219" lon="-77.78899">
+        <ele>310.5</ele>
+      </trkpt>
+      <trkpt lat="48.102224" lon="-77.789081">
         <ele>310.5</ele>
       </trkpt>
       <trkpt lat="48.10257" lon="-77.79002">
@@ -5675,26 +5911,20 @@
       <trkpt lat="48.10077" lon="-77.79914">
         <ele>341.8</ele>
       </trkpt>
-      <trkpt lat="48.10003" lon="-77.79913">
+      <trkpt lat="48.10004" lon="-77.79914">
         <ele>340.1</ele>
       </trkpt>
       <trkpt lat="48.0993" lon="-77.79913">
         <ele>340.0</ele>
       </trkpt>
-      <trkpt lat="48.09931" lon="-77.79788">
+      <trkpt lat="48.09931" lon="-77.7979">
         <ele>339.0</ele>
       </trkpt>
-      <trkpt lat="48.0994" lon="-77.79788">
+      <trkpt lat="48.09931" lon="-77.7979">
         <ele>339.0</ele>
       </trkpt>
-      <trkpt lat="48.0994" lon="-77.79788">
-        <ele>339.0</ele>
-      </trkpt>
-      <trkpt lat="48.09931" lon="-77.79788">
-        <ele>339.0</ele>
-      </trkpt>
-      <trkpt lat="48.0991" lon="-77.79725">
-        <ele>337.3</ele>
+      <trkpt lat="48.0991" lon="-77.79726">
+        <ele>337.4</ele>
       </trkpt>
       <trkpt lat="48.09889" lon="-77.79663">
         <ele>335.8</ele>
@@ -6127,6 +6357,9 @@
       </trkpt>
       <trkpt lat="48.10187" lon="-77.78811">
         <ele>309.8</ele>
+      </trkpt>
+      <trkpt lat="48.102237" lon="-77.789125">
+        <ele>310.6</ele>
       </trkpt>
       <trkpt lat="48.10229" lon="-77.78927">
         <ele>310.7</ele>

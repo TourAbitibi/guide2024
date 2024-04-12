@@ -148,7 +148,9 @@ tableau_Descrip_Etape(Etape, lang)
 
 ### Notes {-}
 
-Merci de consulter l'article 12 des [règlements particuliers][Règlements particuliers] concernant l'arrivée en circuit de cette dernière étape.
+- Merci de consulter l'article 12 des [règlements particuliers][Règlements particuliers] concernant l'arrivée en circuit de cette dernière étape.
+- Le ravitaillement fixe est permis dans la montée de la 1^ère^ avenue (500 m après la ligne de départ) dans le circuit d'arrivée.
+- Cette zone de ravitaillement est aussi la zone de déchets. 
 
 <!-- impression des résultats si existent  -->
 

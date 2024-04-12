@@ -145,9 +145,9 @@ creation_3_map(no_etape =1,
 creation_3_map(no_etape =2,
                pct_point_debut = 0.02, 
                pct_point_fin = 0.98,
-               pos_h_arrow = "left",
+               pos_h_arrow = "right",
                pos_v_arrow = "top",
-               pos_h_scale = "right",
+               pos_h_scale = "left",
                pos_v_scale = "bottom",
                buff = 300)
 
@@ -186,12 +186,12 @@ creation_3_map(no_etape =6,
 
 
 creation_3_map(no_etape =7,
-               pct_point_debut = 0.012, 
+               pct_point_debut = 0.014, 
                pct_point_fin = 0.97,
                pos_h_arrow = "right",
-               pos_v_arrow = "top",
+               pos_v_arrow = "bottom",
                pos_h_scale = "left",
-               pos_v_scale = "bottom",
+               pos_v_scale = "top",
                buff = 300)
  
 ################################################################################
