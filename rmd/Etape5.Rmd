@@ -40,7 +40,7 @@ glue('<table border=1>
 
 - `r iti_etape$Details$KM_Neutres[Etape]` km neutralisés au départ   
 - Boucle en sens anti-horaire
-- Arrivée au sommet du Mont Bell : bonification doublée pour Classement général individuel de la montagne (GPM) (art. 13.3, [Règlements particuliers])
+- Arrivée au sommet du Mont Bell : bonification doublée pour Classement général individuel de la montagne (GPM) (art. 14.3, [Règlements particuliers])
 - Cérémonies protocolaires sur le site de départ devant l'hôtel de ville de Senneterre
 
 

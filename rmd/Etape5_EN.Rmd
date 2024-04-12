@@ -36,7 +36,7 @@ glue('<table border=1>
 
 - `r iti_etape$Details$KM_Neutres[Etape]` neutralized km from the start   
 - Counterclockwise loop
-- Mountain top finich at the *Mont Bell* : General climber’s classification (KOM) are doubled (art 13.3, [Specific rules])
+- Mountain top finich at the *Mont Bell* : General climber’s classification (KOM) are doubled (art 14.3, [Specific rules])
 - Protocol ceremony at the start line, in front of Senneterre City Hall
 
 
