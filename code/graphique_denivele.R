@@ -81,6 +81,48 @@ elv_poi <- function(df = dist_df, num_etape){
     return()
 }
 
+################################################################################ 
+
+# Correction pour circuit urbain (gpx tracé sur 1 tour seulement, mais utilisé X fois)
+
+df_circuit_urbain <- function(df = dist_df, num_etape){
+  # Pour un cc, nous avons un tracé d'un tour qui a été étiré sur X tours.
+  # On doit le ramener sur 1 tours et ensuite le multiplier par nb_tour
+  
+  km_tour <- iti_etape$Details$KM_par_tours[num_etape]
+  
+  nb_tour <- iti_etape$Details$Nb_tours[num_etape]
+  
+  poi <- calcul_iti_etape(num_etape, "FR") %>% 
+    select (KM_fait, Symbol) %>% 
+    filter(Symbol %in% df_POI$values)
+  
+  
+  ## Actuellement, les 12 tours sont corrigés sur 1 tour seulement.
+  ### Il faut faire le fichier fois le nombre de tours  dans le fichier dist_df
+  
+  dist_df_circuit_base <- dist_df %>% filter (etape == num_etape) %>% 
+    select(-etape) %>% 
+    mutate(dist = dist/nb_tour) %>% 
+    mutate (dist = round(dist, digits = 1)) %>% 
+    group_by(dist) %>% 
+    summarise(etape = num_etape,
+              dist = mean(dist), 
+              elev= mean(elev))
+  
+  dist_df_circuit <- dist_df_circuit_base
+  
+  for (tour in 1:(nb_tour - 1)) { 
+    
+    dist_df_circuit_supp <- dist_df_circuit_base %>% mutate(dist= dist + tour *km_tour)
+    
+    dist_df_circuit <- rbind(dist_df_circuit, dist_df_circuit_supp)
+  }
+  
+  dist_df_circuit %>% 
+    return()
+}
+
 ################################################################################
 
 # - [x] Français et Anglais
@@ -91,13 +133,20 @@ elv_poi <- function(df = dist_df, num_etape){
 
 
 
-graph_elev_complet <-  function(df, num_etape, iti_etape , language){
+graph_elev_complet <-  function(df, num_etape, iti_etape , language, isCircuitUrbain = FALSE){
   
   # Points d'intérêts
-  poi_etape <- elv_poi(df, num_etape) %>%
-    rename(dist = KM_fait) %>% 
-    as_tibble()
-  
+  if (isCircuitUrbain == TRUE){
+    df= df_circuit_urbain(df,num_etape)
+    poi_etape <- elv_poi(df, num_etape) %>%
+      rename(dist = KM_fait) %>% 
+      as_tibble()
+  }
+  else{
+    poi_etape <- elv_poi(df, num_etape) %>%
+      rename(dist = KM_fait) %>% 
+      as_tibble()
+  }
   # Élévation regroupée par chaque 0.1km
   data_graph_base <- df %>% 
     filter(etape == num_etape) %>% 
@@ -134,14 +183,22 @@ graph_elev_complet <-  function(df, num_etape, iti_etape , language){
 ################################################################################
 ################################################################################
 
-graph_elev_arrivee <-  function(df , num_etape , iti_etape, language , km_finaux){
-  
+graph_elev_arrivee <-  function(df , num_etape , iti_etape, language , km_finaux, isCircuitUrbain = FALSE){
+
   # Points d'intérêts
-  poi_etape <- elv_poi(df, num_etape) %>%
+  if (isCircuitUrbain == TRUE){
+    df= df_circuit_urbain(df,num_etape)
+    poi_etape <- elv_poi(df, num_etape) %>%
     rename(dist = KM_fait) %>% 
     filter(dist >= (max(dist)- km_finaux)) %>% 
     as_tibble()
-  
+  }
+  else{
+    poi_etape <- elv_poi(df, num_etape) %>%
+      rename(dist = KM_fait) %>% 
+      filter(dist >= (max(dist)- km_finaux)) %>% 
+      as_tibble()
+  }
   # Élévation regroupée par chaque 0.1km
   data_graph_base <- df %>% 
     filter(etape == num_etape) %>% 
@@ -180,24 +237,31 @@ graph_elev_arrivee <-  function(df , num_etape , iti_etape, language , km_finaux
 # Créations de tous les graphiques en .png                                     #
 ################################################################################
 
-creation_graphs_elev <- function(etape, lang = "FR"){
+creation_graphs_elev <- function(etape, lang = "FR", isCircuitUrbain=FALSE){
   
   km_tour <- iti_etape$Details$KM_par_tours[etape]
   
   km <- if_else(km_tour > 0, km_tour, 3) 
   
-  graph_elev_complet(dist_df, etape, iti_etape, lang) %>% 
+  graph_elev_complet(dist_df, etape, iti_etape, lang, isCircuitUrbain) %>% 
     ggsave( filename = here("img","elev", glue("Etape{etape}_Full_{lang}.png")), width =8, height = 5, dpi= 300, bg= "white")  
   
-  graph_elev_arrivee(dist_df, etape, iti_etape ,lang , km) %>% 
+  graph_elev_arrivee(dist_df, etape, iti_etape ,lang , km, isCircuitUrbain) %>% 
     ggsave( filename = here("img","elev", glue("Etape{etape}_Final_{lang}.png")), width =8, height = 3, dpi= 300, bg= "white")
 
 }
 
-# Création des 7 étapes dans les 2 langues 
-walk(.x = 1:nrow(iti_etape$Details), ~creation_graphs_elev(.x, "FR"))
-walk(.x = 1:nrow(iti_etape$Details), ~creation_graphs_elev(.x, "EN"))
 
+# Création des 7 étapes dans les 2 langues SAUF circuit urbain
+walk(.x = c(1,2,3,4,5,7), ~creation_graphs_elev(.x, "FR"))
+walk(.x = c(1,2,3,4,5,7), ~creation_graphs_elev(.x, "EN"))
 
+# Création du circuit urbain
+walk(.x = c(6), ~creation_graphs_elev(.x, "FR", isCircuitUrbain=TRUE))
+walk(.x = c(6), ~creation_graphs_elev(.x, "EN", isCircuitUrbain=TRUE))
 
-               
+################################################################################ 
+
+### Tests - ajustements manuels ###
+# source(here("code","_import_itineraire.R"))
+# walk(.x = c(7), ~creation_graphs_elev(.x, "FR"))

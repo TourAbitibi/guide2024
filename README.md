@@ -32,3 +32,4 @@ Certains processus manuels sont aussi inclus :
   - Les lignes à tracer sur la route
   - Les signaleurs drapeaux jaunes
   - Les motos drapeaux jaunes
+- `results/CalculsBourses/calculResumeBourses.R`pour faire le résumé des bourses après la course, pour l'organisation

@@ -90,6 +90,7 @@ img/sign/~$ajout_signalisation.pptx
 # Fichiers de test
 tests/__pycache__
 tests/.pytest_cache
+excel/tmp
 
 # Fichiers vscode
 .vscode/
