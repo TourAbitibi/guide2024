@@ -84,7 +84,7 @@ Pour la durée de l'évènement, la permanence du **Tour de l’Abitibi `r param
 :::
 
 :::{}
-For the duration of the event, the **Tour de l'Abitibi `r params$sponsor`** headquarters are located at the `r params$centrale_name` at `r params$adresse_centrale`.
+For the duration of the event, the **Tour de l'Abitibi `r params$sponsor`** headquarters are located at the `r params$nom_centrale` at `r params$adresse_centrale`.
 :::
 ::::
 

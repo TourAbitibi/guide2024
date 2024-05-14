@@ -2501,7 +2501,7 @@ df %>%
 
 bourse_totale <- read_excel(here("excel", "prix.xlsx"), 
            sheet = "Total") %>% 
-  filter(Type == "GrandTotal") %>% pull(Total) %>% currency(digits = 0)
+  filter(Type == "GrandTotal") %>% pull(Total) %>% currency(digits = 0) %>% str_replace(",", " ")
 
 ```
 
