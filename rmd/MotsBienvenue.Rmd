@@ -43,12 +43,13 @@ knitr::include_graphics(here("img", "photos", "comm_titre.jpg"))
 
 ```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+Chers partenaires et bénévoles,
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+Nous sommes ravis de renouveler notre engagement auprès du Tour de l'Abitibi Glencore pour une deuxième année.
 
-Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+Notre soutien envers cet évènement d'envergure internationale s'inscrit dans notre volonté de promouvoir la passion de jeunes athlètes, d'encourager de saines habitudes de vie et de contribuer à vitalité régionale. C'est avec grande fierté que nous supportons la seule course cycliste junior au Canada de calibre international!
 
+Nous tenons à féliciter le comité organisateur et tous les bénévoles dévoués qui contribuent au succès de cet évènement année après année. Grâce à leur engagement, ils offrent aux jeunes une expérience véritablement extraordinaire! 
 
 **Alexis Segal**      
 Directeur Relations gouvernementales et affaires publiques
