@@ -9,13 +9,14 @@ knitr::include_graphics(here("img", "photos", "pres.png"))
 ```
 
 
-C’est au nom de tous les membres du conseil d’administration, du comité organisateur, que j’aimerais vous souhaiter la bienvenue au `r params$edition`e Tour de l’Abitibi `r params$sponsor`. Nous sommes très fiers de notre événement cycliste, le seul dans sa catégorie en Amérique du Nord! Sa longévité est attribuable à la passion, l’engouement et l’engagement inconditionnel des Témiscabitibiens!
+Au nom de l'ensemble du conseil d'administration et du comité organisateur, je souhaite chaleureusement la bienvenue au 54e Tour de l'Abitibi Glencore. Nous sommes extrêmement fiers de cet événement cycliste qui demeure unique en son genre en Amérique du Nord ! Sa longévité témoigne de la passion, de l'enthousiasme et de l'engagement indéfectible des habitants de la région de l’Abitibi-Témiscamingue. 
 
-Pour sa `r params$edition`e édition, le Tour accueillera des jeunes cyclistes provenant d’un peu partout à travers le monde. Comme les années dernières, les partisans des équipes pourront suivre les courses en direct sur notre site web en se rendant au <a href="https://www.tourabitibi.com" target="blank">www.tourabitibi.com</a>.
+Pour ce 54e Tour, nous recevrons des jeunes cyclistes venant des quatre coins du monde, et nous sommes enthousiastes à l'idée de compter sur la participation de davantage de pays internationaux que l'an dernier. Comme les années précédentes, les supporters des équipes auront la possibilité de suivre les courses en direct sur notre site web à l'adresse <a href="https://www.tourabitibi.com" target="_blank">www.tourabitibi.com</a>
 
-Je tiens à souligner le travail indispensable de nos nombreux bénévoles et de notre équipe permanente, qui tout au long de l’année, ont travaillé pour vous offrir un événement des plus mémorable lors de la semaine du Tour à Amos. De plus, j’aimerais faire une mention toute spéciale à nos fidèles et généreux partenaires, sans qui l’événement n’aurait pas lieu, sans oublier notre partenaire en titre ; Glencore.
+Je tiens à exprimer ma profonde gratitude envers nos nombreux bénévoles et notre équipe permanente, qui ont travaillé sans relâche tout au long de l'année pour vous offrir un événement mémorable lors de la semaine du Tour à Val-d’Or. Je tiens également à adresser un merci tout particulier à nos partenaires fidèles et généreux, sans lesquels cet événement ne serait pas possible, notamment notre partenaire en titre, Glencore.
 
-En mon nom et en celui de tous ceux et celles qui participent à la réussite de cette compétition sportive, j’aimerais remercier les cyclistes et leurs accompagnateurs de s’être déplacés jusqu’en Abitibi-Témiscamingue. À vous tous, je vous souhaite la meilleure des chances, et que le passage dans notre magnifique région soit à jamais gravé dans votre mémoire.
+Au nom de tous ceux et celles qui contribuent au succès de cette compétition sportive, je souhaite remercier les cyclistes et leurs accompagnateurs d'avoir fait le déplacement jusqu'en Abitibi-Témiscamingue. À vous tous, je vous adresse mes meilleurs vœux de réussite, et j'espère que votre passage dans notre magnifique région laissera une empreinte dans vos mémoires.
+
 
 **Mélanie Rocher**    
 Présidente du Conseil d'Administration         

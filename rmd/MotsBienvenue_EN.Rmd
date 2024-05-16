@@ -9,13 +9,14 @@ knitr::include_graphics(here("img", "photos", "pres.png"))
 ```
 
 
-On behalf of all the members of the board of directors, the organizing committee, I would like to welcome you to the 54th Tour de l'Abitibi Glencore. We are very proud of our cycling event, the only one in its category in North America! Its longevity is due to the passion, enthusiasm and unconditional commitment of the Témiscabitibians!
+On behalf of the entire board of directors and the organizing committee, I warmly welcome you to the 54th Tour de l'Abitibi Glencore. We are extremely proud of this cycling event, which remains unique in its kind in North America! Its longevity is a testament to the passion, enthusiasm, and unwavering commitment of the residents of the Abitibi-Témiscamingue region.
 
-For its 54th edition, the Tour will welcome young cyclists from all over the world. As in previous years, team fans can watch the races live on our website at www.tourabitibi.com.
+For this 54th Tour, we will be hosting young cyclists from all around the world, and we are excited to have even more international countries participating than last year. As in previous years, team supporters will have the opportunity to follow the races live on our website at <a href="https://www.tourabitibi.com" target="_blank">www.tourabitibi.com</a>.
 
-I would like to acknowledge the indispensable work of our many volunteers and our permanent team, who worked throughout the year to offer you a most memorable event during the week of the Tour in Amos. In addition, I would like to make a special mention to our faithful and generous partners, without whom the event would not take place, not to mention our current partner, Glencore.
+I would like to express my deep gratitude to our many volunteers and our permanent team, who have worked tirelessly throughout the year to bring you a memorable event during Tour week in Val-d'Or. I would also like to extend a special thank you to our loyal and generous partners, without whom this event would not be possible, especially our title partner, Glencore.
 
-On behalf of myself and all those involved in the success of this sporting event, I would like to thank the cyclists and their companions for travelling to Abitibi-Timiskaming. To all of you, I wish you the best of luck, and that the visit to our beautiful region will forever be remembered.
+On behalf of everyone who contributes to the success of this sporting competition, I would like to thank the cyclists and their companions for traveling to Abitibi-Témiscamingue. To all of you, I extend my best wishes for success and hope that your visit to our beautiful region will leave a lasting impression on your memories.
+
 
 
 **Mélanie Rocher**    
