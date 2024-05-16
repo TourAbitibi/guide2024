@@ -265,3 +265,4 @@ walk(.x = c(6), ~creation_graphs_elev(.x, "EN", isCircuitUrbain=TRUE))
 ### Tests - ajustements manuels ###
 # source(here("code","_import_itineraire.R"))
 # walk(.x = c(7), ~creation_graphs_elev(.x, "FR"))
+
