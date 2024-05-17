@@ -5,8 +5,8 @@ image: "../img/favicon.jpg"
 links:
   - label: Facebook
     url: "https://www.facebook.com/tourdelabitibi/"
-  - label: Twitter
-    url: "https://twitter.com/TourAbitibi/"
+  - label: Twitter/ X
+    url: "https://x.com/TourAbitibi/"
   - label: Instagram
     url: "https://www.instagram.com/tourabitibi/"
 output:
