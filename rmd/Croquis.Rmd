@@ -3,6 +3,9 @@
 
 # Croquis Installation {#croquis}
 
+
+## Tour de l'Abitibi
+
 **Référence 2023, à mettre à jour 2024.**
 
 Présentation des différents site de compétition et des installations logistiques qui y sont requises.
@@ -50,4 +53,13 @@ knitr::include_graphics("https://i.ibb.co/KD9chrr/croquis-dep-arr-malartic.png")
 ```
 <br/>
 
+## Tour de la Relève
 
+### Croquis - Sprint et jeux d'habiletés
+
+*À mettre à jour avec le plan de Stéphane Larose*
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("http://www.vsquimperois.fr/wp-content/uploads/2018/05/Th%C3%A9o-1024x683.jpg")
+```
+<br/>
