@@ -60,6 +60,6 @@ knitr::include_graphics("https://i.ibb.co/KD9chrr/croquis-dep-arr-malartic.png")
 *À mettre à jour avec le plan de Stéphane Larose*
 
 ```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("http://www.vsquimperois.fr/wp-content/uploads/2018/05/Th%C3%A9o-1024x683.jpg")
+knitr::include_graphics("https://i.ibb.co/F0tnh97/croquis-site-releve.png")
 ```
 <br/>
