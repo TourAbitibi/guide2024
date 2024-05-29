@@ -33,7 +33,19 @@ resp_medical <- read_excel(staff_xlsx, sheet = "CO") %>%
 | Senneterre    | 961,rue de la Clinique | (819) 825-5858 |
 | La Sarre      | 679 2e Rue E           | (819) 333-2311 | 
 
-<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 3px;">Merci de contacter le responsable médical **avant** de vous déplacer à l'hôpital : **`r resp_medical %>% pull(noms)`** au `r resp_medical %>% pull(cell)`</div>
+<br/> 
+<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 3px;">
+  <p>Merci de contacter le responsable médical **avant** de vous déplacer à l'hôpital:</p> 
+  <p style="justify-content: center; align-items: center;margin:10px 100px 20px 20px;">
+    <table style="width:100%;text-align:center;"> 
+      <tr> 
+        <td width="50%"> `r resp_medical %>% pull(noms)` </td> 
+        <td width="50%"> `r resp_medical %>% pull(cell)`  </td> 
+      </tr> 
+    </table>
+  </p>
+</div>
+
 
 ### Horaire de la clinique médicale {-}
 

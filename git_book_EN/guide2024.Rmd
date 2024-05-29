@@ -2863,7 +2863,19 @@ resp_medical <- read_excel(staff_xlsx, sheet = "CO") %>%
 | Senneterre    | 961,rue de la Clinique | (819) 825-5858 | 
 | La Sarre      | 679 2e Rue E           | (819) 333-2311 | 
 
-<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 3px;">Please contact the person in charge of the medical comitee **before** going to the hospital: **`r resp_medical %>% pull(noms)`** at `r resp_medical %>% pull(cell)`</div>
+<br/> 
+<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 3px;">
+  <p>Please contact the person in charge of the medical comitee **before** going to the hospital:</p> 
+  <p style="justify-content: center; align-items: center;margin:10px 100px 20px 20px;">
+    <table style="width:100%;text-align:center;"> 
+      <tr> 
+        <td width="50%"> `r resp_medical %>% pull(noms)` </td> 
+        <td width="50%"> `r resp_medical %>% pull(cell)`  </td> 
+      </tr> 
+    </table>
+  </p>
+</div>
+
 
 ### Medical clinic schedule {-}
 
@@ -2875,7 +2887,7 @@ df <- read_excel(med_xlsx, sheet = "MEDICAL")
 
 left_join(x= df, y= dates_EN, by= "code") %>% 
   select(Date = jsem_jour_mois,
-         "Heures d'ouverture" = heures) %>%   
+         "Opening hours" = heures) %>%   
   kbl(escape = F, # permet de passer les <br/>
       align = c("l","c")) %>% 
     kable_styling("striped",      # kable_minimal
@@ -2902,7 +2914,7 @@ df <- read_excel(med_xlsx, sheet = "MASSO")
 
 left_join(x= df, y= dates_EN, by= "code") %>% 
   select(Date = jsem_jour_mois,
-         "Heures d'ouverture" = hours) %>%   
+         "Opening hours" = hours) %>%   
   kbl(escape = F, # permet de passer les <br/>
       align = c("l","c")) %>% 
     kable_styling("striped",      # kable_minimal
