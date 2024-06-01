@@ -117,11 +117,16 @@ knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/20
 ```
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+**Une course importante en Abitibi-Témiscamingue**
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+Le gouvernement du Québec est heureux de soutenir le Tour de l’Abitibi Glencore, qui donne l’occasion aux meilleurs cyclistes juniors d’ici et d’ailleurs de concourir dans les 7 étapes de la course, laquelle se déroule en 7 jours et totalise près de 700 kilomètres. Voilà une belle façon de découvrir la région et d’encourager des athlètes hors du commun, qui représentent des modèles inspirants pour notre jeunesse.
 
-Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+Cet événement sportif unique en Amérique fait partie des rendez-vous qui stimulent l’économie de la région de l’Abitibi-Témiscamingue et qui promeuvent les bienfaits du sport tant auprès de la population qu’auprès des visiteurs. Il participe à la mise en valeur des acteurs de notre industrie événementielle tout en valorisant la résilience et le dévouement des athlètes.
+
+Félicitations à l’équipe organisatrice, qui a orchestré de main de maître ce grand rassemblement. Chaque année, les visiteurs peuvent encourager leurs cyclistes préférés tout en profitant de ce moment pour découvrir la région. 
+
+Bon événement!
+
 <br/>
 
 **Isabelle Charest**    
