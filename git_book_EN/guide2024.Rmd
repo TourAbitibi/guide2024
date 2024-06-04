@@ -1697,7 +1697,7 @@ heureArr <- iti_etape$Details$time_arrivee[Etape]
 glue('<table border=1>
     <tr>
         <td><strong/>Powered by</strong></td>
-        <td><img src="../img/logo/comm_{Etape}.png" width="350" style="float:right"></td>
+        <td><img src="../img/logo/comm_{Etape}.png" height="200" style="float:right"></td>
     </tr>
 </table>')
 ```
@@ -1877,7 +1877,7 @@ heureArr <- iti_etape$Details$time_arrivee[Etape]
 glue('<table border=1>
     <tr>
         <td><strong/>Powered by</strong></td>
-        <td><img src="../img/logo/comm_{Etape}.png" width="350" style="float:right"></td>
+        <td><img src="../img/logo/comm_{Etape}.png" height="200" style="float:right"></td>
     </tr>
 </table>')
 ```
