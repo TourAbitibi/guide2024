@@ -1,5 +1,5 @@
 ---
-title: "Tour de la Relève 2024"
+title: "Tour de la Relève Promutuel Assurance Boréale 2024"
 description: "Programmation préliminaire<br/>Dernière mise à jour : `r Sys.Date()`"
 output: 
   distill::distill_article:
@@ -59,12 +59,12 @@ opts_chunk$set( tidy = FALSE, comment = NA,
 
 Courses sur route - 8h à 13h30    
 
-Distances variables selon les âges  - Aller-Retour de / vers la Cathédrale d'Amos
+Distances variables selon les âges  - Aller-Retour de / vers l'Hôtel de Ville de Val-d'Or 
 
 <iframe src="https://ridewithgps.com/embeds?type=route&id=45032641&metricUnits=true&sampleGraph=true&distanceMarkers=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
 
 <aside>
-  <a href="https://tourabitibi.com" target="_blank" >
+  <a href="https://tourabitibi.com/tour-de-la-releve/" target="_blank" >
   <img src="../img/logo/Releve-Couleur.png" alt="Logo Tour de la Relève" width="100%">
   </a>
 </aside>

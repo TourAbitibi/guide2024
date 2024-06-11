@@ -1,5 +1,5 @@
 ---
-title: "Cyclo TiTour 2024"
+title: "Cyclo TiTour CMAC-Thyssen 2024"
 description: "Tracé et horaire<br/>Dernière mise à jour : `r Sys.Date()`"
 output: 
   distill::distill_article:
