@@ -1,26 +1,26 @@
 Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
 Start,Start of route,0,0,,
-Danger,sign_01,0.03,305.90,terre_plein,Edited
-Danger,sign_02,0.25,305.10,terre-plein,Edited
-Danger,sign_03,0.30,305.10,Terre-plein,Edited
-Danger,sign_04,0.98,302.90,terre-plein,Edited
-Control,sign_05,1.04,302.20,police,Edited
-Danger,sign_06,2.05,302.70,terre-plein,Edited
-Danger,sign_07,2.30,305.90,terre-plein,Edited
-Danger,sign_08,2.48,306.30,terre-plein,Edited
-Danger,sign_09,2.57,305.10,terre-plein,Edited
-Danger,sign_10,46.62,311.80,terre-plein,Edited
-Danger,sign_11,46.68,312.30,terre-plein,Edited
-Left,sign_12,58.90,319.30,Police - Intersection route provinciale,Edited
-Danger,sign_13,79.49,314.80,Voie ferrée - Angle,Edited
-Danger,sign_14,88.88,316.90,Police - Intersection route provinciale,Edited
-Control,sign_23,89.03,318.20,SQ,Edited
-Danger,sign_15,92.44,309.00,terre-plein,Edited
-Danger,sign_16,93.07,304.70,terre-plein,Edited
-Danger,sign_17,93.32,307.30,terre-plein (300m),Edited
-Danger,sign_18,93.66,305.90,terre-plein (100m),Edited
-Danger,sign_19,94.23,298.00,terre-plein,Edited
-Danger,sign_20,94.52,297.60,terre-plein,Edited
-Control,sign_21,94.60,298.40,Contrôle Policier,Edited
-Left,sign_22,95.14,301.50,Prendre à gauche sur 14e Av E,Edited
-End,End of route,119.44,306.30,
+Danger,sign_01,2.11,281.90,,Edited
+Danger,sign_02,7.94,288.70,,Edited
+Danger,sign_03,24.67,315.90,,Edited
+Danger,sign_04,33.32,349.30,,Edited
+Generic,sign_05,44.26,322.00,,Edited
+Generic,sign_07,48.04,321.80,,Edited
+Generic,sign_08,48.40,321.90,,Edited
+Generic,sign_09,61.34,304.50,,Edited
+Generic,sign_10,61.60,303.00,,Edited
+Generic,sign_11,70.52,308.70,,Edited
+Generic,sign_12,71.19,309.60,,Edited
+Generic,sign_13,76.39,325.20,,Edited
+Generic,sign_14,77.16,317.10,,Edited
+Generic,sign_15,77.53,319.40,,Edited
+Generic,sign_16,77.57,319.00,,Edited
+Generic,sign_17,77.67,319.00,,Edited
+Generic,sign_18,77.76,318.20,,Edited
+Generic,sign_19,77.79,317.60,,Edited
+Generic,sign_20,77.87,317.60,,Edited
+Generic,sign_22,81.69,308.00,,Edited
+Generic,sign_23,97.10,293.10,,Edited
+Generic,sign_24,100.23,302.00,,Edited
+Control,Arrivée finale,118.57,310.60,,Edited
+End,End of route,118.58,310.60,
