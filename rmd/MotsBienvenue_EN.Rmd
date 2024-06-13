@@ -77,12 +77,17 @@ knitr::include_graphics(here("img", "photos", "maire_vd.png"))
 
 ```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia libero. Integer tempus metus elit, nec commodo orci venenatis non. Curabitur turpis arcu, mattis quis egestas non, sagittis id velit. Suspendisse potenti. Ut at ipsum nec leo suscipit sagittis. Integer accumsan, sapien a ultrices laoreet, nunc risus posuere nibh, ut malesuada nisi velit vestibulum elit. Sed a dolor at dui porttitor suscipit in consectetur enim. Phasellus consectetur hendrerit quam.
+Hello everyone,
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris tempor placerat tempor. Integer quis iaculis odio, at convallis nunc. Integer viverra nisi nec enim varius condimentum. Integer sit amet orci non enim feugiat lobortis in non nisl. Fusce aliquet molestie quam vel ornare. Sed egestas risus nisl, sed blandit ex tristique sit amet. Nullam eget libero tortor. Nullam erat risus, fermentum id sagittis ac, bibendum ut magna. Etiam consequat augue at est tempor interdum. In id mi ut nibh congue pharetra eget a augue. In efficitur pulvinar leo, et commodo ex placerat et. Phasellus convallis auctor ex, vitae aliquet lacus blandit vitae. Nam risus ipsum, facilisis ac volutpat ac, iaculis id dui.
+As the mayor, it is my great pleasure to welcome you to Val-d'Or for this 54th edition of the Tour de l’Abitibi Glencore. It is an honor to host you for this high-level sporting event that has been a source of pride for our region for over half a century!
 
-Nam nulla sapien, venenatis ac nunc eu, euismod auctor massa. Proin quis neque a dui pellentesque mollis. Phasellus at arcu non purus tempor gravida. Proin sollicitudin diam eget diam scelerisque fringilla. Mauris vitae augue sapien. Cras eu ultrices nisl. Pellentesque viverra neque vitae eros interdum aliquam. Suspendisse a augue laoreet, sollicitudin risus in, mattis enim. Nunc vehicula sapien sed lorem cursus, vel consequat libero commodo.
+Your presence brings a wave of dynamism to our city. You are a true source of inspiration for the population, especially for young enthusiasts of this spectacular sport. We admire your determination, sportsmanship, and unwavering perseverance. We hope that your experience in Val-d'Or meets your expectations.
 
+To the coaches and companions of the athletes, we wish you a wonderful stay. It is always a pleasure to share our beautiful and vast region with you!
+
+I am convinced that you will appreciate the warm welcome from our residents and the great involvement of the organizers, partners, and numerous volunteers. Thank you for contributing to the prominence of our area.
+
+Enjoy the competition!
 
 **Céline Brindamour**    
 `r params$ville` mayor 
