@@ -715,6 +715,9 @@ knitr::include_graphics("https://i.ibb.co/6Dqg214/site-44.jpg")
 
 # Croquis Installation {#croquis}
 
+
+## Tour de l'Abitibi
+
 **Référence 2023, à mettre à jour 2024.**
 
 Présentation des différents site de compétition et des installations logistiques qui y sont requises.
@@ -762,7 +765,16 @@ knitr::include_graphics("https://i.ibb.co/KD9chrr/croquis-dep-arr-malartic.png")
 ```
 <br/>
 
+## Tour de la Relève
 
+### Croquis - Sprint et jeux d'habiletés
+
+*À mettre à jour avec le plan de Stéphane Larose*
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics("https://i.ibb.co/F0tnh97/croquis-site-releve.png")
+```
+<br/>
 
 <!--chapter:end:../rmd/Croquis.Rmd-->
 
@@ -938,12 +950,12 @@ Article 1 – Organisation
 
 Article 2 – Type d’épreuve
 
-:   L’épreuve est réservée aux athlètes de la catégorie hommes junior. Elle est inscrite au calendrier UCI Mondial Junior. Pour être considéré comme junior, un coureur doit être né en `r params$annee - 18` ou `r params$annee - 17`. L’épreuve est classée 2.NCupJ et les points UCI seront attribués selon l’article  `r glue('<a href="{uci_p2_FR}#page=185" target="_blank">2.14.040</a>')`.    
+:   L’épreuve est réservée aux athlètes de la catégorie hommes junior. Elle est inscrite au calendrier UCI Mondial Junior. Pour être considéré comme junior, un coureur doit être né en `r params$annee - 18` ou `r params$annee - 17`. L’épreuve est classée 2.NCupJ et les points UCI seront attribués selon l’article  `r glue('<a href="{uci_p2_FR}#page=187" target="_blank">2.14.040</a>')`.    
 
     Les dérogations suivantes ont été accordées par l’UCI à l’organisation du Tour de l’Abitibi :  
     
-    * L’épreuve du Tour de l’Abitibi a la possibilité d’accueillir des équipes régionales ou des clubs composés uniquement de coureurs juniors mais ne marquant pas de points UCI (article `r glue('<a href="{uci_p2_FR}#page=184" target="_blank">2.14.036</a>')`. De plus, leur maillot devra respecter les articles `r glue('<a href="{uci_p1_FR}#page=83" target="_blank">1.3.045 à 1.3.047</a>')` du Règlement UCI;    
-    * L’épreuve du Tour de l’Abitibi compte deux (2) demi-étapes la même journée (article `r glue('<a href="{uci_p2_FR}#page=60" target="_blank">2.6.010</a>')`.
+    * L’épreuve du Tour de l’Abitibi a la possibilité d’accueillir des équipes régionales ou des clubs composés uniquement de coureurs juniors mais ne marquant pas de points UCI (article `r glue('<a href="{uci_p2_FR}#page=186" target="_blank">2.14.036</a>')`). De plus, leur maillot devra respecter les articles `r glue('<a href="{uci_p1_FR}#page=83" target="_blank">1.3.045 à 1.3.047</a>')` du Règlement UCI;    
+    * L’épreuve du Tour de l’Abitibi compte deux (2) demi-étapes la même journée (article `r glue('<a href="{uci_p2_FR}#page=60" target="_blank">2.6.010</a>')`) suite à l'obtention d'une dérogation de l'UCI .
    
    
     
@@ -951,7 +963,7 @@ Article 3 – Participation
  
 :   Tel que mentionné à l’article 2 ci-dessus, l’épreuve est ouverte aux équipes nationales, régionales, de club et mixtes. 
 
-    Conformément à l’article `r glue('<a href="{uci_p2_FR}#page=185" target="_blank">2.14.039</a>')` du règlement UCI, le nombre de coureurs par équipe est de minimum quatre (4) et de maximum six (6) coureurs.
+    Conformément à l’article `r glue('<a href="{uci_p2_FR}#page=188" target="_blank">2.14.039</a>')` du règlement UCI, le nombre de coureurs par équipe est de minimum quatre (4) et de maximum six (6) coureurs.
     
     > Conformément au règlement `r glue('<a href="{uci_p2_FR}#page=20" target="_blank">2.2.023</a>')` abrogé par l'UCI pour 2023, il n'y a plus de développement maximum pour les hommes juniors (braquets). 
     
@@ -964,12 +976,12 @@ Article 4 – Permanence
     
     La vérification des licences par le Collège des commissaires et la remise des dossards et plaques de cadre aura lieu le lundi `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jour_mois)` entre 14h et 15h30.
     
-    La réunion obligatoire des directeurs sportifs organisée suivant l’article `r glue('<a href="{uci_p1_FR}#page=43" target="_blank">1.2.087</a>')` du règlement UCI, en présence des membres du Collège des commissaires, est fixée à 10h00 le mardi `r dates_FR %>% filter(code=="Mar") %>% pull(jour_mois_an)`.
+    La réunion obligatoire des directeurs sportifs organisée suivant l’article `r glue('<a href="{uci_p1_FR}#page=45" target="_blank">1.2.087</a>')` du règlement UCI, en présence des membres du Collège des commissaires, est fixée à 10h00 le mardi `r dates_FR %>% filter(code=="Mar") %>% pull(jour_mois_an)`.
 
 
 Article 5 – Ordre de la caravane
 
-:   L’ordre de la caravane pour l’étape 1 sera déterminé selon l’article `r glue('<a href="{uci_p2_FR}#page=187" target="_blank">2.14.046</a>')` du règlement UCI. 
+:   L’ordre de la caravane pour l’étape 1 sera déterminé selon l’article `r glue('<a href="{uci_p2_FR}#page=189" target="_blank">2.14.046</a>')` du règlement UCI. 
 
     L’ordre de la caravane pour les étapes subséquentes sera déterminé en fonction du coureur de l’équipe le mieux placé au classement général individuel.
     
@@ -980,29 +992,37 @@ Article 6 – Ordre de départ pour le contre-la-montre
 
     Les départs se donneront à intervalle d’une (1) minute, à l’exception des 10 derniers coureurs qui partiront avec un intervalle de deux (2) minutes.
 
-    Les vélos doivent être présentés et en quarantaine pour vérification au moins 15 minutes avant le départ du coureur. Les vélos spécifiques au contre-la-montre sont autorisés pour le contre-la-montre individuel s’ils respectent la règlementation de l’UCI.
+    Les vélos doivent être présentés et en quarantaine pour vérification au moins 15 minutes avant le départ du coureur. 
+<!--Les vélos spécifiques au contre-la-montre sont autorisés pour le contre-la-montre individuel s’ils respectent la règlementation de l’UCI.
     
-    Une vérification optionnelle de vélos sera offerte par les commissaires le mercredi `r dates_FR %>% filter(code=="Mer") %>% pull(jour_mois_an)` à 10h30.
+    Une vérification optionnelle de vélos sera offerte par les commissaires le mercredi `r dates_FR %>% filter(code=="Mer") %>% pull(jour_mois_an)` à 10h30.-->
+
+
+
+Article 7 – Utilisation d'un vélo de route régulier obligatoire pour le contre-la-montre
+
+:   Il est prévu que les vélos utilisés dans le contre-la-montre soient des vélos conformes à tous les règlements de l'UCI pour les courses sur route ; vélo de route standard, configuration standard, guidon standard (`r glue('<a href="{uci_p1_FR}#page=67" target="_blank">1.3.011-1.3.017, 1.3.020, 1.3.022</a>')`). Les limites de poids s'appliquent également (`r glue('<a href="{uci_p1_FR}#page=70" target="_blank">1.3.019</a>')`). En outre, les roues doivent être uniquement des roues de course sur route (`r glue('<a href="{uci_p1_FR}#page=69" target="_blank">1.3.018</a>')`) et les vélos de contre-la-montre et les extensions de guidon ne sont pas autorisés (`r glue('<a href="{uci_p1_FR}#page=74" target="_blank">1.3.023</a>')`). Enfin, les vélos de contre-la-montre et les prolongateurs de guidon définis aux points `r glue('<a href="{uci_p1_FR}#page=73" target="_blank">1.3.021</a>')` et `r glue('<a href="{uci_p1_FR}#page=74" target="_blank">1.3.023</a>')` sont spécifiquement interdits dans cette étape.
+
     
     
-Article 7 – Radio-Tour
+Article 8 – Radio-Tour
 
 :   Les informations courses sont émises sur la fréquence **01 – Radio-Tour** sur le radio fourni par l’organisation.
 
 
-Article 8 – Assistance technique neutre
+Article 9 – Assistance technique neutre
 
-:   Le service d’assistance technique neutre est assuré par l’organisation du Tour cycliste de l’Abitibi (à l’exception de l’étape 3 – CLMI). Le service est assuré au moyen de 2 véhicules automobiles et 1 moto identifiés à cet effet. 
+:   Le service d’assistance technique neutre est assuré par l’organisation du Tour cycliste de l’Abitibi (à l’exception de l’étape 3 – CLMI). Le service est assuré au moyen de 3 véhicules automobiles identifiés à cet effet. 
 
     Toutes les roues arrière du dépannage neutre seront équipées de cassettes 11 & 12 vitesses, avec freins traditionels sur jantes et freins à disques. Pour les équipes ayant des besoins particuliers, veuillez nous avertir à la réunion des directeurs sportifs.
 
 
-Article 9 – Délais d’arrivée
+Article 10 – Délais d’arrivée
 
 :   Il sera accordé un délai d’arrivée établi sur le temps réel du vainqueur augmenté de 20 % pour toutes les étapes, à l’exception du contre-la-montre individuel qui ne comporte pas de délai d’arrivée.
 
 
-Article 10 – Arrivée en circuit (Étapes 1 et 2)
+Article 11 – Arrivée en circuit (Étapes 1 et 2)
 
 :   Dans une étape sur route finissant sur un circuit, les coureurs arrivant à l’entrée du circuit en même temps qu’un peloton ou que la caravane passe sur le circuit seront arrêtés temporairement par un commissaire et pourront repartir lorsque le circuit sera libre, de manière à ne pas interférer avec les autres groupes.   
 
@@ -1013,7 +1033,7 @@ Article 10 – Arrivée en circuit (Étapes 1 et 2)
     Si à l’entrée du circuit, il est déterminé par le commissaire que le coureur ne pourra arriver dans le délai d’arrivée prescrit, le commissaire pourra arrêter ce dernier et il ne pourra reprendre le départ à la prochaine étape.
 
 
-Article 11 – Arrivée en circuit - dernière étape (Étape 7)
+Article 12 – Arrivée en circuit - dernière étape (Étape 7)
 
 :   Lors de la dernière étape, un coureur arrêté par le commissaire à l’entrée du circuit d'arrivée obtiendra un temps calculé et n'entrera pas sur le circuit. S'il est déjà en dehors du temps limite relativement au premier coureur entré sur le circuit, il sera considéré **hors délai** et n’apparaîtra pas aux résultats finaux.
 
@@ -1022,7 +1042,7 @@ Article 11 – Arrivée en circuit - dernière étape (Étape 7)
     Tout coureur abandonnant en cours de circuit lors de la dernière étape obtiendra un résultat d’**abandon**.
     
 
-Article 12 – Bonifications en temps
+Article 13 – Bonifications en temps
 
 :   Des bonifications seront attribuées aux trois (3) premiers coureurs de l’étape excepté pour le contre-la-montre individuel :
 
@@ -1034,14 +1054,14 @@ Article 12 – Bonifications en temps
 
 
 
-Article 13 – Classements
+Article 14 – Classements
 
 :   La course fait l’objet de cinq (5) classements généraux différents:
 
 
     * Classement général individuel au temps (Maillot brun) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.014; 2.6.015; 2.6.019</a>')`
-    * Classement général individuel aux points (Maillot orange) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`
-    * Classement général individuel de la montagne (Maillot à pois) `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`
+    * Classement général individuel aux points (Maillot orange) `r glue('<a href="{uci_p2_FR}#page=62" target="_blank">2.6.017</a>')`
+    * Classement général individuel de la montagne (Maillot à pois) `r glue('<a href="{uci_p2_FR}#page=62" target="_blank">2.6.017</a>')`
     * Classement général individuel de la relève au temps (Maillot bleu) pour les juniors de 1re année;
     * Classement général par équipe au temps `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.016</a>')`
     
@@ -1058,7 +1078,7 @@ Article 13 – Classements
     9.	Équipe régionale.
 
 
-Article 13.1 - Classement général individuel au temps
+Article 14.1 - Classement général individuel au temps
 
 :   Un classement général individuel au temps est établi par l’addition des temps enregistrés dans chacune des étapes en tenant compte des bonifications et pénalités – article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.014</a>')` de l’UCI.
 
@@ -1067,13 +1087,13 @@ Article 13.1 - Classement général individuel au temps
     En cas de nouvelle égalité, les coureurs seront départagés par l’addition des places obtenues à chaque étape; en cas de nouvelle égalité, le classement de la dernière étape sera pris en compte. (article `r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.015</a>')` du règlement UCI).
     
 
-Article 13.2 - Classement général individuel aux points
+Article 14.2 - Classement général individuel aux points
 
 :   Il s’obtient par l’addition des points attribués à la fin des étapes et ceux des sprints intermédiaires.
 
     En cas d’égalité dans une étape, les coureurs bénéficient tous du nombre de points attribués à leur rang.
 
-    En cas d’égalité au classement général individuel aux points, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage (`r glue('<a href="{uci_p2_FR}#page=61" target="_blank">2.6.017</a>')`) :
+    En cas d’égalité au classement général individuel aux points, il est fait application des critères suivants, jusqu’à ce qu’il y ait départage (`r glue('<a href="{uci_p2_FR}#page=62" target="_blank">2.6.017</a>')`) :
     
     1.  Nombre de victoires d’étapes
     2.  Nombre de victoires dans les sprints intermédiaires
@@ -1086,7 +1106,7 @@ Article 13.2 - Classement général individuel aux points
     *  Sprints intermédiaires : 6 – 4 – 2
 
 
-Article 13.3 - Classement général individuel de la montagne (GPM) 
+Article 14.3 - Classement général individuel de la montagne (GPM) 
 
 :   Il s’obtient par l’addition de points attribués au prix de la montagne (sprint de côte) soit 5-3-2 points, sauf à l’étape 5 où les points sont doublés à l’arrivée (arrivée au sommet), soit 10-6-4 points.
 
@@ -1096,13 +1116,13 @@ Article 13.3 - Classement général individuel de la montagne (GPM)
     2. Nombre de premières places dans les sprints de côte;
     3. Classement général individuel au temps.
 
-Article 13.4 - Classement général individuel de la relève
+Article 14.4 - Classement général individuel de la relève
 
 :   Le classement général individuel de la relève est basé sur le classement général individuel au temps, mais ne concerne que les coureurs juniors de 1re année nés en `r params$annee - 17`.
 
 
 
-Article 13.5 - Classement général par équipe au temps
+Article 14.5 - Classement général par équipe au temps
 
 :   Le classement par équipe du jour s’établit par l’addition des trois (3) meilleurs temps individuels de chaque équipe. 
 
@@ -1119,7 +1139,7 @@ Article 13.5 - Classement général par équipe au temps
     Toute équipe réduite à moins de trois coureurs est éliminée du classement général par équipe.
 
 
-Article 14 - Réclamation
+Article 15 - Réclamation
 
 :   Seul le directeur sportif d’une équipe pourra déposer une demande de vérification des résultats; celle-ci devra être présentée au juge à l’arrivée. 
 
@@ -1129,9 +1149,7 @@ Article 14 - Réclamation
     * Au sujet du classement général final : au plus tard trente (30) minutes après l’affichage des résultats.
 
 
-
-
-Article 15 – Bourses
+Article 16 – Bourses
 
 :     Les prix suivants sont attribués selon le guide des `r glue('<a href="{uci_financial}" target="_blank">obligations financières UCI</a>')`. Tous les montants sont en dollars canadiens.        
 
@@ -1370,7 +1388,7 @@ df %>%
 
 bourse_totale <- read_excel(here("excel", "prix.xlsx"), 
            sheet = "Total") %>% 
-  filter(Type == "GrandTotal") %>% pull(Total) %>% currency(digits = 0)
+  filter(Type == "GrandTotal") %>% pull(Total) %>% currency(digits = 0) %>% str_replace(",", " ")
 
 ```
 
@@ -1379,25 +1397,25 @@ Le total général des prix distribués à l’occasion de l’épreuve est de *
 
 <br/>
 
-Article 16 - Prix spéciaux
+Article 17 - Prix spéciaux
 
 :   Les gagnants des prix spéciaux sont choisis par l’ensemble des directeurs techniques et par les commissaires par le biais d’un questionnaire
 
     * Trophée du meilleur junior abitibien[^abitibien]
-    * Trophée de la révélation – Relevation Trophy
-    * Trophée du plus courageux – Most Courageous Trophy
-    * Trophée du plus gentilhomme – Most Gentlemanly Conduct Trophy
-    * Trophée du plus combatif – Most Combative Trophy
-    * Trophée du meilleur esprit d’équipe – Best Team Spirit Trophy
-    * Trophée du meilleur mécanicien - Best Mechanic Trophy
-    * Trophée du directeur sportif par excellence – Best Team Manager Trophy
-    * Trophée du plus utile à son équipe – MVP of each team Trophy
+    * Trophée de la révélation
+    * Trophée du plus courageux
+    * Trophée du plus gentilhomme
+    * Trophée du plus combatif
+    * Trophée du meilleur esprit d’équipe
+    * Trophée du meilleur mécanicien
+    * Trophée Bruno Gauthier du meilleur directeur sportif
+    * Trophée du plus utile à son équipe
 
 
 [^abitibien]: Coureur en provenance ou habitant en Abitibi-Témiscamingue, selon le classement général individuel au temps
 
 
-Article 17 – Antidopage
+Article 18 – Antidopage
 
 :   Le règlement antidopage de l’UCI s’applique intégralement à la présente épreuve, le cas échéant, la législation antidopage locale qui serait d’application outre le règlement antidopage de l’UCI. 
 
@@ -1407,9 +1425,9 @@ Article 17 – Antidopage
 
 
 
-Article 18 – Protocole et récompenses
+Article 19 – Protocole et récompenses
 
-:   Conformément à l’article `r glue('<a href="{uci_p1_FR}#page=47" target="_blank">1.2.112</a>')` du règlement UCI, les coureurs suivants doivent se présenter quotidiennement au protocole au maximum 10 minutes après l’arrivée en tenue de compétition :
+:   Conformément à l’article `r glue('<a href="{uci_p1_FR}#page=48" target="_blank">1.2.112</a>')` du règlement UCI, les coureurs suivants doivent se présenter quotidiennement au protocole au maximum 10 minutes après l’arrivée en tenue de compétition :
 
     * Les 3 premiers de l’étape.
     * Les leaders des classements suivants : 
@@ -1420,7 +1438,7 @@ Article 18 – Protocole et récompenses
         * leader au classement de la montagne (maillot à pois).
 
 
-Article 19 – Pénalités
+Article 20 – Pénalités
 
 :   Le barème de pénalités de l’UCI est applicable intégralement.
 
@@ -1429,18 +1447,18 @@ Article 19 – Pénalités
     Si une deuxième infraction devait se produire ou en cas d’infraction grave, la voiture d’équipe pourrait être exclue complètement de la caravane.
 
 
-Article 20 – Services d’urgence
+Article 21 – Services d’urgence
 
 :   Étant donné le caractère urbain de certaines épreuves et de l’importance accordée par l’organisation à la sécurité du public, la priorité sera accordée aux services d’urgence en cas d’incident et tous devront s’y conformer.
 
 
-Article 21 – Respect de l’environnement et de l’image du cyclisme
+Article 22 – Respect de l’environnement et de l’image du cyclisme
 
 :   Il est interdit aux coureurs de jeter déchets ou bidons sans précautions le long du parcours en dehors des zones de déchets mises en place par l’organisateur (article `r glue('<a href="{uci_p2_FR}#page=21" target="_blank">2.2.025</a>')`). 
 
     Les emballages et déchets doivent être conservés par le coureur ou remis à la voiture d’équipe. Les bidons peuvent être laissés en bord de chaussée si des spectateurs sont présents. 
     
-    Le non-respect de cet article peut entrainer des sanctions (`r glue('<a href="{uci_p2_FR}#page=103" target="_blank">2.12.004</a>')`) ou une exclusion (`r glue('<a href="{uci_p2_FR}#page=128" target="_blank">2.2.010</a>')`).
+    Le non-respect de cet article peut entrainer des sanctions (`r glue('<a href="{uci_p2_FR}#page=103" target="_blank">2.12.004</a>')`) ou une exclusion (`r glue('<a href="{uci_p2_FR}#page=130" target="_blank">2.2.010</a>')`).
 
 
 <!--chapter:end:../rmd/Reglements.Rmd-->
@@ -1950,7 +1968,7 @@ Afin d'assurer la sécurité des coureurs et de la population locale, ces direct
 * Après un arrêt pour assistance à un coureur ou autre, le véhicule reprend une place dans la caravane à l'endroit où il se trouve. **Le dépassement pour reprendre sa place originale dans la file est interdit.**  
 * Si l'arrêt s'est prolongé et qu'un écart s'est formée entre la caravane et son véhicule, le conducteur doit être particulièrement prudent lors de son retour à la caravane, car certaines intersections peuvent être ouvertes à la circulation automobile ou piétonne.  
 * La vitesse maximale exceptionnellement tolérée en ville est de **70 km/h**. 
-* Toute conduite ***dangereuse*** sera sanctionnée par les commissaires, l'organisation et/ou ses représentants, tel que décrit à l'article **19** des [règlements particuliers][Règlements particuliers].  
+* Toute conduite ***dangereuse*** sera sanctionnée par les commissaires, l'organisation et/ou ses représentants, tel que décrit à l'article **20** des [règlements particuliers][Règlements particuliers].  
 
 
 ### Dérivation de la caravane {-}

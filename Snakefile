@@ -253,21 +253,21 @@ rule R01_importExportGPX:
 
 
 
-# rule R31_importExportGPX_Signalisation:
-#     input:
-#         "code/_importExportGPX_Signalisation.R", "excel/Itineraires.xlsx", "excel/signalisation.xlsx",
-#         "gpx/input/Signalisation_1.gpx", "gpx/input/Signalisation_2.gpx", "gpx/input/Signalisation_3.gpx", "gpx/input/Signalisation_3.gpx",
-#         "gpx/input/Signalisation_5.gpx", "gpx/input/Signalisation_5.gpx", "gpx/input/Signalisation_7.gpx", 
-#         "gpx/input/Signalisation_1.csv", "gpx/input/Signalisation_2.csv", "gpx/input/Signalisation_3.csv", "gpx/input/Signalisation_3.csv",
-#         "gpx/input/Signalisation_5.csv", "gpx/input/Signalisation_5.csv", "gpx/input/Signalisation_7.csv", 
-#     output:
-#         "gpx/output/points_signalisation.shp", "gpx/output/points_signalisation.dbf", "gpx/output/points_signalisation.prj", "gpx/output/points_signalisation.shx"
-#     params:
-#         script = "code/_importExportGPX_Signalisation.R"
-#     shell:
-#         """ 
-#         {params.script}
-#         """
+rule R31_importExportGPX_Signalisation:
+    input:
+        "code/_importExportGPX_Signalisation.R", "excel/Itineraires.xlsx", "excel/signalisation.xlsx",
+        "gpx/input/Signalisation_1.gpx", "gpx/input/Signalisation_2.gpx", "gpx/input/Signalisation_3.gpx", "gpx/input/Signalisation_3.gpx",
+        "gpx/input/Signalisation_5.gpx", "gpx/input/Signalisation_5.gpx", "gpx/input/Signalisation_7.gpx", 
+        "gpx/input/Signalisation_1.csv", "gpx/input/Signalisation_2.csv", "gpx/input/Signalisation_3.csv", "gpx/input/Signalisation_3.csv",
+        "gpx/input/Signalisation_5.csv", "gpx/input/Signalisation_5.csv", "gpx/input/Signalisation_7.csv", 
+    output:
+        "gpx/output/points_signalisation.shp", "gpx/output/points_signalisation.dbf", "gpx/output/points_signalisation.prj", "gpx/output/points_signalisation.shx"
+    params:
+        script = "code/_importExportGPX_Signalisation.R"
+    shell:
+        """ 
+        {params.script}
+        """
 
 
 # À mettre en pause une fois les points de signalisations finalisés :

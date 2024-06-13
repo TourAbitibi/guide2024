@@ -86,7 +86,7 @@ for (poi_idx in seq(nrow(POIs))) {
 descr_iti <- calcul_iti_etape(Etape, "FR")
   
 descr_iti %>% as_tibble() %>% 
-  mutate(ligne_entree_circuit = str_detect(Details, "circuit d'arrivée" )) %>% 
+  mutate(ligne_entree_circuit = str_detect(Details, "circuit d" )) %>% 
   slice(1:(which(ligne_entree_circuit))) %>%
   select(Symbol) %>% 
   janitor::tabyl(Symbol) %>% 
