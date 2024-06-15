@@ -1,12 +1,17 @@
 Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
 Start,Start of route,0,0,,
-Generic,sign_01,0.02,305.70,Structure Départ,Edited
-Generic,sign_02,0.05,304.60,,Edited
-Left,sign_03,0.11,303.20,,Edited
-Left,sign_70,9.80,303.00,,Edited
-Control,sign_60,1.40,311.80,Sortie moto,Edited
-Uturn,sign_50,4.97,334.70,,Edited
-Left,sign_92,9.92,306.10,,Edited
-Sprint,sign_90,9.99,306.40,,Edited
-Danger,sign_91,9.99,306.40,Décélération,Edited
-End,End of route,10.00,306.40,
+Generic,sign_01,0.01,324.90,,Edited
+Generic,sign_02,0.56,325.20,,Edited
+Generic,sign_03,0.82,326.60,virage,Edited
+Generic,sign_04,0.84,326.40,entrée sortie moto,Edited
+Generic,sign_05,0.98,323.90,,Edited
+Generic,sign_06,1.28,318.80,,Edited
+Generic,sign_07,1.69,318.60,,Edited
+Generic,sign_08,2.58,320.20,,Edited
+Generic,sign_09,3.71,349.70,,Edited
+Generic,sign_10,4.03,357.30,,Edited
+Generic,sign_11,4.14,359.30,demi-tour,Edited
+Generic,sign_12,5.52,321.00,,Edited
+Generic,sign_13,6.97,318.90,,Edited
+Generic,sign_14,8.25,324.90,,Edited
+End,End of route,8.25,324.90,

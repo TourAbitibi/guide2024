@@ -897,7 +897,7 @@ Il faut être extrêmement prudent dans le secteur de la rue Principale Nord et 
 
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics(here("img", "sign", "E3", "sign_92.png"))
+knitr::include_graphics(here("img", "sign", "E3", "sign_14.png"))
 ```
 
 <br/>
@@ -932,7 +932,7 @@ Il faut aussi gérer la sortie des coureurs de la section sécurisée.
 > Il faut éviter à tout prix qu'ils retournent jusqu'à la ligne d'arrivée, où il pourrait causer une collision avec un coureur finissant son parcours à pleine vitesse. 
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics(here("img", "sign", "E3", "sign_91.png"))
+knitr::include_graphics(here("img", "sign", "E3", "sign_14.png"))
 ```
 
 <!--chapter:end:../rmd/CLMI_notes.Rmd-->
