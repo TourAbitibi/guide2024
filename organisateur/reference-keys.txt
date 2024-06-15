@@ -152,6 +152,10 @@ signalisation---carte-5
 signalisation---tableau-5
 signalisation---détails-5
 point-dintérêt---e6_sign_01
+point-dintérêt---e6_sign_02
+point-dintérêt---e6_sign_03
+point-dintérêt---e6_sign_04
+point-dintérêt---e6_sign_05
 matériel-pour-signalisation-flèchage-5
 etape7
 sommaire-6
