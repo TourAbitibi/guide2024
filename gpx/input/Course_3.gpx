@@ -7,125 +7,15 @@
     </link>
     <time>2024-04-03T20:05:33Z</time>
   </metadata>
-  <wpt lon="-77.776438" lat="48.094716">
-    <name>Right</name>
-    <cmt>Boulevard Dennisson</cmt>
-    <desc>Boulevard Dennisson</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.77805" lat="48.095528">
-    <name>Slight Right</name>
-    <cmt>Droite du terre-plein</cmt>
-    <desc>Droite du terre-plein</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78649" lat="48.09767">
-    <name>Left</name>
-    <cmt>Tournez à gauche sur Rue Self</cmt>
-    <desc>Tournez à gauche sur Rue Self</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.788737" lat="48.091809">
-    <name>Slight Left</name>
-    <cmt>À gauche du terre-plein interserction 7e rue : Début circulation à contre-sens</cmt>
-    <desc>À gauche du terre-plein interserction 7e rue : Début circulation à contre-sens</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.790344" lat="48.091732">
-    <name>Straight</name>
-    <cmt>Boulevard des Pins</cmt>
-    <desc>Boulevard des Pins</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.803924" lat="48.091678">
-    <name>Left</name>
-    <cmt>Boulevard Sabourin</cmt>
-    <desc>Boulevard Sabourin</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.80461" lat="48.08886">
-    <name>Left</name>
-    <cmt>Tournez à gauche - Stationnement</cmt>
-    <desc>Tournez à gauche - Stationnement</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.803408" lat="48.088633">
-    <name>Uturn</name>
-    <cmt>Demi-tour au fond du stationnement</cmt>
-    <desc>Demi-tour au fond du stationnement</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.80449" lat="48.08907">
-    <name>Right</name>
-    <cmt>Tournez à droite sur Boulevard Sabourin - Sortie du stationnement</cmt>
-    <desc>Tournez à droite sur Boulevard Sabourin - Sortie du stationnement</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.803808" lat="48.091628">
-    <name>Right</name>
-    <cmt>Boulevard des Pins</cmt>
-    <desc>Boulevard des Pins</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.790302" lat="48.09166">
-    <name>Straight</name>
-    <cmt>Rue Self</cmt>
-    <desc>Rue Self</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78649" lat="48.09767">
-    <name>Right</name>
-    <cmt>Tournez à droite sur Boulevard Dennison</cmt>
-    <desc>Tournez à droite sur Boulevard Dennison</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.781221" lat="48.09727">
-    <name>Slight Right</name>
-    <cmt>À droite du terre-plein</cmt>
-    <desc>À droite du terre-plein</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.776469" lat="48.094719">
-    <name>Left</name>
-    <cmt>Rue Allard</cmt>
-    <desc>Rue Allard</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.77395" lat="48.0963">
-    <name>Right</name>
-    <cmt>Tournez à droite sur Avenue Perreault</cmt>
-    <desc>Tournez à droite sur Avenue Perreault</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.766907" lat="48.09433">
-    <name>Sprint</name>
-    <cmt>Arrivée / Finish</cmt>
-    <desc>Arrivée / Finish</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
   <wpt lon="-77.76687778791778" lat="48.094333194293185">
     <name>Finish</name>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
   <wpt lon="-77.76710107443421" lat="48.094342687195514">
-    <name>Green / Départ réel</name>
+    <name>Départ officiel / Official start</name>
+    <cmt>Départ officiel / Official start</cmt>
+    <desc>Départ officiel / Official start</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>

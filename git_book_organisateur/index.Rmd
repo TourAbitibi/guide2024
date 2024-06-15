@@ -29,6 +29,9 @@ here::i_am("guide2024.Rproj")
 # Appel des librairies et variables partagées
 source(here::here("code","_LibsVars.R"))
 
+# Options knitr pour knitr_child
+opts_knit$set(output.dir=here("tmp"))
+
 # Dates
 source(here("code", "_Dates.R"))
 
