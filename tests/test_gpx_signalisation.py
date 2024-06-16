@@ -61,37 +61,49 @@ def read_signalisation_column(onglet: str) -> List[str]:
     return list_sign
 
 
+def verif_une_etape(etape: int) -> None:
+    """Tester si les waypoints de signalisation sont les mêmes que dans le fichier Excel de signalisation pour une étape unique"""
+    xmlfile: str = f"gpx/input/Signalisation_{etape}.gpx"
+
+    list_wp: List[str] = read_wp_gpx(file=xmlfile)
+
+    list_sign_excel: List[str] = read_signalisation_column(onglet=f"Etape{etape}")
+
+    if list_sign_excel != list_wp:
+        print(f"--- Étape {etape} ---")
+        # print("WP :", list_wp)
+        # print("Sign :", list_sign_excel)
+
+        # Vérifier les différences
+        diff1: List[str] = [item for item in list_wp if item not in list_sign_excel]
+        diff2: List[str] = [item for item in list_sign_excel if item not in list_wp]
+
+        if diff1:
+            print("Dans le GPX mais pas dans Excel : ", diff1)
+        if diff2:
+            print("Dans le Excel mais pas dans le GPX", diff2)
+
+    # Test pour pytest
+    assert (
+        list_sign_excel == list_wp
+    ), f"Étape {etape} : Les deux listes sont différentes"
+
+
 def test_waypoint_signalisation() -> None:
-    """Tester si les waypoints de signalisation sont les mêmes que dans le fichier Excel de signalisation"""
+    """Tester si les waypoints de signalisation sont les mêmes que dans le fichier Excel de signalisation, avec Pytest"""
     for etape in range(1, 8):
-        xmlfile: str = f"gpx/input/Signalisation_{etape}.gpx"
+        verif_une_etape(etape)
 
-        list_wp: List[str] = read_wp_gpx(file=xmlfile)
 
-        list_sign_excel: List[str] = read_signalisation_column(onglet=f"Etape{etape}")
-
-        if list_sign_excel != list_wp:
-            print(f"--- Étape {etape} ---")
-            # print("WP :", list_wp)
-            # print("Sign :", list_sign_excel)
-
-            # Vérifier les différences
-            diff1: List[str] = [item for item in list_wp if item not in list_sign_excel]
-            diff2: List[str] = [item for item in list_sign_excel if item not in list_wp]
-
-            if diff1:
-                print("Dans le GPX mais pas dans Excel : ", diff1)
-            if diff2:
-                print("Dans le Excel mais pas dans le GPX", diff2)
-
-        # Test pour pytest
-        assert (
-            list_sign_excel == list_wp
-        ), f"Étape {etape} : Les deux listes sont différentes"
+def main() -> None:
+    """En utilisant le fichier directement, vérification de toutes les étapes une par une :
+    `python tests/test_gpx_signalisation.py`"""
+    for etape in range(1, 8):
+        try:
+            verif_une_etape(etape)
+        except AssertionError as e:
+            print(e)
 
 
 if __name__ == "__main__":
-    try:
-        test_waypoint_signalisation()
-    except AssertionError as e:
-        print(e)
+    main()

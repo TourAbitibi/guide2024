@@ -1,18 +1,26 @@
 Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
 Start,Start of route,0,0,,
-Danger,sign_01,1.04,327.00,Terre-plein,Edited
-Control,sign_02,1.07,327.50,,Edited
-Slight Left,sign_03,6.38,308.90,,Edited
-Slight Left,sign_04,15.92,302.00,,Edited
-Danger,sign_05,29.08,321.80,,Edited
-Left,sign_06,29.54,321.60,,Edited
-Left,sign_07,29.60,320.90,,Edited
-Danger,sign_08,29.65,320.50,,Edited
-Left,sign_09,29.84,320.00,,Edited
-Right,sign_10,30.30,321.80,,Edited
-Sharp Right,sign_11,58.08,323.00,,Edited
-Control,sign_12,58.29,326.10,,Edited
-Left,sign_13,58.93,318.90,,Edited
-Left,sign_14,59.28,318.60,,Edited
-Control,sign_15,59.47,323.60,,Edited
-End,End of route,59.54,322.70,
+Left,sign_01,0.09,319.50,,Edited
+Left,sign_02,0.24,317.70,,Edited
+Danger,sign_03,0.66,319.90,,Edited
+Danger,Sign_04,0.84,319.10,,Edited
+Slight Right,sign_06,1.56,327.10,,Edited
+Slight Left,sign_07,6.96,309.30,,Edited
+Slight Left,sign_09,16.47,302.40,,Edited
+Straight,sign_11,29.58,321.90,,Edited
+Left,sign_12,30.08,321.80,,Edited
+Generic,sign_05,30.12,320.80,,Edited
+Danger,sign_13,30.19,320.50,,Edited
+Left,sign_14,30.37,320.00,,Edited
+Right,sign_15,30.83,322.00,,Edited
+Generic,sign_08,43.65,304.30,,Edited
+Generic,sign_16,52.82,308.90,,Edited
+Slight Right,sign_20,58.57,323.60,,Edited
+Generic,sign_21,58.73,326.10,,Edited
+Generic,sign_22,59.03,323.10,,Edited
+Slight Right,sign_23,59.45,317.10,,Edited
+Danger,sign_24,59.59,319.50,,Edited
+Right,sign_25,59.71,320.40,,Edited
+Left,sign_26,60.06,320.70,,Edited
+Generic,sign_27,60.35,318.90,,Edited
+End,End of route,60.35,318.90,

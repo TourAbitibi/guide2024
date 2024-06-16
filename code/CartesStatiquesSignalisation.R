@@ -73,12 +73,6 @@ creation_carte_vignette <- function(pt_sign = "E1_sign_01",
 } 
 
 
-#################################################################################
-################################################################################
-
-# Boucle sur tous les items de signalisation
-
-lapply(signalisation_stat$sign_id, creation_carte_vignette)
 
 ## Processus manuel pour une étape spécifique 
 creation_carte_vignette_etape <- function(etape){
@@ -86,3 +80,12 @@ creation_carte_vignette_etape <- function(etape){
   df_temp <- signalisation_stat %>% filter(grepl(no_etape, signalisation_stat$sign_id))
   lapply(df_temp$sign_id, creation_carte_vignette)
 }
+
+
+#################################################################################
+################################################################################
+
+# Boucle sur tous les items de signalisation
+
+lapply(signalisation_stat$sign_id, creation_carte_vignette)
+
