@@ -1,6 +1,6 @@
+fig:unnamed-chunk-87
+fig:unnamed-chunk-88
 fig:unnamed-chunk-89
-fig:unnamed-chunk-90
-fig:unnamed-chunk-91
 présentation
 programmation
 partenaires
@@ -83,6 +83,7 @@ point-dintérêt---e3_sign_10
 point-dintérêt---e3_sign_11
 point-dintérêt---e3_sign_12
 point-dintérêt---e3_sign_13
+point-dintérêt---e3_sign_15
 point-dintérêt---e3_sign_14
 matériel-pour-signalisation-flèchage-2
 etape4
@@ -199,7 +200,6 @@ tour-de-labitibi
 croquis---challenge-sprint---amos
 croquis---clmi---amos
 croquis-départ---amos
-croquis---départ---val-dor
 croquis---départ---rouyn-noranda
 croquis---départ-arrivée---malartic
 tour-de-la-relève

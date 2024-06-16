@@ -6,7 +6,7 @@
 
 ## Tour de l'Abitibi
 
-**Référence 2023, à mettre à jour 2024.**
+** TODO : Référence 2023, à mettre à jour 2024.**
 
 Présentation des différents site de compétition et des installations logistiques qui y sont requises.
 
@@ -32,12 +32,6 @@ knitr::include_graphics("https://i.ibb.co/XJy04Cq/croquis-site-amos.png")
 ```
 <br/>
 
-### Croquis - Départ - Val-d'Or
-
-```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/tHc0nWd/croquis-dep-vd.png")
-```
-<br/>
 
 ### Croquis - Départ - Rouyn-Noranda 
 

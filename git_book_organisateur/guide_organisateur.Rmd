@@ -721,7 +721,7 @@ knitr::include_graphics("https://i.ibb.co/6Dqg214/site-44.jpg")
 
 ## Tour de l'Abitibi
 
-**Référence 2023, à mettre à jour 2024.**
+** TODO : Référence 2023, à mettre à jour 2024.**
 
 Présentation des différents site de compétition et des installations logistiques qui y sont requises.
 
@@ -747,12 +747,6 @@ knitr::include_graphics("https://i.ibb.co/XJy04Cq/croquis-site-amos.png")
 ```
 <br/>
 
-### Croquis - Départ - Val-d'Or
-
-```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/tHc0nWd/croquis-dep-vd.png")
-```
-<br/>
 
 ### Croquis - Départ - Rouyn-Noranda 
 
@@ -891,13 +885,13 @@ knitr::include_graphics("https://i.ibb.co/kXbGMPp/rampe-05.jpg")
 
 ### Déviation des voitures suiveuses
 
-Les voitures d'équipe choisissent de suivre certains leurs coureurs. Le retour se fait via la 3e avenue Est et la 1ere rue Est.
+Les voitures d'équipe choisissent de suivre certains leurs coureurs. Ils quittent le stationnement de gravier au nord de l'avenue Perreault, à l'extrème ouest du stationnement.  Ils quittent la course dans la première allée de roulette, à droite en arrivant à la Cité de l'Or.
 
-Il faut être extrêmement prudent dans le secteur de la rue Principale Nord et de la 3e avenue : beaucoup de circulation des coureurs en fin de parcours, des voitures suiveuses, des coureurs en préparation, spectateurs, etc...
+Il faut être extrêmement prudent dans le secteur du stationnement des roulottes à la Cité de l'Or : beaucoup de circulation des coureurs en fin de parcours, des voitures suiveuses, des coureurs en préparation, spectateurs, etc...
 
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics(here("img", "sign", "E3", "sign_14.png"))
+knitr::include_graphics(here("img", "sign", "E3", "sign_15.png"))
 ```
 
 <br/>
@@ -915,25 +909,25 @@ knitr::include_graphics("https://i.ibb.co/TmF3Gjp/rampe-13.jpg")
 
 ### Secteur ligne arrivée
 
+TODO :photo à mettre à jour ici bas. 
+
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics("https://i.ibb.co/rMC54Sk/rampe-11.jpg")
 ```
 
 <br/>
 
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/rmySY1q/rampe-12.jpg")
-```
-
-<br/>
+Les coureurs doivent ralentir rapidement après leur arrivée, même s'ils auront accès à dépasser la clôture, normalement fermée, de la Cité de l'Or.
 
 Il faut aussi gérer la sortie des coureurs de la section sécurisée. 
-
-> Il faut éviter à tout prix qu'ils retournent jusqu'à la ligne d'arrivée, où il pourrait causer une collision avec un coureur finissant son parcours à pleine vitesse. 
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics(here("img", "sign", "E3", "sign_14.png"))
 ```
+
+<br/> 
+
+> Il faut éviter à tout prix qu'ils retournent jusqu'à la ligne d'arrivée, où il pourrait causer une collision avec un coureur finissant son parcours à pleine vitesse. 
 
 <!--chapter:end:../rmd/CLMI_notes.Rmd-->
 
