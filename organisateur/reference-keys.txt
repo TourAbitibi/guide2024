@@ -1,6 +1,6 @@
-fig:unnamed-chunk-80
-fig:unnamed-chunk-81
-fig:unnamed-chunk-82
+fig:unnamed-chunk-77
+fig:unnamed-chunk-78
+fig:unnamed-chunk-79
 présentation
 programmation
 partenaires
@@ -190,7 +190,7 @@ signalisation---détails-6
 point-dintérêt---e7_sign_01
 matériel-pour-signalisation-flèchage-6
 sites
-site-départ---départ-amos
+site-départ---arrivée-val-dor
 site-départ---rouyn-noranda
 site-départ---arrivée-malartic
 site-départ---senneterre

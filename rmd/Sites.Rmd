@@ -3,76 +3,56 @@
 
 # Sites Départ Arrivée {#sites}
 
-**2024 : à mettre à jour**
-
 Présentation de différentes photos concernant les lieux de départs et arrivées.
 
-### Site départ - départ -- Amos
+### Site départ - arrivée -- Val-d'Or 
+
+Photos générales du site de départ - arrivée devant l'hôtel de ville de Val-d'Or.
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/nQcPt5Z/site-1.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_1.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/2NzFWX3/site-2.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_2.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/M2FGWcN/site-3.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_3.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/Z1rWmPm/site-4.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_4.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/C95LVMX/site-5.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_5.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/YkynzT8/site-6.jpg")
-```
-<br/>
-
-Et quelques références un peu plus vieilles
-
-```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/7XFyb5t/ref-1.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_6.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/3ccqTyX/ref-2.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_7.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/W04dTBZ/ref-3.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_8.png"))
 ```
 <br/>
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/DC2Q2F7/ref-4.jpg")
+knitr::include_graphics(here("img", "support", "vd", "ArrDep_VD_9.png"))
 ```
 <br/>
-
-```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/DM3y2sY/ref-5.jpg")
-```
-<br/>
-
-```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/nnPVzjP/ref-6.jpg")
-```
-<br/>
-
-Voir [Installation - CLMI] pour la section spécifique au contre-la-montre du jeudi matin.
-
 
 ### Site départ - Rouyn-Noranda
 
@@ -104,6 +84,8 @@ knitr::include_graphics("https://i.ibb.co/Mh2RL3P/site-15.jpg")
 
 ### Site départ - arrivée -- Malartic
 
+Photos du site devant le théâtre Meglab. À partir de 2024, le site sera près du Musée minéralogique.
+
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics("https://i.ibb.co/cvYzVn5/site-31.jpg")
 ```
@@ -129,7 +111,7 @@ knitr::include_graphics("https://i.ibb.co/swF6tf3/site-35.jpg")
 ```
 <br/>
 
-On voit ici que l'arche gonflable a été déplacée durant la course, avant l'arrivée, derrière le *flat bed*.
+On voit ici que l'arche gonflable a été déplacée durant la course, avant l'arrivée, derrière le *flat bed*, étant donné qu'il est interdit d'avoir une arche gonflable sur une arrivée de course. 
 
 ```{r, out.width="75%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics("https://i.ibb.co/ZYwTkj0/site-36.jpg")
