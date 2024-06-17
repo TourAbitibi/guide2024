@@ -782,15 +782,29 @@ knitr::include_graphics("https://i.ibb.co/F0tnh97/croquis-site-releve.png")
 
 Présentation de différentes vues sur le secteur du départ/arrivée du CLMI et de sa rampe de départ.
 
-**Référence 2023, à mettre à jour 2024.**
+Les premières images sont spécifique à l'édition **`r params$annee`** alors que les images suivantes représentent l'organisation générale. 
 
-### Localisation
+### Localisation - Cité de l'Or - `r params$annee`
 
 ```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics(here("img", "cartes", "sign", "E3_sign_01.png"))
 ```
 
+<br/> 
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "sign", "E3", "cite_or_rampe.jpg"))
+```
+
+<br/> 
+
+```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "sign", "E3","cite_or_rampe_gros_plan.jpg"))
+```
+
 ### Vues générales
+
+Ces images représentent l'installation de **2023 à Amos**. Elles démontrent l'organisation générale du site autour de la rampe, la séparations des voies *aller* et *retour* (si le CLMI est aller-retour), le positionnement des escaliers, des tentes, tables, etc.
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics("https://i.ibb.co/zHt2XxP/CLMI-Ligne-Droite.jpg")
@@ -820,44 +834,6 @@ knitr::include_graphics("https://i.ibb.co/KwnrGhb/rampe-15.jpg")
 knitr::include_graphics("https://i.ibb.co/bBtKn0m/rampe-16.jpg")
 ```
 
-<br/>
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/jWnqDVL/rampe-17.jpg")
-```
-
-
-### Positionnement de la rampe
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/h7ftS0p/rampe-01.jpg")
-```
-
-<br/>
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/V0GmQqd/rampe-06.jpg")
-```
-
-<br/>
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/BGY6wLP/rampe-08.jpg")
-```
-
-<br/>
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/RYg6kZg/rampe-18.jpg")
-```
-
-<br/>
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/ygghSMt/rampe-19.jpg")
-```
-
-
 ### Secteur vérification vélos
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
@@ -885,37 +861,24 @@ knitr::include_graphics("https://i.ibb.co/kXbGMPp/rampe-05.jpg")
 
 ### Déviation des voitures suiveuses
 
-Les voitures d'équipe choisissent de suivre certains leurs coureurs. Ils quittent le stationnement de gravier au nord de l'avenue Perreault, à l'extrème ouest du stationnement.  Ils quittent la course dans la première allée de roulette, à droite en arrivant à la Cité de l'Or.
+Les voitures d'équipe choisissent de suivre certains leurs coureurs. Ils quittent le stationnement de gravier au nord de l'avenue Perreault, à l’extrême ouest du stationnement.  
 
-Il faut être extrêmement prudent dans le secteur du stationnement des roulottes à la Cité de l'Or : beaucoup de circulation des coureurs en fin de parcours, des voitures suiveuses, des coureurs en préparation, spectateurs, etc...
+Au retour, ils quittent la course dans la première allée de roulotte, à droite en arrivant à la Cité de l'Or.
 
+<!-- Encadré rouge -->
+<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 3px;">
+  <p>Il faut être extrêmement prudent dans le secteur du stationnement des roulottes à la Cité de l'Or : beaucoup de circulation des coureurs en fin de parcours, des voitures suiveuses, des coureurs en préparation, spectateurs, etc...
+  </p> 
+</div>
+
+<br/>
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics(here("img", "sign", "E3", "sign_15.png"))
 ```
 
-<br/>
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/xS4YsYJ/rampe-10.jpg")
-```
-
-<br/>
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/TmF3Gjp/rampe-13.jpg")
-```
-
 
 ### Secteur ligne arrivée
-
-TODO :photo à mettre à jour ici bas. 
-
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/rMC54Sk/rampe-11.jpg")
-```
-
-<br/>
 
 Les coureurs doivent ralentir rapidement après leur arrivée, même s'ils auront accès à dépasser la clôture, normalement fermée, de la Cité de l'Or.
 
@@ -927,7 +890,11 @@ knitr::include_graphics(here("img", "sign", "E3", "sign_14.png"))
 
 <br/> 
 
-> Il faut éviter à tout prix qu'ils retournent jusqu'à la ligne d'arrivée, où il pourrait causer une collision avec un coureur finissant son parcours à pleine vitesse. 
+<!-- Encadré rouge -->
+<div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 3px;">
+  <p>Il faut éviter à tout prix qu'ils retournent jusqu'à la ligne d'arrivée, où il pourrait causer une collision avec un coureur finissant son parcours à pleine vitesse.
+  </p> 
+</div>
 
 <!--chapter:end:../rmd/CLMI_notes.Rmd-->
 

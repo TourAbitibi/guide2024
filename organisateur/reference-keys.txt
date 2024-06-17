@@ -1,6 +1,6 @@
-fig:unnamed-chunk-87
-fig:unnamed-chunk-88
-fig:unnamed-chunk-89
+fig:unnamed-chunk-80
+fig:unnamed-chunk-81
+fig:unnamed-chunk-82
 présentation
 programmation
 partenaires
@@ -205,9 +205,8 @@ croquis---départ-arrivée---malartic
 tour-de-la-relève
 croquis---sprint-et-jeux-dhabiletés
 clmi
-localisation
+localisation---cité-de-lor---2024
 vues-générales
-positionnement-de-la-rampe
 secteur-vérification-vélos
 déviation-des-voitures-suiveuses
 secteur-ligne-arrivée
