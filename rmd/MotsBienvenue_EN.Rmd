@@ -9,9 +9,9 @@ knitr::include_graphics(here("img", "photos", "pres.png"))
 ```
 
 
-On behalf of the entire board of directors and the organizing committee, I warmly welcome you to the 54th Tour de l'Abitibi Glencore. We are extremely proud of this cycling event, which remains unique in its kind in North America! Its longevity is a testament to the passion, enthusiasm, and unwavering commitment of the residents of the Abitibi-Témiscamingue region.
+On behalf of the entire board of directors and the organizing committee, I warmly welcome you to the 54^th^ Tour de l'Abitibi Glencore. We are extremely proud of this cycling event, which remains unique in its kind in North America! Its longevity is a testament to the passion, enthusiasm, and unwavering commitment of the residents of the Abitibi-Témiscamingue region.
 
-For this 54th Tour, we will be hosting young cyclists from all around the world, and we are excited to have even more international countries participating than last year. As in previous years, team supporters will have the opportunity to follow the races live on our website at <a href="https://www.tourabitibi.com" target="_blank">www.tourabitibi.com</a>.
+For this 54^th^ Tour, we will be hosting young cyclists from all around the world, and we are excited to have even more international countries participating than last year. As in previous years, team supporters will have the opportunity to follow the races live on our website at <a href="https://www.tourabitibi.com" target="_blank">www.tourabitibi.com</a>.
 
 I would like to express my deep gratitude to our many volunteers and our permanent team, who have worked tirelessly throughout the year to bring you a memorable event during Tour week in Val-d'Or. I would also like to extend a special thank you to our loyal and generous partners, without whom this event would not be possible, especially our title partner, Glencore.
 
@@ -79,7 +79,7 @@ knitr::include_graphics(here("img", "photos", "maire_vd.png"))
 
 Hello everyone,
 
-As the mayor, it is my great pleasure to welcome you to Val-d'Or for this 54th edition of the Tour de l’Abitibi Glencore. It is an honor to host you for this high-level sporting event that has been a source of pride for our region for over half a century!
+As the mayor, it is my great pleasure to welcome you to Val-d'Or for this 54^th^ edition of the Tour de l’Abitibi Glencore. It is an honor to host you for this high-level sporting event that has been a source of pride for our region for over half a century!
 
 Your presence brings a wave of dynamism to our city. You are a true source of inspiration for the population, especially for young enthusiasts of this spectacular sport. We admire your determination, sportsmanship, and unwavering perseverance. We hope that your experience in Val-d'Or meets your expectations.
 
@@ -169,9 +169,9 @@ knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/20
 ```
 
 
-**54th edition of the Tour de Abitibi Glencore**
+**54^th^ edition of the Tour de Abitibi Glencore**
 
-It is with great honor that I address you with this message for the 54th edition.
+It is with great honor that I address you with this message for the 54^th^ edition.
 
 It is important to note that the significance of the number 54 creates a vibration that inspires flexibility in the face of change and the enthusiastic management of structural responsibilities.
 

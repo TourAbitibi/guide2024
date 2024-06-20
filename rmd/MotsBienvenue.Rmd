@@ -9,9 +9,9 @@ knitr::include_graphics(here("img", "photos", "pres.png"))
 ```
 
 
-Au nom de l'ensemble du conseil d'administration et du comité organisateur, je souhaite chaleureusement la bienvenue au 54e Tour de l'Abitibi Glencore. Nous sommes extrêmement fiers de cet événement cycliste qui demeure unique en son genre en Amérique du Nord ! Sa longévité témoigne de la passion, de l'enthousiasme et de l'engagement indéfectible des habitants de la région de l’Abitibi-Témiscamingue. 
+Au nom de l'ensemble du conseil d'administration et du comité organisateur, je souhaite chaleureusement la bienvenue au 54^e^ Tour de l'Abitibi Glencore. Nous sommes extrêmement fiers de cet événement cycliste qui demeure unique en son genre en Amérique du Nord ! Sa longévité témoigne de la passion, de l'enthousiasme et de l'engagement indéfectible des habitants de la région de l’Abitibi-Témiscamingue. 
 
-Pour ce 54e Tour, nous recevrons des jeunes cyclistes venant des quatre coins du monde, et nous sommes enthousiastes à l'idée de compter sur la participation de davantage de pays internationaux que l'an dernier. Comme les années précédentes, les supporters des équipes auront la possibilité de suivre les courses en direct sur notre site web à l'adresse <a href="https://www.tourabitibi.com" target="_blank">www.tourabitibi.com</a>
+Pour ce 54^e^ Tour, nous recevrons des jeunes cyclistes venant des quatre coins du monde, et nous sommes enthousiastes à l'idée de compter sur la participation de davantage de pays internationaux que l'an dernier. Comme les années précédentes, les supporters des équipes auront la possibilité de suivre les courses en direct sur notre site web à l'adresse <a href="https://www.tourabitibi.com" target="_blank">www.tourabitibi.com</a>
 
 Je tiens à exprimer ma profonde gratitude envers nos nombreux bénévoles et notre équipe permanente, qui ont travaillé sans relâche tout au long de l'année pour vous offrir un événement mémorable lors de la semaine du Tour à Val-d’Or. Je tiens également à adresser un merci tout particulier à nos partenaires fidèles et généreux, sans lesquels cet événement ne serait pas possible, notamment notre partenaire en titre, Glencore.
 
@@ -48,7 +48,7 @@ Chers partenaires et bénévoles,
 
 Nous sommes ravis de renouveler notre engagement auprès du Tour de l'Abitibi Glencore pour une deuxième année.
 
-Notre soutien envers cet évènement d'envergure internationale s'inscrit dans notre volonté de promouvoir la passion de jeunes athlètes, d'encourager de saines habitudes de vie et de contribuer à vitalité régionale. C'est avec grande fierté que nous supportons la seule course cycliste junior au Canada de calibre international!
+Notre soutien envers cet évènement d'envergure internationale s'inscrit dans notre volonté de promouvoir la passion de jeunes athlètes, d'encourager de saines habitudes de vie et de contribuer à la vitalité régionale. C'est avec grande fierté que nous supportons la seule course cycliste junior au Canada de calibre international!
 
 Nous tenons à féliciter le comité organisateur et tous les bénévoles dévoués qui contribuent au succès de cet évènement année après année. Grâce à leur engagement, ils offrent aux jeunes une expérience véritablement extraordinaire! 
 
@@ -68,7 +68,7 @@ knitr::include_graphics(here("img", "logo", "Glencore.png"))
 
 <br/>
 
-### Mot de la Mairesse de la Ville de `r params$ville` {-}
+### Mot de la mairesse de la Ville de `r params$ville` {-}
 
 \linebreak
 
@@ -79,7 +79,7 @@ knitr::include_graphics(here("img", "photos", "maire_vd.png"))
 ```
 
 Bonjour à toutes et à tous,
-À titre de mairesse, il me fait grandement plaisir de vous souhaiter la bienvenue à Val-d’Or pour cette 54e édition du Tour de l’Abitibi Glencore. C’est un honneur de vous accueillir dans le cadre de cet événement sportif de haut niveau qui fait la fierté de notre région depuis plus d’un demi-siècle!
+À titre de mairesse, il me fait grandement plaisir de vous souhaiter la bienvenue à Val-d’Or pour cette 54^e^ édition du Tour de l’Abitibi Glencore. C’est un honneur de vous accueillir dans le cadre de cet événement sportif de haut niveau qui fait la fierté de notre région depuis plus d’un demi-siècle!
 
 Votre présence apporte un vent de dynamisme à notre ville. Vous êtes une véritable source d’inspiration pour la population, particulièrement pour les jeunes passionnés de ce sport spectaculaire. Nous admirons votre détermination, votre esprit sportif et votre persévérance à toute épreuve. Nous espérons que votre expérience à Val-d’Or sera à la hauteur de vos attentes.
 
@@ -105,7 +105,7 @@ knitr::include_graphics(here("img", "logo", "VilleVD.png"))
 
 <br/>
 
-### Mot de la Ministre {-}
+### Mot des ministres {-}
 
 \linebreak
 
@@ -168,9 +168,9 @@ knitr::include_graphics("https://coalitionavenirquebec.org/wp-content/uploads/20
 ```
 
 
-**54e édition du Tour de l’Abitibi Glencore**
+**54^e^ édition du Tour de l’Abitibi Glencore**
 
-C’est avec un immense honneur que je m’adresse à vous avec le mot du député pour cette 54e édition. 
+C’est avec un immense honneur que je m’adresse à vous avec le mot du député pour cette 54^e^ édition. 
 
 Il est de mise de mentionner que la signification du chiffre 54 crée une vibration qui inspire à être flexible face aux changements et à gérer les responsabilités structurelles avec enthousiasmes. 
 
@@ -179,7 +179,7 @@ Sachant fort bien tout le travail derrière la réussite de ce type d’événem
 Je souhaite le meilleur des succès à tous les participants et aux organisateurs de cette 54e édition du Tour de l’Abitibi Glencore. 
 
 **Pierre Dufour**     
-Député dans Abitibi-Est   
+Député d'Abitibi-Est   
 Adjoint parlementaire au ministre de l’Économie, de l’Innovation et de l’Énergie   
 Adjoint gouvernemental au ministre responsable de la région de l’Abitibi-Témiscamingue 
 

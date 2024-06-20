@@ -26,12 +26,12 @@ resp_medical <- read_excel(staff_xlsx, sheet = "CO") %>%
 
 | Ville         | Adresse                | Téléphone      |
 | :------------ | :--------------------- | :------------- |
-| Val-d'Or      | 725, 6e rue            | (819) 855-5858 |
-| Amos          | 622, 4e rue Ouest      | (819) 732-3341 |
-| Rouyn-Noranda | 4, 9e rue              | (819) 764-5131 |
+| Val-d'Or      | 725, 6^e^ rue            | (819) 855-5858 |
+| Amos          | 622, 4^e^ rue Ouest      | (819) 732-3341 |
+| Rouyn-Noranda | 4, 9^e^ rue              | (819) 764-5131 |
 | Malartic      | 1141, rue Royale       | (819) 757-4342 |
 | Senneterre    | 961,rue de la Clinique | (819) 825-5858 |
-| La Sarre      | 679 2e Rue E           | (819) 333-2311 | 
+| La Sarre      | 679 2^e^ Rue Est           | (819) 333-2311 | 
 
 <br/> 
 <div style="background-color: #ffaca3; border-radius: 5px; border: 2px solid#ff3924; padding: 3px;">
