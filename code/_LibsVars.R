@@ -63,6 +63,8 @@ params <- tibble(
     nb_etapes = 7,
     nb_equipes = 13,
     nb_coureurs_sprint = 16, # 16 ou 24
+    nb_coureurs_sprint_par_vague = 4,
+    distance_totale_sprint = 600
 )
 
 # Paramètres calculés 

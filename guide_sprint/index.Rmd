@@ -42,7 +42,6 @@ opts_chunk$set( tidy = FALSE, comment = NA,
                 warning = FALSE,
                 message = FALSE,
                 quiet=TRUE)
-
 ```
 
 
@@ -73,11 +72,11 @@ The `r params$edition_ChallengeSprint`^th^ edition of the **Challenge Sprint Abi
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
 
 ::: {}
-Le **Challenge Sprint Abitibi** consiste en une série de sprints disputés entre quatre coureurs, avec un processus d’élimination simple afin de couronner le meilleur sprinter. Les sprints seront disputés sur une distance de 600 mètres, soit un aller-retour de 300 m intégrant un virage autour d’une série de cônes.
+Le **Challenge Sprint Abitibi** consiste en une série de sprints disputés entre quatre coureurs, avec un processus d’élimination simple afin de couronner le meilleur sprinter. Les sprints seront disputés sur une distance de `r params$distance_totale_sprint` mètres, soit un aller-retour de `r params$distance_totale_sprint/2` m intégrant un virage autour d’une série de cônes.
 :::
 
 ::: {}
-The **Challenge Sprint Abitibi** consists of a series of sprints between four cyclists, with a simple elimination process, in order to determine the best sprinter. Sprints will take place over a 600-meter distance, in a 300 meters round-trip around a series of cones.
+The **Challenge Sprint Abitibi** consists of a series of sprints between four cyclists, with a simple elimination process, in order to determine the best sprinter. Sprints will take place over a `r params$distance_totale_sprint`-meter distance, in a `r params$distance_totale_sprint/2` meters round-trip around a series of cones.
 :::
 ::::
 

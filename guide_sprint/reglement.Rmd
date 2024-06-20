@@ -125,11 +125,11 @@ A maximum of **`r params$nb_coureurs_sprint`** riders will be invited to take pa
 
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
 ::: {}
-La composition des séries de qualification sera déterminée selon un tirage au sort effectué durant la réunion des directeurs sportifs (N1 @ N16). Voir la liste des [partants](partants.html) après la rencontre des directeurs sportifs.
+La composition des séries de qualification sera déterminée selon un tirage au sort effectué durant la réunion des directeurs sportifs (N1 @ N`r params$nb_coureurs_sprint`). Voir la liste des [partants](partants.html) après la rencontre des directeurs sportifs.
 :::
 
 :::{}
-The heat composition will be determined by a draw conducted during the team managers' meeting (N1 @ N16). See the [start list](partants.html) available after the team directors meeting.
+The heat composition will be determined by a draw conducted during the team managers' meeting (N1 @ N`r params$nb_coureurs_sprint`). See the [start list](partants.html) available after the team directors meeting.
 :::
 :::: 
 
@@ -146,17 +146,17 @@ The heat will be composed in such a way as not to have riders from the same team
 
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
 ::: {}
-Les quarts de finale seront constituées de 4 vagues. S’ensuivront les demi-finales, la finale consolation et la grande finale, pour un total de 8 épreuves. Toutes les épreuves seront composées de 4 coureurs, sauf abandon ou non-départ.
+Les quarts de finale seront constituées de 4 vagues. S’ensuivront les demi-finales, la finale consolation et la grande finale, pour un total de 8 épreuves. Toutes les épreuves seront composées de `r params$nb_coureurs_sprint_par_vague` coureurs, sauf abandon ou non-départ.
 :::
 
 :::{}
-The quarter-final will consist of 4 heats. The the semi-final, the little final and the grand final will follow. All heats will be contested by 4 participants, to the exception of an abandon or a DNS.
+The quarter-final will consist of 4 heats. The the semi-final, the little final and the grand final will follow. All heats will be contested by `r params$nb_coureurs_sprint_par_vague` participants, to the exception of an abandon or a DNS.
 :::
 ::::
 
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px;"}
 ::: {}
-À chaque vague de quart de finale, les deux premiers coureurs de chaque série avanceront à la ronde suivante alors que les 2 derniers seront éliminés.
+À chaque vague de quart de finale, les deux premiers coureurs de chaque série avanceront à la ronde suivante alors que les autres seront éliminés.
 :::
 
 :::{}
