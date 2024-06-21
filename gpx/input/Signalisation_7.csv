@@ -1,22 +1,14 @@
 Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
 Start,Start of route,0,0,,
-Control,sign_01,0.05,272.70,Sortie stationnement vers rue Principale,Edited
-Control,sign_02,0.13,272.60,Gestion circulation rue Principale / Virage à droite,Edited
-Control,sign_03,0.44,271.70,Gestion circulation rte 111E / Virage à droite,Edited
-Control,sign_04,0.75,276.50,Gestion intersection 12e ave / Rte 111E,Edited
-Control,sign_05,2.33,280.70,Signaleur terre-plein - toute à gauche dans bretelle,Edited
-Control,sign_06,2.38,280.00,Gestion circulation SQ,Edited
-Danger,sign_07,7.45,282.30,Chemin de fer oblique,Edited
-Control,sign_08,18.17,286.80,,Edited
-Danger,sign_09,28.35,289.40,Pont potentiellement 1 voie - Construction,Edited
-Danger,sign_10,49.43,302.40,,Edited
-Danger,sign_11,72.40,312.40,Voie ferrée très oblique,Edited
-Control,sign_12,84.82,311.70,,Edited
-Control,sign_13,94.54,315.70,,Edited
-Control,sign_14,95.06,298.60,,Edited
-Control,sign_15,95.23,297.78,,Edited
-Right,Tournez à droite sur 2e Avenue Ouest,95.33,296.40,,""
-Left,Tournez à gauche sur 1re Rue Ouest,95.56,307.30,,""
-Right,Tournez à droite sur 5e Avenue Ouest,95.96,300.80,,""
-Right,Tournez à droite sur Rue Principale Nord,96.14,304.10,,""
-End,End of route,96.47,306.40,
+Left,sign_01,0.31,307.00,Virage à gauche sur 4e rue ouest,Edited
+Right,sign_02,0.62,306.50,Virage à droite par la bretelle,Edited
+Right,sign_03,37.04,344.00,"Contrôle policier, intersection route provinciale, virage à droite sur route 117",Edited
+Danger,sign_04,65.33,319.00,"Entrée carrefour giratoire, tout à droite et prendre 1ère sortie",Edited
+Control,sign_05,65.43,319.00,"Entrée carrefour giratoire, tout à droite et prendre 1ère sortie",Edited
+Generic,sign_06,66.32,306.00,Voie ferrée perpendiculaire à la route,Edited
+Danger,sign_07,67.43,304.10,Voie ferrée perpendiculaire à la route,Edited
+Danger,sign_08,67.87,302.20,"Terre-plein, tout à gauche et prendre première sortie à gauche",Edited
+Left,sign_09,67.92,302.10,"Contrôle policier, intersection route provinciale, gestion du giratoire",Edited
+Danger,sign_10,68.46,306.00,Voie ferrée,Edited
+Danger,sign_11,68.60,305.20,Terre-plein,Edited
+End,End of route,121.03,310.70,
