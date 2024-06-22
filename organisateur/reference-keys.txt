@@ -33,11 +33,6 @@ point-dintérêt---e1_sign_12
 point-dintérêt---e1_sign_13
 point-dintérêt---e1_sign_14
 point-dintérêt---e1_sign_15
-point-dintérêt---e1_sign_16
-point-dintérêt---e1_sign_17
-point-dintérêt---e1_sign_18
-point-dintérêt---e1_sign_19
-point-dintérêt---e1_sign_20
 point-dintérêt---e1_sign_21
 point-dintérêt---e1_sign_22
 point-dintérêt---e1_sign_23

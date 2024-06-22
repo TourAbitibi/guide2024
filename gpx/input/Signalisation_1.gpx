@@ -7,188 +7,6 @@
     </link>
     <time>2024-05-14T22:02:25Z</time>
   </metadata>
-  <wpt lon="-78.985991" lat="48.223159">
-    <name>Danger</name>
-    <cmt>sign_01</cmt>
-    <desc>sign_01</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.910191" lat="48.214207">
-    <name>Danger</name>
-    <cmt>sign_02</cmt>
-    <desc>sign_02</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.690445" lat="48.223156">
-    <name>Danger</name>
-    <cmt>sign_03</cmt>
-    <desc>sign_03</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.575796" lat="48.234824">
-    <name>Danger</name>
-    <cmt>sign_04</cmt>
-    <desc>sign_04</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.434171" lat="48.23239">
-    <name>Generic</name>
-    <cmt>sign_05</cmt>
-    <desc>sign_05</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.386781" lat="48.226947">
-    <name>Danger</name>
-    <cmt>sign_06</cmt>
-    <desc>sign_06</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.380243" lat="48.22761">
-    <name>Danger</name>
-    <cmt>sign_07</cmt>
-    <desc>sign_07</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.219013" lat="48.23931">
-    <name>Danger</name>
-    <cmt>sign_08</cmt>
-    <desc>sign_08</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.216009" lat="48.238184">
-    <name>Danger</name>
-    <cmt>sign_09</cmt>
-    <desc>sign_09</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.132486" lat="48.196533">
-    <name>Generic</name>
-    <cmt>sign_10</cmt>
-    <desc>sign_10</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12718" lat="48.192037">
-    <name>Danger</name>
-    <cmt>sign_11</cmt>
-    <desc>sign_11</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.127198" lat="48.145338">
-    <name>Danger</name>
-    <cmt>sign_12</cmt>
-    <desc>sign_12</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.127296" lat="48.144686">
-    <name>Danger</name>
-    <cmt>sign_13</cmt>
-    <desc>sign_13</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12723" lat="48.138471">
-    <name>Generic</name>
-    <cmt>sign_14</cmt>
-    <desc>sign_14</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.125792" lat="48.135484">
-    <name>Danger</name>
-    <cmt>sign_15</cmt>
-    <desc>sign_15</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12531" lat="48.135296">
-    <name>Danger</name>
-    <cmt>sign_16</cmt>
-    <desc>sign_16</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.124081" lat="48.134997">
-    <name>Danger</name>
-    <cmt>sign_17</cmt>
-    <desc>sign_17</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12295" lat="48.134742">
-    <name>Danger</name>
-    <cmt>sign_18</cmt>
-    <desc>sign_18</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.122527" lat="48.134646">
-    <name>Danger</name>
-    <cmt>sign_19</cmt>
-    <desc>sign_19</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.121533" lat="48.134417">
-    <name>Danger</name>
-    <cmt>sign_20</cmt>
-    <desc>sign_20</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.117562" lat="48.133477">
-    <name>Danger</name>
-    <cmt>sign_21</cmt>
-    <desc>sign_21</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.116911" lat="48.133329">
-    <name>Danger</name>
-    <cmt>sign_22</cmt>
-    <desc>sign_22</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.844766" lat="48.097667">
-    <name>Danger</name>
-    <cmt>sign_23</cmt>
-    <desc>sign_23</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.843715" lat="48.09757">
-    <name>Danger</name>
-    <cmt>sign_24</cmt>
-    <desc>sign_24</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.803367" lat="48.079731">
-    <name>Danger</name>
-    <cmt>sign_25</cmt>
-    <desc>sign_25</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.789117" lat="48.102237">
-    <name>Control</name>
-    <cmt>Arrivée finale</cmt>
-    <desc>Arrivée finale</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
   <wpt lon="-78.6903193298084" lat="48.22318023513152">
     <name>sign_03</name>
     <sym>Dot</sym>
@@ -271,41 +89,13 @@
   </wpt>
   <wpt lon="-78.12565681947653" lat="48.13542644327489">
     <name>sign_15</name>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12521830701097" lat="48.13526818040487">
-    <name>sign_16</name>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12407181188885" lat="48.134995704980625">
-    <name>sign_17</name>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12297254578506" lat="48.13474807878904">
-    <name>sign_18</name>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12242384188318" lat="48.13462302797875">
-    <name>sign_19</name>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.12151992043265" lat="48.13441495077672">
-    <name>sign_20</name>
+    <cmt>Avancé de trotteur sur 500m</cmt>
+    <desc>Avancé de trotteur sur 500m</desc>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
   <wpt lon="-78.11745341179927" lat="48.13345290673479">
     <name>sign_21</name>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-78.11685258654857" lat="48.13324572710852">
-    <name>sign_22</name>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -321,6 +111,11 @@
   </wpt>
   <wpt lon="-77.803263349617" lat="48.07981412889743">
     <name>sign_25</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-78.11694286908117" lat="48.13333611592897">
+    <name>sign_22</name>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -4562,6 +4357,9 @@
       </trkpt>
       <trkpt lat="48.1334" lon="-78.11722">
         <ele>320.2</ele>
+      </trkpt>
+      <trkpt lat="48.133345" lon="-78.116981">
+        <ele>320.6</ele>
       </trkpt>
       <trkpt lat="48.133329" lon="-78.116912">
         <ele>320.7</ele>
