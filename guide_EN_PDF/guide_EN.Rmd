@@ -158,7 +158,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 \centering
 \begin{tabularx}{\textwidth}{X X}
 	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.35\textwidth]{`r comm`}}} \\
-	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+	  \textbf{`r iti_etape$Details$Descr_km[Etape]`}  &  \textbf{} \\
   \end{tabularx}
 \end{table}
 
@@ -183,7 +183,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=0.6\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+  \includegraphics[width=0.9\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
 \end{figure}
 
 \pagebreak
@@ -206,13 +206,13 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+  \includegraphics[width=0.8\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
 \end{figure}
 
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
   \begin{itemize}
-  \item[\ding{46}] `r iti_etape$Details$Nb_tours[Etape]` full clockwise laps of the `r iti_etape$Details$KM_par_tours[Etape]` km finish circuit
-  \item[\ding{46}] The entrance to the circuit is located at the intersection of \textit{4e Rue Est} and \textit{14e Avenue Est}
+  \item[\ding{46}] `r iti_etape$Details$Nb_tours[Etape]` full counterclockwise laps of the `r iti_etape$Details$KM_par_tours[Etape]` km finish circuit
+  \item[\ding{46}] The entrance to the circuit is located at the intersection of \textit{7e Rue} and \textit{1ère Avenue}.
   \end{itemize}
 \end{tcolorbox}
 
@@ -258,7 +258,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 \centering
 \begin{tabularx}{\textwidth}{X X}
 	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
-	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+	  \textbf{`r iti_etape$Details$Descr_km[Etape]`}  &  \textbf{} \\
   \end{tabularx}
 \end{table}
 
@@ -280,7 +280,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+  \includegraphics[width=0.65\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
 \end{figure}
 
 \pagebreak
@@ -289,7 +289,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+  \includegraphics[width=0.65\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
 \end{figure}
 
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
@@ -308,7 +308,8 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
   \begin{itemize}
-  \item[\ding{46}] Finish without circuit
+  \item[\ding{46}] `r iti_etape$Details$Nb_tours[Etape]` full counterclockwise laps of the `r iti_etape$Details$KM_par_tours[Etape]` km finish circuit
+  \item[\ding{46}] The entrance to the circuit is located at the intersection of \textit{7e Rue} and \textit{2e Avenue}.
   \end{itemize}
 \end{tcolorbox}
 
@@ -390,7 +391,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \pagebreak
 
-\subsection{Start details}
+\subsection{Start and finish details}
 
 \begin{figure}[H]
   \centering    
@@ -399,19 +400,18 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
   \begin{itemize}
-  \item[\ding{46}] Round-trip time trial : 2 x 5 km
-  \item[\ding{46}] Team car deviation towards 3e ave Est and 1ere Rue Est
+  \item[\ding{46}] Round-trip time trial : 2 x 4.15 km
   \end{itemize}
 \end{tcolorbox}
 
-
+<!--
 \subsection{Finish details}
 
 \begin{figure}[H]
   \centering    
   \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
 \end{figure}
-
+ -->
 
 \pagebreak
 
@@ -455,7 +455,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 \centering
 \begin{tabularx}{\textwidth}{X X}
 	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
-	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+	  \textbf{`r iti_etape$Details$Descr_km[Etape]`}  &  \textbf{} \\
   \end{tabularx}
 \end{table}
 
@@ -482,7 +482,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \pagebreak
 
-\subsection{Start details}
+\subsection{Start and finish details}
 
 \begin{figure}[H]
   \centering    
@@ -492,22 +492,18 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
   \begin{itemize}
   \item[\ding{46}] Neutralized start on `r iti_etape$Details$KM_Neutres[Etape]` km
+    \item[\ding{46}] Dinner will be served at the \emph{Centre Michel-Brière}
   \end{itemize}
 \end{tcolorbox}
 
-
+<!--
 \subsection{Finish details}
 
 \begin{figure}[H]
   \centering    
   \includegraphics[width=0.7\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
 \end{figure}
-
-\begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
-  \begin{itemize}
-  \item[\ding{46}] Dinner will be served at the \emph{Théâtre Meglab}, near the finish line
-  \end{itemize}
-\end{tcolorbox}
+-->
 
 \pagebreak
 
@@ -551,7 +547,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 \centering
 \begin{tabularx}{\textwidth}{X X}
 	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
-	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+	  \textbf{`r iti_etape$Details$Descr_km[Etape]`}  &  \textbf{} \\
   \end{tabularx}
 \end{table}
 
@@ -573,7 +569,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=0.6\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+  \includegraphics[width=0.85\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
 \end{figure}
 
 \pagebreak
@@ -582,7 +578,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=0.85\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
+  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Dep.png"))`}
 \end{figure}
 
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
@@ -596,12 +592,12 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
+  \includegraphics[width=0.65\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
 \end{figure}
 
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
   \begin{itemize}
-  \item[\ding{46}] Finish without circuit
+  \item[\ding{46}] Finish at mont Bell summit - KOM points doubled
   \end{itemize}
 \end{tcolorbox}
 
@@ -646,8 +642,8 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 \begin{table}[H]
 \centering
 \begin{tabularx}{\textwidth}{X X}
-	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.2\textwidth]{`r comm`}}} \\
-	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.1\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$Descr_km[Etape]`}  &  \textbf{} \\
   \end{tabularx}
 \end{table}
 
@@ -669,11 +665,11 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=0.6\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+  \includegraphics[width=0.8\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
 \end{figure}
 
 \pagebreak
-
+<!--
 \subsection{Start details}
 
 \begin{figure}[H]
@@ -687,20 +683,20 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
   \end{itemize}
 \end{tcolorbox}
 
-
-\subsection{Finish details}
+-->
+\subsection{Start and finish details}
 
 \begin{figure}[H]
   \centering    
   \includegraphics[width=\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Arr.png"))`}
 \end{figure}
-
+<!--
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
   \begin{itemize}
   \item[\ding{46}] Finish without circuit
   \end{itemize}
 \end{tcolorbox}
-
+-->
 \pagebreak
 
 \subsection{Elevation}
@@ -747,8 +743,8 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 \begin{table}[H]
 \centering
 \begin{tabularx}{\textwidth}{X X}
-	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.35\textwidth]{`r comm`}}} \\
-	  \textbf{`r iti_etape$Details$KM_Total[Etape]` km}  &  \textbf{} \\
+	  \large{\textbf{`r jour_date`}}  & \multicolumn{1}{r}{\multirow{2}{*}{\includegraphics[width=0.15\textwidth]{`r comm`}}} \\
+	  \textbf{`r iti_etape$Details$Descr_km[Etape]`}  &  \textbf{} \\
   \end{tabularx}
 \end{table}
 
@@ -773,7 +769,7 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=1\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
+  \includegraphics[width=0.85\textwidth]{`r here("img", "cartes", params$input_output,  glue("Etape{Etape}_Full.png"))`}
 \end{figure}
 
 \pagebreak
@@ -801,8 +797,8 @@ comm <- here("img", "logo",  glue("comm_{Etape}.png"))
 
 \begin{tcolorbox}[colback=orange!5!white,colframe=orange!75!black]
   \begin{itemize}
-  \item[\ding{46}] `r iti_etape$Details$Nb_tours[Etape]` full clockwise laps of the `r iti_etape$Details$KM_par_tours[Etape]` km finish circuit
-  \item[\ding{46}] The entrance to the circuit is located at the intersection of \textit{4e Rue Est} and \textit{14e Avenue Est}
+  \item[\ding{46}] `r iti_etape$Details$Nb_tours[Etape]` full counterclockwise laps of the `r iti_etape$Details$KM_par_tours[Etape]` km finish circuit
+  \item[\ding{46}] The entrance to the circuit is located at the intersection of \textit{7e Rue} and \textit{2e Avenue}
   \end{itemize}
 \end{tcolorbox}
 
