@@ -7,209 +7,6 @@
     </link>
     <time>2024-01-07T10:36:20Z</time>
   </metadata>
-  <wpt lon="-77.25062" lat="48.39023">
-    <name>Straight</name>
-    <cmt>Continuer sur QC-386 O</cmt>
-    <desc>Continuer sur QC-386 O</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.308033" lat="48.39005">
-    <name>Generic</name>
-    <cmt>Départ officiel / Official start</cmt>
-    <desc>Départ officiel / Official start</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.34693" lat="48.401126">
-    <name>Generic</name>
-    <cmt>Belcourt</cmt>
-    <desc>Belcourt</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.353785" lat="48.402149">
-    <name>Sprint</name>
-    <cmt>Sprint bonifications / Bonus Sprint</cmt>
-    <desc>Sprint bonifications / Bonus Sprint</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.62689" lat="48.41585">
-    <name>Left</name>
-    <cmt>Prendre à gauche sur QC-397 S</cmt>
-    <desc>Prendre à gauche sur QC-397 S</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.62712" lat="48.367657">
-    <name>Food</name>
-    <cmt>Ravito ouvert / Feed open</cmt>
-    <desc>Ravito ouvert / Feed open</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.625269" lat="48.341075">
-    <name>Climb</name>
-    <cmt>KOM sprint</cmt>
-    <desc>KOM sprint</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.655702" lat="48.191189">
-    <name>Generic</name>
-    <cmt>Val-Senneville</cmt>
-    <desc>Val-Senneville</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.71415" lat="48.15598">
-    <name>Right</name>
-    <cmt>Tourner à droite vers Rte des Campagnards/​QC-397 S</cmt>
-    <desc>Tourner à droite vers Rte des Campagnards/​QC-397 S</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.71415" lat="48.15598">
-    <name>Right</name>
-    <cmt>Prendre à droite sur Rte des Campagnards/​QC-397 S</cmt>
-    <desc>Prendre à droite sur Rte des Campagnards/​QC-397 S</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.749361" lat="48.146074">
-    <name>Sprint</name>
-    <cmt>Sprint bonifications / Bonus sprint</cmt>
-    <desc>Sprint bonifications / Bonus sprint</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.779773" lat="48.123776">
-    <name>Generic</name>
-    <cmt>Zone déchets / Trash zone</cmt>
-    <desc>Zone déchets / Trash zone</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.78259" lat="48.11277">
-    <name>Straight</name>
-    <cmt>Au rond-point, prendre la 3e sortie sur Rte Transcanadienne/​QC-117 S</cmt>
-    <desc>Au rond-point, prendre la 3e sortie sur Rte Transcanadienne/​QC-117 S</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.775812" lat="48.112339">
-    <name>Danger</name>
-    <cmt>Voie ferrée / Railroad</cmt>
-    <desc>Voie ferrée / Railroad</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.765639" lat="48.107478">
-    <name>Danger</name>
-    <cmt>Voie ferrée / Railroad</cmt>
-    <desc>Voie ferrée / Railroad</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.76906" lat="48.10009">
-    <name>Straight</name>
-    <cmt>Au rond-point, prendre la 3e sortie et continuer sur Rte Transcanadienne/​QC-117 S</cmt>
-    <desc>Au rond-point, prendre la 3e sortie et continuer sur Rte Transcanadienne/​QC-117 S</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.489129" lat="48.095094">
-    <name>Climb</name>
-    <cmt>KOM Sprint</cmt>
-    <desc>KOM Sprint</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.358566" lat="48.205336">
-    <name>Generic</name>
-    <cmt>Obaska</cmt>
-    <desc>Obaska</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.356482" lat="48.208336">
-    <name>Sprint</name>
-    <cmt>Sprint du maire / Mayor's sprint</cmt>
-    <desc>Sprint du maire / Mayor's sprint</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.319492" lat="48.272161">
-    <name>Food</name>
-    <cmt>Ravito fermé / Feed closed</cmt>
-    <desc>Ravito fermé / Feed closed</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.25041" lat="48.383162">
-    <name>Generic</name>
-    <cmt>Senneterre</cmt>
-    <desc>Senneterre</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.24947" lat="48.38594">
-    <name>Straight</name>
-    <cmt>Continuer sur 6e Rue O</cmt>
-    <desc>Continuer sur 6e Rue O</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.24945" lat="48.39023">
-    <name>Right</name>
-    <cmt>Prendre à droite sur 10e Avenue/​QC-386 E</cmt>
-    <desc>Prendre à droite sur 10e Avenue/​QC-386 E</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.23961" lat="48.39022">
-    <name>Right</name>
-    <cmt>Prendre à droite sur Rue du Parc</cmt>
-    <desc>Prendre à droite sur Rue du Parc</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.22807" lat="48.37873">
-    <name>Right</name>
-    <cmt>Prendre à droite sur Chem. du Mont Bell</cmt>
-    <desc>Prendre à droite sur Chem. du Mont Bell</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.21863" lat="48.36742">
-    <name>Right</name>
-    <cmt>Prendre à droite sur Mnt de la Tour</cmt>
-    <desc>Prendre à droite sur Mnt de la Tour</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.21835" lat="48.36115">
-    <name>Generic</name>
-    <cmt>Dérivation caravane / Caravan bypass droite / rigth</cmt>
-    <desc>Dérivation caravane / Caravan bypass droite / rigth</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.22224" lat="48.35985">
-    <name>Right</name>
-    <cmt>Tourner à droite pour rester sur Mnt de la Tour</cmt>
-    <desc>Tourner à droite pour rester sur Mnt de la Tour</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lon="-77.222482" lat="48.361174">
-    <name>Summit</name>
-    <cmt>Arrivée/ Finish Double points KOM</cmt>
-    <desc>Arrivée/ Finish Double points KOM</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
   <wpt lon="-77.62704916008951" lat="48.367985341463324">
     <name>Feed open</name>
     <sym>Dot</sym>
@@ -279,6 +76,11 @@
   </wpt>
   <wpt lon="-77.2504702618811" lat="48.38297391086956">
     <name>Senneterre</name>
+    <sym>Dot</sym>
+    <type>Dot</type>
+  </wpt>
+  <wpt lon="-77.65572993266014" lat="48.18506893378892">
+    <name>Sprint Maire</name>
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
@@ -3851,6 +3653,9 @@
       </trkpt>
       <trkpt lat="48.185458" lon="-77.655727">
         <ele>305.8</ele>
+      </trkpt>
+      <trkpt lat="48.185065" lon="-77.65573">
+        <ele>306.7</ele>
       </trkpt>
       <trkpt lat="48.18506" lon="-77.65573">
         <ele>306.7</ele>
