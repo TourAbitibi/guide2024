@@ -14,11 +14,11 @@ Article 1 – Organisation
 
 Article 2 – Type d’épreuve
 
-:   L’épreuve est réservée aux athlètes de la catégorie hommes junior. Elle est inscrite au calendrier UCI Mondial Junior. Pour être considéré comme junior, un coureur doit être né en `r params$annee - 18` ou `r params$annee - 17`. L’épreuve est classée 2.NCupJ et les points UCI seront attribués selon l’article  `r glue('<a href="{uci_p2_FR}#page=187" target="_blank">2.14.040</a>')`.    
+:   L’épreuve est réservée aux athlètes de la catégorie hommes junior. Elle est inscrite au calendrier UCI Mondial Junior. Pour être considéré comme junior, un coureur doit être né en `r params$annee - 18` ou `r params$annee - 17`. L’épreuve est classée 2.NCupJ et les points UCI seront attribués selon l’article  `r glue('<a href="{uci_p2_FR}#page=192" target="_blank">2.14.040</a>')`.    
 
     Les dérogations suivantes ont été accordées par l’UCI à l’organisation du Tour de l’Abitibi :  
     
-    * L’épreuve du Tour de l’Abitibi a la possibilité d’accueillir des équipes régionales ou des clubs composés uniquement de coureurs juniors mais ne marquant pas de points UCI (article `r glue('<a href="{uci_p2_FR}#page=186" target="_blank">2.14.036</a>')`). De plus, leur maillot devra respecter les articles `r glue('<a href="{uci_p1_FR}#page=83" target="_blank">1.3.045 à 1.3.047</a>')` du Règlement UCI;    
+    * L’épreuve du Tour de l’Abitibi a la possibilité d’accueillir des équipes régionales ou des clubs composés uniquement de coureurs juniors mais ne marquant pas de points UCI (article `r glue('<a href="{uci_p2_FR}#page=191" target="_blank">2.14.036</a>')`). De plus, leur maillot devra respecter les articles `r glue('<a href="{uci_p1_FR}#page=83" target="_blank">1.3.045 à 1.3.047</a>')` du Règlement UCI;    
     * L’épreuve du Tour de l’Abitibi compte deux (2) demi-étapes la même journée (article `r glue('<a href="{uci_p2_FR}#page=60" target="_blank">2.6.010</a>')`) suite à l'obtention d'une dérogation de l'UCI .
    
    

@@ -15,11 +15,11 @@ Article 1 – Organization
 
 Article 2 – Race type
 
-:  This race is open to athletes from the junior men’s category. It is an official UCI World Junior competition. In order to be considered as a junior athlete, one must have been born in `r params$annee - 18` ou `r params$annee - 17`. The competition is registered as a 2.NCupJ category and UCI points will be awarded following article `r glue('<a href="{uci_p2_EN}#page=185" target="_blank">2.14.040</a>')`.    
+:  This race is open to athletes from the junior men’s category. It is an official UCI World Junior competition. In order to be considered as a junior athlete, one must have been born in `r params$annee - 18` ou `r params$annee - 17`. The competition is registered as a 2.NCupJ category and UCI points will be awarded following article `r glue('<a href="{uci_p2_EN}#page=190" target="_blank">2.14.040</a>')`.    
 
     The following waivers were granted to the organisation of the Tour de l’Abitibi by the UCI :  
     
-    * The Tour de l’Abitibi allows the participation of regional and club teams only composed of junior riders but will not score any UCI points `r glue('<a href="{uci_p2_EN}#page=184" target="_blank">2.14.036</a>')`. In addition, club teams jerseys must respect articles `r glue('<a href="{uci_p1_EN}#page=81" target="_blank">1.3.045 to 1.3.047</a>')` of the UCI rules;    
+    * The Tour de l’Abitibi allows the participation of regional and club teams only composed of junior riders but will not score any UCI points `r glue('<a href="{uci_p2_EN}#page=189" target="_blank">2.14.036</a>')`. In addition, club teams jerseys must respect articles `r glue('<a href="{uci_p1_EN}#page=81" target="_blank">1.3.045 to 1.3.047</a>')` of the UCI rules;    
     * The Tour de l’Abitibi race features two (2) half-stages on the same day (article `r glue('<a href="{uci_p2_EN}#page=60" target="_blank">2.6.010</a>')`) following the granting of a waiver from the UCI.
    
    

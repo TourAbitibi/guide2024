@@ -150,10 +150,10 @@ medaille_emoji <- tribble(
 # Liens règlements UCI
 ## PDF des règlements UCI
 
-uci_p1_FR <- "https://assets.ctfassets.net/761l7gh5x5an/wQympSG6EWlKq6o6HKw9E/a139e38c1f22db170c98c14b7168c9b2/1-GEN-20240401-F.pdf"
-uci_p2_FR <- "https://assets.ctfassets.net/761l7gh5x5an/5zPSLYnROebDjMLDWUnLsM/aebab566afe0e0fa0781a577f33a9027/2-ROA-20240205-F.pdf"
+uci_p1_FR <- "https://assets.ctfassets.net/761l7gh5x5an/wQympSG6EWlKq6o6HKw9E/6a659ce56c6a1679ebc29d2aee0b4990/1-GEN-20240617-F.pdf"
+uci_p2_FR <- "https://assets.ctfassets.net/761l7gh5x5an/5zPSLYnROebDjMLDWUnLsM/f9f2e99838d85dd8764c6f095c8a9adb/2-ROA-20240617-F.pdf"
 
-uci_p1_EN <- "https://assets.ctfassets.net/761l7gh5x5an/wQympSG6EWlKq6o6HKw9E/97b99486ecdcb4d5b5ae27ecb65dcd16/1-GEN-20240401-E.pdf"
-uci_p2_EN <- "https://assets.ctfassets.net/761l7gh5x5an/6FEzFHeA2oKMBGb5sdIvQ7/6ecdf625b5175759daed42c522204ef1/2-ROA-20240205-E.pdf"
+uci_p1_EN <- "https://assets.ctfassets.net/761l7gh5x5an/wQympSG6EWlKq6o6HKw9E/dbf22e49f7cde9ae61df6180c7a90c8e/1-GEN-20240617_E.pdf"
+uci_p2_EN <- "https://assets.ctfassets.net/761l7gh5x5an/6FEzFHeA2oKMBGb5sdIvQ7/2bebd126b4e4937f41760c4fc0e085c1/2-ROA-20240617-E.pdf"
 
 uci_financial <- "https://assets.ctfassets.net/761l7gh5x5an/3XSdDT5GZNHaRDKjjqE4bo/d586af08d8940967b7e4cdac1d14bc18/ROA-20231008_-_2024_Road_Financial_Obligations.pdf"
