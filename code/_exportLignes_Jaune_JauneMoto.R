@@ -60,7 +60,7 @@ POIS_motosignaleur <- function(Etape = 1){
 
 Etape <-1 
 
-creer_fichier_execel_moto_sign <- function(Etape =1){
+creer_fichier_excel_moto_sign <- function(Etape =1){
 
   POIS_motosignaleur(Etape) %>% 
     mutate(Etape = Etape) %>% 
@@ -71,7 +71,7 @@ creer_fichier_execel_moto_sign <- function(Etape =1){
 
 }
 
-ajout_onglet_fichier_execel_moto_sign <- function(Etape =1){
+ajout_onglet_fichier_excel_moto_sign <- function(Etape =1){
   
   POIS_motosignaleur(Etape) %>% 
     mutate(Etape = Etape) %>% 
@@ -84,9 +84,9 @@ ajout_onglet_fichier_execel_moto_sign <- function(Etape =1){
 }
 
 
-creer_fichier_execel_moto_sign(1)
-ajout_onglet_fichier_execel_moto_sign(2)
-ajout_onglet_fichier_execel_moto_sign(4)
-ajout_onglet_fichier_execel_moto_sign(5)
-ajout_onglet_fichier_execel_moto_sign(6)
-ajout_onglet_fichier_execel_moto_sign(7)
+creer_fichier_excel_moto_sign(1)
+ajout_onglet_fichier_excel_moto_sign(2)
+ajout_onglet_fichier_excel_moto_sign(4)
+ajout_onglet_fichier_excel_moto_sign(5)
+ajout_onglet_fichier_excel_moto_sign(6)
+ajout_onglet_fichier_excel_moto_sign(7)
