@@ -8,6 +8,15 @@
 
 Présentation des différents site de compétition et des installations logistiques qui y sont requises.
 
+
+### Croquis - Hôtel de ville - Val-d'Or 
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "croquis", "2024_DepArr.png"))
+```
+
+<br/> 
+
 ### Croquis - Challenge Sprint - Val-d'Or 
 
 ```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}

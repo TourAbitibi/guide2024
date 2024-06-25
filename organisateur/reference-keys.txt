@@ -1,6 +1,6 @@
-fig:unnamed-chunk-80
 fig:unnamed-chunk-81
 fig:unnamed-chunk-82
+fig:unnamed-chunk-83
 présentation
 programmation
 partenaires
@@ -225,6 +225,7 @@ site-départ---senneterre
 site-arrivée---mont-bell---senneterre
 croquis
 tour-de-labitibi
+croquis---hôtel-de-ville---val-dor
 croquis---challenge-sprint---val-dor
 croquis---départ---rouyn-noranda
 croquis-départ---amos
