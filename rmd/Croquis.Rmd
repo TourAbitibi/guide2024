@@ -6,52 +6,55 @@
 
 ## Tour de l'Abitibi
 
-** TODO : Référence 2023, à mettre à jour 2024.**
-
 Présentation des différents site de compétition et des installations logistiques qui y sont requises.
 
-
-### Croquis - Challenge Sprint - Amos
+### Croquis - Challenge Sprint - Val-d'Or 
 
 ```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/yqDdTCb/croquis-challengesprint.png")
+knitr::include_graphics(here("img", "support", "croquis", "2024_Sprint.png"))
 ```
-<br/>
 
-### Croquis - CLMI - Amos
+<br/> 
+
+### Croquis - Départ - Rouyn-Noranda 
 
 ```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/m8dFN2G/croquis-clmi-amos.png")
+knitr::include_graphics(here("img", "support", "croquis", "2024_RN.png"))
 ```
 <br/>
 
 ### Croquis départ - Amos
 
 ```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/XJy04Cq/croquis-site-amos.png")
+knitr::include_graphics(here("img", "support", "croquis", "2024_Amos.png"))
 ```
 <br/>
 
 
-### Croquis - Départ - Rouyn-Noranda 
 
-```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/Rz25BzY/croquis-dep-rn.png")
-```
-<br/>
 
 ### Croquis - Départ Arrivée - Malartic
 
 ```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/KD9chrr/croquis-dep-arr-malartic.png")
+knitr::include_graphics(here("img", "support", "croquis", "2024_Malartic.png"))
 ```
 <br/>
+
+### Croquis - Départ - Senneterre
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "croquis", "2024_Senneterre.png"))
+```
+
+### Croquis - Arrivée - Senneterre - Mont Bell
+
+```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "croquis", "2024_MontBell.png"))
+```
 
 ## Tour de la Relève
 
 ### Croquis - Sprint et jeux d'habiletés
-
-*À mettre à jour avec le plan de Stéphane Larose*
 
 ```{r, out.width="95%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics("https://i.ibb.co/F0tnh97/croquis-site-releve.png")

@@ -9,11 +9,24 @@ Les premières images sont spécifique à l'édition **`r params$annee`** alors 
 
 ### Localisation - Cité de l'Or - `r params$annee`
 
-```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
+```{r, out.width="60%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics(here("img", "cartes", "sign", "E3_sign_01.png"))
 ```
 
 <br/> 
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "croquis", "2024_CLMI.png"))
+```
+
+<br/> 
+
+```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
+knitr::include_graphics(here("img", "support", "croquis", "2024_CLMI_DemiTour.png"))
+```
+
+<br/> 
+
 
 ```{r, out.width="70%",fig.align='center',  echo = FALSE, eval = TRUE}
 knitr::include_graphics(here("img", "sign", "E3", "cite_or_rampe.jpg"))
@@ -25,7 +38,7 @@ knitr::include_graphics(here("img", "sign", "E3", "cite_or_rampe.jpg"))
 knitr::include_graphics(here("img", "sign", "E3","cite_or_rampe_gros_plan.jpg"))
 ```
 
-### Vues générales
+### Vues générales - références Amos - 2023
 
 Ces images représentent l'installation de **2023 à Amos**. Elles démontrent l'organisation générale du site autour de la rampe, la séparations des voies *aller* et *retour* (si le CLMI est aller-retour), le positionnement des escaliers, des tentes, tables, etc.
 
