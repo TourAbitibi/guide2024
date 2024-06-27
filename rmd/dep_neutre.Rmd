@@ -101,7 +101,7 @@ here("excel", "ardoise_info_neutre.xlsx") %>%
 - Prendre en note le numéro du coureur ayant reçu une roue ou un vélo
 
 ```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/5Mf4QGR/neutre-auto.jpg")
+knitr::include_graphics(here("img", "support","neutre","neutre-auto.jpg"))
 ```
 
 #### Matériel {-}
@@ -114,7 +114,7 @@ knitr::include_graphics("https://i.ibb.co/5Mf4QGR/neutre-auto.jpg")
 
 
 ```{r, out.width="90%",fig.align='center',  echo = FALSE, eval = TRUE}
-knitr::include_graphics("https://i.ibb.co/gg77qBR/neutre-moto.jpg")
+knitr::include_graphics(here("img", "support","neutre","neutre-moto.jpg"))
 ```
 
 #### Références UCI {-}
