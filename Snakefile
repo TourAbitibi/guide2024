@@ -71,6 +71,8 @@ rule Z_targets:
         "rmd/signaleur.Rmd",
         "rmd/dep_neutre.Rmd",
         "rmd/Repas.Rmd",
+        "rmd/Repas_FR.Rmd",
+        "rmd/Repas_EN.Rmd",
         "rmd/MedMasso.Rmd",
         "rmd/MedMasso_EN.Rmd",
         "rmd/CirculationCourse.Rmd",
@@ -341,6 +343,7 @@ rule R50_render_book_EN:
         "rmd/CirculationCourse_EN.Rmd",
         "rmd/Regl_sejour_EN.Rmd",
         "rmd/Repas.Rmd",
+        "rmd/Repas_EN.Rmd",
         "rmd/MedMasso_EN.Rmd",
         "rmd/Locaux.Rmd",
         "rmd/CarteAbitibi.Rmd"
@@ -400,6 +403,7 @@ rule R51_render_book:
         "rmd/CirculationCourse.Rmd",
         "rmd/Regl_sejour.Rmd",
         "rmd/Repas.Rmd",
+        "rmd/Repas_FR.Rmd",
         "rmd/MedMasso.Rmd",
         "rmd/Locaux.Rmd",
         "rmd/CarteAbitibi.Rmd"
@@ -473,7 +477,6 @@ rule R54_render_book_organisateur:
         "excel/staff.xlsx",
         "excel/Itineraires.xlsx",
         "excel/feuilleroute.xlsx",
-        "excel/repas.xlsx",
         "excel/locaux.xlsx",
         "excel/signalisation.xlsx",
         "excel/ardoise_info_neutre.xlsx",
@@ -506,7 +509,6 @@ rule R54_render_book_organisateur:
         "rmd/dep_neutre.Rmd",
         "rmd/Reglements.Rmd",
         "rmd/CirculationCourse.Rmd",
-        "rmd/Repas.Rmd",
         "rmd/Locaux.Rmd"
     output:
         "git_book_organisateur/_book/index.html",

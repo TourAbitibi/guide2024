@@ -24,7 +24,7 @@ rmd_files:
   - "../rmd/Reglements_EN.Rmd"
   - "../rmd/CirculationCourse_EN.Rmd"
   - "../rmd/Regl_sejour_EN.Rmd"
-  - "../rmd/Repas.Rmd"
+  - "../rmd/Repas_EN.Rmd"
   - "../rmd/MedMasso_EN.Rmd"
   - "../rmd/Locaux.Rmd"
   - "../rmd/CarteAbitibi.Rmd"

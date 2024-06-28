@@ -1,0 +1,244 @@
+
+<!-- Repas.Rmd  : document français -->
+
+# Meals of the week {#meals}
+
+### `r dates_EN %>% filter(code=="Dim_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Dinner {-}
+
+Soup and bread (1)  
+Beef chili with red beans served with corn chips, cheese, and sour cream.  
+Pineapple upside-down cake  
+Fruit; banana, apple, orange  
+Juice (1), milk (1), coffee
+
+
+### `r dates_EN %>% filter(code=="Lun_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Breakfast {-}
+
+
+Vegetable frittata  
+Bacon, ham, sausage  
+Yogurt and granola (1)  
+Assorted muffins (1)  
+Fruit; banana, apple or orange  
+Milk (1), juice (1),coffee
+
+
+#### Lunch {-}
+
+Soup and Bread (1)  
+Tofu lasagna  
+Caesar salad  
+Assorted cookies (2)  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+
+#### Dinner {-}
+
+Soup and Bread (1)  
+Beef with vegetables and pasta  
+Seasonal vegetables  
+Sugar pie  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+### `r dates_EN %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Breakfast {-}
+
+Scrambled eggs  
+Sausage, ham, bacon  
+Plate of fruits and cheese  
+Yogurt and granola (1)  
+Assorted muffins (1)  
+Fruit; banana, apple, orange  
+Milk (1), juice (1), coffee
+
+#### Lunch {-}
+
+Soup and Bread (1)  
+Macaroni with meat  
+Vegetable salad  
+Assorted cookies (2)  
+Milk (1)  
+Juice (1)  
+Fruit; banana, apple or orange (1)
+
+#### Dinner {-}
+
+Soup and Bread (1)  
+Macaroni with meat  
+Vegetable salad  
+Assorted cookies (2)  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+### `r dates_EN %>% filter(code=="Mer") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Breakfast {-}
+
+Quiche Lorraine  
+Sausage, ham, bacon  
+Plate of fruits and cheese  
+Yogurt and granola (1)  
+Assorted muffins (1)  
+Fruit; apple, banana, orange  
+Milk (1), juice (1), coffee
+
+#### Lunch {-}
+
+Soup and Bread (1)  
+Shepherd's pie  
+Cabbage salad  
+Assorted cookies (2)  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+#### Dinner {-}
+
+Soup and Bread (1)  
+Salmon fillet with egg sauce and quinoa  
+Seasonal vegetables  
+Unemployed pudding  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+
+### `r dates_EN %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Breakfast {-}
+
+Scrambled eggs toast  
+Sausage, ham, bacon  
+Plate of fruits and cheese  
+Yogurt and granola (1)  
+Assorted muffins (1)  
+Fruit; apple, banana, orange  
+Milk (1), juice (1), coffee
+
+#### Lunch {-}
+
+Soup and Bread (1)  
+Chicken and vegetable vol-au-vent  
+Potato salad  
+Assorted cookies (2)  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+#### Dinner - Malartic {-}
+
+Lasagna
+
+*More information to come*
+
+
+
+### `r dates_EN %>% filter(code=="Ven") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Breakfast {-}
+
+Vegetable frittata  
+Sausage, ham, bacon  
+Plate of fruits and cheese  
+Yogurt and granola (1)  
+Assorted muffins (1)  
+Fruit; apple, banana, orange  
+Milk (1), juice (1), coffee
+
+#### Lunchbox{-}
+
+8-inch sandwich  
+Pasta, rice or potato salad  
+Crudité and dip  
+Assorted cookies (2)  
+Juice (1)  
+Fruit; banana, apple or orange (1)
+
+#### Dinner - Senneterre {-}
+
+Crudité and local cheeses  
+Bread and butter  
+Spaghetti    
+Juice, water, coffee / herbal tea / tea  
+Carrot and maple cupcakes
+
+
+
+### `r dates_EN %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Breakfast {-}
+
+Breakfast muffins  
+Sausage, ham, bacon  
+Plate of fruits and cheese  
+Yogurt and granola (1)  
+Assorted muffins (1)  
+Fruit; apple, banana, orange  
+Milk (1), juice (1), coffee
+
+#### Lunch {-}
+
+Soup and Bread (1)  
+Shepherd's pie  
+Green salad  
+Assorted cookies (2)  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+#### Dinner {-}
+
+Soup and Bread (1)  
+Spanish meatball, rice and seasonal vegetable  
+Black bean brownies  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+### `r dates_EN %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` {-}
+
+### Breakfast {-}
+
+Scrambled eggs  
+Sausage, ham, bacon  
+Plate of fruits and cheese  
+Yogurt and granola (1)  
+Assorted muffins (1)  
+Fruit; apple, banana, orange  
+Milk (1), juice (1), coffee
+
+#### Lunchbox{-}
+
+8-inch sandwiches  
+Pasta, potato or rice salad  
+Crudité and dip  
+Date squares  
+Juice (1)  
+Fruit; banana, apple or orange (1)
+
+#### Dinner {-}
+
+Soup and Bread (1)  
+Pork burger, grilled potatoes and salad  
+Lemon pie  
+Milk (1), juice (1)  
+Fruit; banana, apple or orange (1)
+
+### `r dates_EN %>% filter(code=="Lun_Ap") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Breakfast {-}
+
+Breakfast lunch boxes  
+Fruit and cheese, juice.   
+Breakfast muffins and yogurt  
+
+<br/>
+
+### Notes {-}
+
+**Menu may vary <br/> <br/>The Tour Cycliste de l’Abitibi is not responsible of any allergic reactions and/or food intolerances**
+
+
+

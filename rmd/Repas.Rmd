@@ -1,3 +1,9 @@
+<!-- 
+  À utiliser avec le fichier Excel
+  En 2024, les fichiers repas_FR et repas_EN on été utilisés plutôt
+  - BG
+-->
+
 
 <!-- Repas.Rmd  : document bilingue -->
 

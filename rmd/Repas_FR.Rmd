@@ -1,0 +1,235 @@
+
+<!-- Repas.Rmd  : document français -->
+
+# Repas de la semaine {#repas}
+
+### `r dates_FR %>% filter(code=="Dim_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Souper {-}
+
+Soupe et pain (1)  
+Chili au boeuf et fèves rouge servi avec chips de maïs, fromage et crème sûre.  
+Gâteau renversé à l’ananas  
+Fruit : banane, pomme, orange  
+Jus (1), lait (1), café
+
+### `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Frittata aux légumes, bacon, jambon, saucisse  
+Yogourt et granola (1)  
+Muffin variés (1)  
+Fruit : banane, pomme ou orange  
+Lait (1), jus (1), café à volonté
+
+#### Diner {-}
+
+Potage et Pain (1)  
+Lasagne au tofu  
+Salade césars  
+Biscuits variés (2)  
+Lait (1), jus (1)
+Fruit : banane, pomme ou orange (1)
+
+#### Souper {-}
+
+Potage et Pain (1)  
+Boeuf aux légumes et pâtes, légumes du moment  
+Tarte au sucre  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+### `r dates_FR %>% filter(code=="Mar") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Oeuf brouillé  
+Saucisse, jambon, bacon  
+Assiette de fruits et fromage  
+Yogourt et granola (1)  
+Muffins variés (1)  
+Fruit : banane, pomme, orange  
+Lait (1), jus (1), café
+
+#### Diner {-}
+
+Potage et Pain (1)  
+Macaroni à la viande  
+Salade de légumes  
+Biscuits variés (2)  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+#### Souper {-}
+
+Potage et Pain (1)  
+Poulet au beurre et riz basmati  
+Légumes de moment  
+Gâteau au chocolat  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+### `r dates_FR %>% filter(code=="Mer") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Quiche lorraine  
+Saucisse, jambon, bacon  
+Assiette de fruits et fromage  
+Yogourt et granola (1)  
+Muffins variés (1)  
+Fruit : pomme, banane, orange  
+Lait (1), jus (1), café
+
+#### Diner {-}
+
+Potage et Pain (1)  
+Hachis parmentier  
+Salade de chou  
+Biscuits variés (2)  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+#### Souper {-}
+
+Potage et Pain (1)  
+Filet de saumon sauce aux œufs et quinoa  
+Légumes du moment  
+Pouding chômeur  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+### `r dates_FR %>% filter(code=="Jeu") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Œuf brouillé rôties  
+Saucisse, jambon, bacon  
+Assiette de fruits et fromage  
+Yogourt et granola (1)  
+Muffins variés (1)  
+Fruit : pomme, banane, orange  
+Lait (1), jus (1), café
+
+#### Diner {-}
+
+Potage et Pain (1)  
+Vol au vent au poulet et légumes  
+Salade de pomme de terre  
+Biscuits variés (2)  
+Lait (1), jus (1)
+Fruit : banane, pomme ou orange (1)
+
+#### Souper - Malartic{-}
+
+Lasagne
+
+*Plus d'informations à venir*
+
+
+
+### `r dates_FR %>% filter(code=="Ven") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Frittata aux légumes  
+Saucisse, jambon, bacon  
+Assiette de fruits et fromage  
+Yogourt et granola (1)  
+Muffins variés (1)  
+Fruit : pomme, banane, orange  
+Lait (1), jus (1), café
+
+#### Diner - Boîte à lunch {-}
+
+Sandwiche 8 pouces  
+Salade de pâte, riz ou pomme de terre  
+Crudité et trempette  
+Biscuits variés (2)  
+Jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+#### Souper - Senneterre {-}
+
+Crudités et fromages d’ici  
+Pain et beurre  
+Spaghetti  
+Jus, eau et café / tisane / thé  
+Cup cakes carottes et érable
+
+### `r dates_FR %>% filter(code=="Sam") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Muffins déjeuner  
+Saucisse, jambon, bacon  
+Assiette de fruits et fromage  
+Yogourt et granola (1)  
+Muffins variés (1)  
+Fruit : pomme, banane, orange  
+Lait (1), jus (1), café
+
+#### Diner {-}
+
+Potage et Pain (1)  
+Pâté chinois  
+Salade verte  
+Biscuits variés (2)  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+#### Souper {-}
+
+Potage et Pain (1)  
+Boulette espagnole, riz et légume du moment  
+Brownies au haricot noir  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+### `r dates_FR %>% filter(code=="Dim") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Oeuf brouillé  
+Saucisse, jambon, bacon  
+Assiette de fruits et fromage  
+Yogourt et granola (1)  
+Muffins variés (1)  
+Fruit : pomme, banane, orange  
+Lait (1), jus (1), café
+
+#### Diner - Boîte à lunch {-}
+
+Sandwiches 8 pouces  
+Salade de pâte, pomme de terre ou riz  
+Crudité et trempette  
+Carré aux dattes  
+Jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+#### Souper {-}
+
+Potage et Pain (1)  
+Burger de porc, pomme de terre grillé et salade  
+Tarte au citron  
+Lait (1), jus (1)  
+Fruit : banane, pomme ou orange (1)
+
+
+### `r dates_FR %>% filter(code=="Lun_Ap") %>% pull(jsem_jour_mois_an)` {-}
+
+#### Déjeuner {-}
+
+Boîtes à lunch déjeuner  
+Fruit et fromage, jus.   
+Muffins déjeuner et yogourt
+
+<br/>
+
+### Notes {-}
+
+**Le menu est sujet à changement <br/> <br/>Le Tour Cycliste de l’Abitibi n’est pas responsable des réactions allergiques et/ou des intolérances alimentaires**
+
+
+
