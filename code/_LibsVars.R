@@ -58,7 +58,7 @@ params <- tibble(
     nom_centrale = "Polyvalente Le Carrefour",
     adresse_centrale = "125 rue Self, Val-d'Or (Qc) J9P 3N2",
     langue = "FR",  # FR ou EN, FR par défaut
-    input_output = "input",  #Quel dossier pour afficher les cartes des tracés : Full, Dep, Arr.
+    input_output = "output",  #Quel dossier pour afficher les cartes des tracés : Full, Dep, Arr.
     sponsor = "Glencore",
     nb_etapes = 7,
     nb_equipes = 16,
