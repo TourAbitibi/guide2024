@@ -60,7 +60,7 @@
     <sym>Dot</sym>
     <type>Dot</type>
   </wpt>
-  <wpt lon="-77.78880837452503" lat="48.09185210573788">
+  <wpt lon="-77.79025676739307" lat="48.09180194230262">
     <name>sign_08</name>
     <sym>Dot</sym>
     <type>Dot</type>
@@ -389,47 +389,29 @@
       <trkpt lat="48.09184" lon="-77.7875">
         <ele>319.8</ele>
       </trkpt>
-      <trkpt lat="48.09184" lon="-77.78795">
+      <trkpt lat="48.09184" lon="-77.787841">
         <ele>319.9</ele>
       </trkpt>
-      <trkpt lat="48.09184" lon="-77.788">
-        <ele>319.9</ele>
-      </trkpt>
-      <trkpt lat="48.09184" lon="-77.78804">
-        <ele>319.9</ele>
-      </trkpt>
-      <trkpt lat="48.09184" lon="-77.78822">
-        <ele>320.0</ele>
-      </trkpt>
-      <trkpt lat="48.09183" lon="-77.7884">
-        <ele>320.0</ele>
-      </trkpt>
-      <trkpt lat="48.09183" lon="-77.78855">
-        <ele>320.1</ele>
-      </trkpt>
-      <trkpt lat="48.09181" lon="-77.788737">
+      <trkpt lat="48.091912" lon="-77.788593">
         <ele>320.2</ele>
       </trkpt>
-      <trkpt lat="48.091808" lon="-77.788756">
+      <trkpt lat="48.091912" lon="-77.788593">
         <ele>320.2</ele>
       </trkpt>
-      <trkpt lat="48.091734" lon="-77.78943">
-        <ele>320.5</ele>
+      <trkpt lat="48.091834" lon="-77.790127">
+        <ele>321.4</ele>
       </trkpt>
-      <trkpt lat="48.091734" lon="-77.78943">
-        <ele>320.5</ele>
+      <trkpt lat="48.0918" lon="-77.790238">
+        <ele>321.4</ele>
       </trkpt>
-      <trkpt lat="48.091732" lon="-77.790323">
+      <trkpt lat="48.091727" lon="-77.790474">
         <ele>321.2</ele>
       </trkpt>
-      <trkpt lat="48.091732" lon="-77.790345">
+      <trkpt lat="48.091727" lon="-77.790474">
         <ele>321.2</ele>
       </trkpt>
-      <trkpt lat="48.091731" lon="-77.791107">
-        <ele>321.2</ele>
-      </trkpt>
-      <trkpt lat="48.091731" lon="-77.791107">
-        <ele>321.2</ele>
+      <trkpt lat="48.091728" lon="-77.792055">
+        <ele>322.1</ele>
       </trkpt>
       <trkpt lat="48.091728" lon="-77.793637">
         <ele>325.1</ele>
