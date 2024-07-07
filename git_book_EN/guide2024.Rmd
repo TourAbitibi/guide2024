@@ -877,13 +877,14 @@ knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{
 
 ```
 
-<!-- À modifier avec nouveau vidéo 2024
 
 #### In video {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7_qncxP2Dbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bdF4iXkGP2k?si=E-ueqvJDVVVdSOJW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br/>
--->
+
+
 ## Topographic profile
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
@@ -1102,13 +1103,14 @@ knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{
 
 ```
 
-<!-- À modifier avec nouveau vidéo 2024
 
 #### In video {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7_qncxP2Dbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bdF4iXkGP2k?si=E-ueqvJDVVVdSOJW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br/>
--->
+
+
 ## Topographic profile
 
 ```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
@@ -1427,15 +1429,13 @@ knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{
 
 ```
 
-<!-- En attente nouveau vidéo 2024
 
 #### In video {-}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BSmjncS_yZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cJEHNKRkr4Q?si=yiv5NfBuorkOLY3B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br/>
 
--->
 
 ## Topographic profile
 
@@ -1966,14 +1966,13 @@ knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{
 ```
 
 
-<!-- En attente vidéo 2024
 
 #### In video {-}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7_qncxP2Dbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-DpVIsG0_AY?si=qGVnILXX7WrQByM1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br/>
--->
+
 
 ## Topographic profile
 
