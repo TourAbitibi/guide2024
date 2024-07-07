@@ -10,7 +10,7 @@
 Soupe et pain (1)  
 Chili au boeuf et fèves rouge servi avec chips de maïs, fromage et crème sûre.  
 Gâteau renversé à l’ananas  
-Fruit : banane, pomme, orange  
+Fruit : banane, pomme, orange (1)  
 Jus (1), lait (1), café
 
 ### `r dates_FR %>% filter(code=="Lun_Av") %>% pull(jsem_jour_mois_an)` {-}
@@ -19,11 +19,11 @@ Jus (1), lait (1), café
 
 Frittata aux légumes, bacon, jambon, saucisse  
 Yogourt et granola (1)  
-Muffin variés (1)  
-Fruit : banane, pomme ou orange  
+Muffins variés (1)  
+Fruit : banane, pomme ou orange (1)   
 Lait (1), jus (1), café à volonté
 
-#### Diner {-}
+#### Dîner {-}
 
 Potage et Pain (1)  
 Lasagne au tofu  
@@ -49,10 +49,10 @@ Saucisse, jambon, bacon
 Assiette de fruits et fromage  
 Yogourt et granola (1)  
 Muffins variés (1)  
-Fruit : banane, pomme, orange  
+Fruit : banane, pomme, orange (1)  
 Lait (1), jus (1), café
 
-#### Diner {-}
+#### Dîner {-}
 
 Potage et Pain (1)  
 Macaroni à la viande  
@@ -65,7 +65,7 @@ Fruit : banane, pomme ou orange (1)
 
 Potage et Pain (1)  
 Poulet au beurre et riz basmati  
-Légumes de moment  
+Légumes du moment  
 Gâteau au chocolat  
 Lait (1), jus (1)  
 Fruit : banane, pomme ou orange (1)
@@ -79,10 +79,10 @@ Saucisse, jambon, bacon
 Assiette de fruits et fromage  
 Yogourt et granola (1)  
 Muffins variés (1)  
-Fruit : pomme, banane, orange  
+Fruit : pomme, banane, orange (1)  
 Lait (1), jus (1), café
 
-#### Diner {-}
+#### Dîner {-}
 
 Potage et Pain (1)  
 Hachis parmentier  
@@ -104,15 +104,15 @@ Fruit : banane, pomme ou orange (1)
 
 #### Déjeuner {-}
 
-Œuf brouillé rôties  
+Œuf brouillé et rôties  
 Saucisse, jambon, bacon  
 Assiette de fruits et fromage  
 Yogourt et granola (1)  
 Muffins variés (1)  
-Fruit : pomme, banane, orange  
+Fruit : pomme, banane, orange (1)  
 Lait (1), jus (1), café
 
-#### Diner {-}
+#### Dîner {-}
 
 Potage et Pain (1)  
 Vol au vent au poulet et légumes  
@@ -138,14 +138,14 @@ Saucisse, jambon, bacon
 Assiette de fruits et fromage  
 Yogourt et granola (1)  
 Muffins variés (1)  
-Fruit : pomme, banane, orange  
+Fruit : pomme, banane, orange (1)  
 Lait (1), jus (1), café
 
-#### Diner - Boîte à lunch {-}
+#### Dîner - Boîte à lunch {-}
 
-Sandwiche 8 pouces  
+Sandwich 8 pouces  
 Salade de pâte, riz ou pomme de terre  
-Crudité et trempette  
+Crudités et trempette  
 Biscuits variés (2)  
 Jus (1)  
 Fruit : banane, pomme ou orange (1)
@@ -167,10 +167,10 @@ Saucisse, jambon, bacon
 Assiette de fruits et fromage  
 Yogourt et granola (1)  
 Muffins variés (1)  
-Fruit : pomme, banane, orange  
+Fruit : pomme, banane, orange (1)  
 Lait (1), jus (1), café
 
-#### Diner {-}
+#### Dîner {-}
 
 Potage et Pain (1)  
 Pâté chinois  
@@ -182,8 +182,8 @@ Fruit : banane, pomme ou orange (1)
 #### Souper {-}
 
 Potage et Pain (1)  
-Boulette espagnole, riz et légume du moment  
-Brownies au haricot noir  
+Boulettes espagnoles, riz et légumes du moment  
+Brownies aux haricots noirs  
 Lait (1), jus (1)  
 Fruit : banane, pomme ou orange (1)
 
@@ -196,22 +196,22 @@ Saucisse, jambon, bacon
 Assiette de fruits et fromage  
 Yogourt et granola (1)  
 Muffins variés (1)  
-Fruit : pomme, banane, orange  
+Fruit : pomme, banane, orange (1)   
 Lait (1), jus (1), café
 
-#### Diner - Boîte à lunch {-}
+#### Dîner - Boîte à lunch {-}
 
-Sandwiches 8 pouces  
+Sandwich 8 pouces  
 Salade de pâte, pomme de terre ou riz  
-Crudité et trempette  
-Carré aux dattes  
+Crudités et trempette  
+Carrés aux dattes  
 Jus (1)  
 Fruit : banane, pomme ou orange (1)
 
 #### Souper {-}
 
 Potage et Pain (1)  
-Burger de porc, pomme de terre grillé et salade  
+Burger de porc, pommes de terre grillés et salade  
 Tarte au citron  
 Lait (1), jus (1)  
 Fruit : banane, pomme ou orange (1)
@@ -221,9 +221,9 @@ Fruit : banane, pomme ou orange (1)
 
 #### Déjeuner {-}
 
-Boîtes à lunch déjeuner  
+Boîte à lunch déjeuner  
 Fruit et fromage, jus.   
-Muffins déjeuner et yogourt
+Muffin déjeuner et yogourt
 
 <br/>
 

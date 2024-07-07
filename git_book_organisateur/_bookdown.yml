@@ -21,6 +21,7 @@ rmd_files:
   - "../rmd/signaleur.Rmd"
   - "../rmd/dep_neutre.Rmd"
   - "../rmd/ardoise.Rmd"
+  - "../rmd/radiotour.Rmd"
   - "../rmd/tv.Rmd"
   - "../rmd/CirculationCourse.Rmd"
   - "../rmd/FollowMee.Rmd"

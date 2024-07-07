@@ -1,0 +1,109 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+### Description - Étape `r Etape` {-}
+
+#### Départ de l'étape {-}
+
+- Bienvenue à la `r Etape`^re^ étape du `r params$edition`^ième^ Tour de l’Abitibi `r params$sponsor`. Le départ (neutralisé) de **`r iti_etape$Details$KM_Neutres[Etape]` km** vient d'être donné par **`r infos_etapes %>% filter(Stage == Etape) %>% pull(DepartDonnePar)`**. 
+
+- Cette étape présentée par **`r iti_etape$Details$Commanditaire[Etape]`** est une course sur route entre les villes de **`r iti_etape$Details$VilleDep[Etape]` et `r iti_etape$Details$VilleArr[Etape]`** sur une distance de **`r iti_etape$Details$Distance_Route[Etape]` km** sur la route suivis de **`r iti_etape$Details$Nb_tours[Etape]` tours** d’un circuit de **`r iti_etape$Details$KM_par_tours[Etape]` km** pour une distance totale de **`r iti_etape$Details$KM_Total[Etape]` km**.  
+
+<i>
+
+- Welcome to the `r Etape`^rd^stage of the **`r params$edition`**^th^ edition of the Tour de l’Abitibi `r params$sponsor`. The (neutralized) start of **`r iti_etape$Details$KM_Neutres[Etape]` km** has just been given by **`r infos_etapes %>% filter(Stage == Etape) %>% pull(DepartDonnePar)`**.
+
+- This stage, sponsored by **`r iti_etape$Details$Commanditaire[Etape]`**, is a road race between the cities of **`r iti_etape$Details$VilleDep[Etape]` and `r iti_etape$Details$VilleArr[Etape]`**, covering a distance of **`r iti_etape$Details$Distance_Route[Etape]` km** on the road, followed by **`r iti_etape$Details$Nb_tours[Etape]` laps** of a circuit measuring **`r iti_etape$Details$KM_par_tours[Etape]` km** each, for a total race distance of **`r iti_etape$Details$KM_Total[Etape]` km**.
+
+</i>
+
+---
+
+- Il y a **`r infos_etapes %>% filter(Stage == Etape) %>% pull(NbPartants)` coureurs au départ**. Les coureurs `r infos_etapes %>% filter(Stage == Etape) %>% pull(NonPartant)` sont non-partants.
+
+- Nous soulignons la présence de **`r infos_etapes %>% filter(Stage == Etape) %>% pull(Invites)`** dans la caravane aujourd'hui.
+
+<i>
+
+- There are **`r infos_etapes %>% filter(Stage == Etape) %>% pull(NbPartants)`** riders at the start. The non-starters are **`r infos_etapes %>% filter(Stage == Etape) %>% pull(NonPartant)`**.
+
+- We highlight the presence of **`r infos_etapes %>% filter(Stage == Etape) %>% pull(Invites)`** in the caravan today.
+
+</i>
+
+---
+
+- Nous rappelons aux conducteurs de la caravane d’allumer les feux de jour et de garder la caravane serrée.
+
+- *We remind the caravan drivers to turn on their daytime running lights and to maintain a tight caravan.*
+
+#### Le menu de la journée / the menu of the day {-}
+
+```{r echo=FALSE}
+calcul_iti_etape(Etape, language = "FR") %>% 
+  filter(Symbol %in% c("Climb", "Sprint","Mayor")) %>% 
+  select(Type = Symbol, Details, KM = KM_fait) %>% 
+  arrange(Type) %>% 
+  mutate( Type = case_when(Type == "Climb" ~ "GPM / KOM",
+                           Type == "Sprint" ~ "Sprint bonif",
+                           Type == "Mayor" ~ "Sprint Maire")) %>% 
+  kbl(col.names = c("Type", "Details", "KM"), escape = FALSE)
+```
+
+
+#### Au kilomètre zéro {-}
+
+- Nous sommes maintenant en course pour cette `r Etape`^re^ étape. 
+
+- Véhicules devant, prenez du champs.
+
+- Veuillez remettre votre **odomètre à zéro**.
+
+<i>
+
+- And the race begins for this **`r Etape`^th^ stage**.
+
+- To all drivers, make sure to **reset your odometers**.
+
+</i>
+
+
+#### Rappel de fin d'étapes {-}
+
+- Aucun véhicule de la course ne devrait passer la ligne d'arrivée. Nous vous rappelons d'utiliser la **déviation** à ...
+
+<i>
+
+- This a reminder for the caravan bypass at the end of the race. No cars should pass the finish line. Please use the **deviation** on ...
+
+</i>
+
+```{r echo=FALSE}
+calcul_iti_etape(Etape, language = "FR") %>% 
+  filter(Symbol %in% c("Bypass")) %>% 
+  select(Details, KM = KM_fait) %>% 
+  kbl(col.names = c("Details", "KM"), escape = FALSE)
+```
+
+- Nous annonçons les résultats non-officiels de l'étape (si possible) :
+
+- *We announce the unofficial results of the stage : *
+
+  - 1. ___________
+  - 2. ___________
+  - 3. ___________
+
+- Merci aux auditeurs de cette `r Etape`^re^ étape.
+
+- Fin des émissions de la journée. 
+
+<i>
+
+- Thank you to the listeners of this `r Etape` ^th^ stage. 
+
+- This is the end of today’s broadcasts.
+
+</i>

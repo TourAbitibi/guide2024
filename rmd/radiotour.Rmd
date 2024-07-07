@@ -1,0 +1,28 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Radio-Tour {#radiotour}
+
+Texte de présentation spécifique pour chacune des étapes. 
+
+Voir aussi le <a href="https://wikitour.brunogauthier.net/fr/home/CO/Comit%C3%A9s/Technique/RadioTour" target="_blank">Wiki</a> pour plus d'informations sur le rôle.
+
+```{r boucle_radiotour, echo=FALSE, results='asis'}
+
+# Informations à mettre à jour à tous les jours : Nombre de partants, Non partants et invités
+infos_etapes <-read_delim(here("results", "InfoEtapes.csv"), delim= ";",show_col_types = FALSE)
+
+for (Etape in c(1,2,4,5,6,7)){
+  
+  cat( knitr::knit_child(here("rmd","radiotour_detail.Rmd"), envir = environment(), quiet = TRUE))
+  
+}
+
+```
+
+### Instruction pour la dernière étape {-}
+
+À venir.
