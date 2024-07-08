@@ -246,6 +246,8 @@ depneutre
 info_ardoise
 un-exemple-en-vidéo
 radiotour
+descriptions-des-étapes
+glossaire-radio-tour
 moto-tv
 circulation
 followmee

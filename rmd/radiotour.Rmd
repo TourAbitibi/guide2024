@@ -10,6 +10,9 @@ Texte de présentation spécifique pour chacune des étapes.
 
 Voir aussi le <a href="https://wikitour.brunogauthier.net/fr/home/CO/Comit%C3%A9s/Technique/RadioTour" target="_blank">Wiki</a> pour plus d'informations sur le rôle.
 
+
+## Descriptions des étapes
+
 ```{r boucle_radiotour, echo=FALSE, results='asis'}
 
 # Informations à mettre à jour à tous les jours : Nombre de partants, Non partants et invités
@@ -26,3 +29,143 @@ for (Etape in c(1,2,4,5,6,7)){
 ### Instruction pour la dernière étape {-}
 
 À venir.
+
+
+## Glossaire Radio-Tour
+
+Glossaire recommandé par l'UCI dans son guide d'organisation <a href="https://downloads.ctfassets.net/761l7gh5x5an/7qhUGLmnseEMGg95GQnF1V/4228000a541888393810a793e2e16a50/uci-guide-orga-epreuve-road-2021-fra.pdf#page=205" target="_blank">français</a> et <a href="https://downloads.ctfassets.net/761l7gh5x5an/7qhUGLmnseEMGg95GQnF1V/671c01089dc026bc1b52c9af0010a043/uci-guide-orga-epreuve-road-2021-eng.pdf#page=205" target="_blank">anglais</a>.
+
+### Français {-}
+
+#### INFORMATIONS GENERALES {-}
+
+- Départ dans 1 minute; véhicules à l'avant merci de prendre de l'avance
+- Nous vous prions de respecter strictement les règles de sécurité et de prudence nous vous souhaitons une excellente étape (ou course)
+- Le départ est donné par M. xxx + titre
+- La moyenne horaire pour la 2® heure de course est de xxx km / heure
+
+#### APPELS {-}
+
+- L'équipe xxx est demandée à l'avant du peloton par le 61 pour un ennui mécanique
+- L'équipe xxx est demandée au peloton pour crevaison. C'est le 61 qui appelle sa voiture
+- L'équipe xxx est demandée en queue de peloton pour vêtements
+- L'équipe xxx est demandée en queue de peloton pour ravitaillement
+- L'équipe xxx est demandée en queue de peloton par le 61
+- Le médecin est demandé par le coureur 61 en queue de peloton
+- Voiture d'assistance neutre merci de venir vous placer derrière la voiture xxx
+- Le service d'assistance neutre est demandé en queue de peloton pour le 61
+- Merci aux voitures en tete de prendre du champ
+- MISES EN GARDE
+- Nous avons une descente très rapide
+- Véhicule mal garé sur le côté gauche de la chaussée
+- Rétrécissement de la chaussée; passage sur une file - prudence
+- Attention : giratoire - passage des deux côtés
+- Passage à droite/à gauche
+
+#### INFORMATION COURSE {-}
+
+- Un groupe de xxx coureurs essaie de faire la jonction avec les hommes de tête
+- Un groupe de coureurs vient de prendre quelque avance sur le peloton
+- Le 61 fait la jonction
+- Les hommes de tête avec 15 secondes d'avance sur la contre attaque
+- Le peloton vient d'entrer dans la ville de xxx
+- 5 secondes d'avance
+- Le coureur 61 est repris par le peloton
+- Crevaison du coureur 61 parmi les hommes de tête
+- Le 61 a toujours 5 secondes d'avance Le 61 a été lâché par le groupe de tête
+- L'écart augmente
+- 3 coureurs sont sortis du groupe de tête
+- Le 61, avec un avantage de 10 secondes
+- Les 3 hommes comptent un avantage de 10 secondes sur le peloton
+- Les coureurs ont été repris par le peloton
+- Les coureurs sont repris par le peloton Retour au peloton du 61 après crevaison
+- Il s'agit du coureur portant le dossard 31
+- Les 3 hommes de tête dans la traversée de la ville de xxx
+- Le peloton est revenu sur les hommes de tête
+- L'écart se réduit très légèrement
+- Les intercalés avec un retard de 10 secondes toujours 3 hommes en tête
+- Le peloton se trouve à 1 km du sprint intermédiaire
+- Peloton emmené par les coureurs de l'équipe xxx
+- 3 coureurs avec une dizaine de mètres sur le peloton
+- 3 coureurs sont sortis du peloton
+- Cassure en tête de peloton avec une dizaine de coureurs
+- Une centaine de mètres d'avance pour les coureurs 101, 95 et 61
+- Composition de l'échappée : pour l'équipe xxx le 127 pour l'équipe xxx le 86 et le 84 etc.
+- Le 61 a abandonné
+- Tentative d'échappée terminée
+- Zone de ravitaillement à xxx km Coureurs regroupés en peloton étiré
+- Les 3 coureurs se sont à nouveau regroupés à l'avant
+- Le 122 a rejoint le peloton
+- Les coureurs ont été repris par le peloton
+- Écart stabilisé à xxx minutes
+- Tête de la course à xxx (nom de la ville) au km xxx de la course
+- Le résultat du sprint : - Premier le 122 - Deuxième le 89 - troisième le 54
+
+
+### Anglais {-}
+
+#### GENERAL INFORMATION {-}
+
+- Start in 1 minute; vehicles at the front please move off.
+- We insist on the strict respect of the safety rules. Please be cautious. We wish you an excellent stage (or race).
+- The started indicated by Mr xxx + title.
+- Average speed during the second hour of the race is xxx km/hour.
+
+#### CALLS {-}
+
+- Rider 61 is calling the xxx team to the front of the peloton for a mechanical problem.
+- Team xxx is being called to the peloton for a puncture. Rider 61 is calling.
+- Team xxx is requested at the back of the peloton for clothing.
+- Team xxx is requested at the back of the peloton for food.
+- Team xxx is requested at the back of the peloton by rider 61.
+- The doctor is requested at the back of the peloton by Rider 61.
+- Neutral service car please position yourself behind the xxx car.
+- Neutral service is requested at the back of the peloton for Rider 61.
+- Vehicles at the front, please accelerate.
+
+#### WARNINGS {-}
+
+- The race is on a very rapid descent.
+- Badly-parked vehicle on the left side of the road.
+- Road narrowing; proceed in single line - caution.
+- Caution: roundabout - pass on both sides.
+- Pass on right/left.
+
+#### RACE INFORMATION {-}
+
+- A group of xxx riders are trying to catch the riders in the lead.
+- A group of riders has opened a gap on the peloton.
+- Rider 61 has bridged the gap.
+- The riders at the front have an advantage of 15 seconds on the counter-attack group.
+- The peloton has entered the town of xxx.
+- A lead of 5 seconds.
+- Rider 61 has been caught by the peloton.
+- Rider 61 in the front group has a puncture.
+- Rider 61 still has a lead of 5 seconds. Rider 61 has been dropped by the lead group.
+- The advantage is growing.
+- 3 riders have broken away from the lead group.
+- Rider 61 as an advantage of 10 seconds.
+- The 3 riders have an advantage of 10 seconds on the peloton.
+- The riders have been caught by the peloton
+- The riders are being caught by the peloton.Rider 61 is returned to the peloton after a puncture.
+- The rider in question is number 31.
+- The 3 riders at the front are passing through the town of xxx.
+- The peloton has caught the lead group.
+- The advantage has decreased slightly.
+- The riders in the in-between group are 10 seconds behind. Still 3 riders at the front.
+- The peloton is 1 km from the intermediate sprint.
+- The peloton is being led by riders from the xxx team.
+- 3 riders with an advantage of about 10 m over the peloton.
+- 3 riders have broken away from the peloton.
+- Split by about 10 riders at the head of the peloton.
+- Riders 101, 95 and 61 have an advantage of about 100 m.
+- Composition of the break: for team xxx, rider 127; for team xxx, riders 86 and 84, etc.
+- Rider 61 has abandoned.
+- End of the breakaway.
+- Feed zone in xxx kilometres. All riders together in stretched-out peloton.
+- The 3 riders have again regrouped at the front.
+- Rider 122 is back in the peloton.
+- The riders have been caught by the peloton.
+- The gap is stable at xxx minutes.
+- Lead riders entering xxx (name of town) at xxx kilometres of the race.
+- Result of the sprint: - First, number 122 - Second, number 89 - Third, number 54.
