@@ -93,12 +93,15 @@ knitr::include_graphics(here("img", "cartes", params$input_output,  glue("Etape{
 
 ```
 
+<!-- Vidéo retirée à la demande de Senneterre
+
 #### In video {-}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z7yGlUB9rwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br/>
 
+-->
 
 ## Topographic profile
 
