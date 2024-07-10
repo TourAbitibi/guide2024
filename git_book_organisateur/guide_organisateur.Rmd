@@ -1864,7 +1864,7 @@ Glossaire recommandé par l'UCI dans son guide d'organisation <a href="https://d
 - Départ dans 1 minute; véhicules à l'avant merci de prendre de l'avance
 - Nous vous prions de respecter strictement les règles de sécurité et de prudence nous vous souhaitons une excellente étape (ou course)
 - Le départ est donné par M. xxx + titre
-- La moyenne horaire pour la 2® heure de course est de xxx km / heure
+- La moyenne horaire pour la 2^e^ heure de course est de xxx km / heure
 
 #### APPELS {-}
 
