@@ -63,7 +63,7 @@ params <- tibble(
     nb_etapes = 7,
     nb_equipes = 16,
     # Challenge Sprint
-    nb_coureurs_sprint = 20, # 16 ou 20 ou 24
+    nb_coureurs_sprint = 16, # 16 ou 20 ou 24
     nb_coureurs_sprint_par_vague = nb_coureurs_sprint/4, # 4 vagues : 4, 5 ou 6 coureurs pour la vague qualification
     distance_totale_sprint = 600
 )
