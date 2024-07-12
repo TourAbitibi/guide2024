@@ -12,10 +12,15 @@ glue("# Partenaires")
 ```
 
 
-<!-- TODO : À réviser 2024-->
 
-```{r, out.width="100%",fig.align='center',  echo = FALSE, eval = TRUE}
+```{r, eval=(lang == "FR"), out.width="100%",fig.align='center',  echo = FALSE}
 
 knitr::include_graphics(here("img", "logo", "Tableau_Partenaires.png"))
+
+```
+
+```{r, eval=(lang != "FR"), out.width="100%",fig.align='center',  echo = FALSE}
+
+knitr::include_graphics(here("img", "logo", "Tableau_Partenaires_EN.png"))
 
 ```
