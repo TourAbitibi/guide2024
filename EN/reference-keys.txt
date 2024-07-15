@@ -7,6 +7,7 @@ welcome
 sponsors
 schedule
 co
+startlist
 roadmaps
 stage1
 summary
