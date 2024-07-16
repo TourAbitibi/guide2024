@@ -137,10 +137,10 @@ Article 14 – Classification
     2.  Orange jersey;
     3.  Polka dot jersey;
     4.  Blue jersey;
-    5.  World champion;
-    6.  Continental champion;
-    7.  National champion;
-    8.  National team;
+    5.  National team;
+    6.  World champion;
+    7.  Continental champion;
+    8.  National champion;
     9.  Regional team. 
 
 

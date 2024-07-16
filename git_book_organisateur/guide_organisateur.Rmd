@@ -1047,10 +1047,10 @@ Article 14 – Classements
     2.	Maillot orange;
     3.	Maillot à pois;
     4.	Maillot bleu;
-    5.	Champion du monde;
-    6.	Champion continental;
-    7.	Champion national;
-    8.	Équipe nationale;
+    5.	Équipe nationale;
+    6.	Champion du monde;
+    7.	Champion continental;
+    8.	Champion national;
     9.	Équipe régionale.
 
 
