@@ -1029,7 +1029,7 @@ Article 13 – Bonifications en temps
     * Sprint bonification: 3, 2, 1 secondes.
 
 
-
+<!-- 2024  : changement maillot national avant maillots champions canadiens.. (1.3.059, révision règlement/interprétation)   -->
 Article 14 – Classements
 
 :   La course fait l’objet de cinq (5) classements généraux différents:

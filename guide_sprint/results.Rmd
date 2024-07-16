@@ -46,9 +46,9 @@ opts_chunk$set( tidy = FALSE, comment = NA,
 
 ```{r input, include=FALSE}
 
-isResultsDisponibles <- FALSE
+isResultsDisponibles <- TRUE
 
-liens_result <- "https://tourabitibi.com/wp-content/uploads/2024/07/ChalengeSprint2024-Resultats.pdf"
+liens_result <- "https://tourabitibi.com/wp-content/uploads/2024/07/Resultats-ChallengeSprint2024.pdf"
 
 ```
 
