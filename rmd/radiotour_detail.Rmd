@@ -10,13 +10,13 @@ editor_options:
 
 - Bienvenue à la `r Etape`^re^ étape du `r params$edition`^ième^ Tour de l’Abitibi `r params$sponsor`. Le départ (neutralisé) de **`r iti_etape$Details$KM_Neutres[Etape]` km** vient d'être donné par **`r infos_etapes %>% filter(Stage == Etape) %>% pull(DepartDonnePar)`**. 
 
-- Cette étape présentée par **`r iti_etape$Details$Commanditaire[Etape]`** est une course sur route entre les villes de **`r iti_etape$Details$VilleDep[Etape]` et `r iti_etape$Details$VilleArr[Etape]`** sur une distance de **`r iti_etape$Details$Distance_Route[Etape]` km** sur la route suivis de **`r iti_etape$Details$Nb_tours[Etape]` tours** d’un circuit de **`r iti_etape$Details$KM_par_tours[Etape]` km** pour une distance totale de **`r iti_etape$Details$KM_Total[Etape]` km**.  
+- Cette étape présentée par **`r iti_etape$Details$Commanditaire[Etape]`** est une course sur route entre les villes de **`r iti_etape$Details$VilleDep[Etape]` et `r iti_etape$Details$VilleArr[Etape]`** sur une distance de **`r iti_etape$Details$Distance_Route[Etape]` km** sur la route suivis de **`r iti_etape$Details$Nb_tours[Etape]` tours** d’un circuit de **`r iti_etape$Details$KM_par_tours[Etape]` km** pour une distance totale de **`r iti_etape$Details$Distance_totale[Etape]` km**.  
 
 <i>
 
 - Welcome to the `r Etape`^rd^stage of the **`r params$edition`**^th^ edition of the Tour de l’Abitibi `r params$sponsor`. The (neutralized) start of **`r iti_etape$Details$KM_Neutres[Etape]` km** has just been given by **`r infos_etapes %>% filter(Stage == Etape) %>% pull(DepartDonnePar)`**.
 
-- This stage, sponsored by **`r iti_etape$Details$Commanditaire[Etape]`**, is a road race between the cities of **`r iti_etape$Details$VilleDep[Etape]` and `r iti_etape$Details$VilleArr[Etape]`**, covering a distance of **`r iti_etape$Details$Distance_Route[Etape]` km** on the road, followed by **`r iti_etape$Details$Nb_tours[Etape]` laps** of a circuit measuring **`r iti_etape$Details$KM_par_tours[Etape]` km** each, for a total race distance of **`r iti_etape$Details$KM_Total[Etape]` km**.
+- This stage, sponsored by **`r iti_etape$Details$Commanditaire[Etape]`**, is a road race between the cities of **`r iti_etape$Details$VilleDep[Etape]` and `r iti_etape$Details$VilleArr[Etape]`**, covering a distance of **`r iti_etape$Details$Distance_Route[Etape]` km** on the road, followed by **`r iti_etape$Details$Nb_tours[Etape]` laps** of a circuit measuring **`r iti_etape$Details$KM_par_tours[Etape]` km** each, for a total race distance of **`r iti_etape$Details$Distance_totale[Etape]` km**.
 
 </i>
 

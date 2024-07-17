@@ -18,6 +18,7 @@ détail-du-départ
 détail-de-larrivée
 élévation
 description-détaillée
+résultats
 etape2
 sommaire-1
 parcours-1
