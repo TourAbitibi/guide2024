@@ -16,6 +16,7 @@ détail-du-départ
 détail-de-larrivée
 élévation
 description-détaillée
+résultats
 signalisation---carte
 signalisation---tableau
 signalisation---détails

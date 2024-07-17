@@ -18,6 +18,7 @@ start-details
 finish-details
 topographic-profile
 detailed-description
+results
 stage2
 summary-1
 course-1
