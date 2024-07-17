@@ -21,11 +21,11 @@ Etape <- 1
 
 HEURE_DEP_REEL <- heure_dep_fx(
   heure = 16,  
-  min = 50,
-  sec = 44)
+  min = 51,
+  sec = 34)
 
 # Données à MAJ en cours d'étape
-KM_ACTUEL <- 85
+KM_ACTUEL <- 2
 
 ################################################################################ 
 
