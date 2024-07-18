@@ -50,6 +50,7 @@ détail-du-départ-1
 détail-de-larrivée-1
 élévation-1
 description-détaillée-1
+résultats-1
 signalisation---carte-1
 signalisation---tableau-1
 signalisation---détails-1

@@ -28,6 +28,7 @@ détail-du-départ-1
 détail-de-larrivée-1
 élévation-1
 description-détaillée-1
+résultats-1
 etape3
 sommaire-2
 parcours-2

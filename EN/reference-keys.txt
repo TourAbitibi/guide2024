@@ -28,6 +28,7 @@ start-details-1
 finish-details-1
 topographic-profile-1
 detailed-description-1
+results-1
 stage3
 summary-2
 course-2
