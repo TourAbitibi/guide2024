@@ -88,6 +88,7 @@ détail-du-départ-2
 détail-de-larrivée-2
 élévation-2
 description-détaillée-2
+résultats-2
 signalisation---carte-2
 signalisation---tableau-2
 signalisation---détails-2

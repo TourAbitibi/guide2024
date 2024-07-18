@@ -38,6 +38,7 @@ détail-du-départ-2
 détail-de-larrivée-2
 élévation-2
 description-détaillée-2
+résultats-2
 etape4
 sommaire-3
 parcours-3
