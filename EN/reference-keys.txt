@@ -48,6 +48,7 @@ start-details-3
 finish-details-3
 topographic-profile-3
 detailed-description-3
+results-3
 stage5
 summary-4
 course-4

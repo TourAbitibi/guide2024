@@ -117,6 +117,7 @@ détail-du-départ-3
 détail-de-larrivée-3
 élévation-3
 description-détaillée-3
+résultats-3
 signalisation---carte-3
 signalisation---tableau-3
 signalisation---détails-3
