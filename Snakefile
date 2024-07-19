@@ -23,8 +23,10 @@ rule Z_targets:
         "FR/index.html",
         "EN/index.html",
         
-        # "results/Liste_Coureurs.csv",
-        # "results/Maillots_Porteurs.csv",
+        "results/Liste_Coureurs.csv", # seulement en prod
+        "results/General_results.csv", # seulement en prod
+        
+        "results/InfoEtapes.csv",
         
         "distill.css",
 
@@ -313,8 +315,8 @@ rule R50_render_book_EN:
 
         "gpx/output/parcours.shp",
 
-        # "results/Liste_Coureurs.csv",
-        # "results/Maillots_Porteurs.csv",
+        "results/Liste_Coureurs.csv", # seulement en prod
+        "results/General_results.csv", # seulement en prod
 
         "img/cartes/input/Etape1_Full.png",
 
@@ -375,8 +377,8 @@ rule R51_render_book:
 
         "img/cartes/input/Etape1_Full.png",
 
-        # "results/Liste_Coureurs.csv",
-        # "results/Maillots_Porteurs.csv",
+        "results/Liste_Coureurs.csv", # seulement en prod
+        "results/General_results.csv", # seulement en prod
 
         "elevParcours/elev_parcours.csv",
         "img/elev/Etape1_Full_FR.png",
@@ -485,8 +487,10 @@ rule R54_render_book_organisateur:
 
         "script/render_book.R",
 
-        # "results/Liste_Coureurs.csv",
-        # "results/Maillots_Porteurs.csv",
+        "results/Liste_Coureurs.csv", # seulement en prod
+        "results/General_results.csv", # seulement en prod
+    
+        "results/InfoEtapes.csv",
 
         "git_book_organisateur/_bookdown.yml",
         "git_book_organisateur/_output.yml",

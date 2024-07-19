@@ -17,10 +17,10 @@ ui_info("L'heure est {ui_value(now())}")
 #
 # Donnée étape à renseigner une fois
 
-Etape <- 1
+Etape <- 5
 
 HEURE_DEP_REEL <- heure_dep_fx(
-  heure = 16,  
+  heure = 14,  
   min = 51,
   sec = 34)
 
