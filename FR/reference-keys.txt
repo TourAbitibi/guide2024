@@ -58,6 +58,7 @@ détail-du-départ-4
 détail-de-larrivée-4
 élévation-4
 description-détaillée-4
+résultats-4
 etape6
 sommaire-5
 parcours-5

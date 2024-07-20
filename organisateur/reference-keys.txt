@@ -154,6 +154,7 @@ détail-du-départ-4
 détail-de-larrivée-4
 élévation-4
 description-détaillée-4
+résultats-4
 signalisation---carte-4
 signalisation---tableau-4
 signalisation---détails-4
