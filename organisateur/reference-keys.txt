@@ -209,6 +209,7 @@ détail-du-départ-6
 détail-de-larrivée-6
 élévation-6
 description-détaillée-6
+résultats-6
 signalisation---carte-6
 signalisation---tableau-6
 signalisation---détails-6

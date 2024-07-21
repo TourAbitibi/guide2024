@@ -78,6 +78,7 @@ start-details-6
 finish-details-6
 topographic-profile-6
 detailed-description-6
+results-6
 rules
 circulation
 accomodation

@@ -186,6 +186,6 @@ maillots_apres_etape_tableau_FR(Etape)
 
 ```{r, eval=(verif_resultats_complets(Stage = Etape)), results='asis', echo= FALSE }
 
-glue('<a href="https://tourabitibi.com/wp-content/uploads/2024/07/TourAbitibi2024-Etape729.pdf" target="_blank">Lien vers résultats complets</a>')
+glue('<a href="https://www.rsstiming.com/Resultats/2024TourAbitibi/TourAbitibi2024-Etape7.pdf" target="_blank">Lien vers résultats complets</a>')
 
 ```
