@@ -190,6 +190,7 @@ détail-du-départ-5
 détail-de-larrivée-5
 élévation-5
 description-détaillée-5
+résultats-5
 signalisation---carte-5
 signalisation---tableau-5
 signalisation---détails-5
